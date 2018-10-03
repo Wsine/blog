@@ -1,6 +1,5 @@
 #C#的winform矩阵简单运算
 
-
 ----------
 ###程序截图
 ![](http://images.cnitblog.com/blog/701997/201502/231401035961164.png)

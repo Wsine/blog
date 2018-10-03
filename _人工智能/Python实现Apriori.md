@@ -1,9 +1,9 @@
-#Python实现Apriori
+# Python实现Apriori
 
-##运行环境
+## 运行环境
 - Pyhton3
 
-##计算过程
+## 计算过程
 
 ```flow
 st=>start: 开始
@@ -16,7 +16,7 @@ op4=>operation: 输出结果
 st->op1->op2->op3->op4->e
 ```
 
-##输入样例
+## 输入样例
 
 ```
 /* Apriori.txt */
@@ -206,7 +206,7 @@ if __name__ == '__main__':
 	main()
 ```
 
-##输出样例
+## 输出样例
 
 ```
 二项集 [frozenset({32, 39}), frozenset({32, 46}), frozenset({46, 39})]

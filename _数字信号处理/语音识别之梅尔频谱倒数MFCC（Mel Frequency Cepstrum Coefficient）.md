@@ -222,7 +222,7 @@ subplot(2, 3, 1); plot(1:len_waveData, waveData);
 axis([0 400 -2 2]);
 title('原始音频文件');
 ```
-                             
+
 ```
 %% 梅尔倒谱的色域
 A = load('All_MelRec_Bef.txt');
@@ -237,7 +237,7 @@ imagesc(B'); hold on
 colorbar;
 title('梅尔倒谱的色域（归一化）');
 ```
-            
+
 其余输出操作是相同的，操作见最后的完整代码
 
 ###结果
@@ -263,7 +263,7 @@ title('梅尔倒谱的色域（归一化）');
 ###完整代码
 
 matlab录音文件 main.m
-   
+
 ```
 clear all
 close all
@@ -308,9 +308,9 @@ int main()
 	return 0;
 }
 ```
-   
+
 C++音频定义头文件 wav.h
-     
+​     
 ```
 #ifndef _WAV_H
 #define _WAV_H
@@ -359,9 +359,9 @@ void load_wave_file(char *fname, struct ret_value *ret, short* waveData2);
 
 #endif
 ```
-      
+
 C++音频实现文件 wav.cpp
-      
+​      
 ```
 #include"wav.h"
 #include<cstdio>
@@ -453,9 +453,9 @@ void load_wave_file(char *fname, struct ret_value *ret, short* waveData2)
 	}
 }
 ```
-     
+
 C++实现MFCC.h
-     
+​     
 ```
 #ifndef _MFCC_H
 #define _MFCC_H
@@ -478,9 +478,9 @@ void DCT(const float* mel, float* melRec);
 
 #endif
 ```
-     
+
 C++实现MFCC.cpp
-     
+​     
 ```
 #include"MFCC.h"
 #include"fftw3.h"
@@ -693,9 +693,9 @@ void print_Array(T* arr, int len, string filename){
 	return;
 }
 ```
-     
+
 Matlab实现输出观察文件 Matlab_print.m
-     
+​     
 ```
 clear all
 close all

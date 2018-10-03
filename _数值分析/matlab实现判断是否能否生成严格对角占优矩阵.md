@@ -1,4 +1,4 @@
-如题：
+如题:
 ```
 function X = IsStrictDiagMatrix(A)
 % input: A matrix

@@ -13,8 +13,8 @@
 ###设计思路
 1. Instruction/Data Memory：
 一共有两种模式：
-1、	输入8位的地址PC，输出对应内存的16位指令内容
-2、	输入8位的地址Address，输出对应内存的DataMemory的内容
+	1、	输入8位的地址PC，输出对应内存的16位指令内容
+	2、	输入8位的地址Address，输出对应内存的DataMemory的内容
 输入写入内容WD，当WE写入信号为真的时候，写入到地址为Address的内存里面
 ![IM](http://images0.cnblogs.com/blog2015/701997/201507/180050578763948.png)
 

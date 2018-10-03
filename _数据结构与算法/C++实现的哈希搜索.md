@@ -152,7 +152,6 @@ Complete a text searching engine using hash table.
     	container.clear(); 
     }
 
-
 ----------
 ####程序运行情况
 ![](http://images.cnitblog.com/blog/701997/201412/101825341652284.png)
