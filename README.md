@@ -1,5 +1,7 @@
 # Wsine's Blog
 
+[![Build Status](https://travis-ci.com/Wsine/Blog.svg?branch=master)](https://travis-ci.com/Wsine/Blog)
+
 强烈建议安装Consolas字体，大大提高博客的浏览效果，相信你也会喜欢这款字体
 
 博客内容大多为我一路以来的学习历程的记录，主要都是写一些相关内容的实现，需要一定的理论知识支撑，博客不会详细讲解为什么
