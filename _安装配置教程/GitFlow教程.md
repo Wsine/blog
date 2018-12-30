@@ -1,8 +1,8 @@
-#GitFlow教程
+# GitFlow教程
 
 > 这份教程是博主学到的git基础，仅适合小团队使用，仅供参考
 
-###配置Git
+### 配置Git
 
 配置github上面的账号，首先需要自己在git上注册一个账号
 
@@ -11,21 +11,21 @@ git config --global user.name "Your Name in Github"
 git config --global user.email "email@domain.com"
 ```
 
-###创建仓库
+### 创建仓库
 
 ```bash
 cd your_project_dir
 git init
 ```
 
-###克隆仓库
+### 克隆仓库
 
 ```bash
 git clone address
 ```
 address是在github上面显示的克隆地址
 
-###添加管理
+### 添加管理
 
 ```bash
 git status # 随时查看管理的文件状态
@@ -36,20 +36,20 @@ git status # 查看状态更新
 git commit -m "Modify file.txt" # 提交一版更新
 ```
 
-###推送到Github
+### 推送到Github
 
 ```bash
 git push origin master # 将当前分支推送到远程仓库上的master分支
 ```
 如果没有配置过ssh，需要输入用户账号和密码
 
-###同步Github
+### 同步Github
 
 ```bash
 git pull origin master # 从远程仓库同步代码回来
 ```
 
-###分支管理
+### 分支管理
 
 策略一：
 多人协同工作，一个master分支，每一个人一个子分支，完成的子分支merge到master中
@@ -69,7 +69,7 @@ git checkout -b dev # 创建dev分支并切换到该分支
 git checkout dev # 切换到dev分支
 ```
 
-###合并分支
+### 合并分支
 
 ```bash
 git checkout master # 切换回master分支
@@ -77,7 +77,7 @@ git merge --no-diff peopleA # 适合策略一，保留分支历史
 git merge dev # 适合策略二,不保留分支历史
 ```
 
-###冲突处理
+### 冲突处理
 
 当merge和pull的时候都会有可能遇到冲突，执行相应的命令会有提示。
 这时候使用开发工具查看代码中冲突的部分（下面类似的格式）解决冲突。
@@ -105,6 +105,6 @@ git commit -m "a new commit" # 提交新版本
 git push origin master --force # 强制覆盖推送
 ```
 
-###后记
+### 后记
 
 原则上足够小型开发使用了，有问题可以在评论区说明。

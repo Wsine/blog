@@ -1,9 +1,9 @@
-#Sublime Text 3安装Latex
+# Sublime Text 3安装Latex
 
-###安装环境
+### 安装环境
 Sublime Text 3已安装Package Control
 
-###安装过程
+### 安装过程
 
 1. 进入官网下载安装MikTex，www.miktex.org
 2. 进入官网下载安装SumatraPDF, www.sumatrapdfreader.org
@@ -29,7 +29,7 @@ Sublime Text 3已安装Package Control
 
 注意符号不能打错和打漏
 
-###如何使用
+### 如何使用
 
 最简单的测试文件test.tex
 ```
@@ -53,7 +53,7 @@ This is where you will write your content.
 
 Ctrl + B可以编译tex文件，会自动用SumatraPDF打开生成文件，在tex文件的所在目录下有同名的pdf文件
 
-###反向操作
+### 反向操作
 
 在SumaPDF中，菜单，设置，选项
 

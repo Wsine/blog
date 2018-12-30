@@ -1,11 +1,11 @@
-#Python实现DBScan
+# Python实现DBScan
 
-##运行环境
+## 运行环境
 - Pyhton3
 - numpy(科学计算包)
 - matplotlib(画图所需，不画图可不必)
 
-##计算过程
+## 计算过程
 
 ```flow
 st=>start: 开始
@@ -20,7 +20,7 @@ cond(yes)->op2
 cond(no)->op3->e
 ```
 
-##输入样例
+## 输入样例
 
 ```
 /* 788points.txt */
@@ -43,7 +43,7 @@ cond(no)->op3->e
 
 788points.txt完整文件：[下载](http://pan.baidu.com/s/1i4o7wxf)
 
-##代码实现
+## 代码实现
 
 ```python
 # -*- coding: utf-8 -*-
@@ -168,7 +168,7 @@ if __name__ == '__main__':
 	plt.show()
 ```
 
-##输出样例
+## 输出样例
 
 ```
 cluster Numbers =  7

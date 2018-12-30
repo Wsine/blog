@@ -1,23 +1,23 @@
-#verilog实现的16位CPU设计
+# verilog实现的16位CPU设计
 
 ------
-##整体电路图
+## 整体电路图
 
 ![整体电路图](http://images.cnitblog.com/blog/701997/201502/151420243083962.png)
 
 ![整体电路图](http://images.cnitblog.com/blog/701997/201502/151421063706244.png)
 
-####CPU状态图
+#### CPU状态图
 
 ![CPU状态图](http://images.cnitblog.com/blog/701997/201502/151421363867308.png)
 
 
 idle代表没有工作，exec代表在工作
-##实验设计思路
+## 实验设计思路
 五级流水线，增加硬件消耗换取时间的做法。
 具体每一部分写什么将由代码部分指明。
-##完整代码
-###headfile.v
+## 完整代码
+### headfile.v
 头文件定义。包含整个工程中的特殊变量定义。后文中只用到gr0到gr3部分，因此该部分没写gr4到gr7，有需要的同学请自行加上。
 ```
 `ifndef HEADFILE_H_
@@ -69,7 +69,7 @@ idle代表没有工作，exec代表在工作
 
 `endif
 ```
-###CPU.v
+### CPU.v
 这个是整个工程的顶层模块。输入100MHz时钟信号，四个开关选择控制七段译码管显示的内容，用button来控制CPU的一次流水线。
 首先三个部分的时钟快慢要求不一样。七段译码器的时钟要求最快，要实时显示内容；memory的时钟要求较快，在PCPU下一级流水线到来之前完成数据读写。PCPU模块的时钟要求最慢，这个只是相对前面来说较慢。整个CPU的工作频率是比较快的。
 ```
@@ -159,7 +159,7 @@ module CPU(
 
 endmodule
 ```
-###clk_div.v
+### clk_div.v
 时钟分频模块，要是开始做CPU设计了还不会时钟分频的话，那我没话说了。不解释，贴代码。
 ```
 `timescale 1ns / 1ps
@@ -195,7 +195,7 @@ module clk_div(
 
 endmodule
 ```
-###PCPUcontroller.v
+### PCPUcontroller.v
 PCPU模块的状态控制模块。因为用的button来手动控制CPU的流水线，以免时钟太快一下子就跑完了。实现的方法是用状态机，加入trap状态，实现消抖。具体想不明白的话，建议自己画一下状态机转移图，聪明的你一定会明白的。
 ```
 `timescale 1ns / 1ps
@@ -246,7 +246,7 @@ module PCPUcontroller(
 
 endmodule
 ```
-###PCPU.v
+### PCPU.v
 整个工程中最核心的部分。注释部分是冲突处理之后的。如不需要冲突处理，把注释部分指明的代码注释掉即可。对应于前图中的五级流水线，该部分的代码亦分为五部分，请自行研啃。
 ```
 `timescale 1ns / 1ps
@@ -632,7 +632,7 @@ module PCPU(
 	/***************************************/
 endmodule
 ```
-###I_mem.v
+### I_mem.v
 指令存储区域。把指令写在这一部分，即可让CPU跑指定的指令。
 ```
 `timescale 1ns / 1ps
@@ -671,7 +671,7 @@ module I_mem(
 
 endmodule
 ```
-###D_mem.v
+### D_mem.v
 数据存储区域。结构简单，根据dwe信号来决定是读取还是写入。
 ```
 `timescale 1ns / 1ps
@@ -697,7 +697,7 @@ module D_mem(
 
 endmodule
 ```
-###light_show.v
+### light_show.v
 七段译码管显示模块。
 ```
 `timescale 1ns / 1ps
@@ -774,7 +774,7 @@ module light_show(
 
 endmodule
 ```
-###VTF_CPU.v
+### VTF_CPU.v
 仿真测试文件。
 ```
 `timescale 1ns / 1ps

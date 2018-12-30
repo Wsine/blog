@@ -1,4 +1,4 @@
-#arm-elf-gcc汇编代码个人理解
+# arm-elf-gcc汇编代码个人理解
 
 有关arm-elf-gcc的安装使用问题请参照本人博客的另一篇文章[http://www.cnblogs.com/wsine/p/4664503.html](http://www.cnblogs.com/wsine/p/4664503.html)
 

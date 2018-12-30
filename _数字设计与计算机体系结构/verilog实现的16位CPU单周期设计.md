@@ -1,20 +1,20 @@
-#verilog实现的16位CPU单周期设计
+# verilog实现的16位CPU单周期设计
 
 这个工程完成了16位CPU的单周期设计，模块化设计，包含对于关键指令的仿真与设计，有包含必要的分析说明。
 
-###单周期CPU结构图
+### 单周期CPU结构图
 ![SingalCycle](http://images0.cnblogs.com/blog2015/701997/201507/172356398291900.jpg)
 
 
-###单周期CPU设计真值表与结构图
+### 单周期CPU设计真值表与结构图
 ![TrueTable](http://images0.cnblogs.com/blog2015/701997/201507/172357154545516.jpg)
 
 
-###该CPU用到的指令集,16位8个通用寄存器
+### 该CPU用到的指令集,16位8个通用寄存器
 ![register](http://images0.cnblogs.com/blog2015/701997/201507/172358140633943.png)
 
 
-###设计思路
+### 设计思路
 1. Instruction Memory：
 输入8位的PC指令，输出对应内存的16位指令
 ![IF](http://images0.cnblogs.com/blog2015/701997/201507/172359081411389.png)
@@ -48,7 +48,7 @@
 ![PC](http://images0.cnblogs.com/blog2015/701997/201507/180000554387409.png)
 
 
-###实验结果
+### 实验结果
 **RTL图**
 ![RTL](http://images0.cnblogs.com/blog2015/701997/201507/180001245019631.jpg)
 
@@ -100,7 +100,7 @@
 
 各类指令均取很具有代表性的指令，也测试了较难的指令，结果和预期结果相符。
 
-###完整代码
+### 完整代码
 
 CPU_top.v
 

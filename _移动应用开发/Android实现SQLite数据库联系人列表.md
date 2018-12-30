@@ -1,9 +1,9 @@
-#Android实现SQLite数据库联系人列表
+# Android实现SQLite数据库联系人列表
 
 开发工具：Andorid Studio 1.3
 运行环境：Android 4.4 KitKat
 
-##工程内容
+## 工程内容
 
 实现一个通讯录查看程序：
 1.	要求使用SQLite数据库保存通讯录，使得每次运行程序均能显示当前联系人的列表
@@ -13,7 +13,7 @@
 5.	长按某个联系人，弹出对话框，询问是否删除该联系人。
 6.	单击某个联系人，弹出修改联想人的界面。
 
-##代码实现
+## 代码实现
 
 为联系人添加一个类Contact，封装学号姓名手机号码三个字段，并重构三个构造函数，给每个字段设置公有的get、set函数，这是类最标准的做法。
 
@@ -342,7 +342,7 @@ lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
 基本逻辑完成，但是程序有bug，在下面会说到
 
-##效果图
+## 效果图
 
 初始化界面->点击添加->填入错误信息点击确定->填入正确信息
 
@@ -356,7 +356,7 @@ lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
 <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145141772-546697164.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145148054-189841865.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
-##一些总结
+## 一些总结
 
 当用户在次界面点击返回按钮的时候，因为主界面会捕获消息并进行相应的处理，但是返回键是没有消息返回的，因此需要重载返回按钮，否则整个程序会崩溃。通过设置resultCode为0，以区分是用返回键返回的
 
@@ -380,6 +380,6 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-##工程下载
+## 工程下载
 
 传送门：[下载](http://pan.baidu.com/s/1pJSFOYR)

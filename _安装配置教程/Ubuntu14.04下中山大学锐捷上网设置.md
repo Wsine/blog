@@ -1,11 +1,11 @@
-#Ubuntu14.04下中山大学锐捷上网设置
+# Ubuntu14.04下中山大学锐捷上网设置
 
 ----------
 > 打开终端后的初始目录是 ～，Ubuntu安装完毕默认路径，不是的请自行先运行`cd ~`
 > 非斜体字命令行方法，斜体字是图形管理方法，二选一即可
 > 记得善用Tab键补全命令
 
-###有线上网设置
+### 有线上网设置
 
 - 建立Software文件夹
 
@@ -37,14 +37,14 @@ sudo ./rjsupplicant.sh -u your_user_name -p your_password -d 1
 your_user_name改为你锐捷上网的用户名，your_password改为你锐捷上网的密码
 文档命名为 runRG.sh 保存到 Software 文件夹
 
-####一键登录锐捷
+#### 一键登录锐捷
 Ctrl + Alt + T 打开终端，输入`sh ./Software/runRG.sh`
 然后输入密码（看不见有输入但其实已经输入了）回车即可成功上网
 最小化终端即可，关闭视为退出锐捷登录
 
-###无线上网设置
+### 无线上网设置
 
-#####登录锐捷同时发射WiFi
+##### 登录锐捷同时发射WiFi
 
 - 安装 ap-hotspot
 
@@ -68,7 +68,7 @@ Ctrl + Alt + T 打开终端，输入`sudo ap-hotspot start`
 
 关闭WiFi输入`sudo ap-hotspot stop`
 
-#####配置 SYSU-SECURE 无线上网
+##### 配置 SYSU-SECURE 无线上网
 
 右击右上角网络图标，连接 SYSU-SECURE ，或者编辑连接，找到 SYSU-SECURE
 配置参数说明：

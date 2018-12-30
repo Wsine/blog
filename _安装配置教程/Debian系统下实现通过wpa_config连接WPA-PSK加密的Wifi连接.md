@@ -1,4 +1,4 @@
-#Debian系统下实现通过wpa_config连接WPA-PSK加密的Wifi连接
+# Debian系统下实现通过wpa_config连接WPA-PSK加密的Wifi连接
 
 > 文章参考：[BASST | BLOG : Setting up Wifi - Debian Wheezy](http://www.basst.nl/?p=624)
 
@@ -10,7 +10,7 @@ Debian系的Linux系统
 我的测试平台：树莓派2，Udoo板子
 使用的是官方系统
 
-###配置过程
+### 配置过程
 
 **配置网络参数**
 

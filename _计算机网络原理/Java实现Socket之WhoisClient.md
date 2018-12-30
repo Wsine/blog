@@ -1,10 +1,10 @@
-#Java实现Socket之WhoisClient
+# Java实现Socket之WhoisClient
 
-##代码内容
+## 代码内容
 
 - 从常用的[whois服务器](http://www.whois.com/whois/)的43号端口得到对应域名的所有注册信息并显示出来
 
-##代码实现
+## 代码实现
 
 ```java
 /* WhoisClient.java */
@@ -70,7 +70,7 @@ public class WhoisClient {
 }
 ```
 
-##运行截图
+## 运行截图
 
 ![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204144347366-1890244519.png)
 ![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204144351663-677943006.png)

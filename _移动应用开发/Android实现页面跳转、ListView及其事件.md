@@ -1,14 +1,14 @@
-#Android实现页面跳转、ListView及其事件
+# Android实现页面跳转、ListView及其事件
 
 开发工具：Andorid Studio 1.3
 运行环境：Android 4.4 KitKat
 
-##工程内容
+## 工程内容
 
 1.	进入主页面后，使用ListView实现特定页面
 2.	点击其中任何一项水果，跳转到另外一个活动，使用Intent转换活动，并使用Bundle传递数据，跳转到特定页面
 
-##代码实现
+## 代码实现
 
 首先在主页面的xml文件中添加ListView控件并给予id
 
@@ -182,13 +182,13 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-##效果图
+## 效果图
 
 初始状态->点击cherry->跳转页面->点击Back ->回到上一个界面->长按banana->删除条目
 
 <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129151723864-790413298.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129151729146-913600329.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129151739099-1887175644.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129151743177-965886348.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
 
-##一些总结
+## 一些总结
 
 1. Import某一个包尽量利用Tab键的自动补全功能，Android Studio会自动添加包进来
 2. 创建新的一个界面用File->new的方法，避免了手动修改AndroidManifest.xml的错误
@@ -225,6 +225,6 @@ protected void onCreate(Bundle savedInstanceState) {
 | singleInstance|   Activity实例在任务栈中创建后，只要该实例还在任务栈中，即只要激活的是该类型的Activity，都会通过调用实例的newInstance()方法重用该Activity，此时使用的都是同一个Activity实例，它都会处于任务栈的栈顶。此模式一般用于加载较慢的，比较耗性能且不需要每次都重新创建的Activity|
 
 
-##工程下载
+## 工程下载
 
 传送门：[下载](http://pan.baidu.com/s/1c1wgTv6)

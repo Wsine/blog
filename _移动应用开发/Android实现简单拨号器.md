@@ -1,9 +1,9 @@
-#Android实现简单拨号器
+# Android实现简单拨号器
 
 开发工具：Andorid Studio 1.3
 运行环境：Android 4.4 KitKat
 
-##代码实现
+## 代码实现
 
 界面布局只有GridLayout和EditText两个控件，全部Button都是动态添加
 
@@ -193,7 +193,7 @@ View.OnTouchListener clearTouchListener = new View.OnTouchListener() {
 
 
 
-##效果图
+## 效果图
 
 初始界面->依次输入->短按清除->长按清除
 
@@ -203,12 +203,12 @@ View.OnTouchListener clearTouchListener = new View.OnTouchListener() {
 
 <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144948677-1936642997.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144953239-592553562.jpg" alt="cant show" style="display: inline-block; width: 22%; " /><img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144957614-1378734194.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129145002161-181732559.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
 
-##一些总结
+## 一些总结
 
 1. 字符串变长的时候按钮控件也会变宽：通过设置button的最小宽度和最大宽度可以固定按钮的大小，这里我让EditText变为允许多行输入，行宽最大值与按钮齐宽。
 2. 一个按钮占两个网格：在以前的API中，通过设置Gravity的大小或者setColumnConent()函数可以修改达到目的，这也是博客中多使用的方法；在新版的API中，通过设置colspec中的第二个参数达到目的，通过翻阅API中文论坛查询得知。
 
 
-##工程下载
+## 工程下载
 
 传送门：[下载](http://pan.baidu.com/s/1mhlHkSw)

@@ -1,6 +1,6 @@
-#Ubuntu系统安装配置 Pintos 和 Bochs
+# Ubuntu系统安装配置 Pintos 和 Bochs
 
-###安装过程
+### 安装过程
 首先是UEFI启动模式下Win8.1安装Ubuntu14.04双系统，由于篇幅过长，就不在这里详写。可见博主的另一篇博客[http://www.cnblogs.com/wsine/p/4297580.html](http://www.cnblogs.com/wsine/p/4297580.html)
 
 本身已安装过其它软件，所以之前就安装好了一些必备的依赖库。
@@ -24,7 +24,7 @@
 然后make命令执行之后，进行make check操作后截图可见
 ![8](http://images0.cnblogs.com/blog2015/701997/201507/212210393491200.png)
 
-###后记
+### 后记
 
 首先是大家看不懂教程的`$PINTOS`所代表的意思，我的理解就像是C++语言里面的`#define`宏定义语句。也就是要直接替换教程中所看到的这个字符为自己pintos的路径。
 

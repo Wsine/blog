@@ -1,14 +1,14 @@
-#Python实现NN(神经网络)
+# Python实现NN(神经网络)
 
 > 参考自Github开源代码：https://github.com/dennybritz/nn-from-scratch
 
-##运行环境
+## 运行环境
 - Pyhton3
 - numpy(科学计算包)
 - matplotlib(画图所需，不画图可不必)
 - sklearn(人工智能包，生成数据使用)
 
-##计算过程
+## 计算过程
 
 ```flow
 st=>start: 开始
@@ -26,11 +26,11 @@ cond(yes)->op6->e
 cond(no)->op3->op4->op5
 ```
 
-##输入样例
+## 输入样例
 
 none
 
-##代码实现
+## 代码实现
 
 ```python
 # -*- coding: utf-8 -*-
@@ -192,7 +192,7 @@ if __name__ == '__main__':
 	plt.show()
 ```
 
-##输出样例
+## 输出样例
 
 ```
 Loss is 0.071316

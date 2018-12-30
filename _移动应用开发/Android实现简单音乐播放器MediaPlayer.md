@@ -1,9 +1,9 @@
-#Android实现简单音乐播放器(MediaPlayer)
+# Android实现简单音乐播放器(MediaPlayer)
 
 开发工具：Andorid Studio 1.3
 运行环境：Android 4.4 KitKat
 
-##工程内容
+## 工程内容
 
 实现一个简单的音乐播放器，要求功能有：
 - 播放、暂停功能；
@@ -13,7 +13,7 @@
 - 停止功能；
 - 退出功能；
 
-##代码实现
+## 代码实现
 
 导入歌曲到手机SD卡的Music目录中，这里我导入了4首歌曲：仙剑六里面的《誓言成晖》、《剑客不能说》、《镜中人》和《浪花》，也推荐大家听喔（捂脸
 
@@ -276,14 +276,14 @@ public void onDestroy() {
 ```
 
 
-##效果图
+## 效果图
 
 打开界面->播放一会儿进度条实时变化->拖动进度条->点击暂停->点击Stop->点击下一首（歌曲时间变化）->点击上一首->点击退出
 
 <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135247804-1526416708.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135253397-1623986004.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135258491-1819953533.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135303288-1052914881.png" alt="cant show" style="display: inline-block; width: 22%; " />
 <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135308288-1470186544.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135312491-1881287969.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135317554-1751431966.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135323616-2074071411.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
-##一些总结
+## 一些总结
 
 1.	读取SD卡内存的时候，应该使用android.os.Environment库中的getExternalStorageDirectory()方法，然而并不能生效。应该再使用getAbsolutePath()获取绝对路径后读取音乐才生效。
 2.	切换歌曲的时候try块不能正确执行。检查过后，也是执行了stop()函数后再重新setDataSource()来切换歌曲的，但是没有效果。查阅资料后，发现setDataSource()之前需要调用reSet()方法，才可以重新设置歌曲
@@ -307,6 +307,6 @@ Handle的post方法，在post的Runable的run方法中，使用postDelay方法�
 方法二：
 多开一个线程，线程写一个持续循环，每次进入循环内即post一次Runable，然后休眠1000ms，亦可做到实时更新UI
 
-##工程下载
+## 工程下载
 
 传送门：[下载](http://pan.baidu.com/s/1skoWvnf)

@@ -1,11 +1,11 @@
-#Python实现SVM(支持向量机)
+# Python实现SVM(支持向量机)
 
-##运行环境
+## 运行环境
 - Pyhton3
 - numpy(科学计算包)
 - matplotlib(画图所需，不画图可不必)
 
-##计算过程
+## 计算过程
 
 ```flow
 st=>start: 开始
@@ -23,7 +23,7 @@ cond(no)->op3
 ```
 啊，这markdown flow好难用，我决定就画到这吧=。=
 
-##输入样例
+## 输入样例
 
 ```
 /* testSet.txt */
@@ -129,7 +129,7 @@ cond(no)->op3
 2.387003	1.573131	-1
 ```
 
-##代码实现
+## 代码实现
 
 ```python
 # -*- coding: utf-8 -*-
@@ -323,7 +323,7 @@ if __name__ == '__main__':
 	print('finish all in %s' % str(end - start))
 ```
 
-##输出样例
+## 输出样例
 
 ```
 ws =

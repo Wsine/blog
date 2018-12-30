@@ -1,11 +1,11 @@
-#Python实现PLA(感知机)
+# Python实现PLA(感知机)
 
-##运行环境
+## 运行环境
 - Pyhton3
 - numpy(科学计算包)
 - matplotlib(画图所需，不画图可不必)
 
-##计算过程
+## 计算过程
 
 ```flow
 st=>start: 开始
@@ -21,7 +21,7 @@ cond(yes)->op4->e
 cond(no)->op3->cond
 ```
 
-##输入样例
+## 输入样例
 
 ```
 /* Dataset.txt */
@@ -46,7 +46,7 @@ cond(no)->op3->cond
     [1, 1, 3]                     ?     
 ```
 
-##代码实现
+## 代码实现
 
 ```python
 # -*- coding: utf-8 -*-
@@ -166,7 +166,7 @@ if __name__ == '__main__':
 	print('finish all in %s' % str(end - start))
 ```
 
-##输出样例
+## 输出样例
 
 ```
 regMatrix =

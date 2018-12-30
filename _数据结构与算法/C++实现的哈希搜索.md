@@ -1,15 +1,15 @@
-#C++实现的哈希搜索
+# C++实现的哈希搜索
 
-##程序内容
+## 程序内容
 Complete a text searching engine using hash table.
 完成一个文本搜索引擎，使用哈希表
 
 ----------
-##程序设计
-####程序流程图
+## 程序设计
+#### 程序流程图
 ![](http://images.cnitblog.com/blog/701997/201412/101824482287079.png)
-####程序代码
-#####程序变量
+#### 程序代码
+##### 程序变量
 
     const int HASH_SIZE=100;
     vector<string> container;
@@ -21,7 +21,7 @@ Complete a text searching engine using hash table.
     };
     hash_node* hash_chain=NULL;
     string word;
-#####初始化
+##### 初始化
 方法是从文件流单个读取字符，遇到句号，问号，感叹号和省略号都视为断句标志，利用了char和string之间的转换，出现bug的情况是句子字符长度超过1024，这个概率太小。程序兼顾了去除前导空格的功能。
 
     bool ReadFile(string source){//读取文件并存储 
@@ -56,7 +56,7 @@ Complete a text searching engine using hash table.
     	cout<<"succeed to open "<<source<<"."<<endl;
     	return true;
     }
-#####创建哈希表
+##### 创建哈希表
 核心哈希函数，string转int，来源CSDN博客[独孤小剑](http://blog.csdn.net/gdujian0119/article/details/6777239)，自己改进了取模操作
 
     int Hash(string &key){//哈希 string转int 
@@ -115,7 +115,7 @@ Complete a text searching engine using hash table.
     		}
     	}
     }
-#####搜索关键词
+##### 搜索关键词
 前提是成功打开文件。利用循环多次搜索，退出的关键词是END（大小写敏感）。instruction（）函数中有说明退出方法。
 
     int main()
@@ -134,7 +134,7 @@ Complete a text searching engine using hash table.
     	return 0;
     }
 
-#####释放内存
+##### 释放内存
 良好习惯（强迫症罢了），据说这才是程序不崩溃的核心=。=
 
     void DeleteHashTable(){//删除哈希表 
@@ -153,7 +153,7 @@ Complete a text searching engine using hash table.
     }
 
 ----------
-####程序运行情况
+#### 程序运行情况
 ![](http://images.cnitblog.com/blog/701997/201412/101825341652284.png)
 
 ![](http://images.cnitblog.com/blog/701997/201412/101825417754305.png)
@@ -163,7 +163,7 @@ Complete a text searching engine using hash table.
 ![](http://images.cnitblog.com/blog/701997/201412/101825586186716.png)
 
 ----------
-####完整代码
+#### 完整代码
 
     #include<bits/stdc++.h>
     using namespace std;

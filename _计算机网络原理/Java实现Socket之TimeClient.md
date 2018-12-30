@@ -1,10 +1,10 @@
-#Java实现Socket之TimeClient
+# Java实现Socket之TimeClient
 
-##代码内容
+## 代码内容
 
 - 从[time.nist.gov](time.nist.gov)服务器的37号端口得到时间信息，并对时间进行解析后显示出来
 
-##代码实现
+## 代码实现
 
 ```java
 /* TimeClient.java */
@@ -47,6 +47,6 @@ public class TimeClient {
 }
 ```
 
-##运行截图
+## 运行截图
 
 ![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204143927007-632521991.png)

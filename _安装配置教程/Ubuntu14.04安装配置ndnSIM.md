@@ -1,12 +1,12 @@
-#Ubuntu14.04安装配置ndnSIM
+# Ubuntu14.04安装配置ndnSIM
 
-###预环境
+### 预环境
 Ubuntu14.04官方系统
 请先使用`sudo apt-get update`更新一下源列表
 
-###安装步骤
+### 安装步骤
 
-####安装boost-lib
+#### 安装boost-lib
 
 ```
 sudo apt-get install build-essential libsqlite3-dev libcrypto++-dev
@@ -17,7 +17,7 @@ sudo apt-get install libboost-all-dev
 
 libboost会被默认安装在 `/usr/lib/x86_64-linux-gnu` 路径下，如通过源码安装请确认版本至少为1.46，官方要求最低版本号，已知1.59版本编译不成功，这里推荐1.54和1.55版本，在默认路径下可以查看版本号
 
-####安装Python bindings 
+#### 安装Python bindings 
 
 ```
 sudo apt-get install python-dev python-pygraphviz python-kiwi
@@ -28,7 +28,7 @@ sudo apt-get install python-rsvg ipython
 强烈建议，python必须是2.7，如果是3.4版本，请手动把每一个`print ''`语句修改为`print()`语句，所以还是老老实实用2.7吧，暂时默认安装就是2.7
 
 命令行敲入python进入python交互环境即可看到版本号，使用exit()退出交互环境
-####下载ns3、pybindgen和ndnsim
+#### 下载ns3、pybindgen和ndnsim
 
 ```
 mkdir ndnSIM
@@ -52,7 +52,7 @@ ns-3目前的版本更新到了v2.1，但是ndnSIM版本没支持这么高，这
 			- ndnSIM
 	- pybindgen
 
-####编译ns-3
+#### 编译ns-3
 
 这里先挖个坑，pybindgen暂时不能成功编译，这里暂时不编译它
 将文件夹修改名称，只要不是pybindgen就ok，可以参考我的
@@ -83,7 +83,7 @@ sudo ./waf install
 注意检查关键模块ndnSIM模块成功安装与否
 
 
-####编译论文代码
+#### 编译论文代码
 
 ```
 cd ndnSIM
@@ -95,7 +95,7 @@ cd ndnSIM-nom-rapid-car2car
 
 这步不通过请检查上面的环境和过程
 
-####安装R语言
+#### 安装R语言
 
 官网网址：https://www.r-project.org/
 
@@ -118,7 +118,7 @@ CRAN列表选择清华大学的镜像源https://mirrors.tuna.tsinghua.edu.cn/CRA
 
 注意，默认使用`sudo apt-get install r-base`安装后的版本为3.0.2，对于后面安装模块ggplot2会不受支持，因此请用安装包安装最新版
 
-####给R环境安装模块
+#### 给R环境安装模块
 
 ```
 sudo R
@@ -129,7 +129,7 @@ install.packages ('doBy')
 
 注意查看安装信息
 
-###运行与测试
+### 运行与测试
 
 ```
 cd ndnSIM/ndnSIM-nom-rapid-car2car
