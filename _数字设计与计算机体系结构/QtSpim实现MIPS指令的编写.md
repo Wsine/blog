@@ -1,4 +1,4 @@
-#QtSpim实现MIPS指令的编写
+# QtSpim实现MIPS指令的编写
 
 由于各种对齐问题，cnblogs的格式难以控制，故贴图片，谅解。
 

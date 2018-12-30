@@ -1,8 +1,8 @@
-#C++ MFC实现基于RFID读写器的上位机软件
+# C++ MFC实现基于RFID读写器的上位机软件
 
 > 该博客涉及的完整工程托管在[https://github.com/Wsine/UpperMonitor](https://github.com/Wsine/UpperMonitor)，觉得好请给个Star (/▽＼=)
 
-##运行和测试环境
+## 运行和测试环境
 
 - Windows 10
 - Visual Studio 2013
@@ -12,7 +12,7 @@
 
 **理论支持全部Win32运行环境**
 
-##参考内容
+## 参考内容
 
 - [https://github.com/Wsine/UpperMonitor/blob/master/references/ZM12xUE系列接口函数说明_20130712.pdf](https://github.com/Wsine/UpperMonitor/blob/master/references/ZM12xUE%E7%B3%BB%E5%88%97%E6%8E%A5%E5%8F%A3%E5%87%BD%E6%95%B0%E8%AF%B4%E6%98%8E_20130712.pdf)
 - [http://durant35.github.io/categories/物联网技术导论实验课/](http://durant35.github.io/categories/%E7%89%A9%E8%81%94%E7%BD%91%E6%8A%80%E6%9C%AF%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C%E8%AF%BE/)
@@ -20,9 +20,9 @@
 
 ------
 
-##代码实现
+## 代码实现
 
-###软件框架
+### 软件框架
 
 在消息响应函数OnInitDialog()中完成整个框架的内容设置，包括插入Tab选项卡标签，关联对话框，调整大小和设置默认选项卡
 
@@ -88,7 +88,7 @@ void CUpperMonitorDlg::OnSelchangeTab(NMHDR *pNMHDR, LRESULT *pResult) {
 
 ------
 
-###调用ZM12xUE API
+### 调用ZM12xUE API
 
 首先需要在工程中include相应的文件，就是已经封装好的ZM124U.lib和ZM124U.h
 
@@ -116,7 +116,7 @@ void CDebugger::OnBnClickedBtnopendevice() {
 
 ------
 
-###类型转换
+### 类型转换
 
 **unsigned char转CString**
 
@@ -194,7 +194,7 @@ void CUtils::HexCString2UnsignedCharStar(const CString& hexStr, unsigned char* a
 
 ------
 
-###界面美化
+### 界面美化
 
 **设置控件颜色**
 
@@ -265,13 +265,13 @@ void CDebugger::DoDataExchange(CDataExchange* pDX) {
 
 ------
 
-##数据库操作
+## 数据库操作
 
 这里使用的是ODBC(Open Database Connection)技术和OLE DB(对象链接与嵌入数据库)技术。ODBC API可以与任何具有ODBC驱动程序的关系数据库进行通信；OLE DB扩展了ODBC，提供数据库编程的COM接口，提供可用于关系型和非关系型数据源的接口[也就是可以操作电子表格、文本文件等]。
 
 **这部分的理论知识建议参考上面提及的参考内容**
 
-###配置数据库
+### 配置数据库
 
 - mysql
 - mysql-connector-odbc
@@ -281,7 +281,7 @@ void CDebugger::DoDataExchange(CDataExchange* pDX) {
 
 ![数据源截图](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204230911694-290884794.jpg)
 
-###连接数据库
+### 连接数据库
 
 注意：这里Open函数的字符串需要和上面配置的数据源一致
 
@@ -322,7 +322,7 @@ BOOL CAdoMySQLHelper::MySQL_Connect(){
 }
 ```
 
-###断开数据库
+### 断开数据库
 
 ```cpp
 void CAdoMySQLHelper::MySQL_Close(){
@@ -337,7 +337,7 @@ void CAdoMySQLHelper::MySQL_Close(){
 }
 ```
 
-###执行SQL语句
+### 执行SQL语句
 
 这部分可以完成数据库四大操作中的**增、删、改**三大操作，也就是用一行SQL语句完成
 
@@ -373,7 +373,7 @@ BOOL CAdoMySQLHelper::MySQL_ExecuteSQL(CString sql){
 }
 ```
 
-###查询获取返回值
+### 查询获取返回值
 
 查询内容的方式实现如下面的代码实现。同时为了可以查询不同的表格，使用了`void*`作为返回值，具体使用方法看下面
 
@@ -468,7 +468,7 @@ void CAppdev::OnBnClickedBtnexitweb() {
 }
 ```
 
-###定时器实现
+### 定时器实现
 
 首先需要创建一个定时器，调用`SetTimer()`函数设置一个定时器并用一个`UINT_PTR`记录下该定时器，这里设置的定时器计时单位是毫秒；然后在消息响应函数`OnTimer()`中对其进行相关的操作；切记定时器也是需要销毁的，但需要在消息响应函数`DestroyWindow()`中完成，不能在析构函数中完成
 
@@ -506,7 +506,7 @@ BOOL CAppdev::DestroyWindow() {
 }
 ```
 
-###临界区问题
+### 临界区问题
 
 软件是一个读写器的上位机软件，那么系统会定时更新数据库即用户的余时，并将已经超时的用户移除和标记。若此时也有用户访问数据库，由于ADO DB使用的是读写模式打开的，因此多并发访问会出问题。因此，这个问题就变成了一个经典的临界区问题，所以可以用经典的临界区解法=。=在定时器操作数据库的时候获得锁，定时器结束释放锁，用户只有当定时器没获得锁的时候才能访问数据库，其余情况阻塞
 
@@ -534,11 +534,11 @@ void CAppdev::OnTimer(UINT_PTR nIDEvent){
 
 ------
 
-##文件操作
+## 文件操作
 
 在读写文件的时候，打开文件时添加参数`CFile::modeNoTruncate`，该参数会打开指定路径的文件，若没有该文件，则新建文件后打开，因此不用考虑文件是否存在的情况
 
-###文件编码
+### 文件编码
 
 原本的文件只能支持英文，为了能支持中文甚至全部语言，选择使用Unicode编码格式，自定义文件的时候往文件头添加Unicode编码头`0xFEFF`即可让程序知道该文件的编码方式
 
@@ -551,7 +551,7 @@ BOOL FileUnicodeEncode(CFile &mFile) {
 }
 ```
 
-###写入文件
+### 写入文件
 
 默认写到文件末尾，不用烦恼各种插入问题，毕竟不是链表，插入比较麻烦
 
@@ -573,7 +573,7 @@ void CRecordHelper::SaveRecharges(CString uid, CString accounts, long remainings
 }
 ```
 
-###读取文件
+### 读取文件
 
 读取文件由于要求用户最新的内容输出在最开头，因此选择读取的时候倒序分段读取，拼接字符串即可。写入文件时使用`CFile`类即可，但是要实现按行读取使用`CStdioFile`类比较方便，该类如其名，`CStdioFIle::ReadString()`操作可以读取一行，剩下的就是判断一段即可
 
@@ -604,7 +604,7 @@ CString CRecordHelper::LoadRecords(){
 }
 ```
 
-###清空文件
+### 清空文件
 
 这里调用构造CFile对象的时候去掉`CFile::modeNoTruncate`参数，就默认新建一个文件了
 
@@ -618,7 +618,7 @@ BOOL CRecordHelper::EmptyRecords(){
 }
 ```
 
-##运行截图
+## 运行截图
 
 这里贴两张运行截图，运行结果都是正确的，只是展示一下界面和字体及颜色
 

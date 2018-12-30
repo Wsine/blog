@@ -1,15 +1,15 @@
-#Android实现网络访问
+# Android实现网络访问
 
 开发工具：Andorid Studio 1.3
 运行环境：Android 4.4 KitKat
 
-##工程内容
+## 工程内容
 
 1)	 熟练使用HttpURLConnection访问WebService
 2)	 熟练使用多线程以及Handler更新UI
 3)	 熟练使用XmlPullParser解析xml文档数据
 
-##代码实现
+## 代码实现
 
 当用户点击查询按钮的时候，用正则表达式匹配是否是手机号码，若是则调用查询函数，否则用Toast提示用户检查输入
 
@@ -150,14 +150,14 @@ private Handler handler = new Handler() {
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-##效果图
+## 效果图
 
 初始化界面->输入错误或不完整手机号码->输入正确并查询->查询结果
 
 <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202150909850-48390256.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202150905647-27911751.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202150918163-1208959184.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202150913554-1400418952.png" alt="cant show" style="display: inline-block; width: 22%; " />
 <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202150857804-1737490091.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202150901944-1400549402.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
-##一些总结
+## 一些总结
 
 这个实验中最大的问题就在于免费的东西有使用次数限制，根据网站的说法是24小时内容不超过100次。
 然后跟踪Http的进度使用Log方法来调试程序比较快。
@@ -170,6 +170,6 @@ private Handler handler = new Handler() {
 答：如果多个子线程同时修改一个UI，那个程序会出现未知的错误。因此每个子线程发送各自的消息，让主线程在消息队列中按到达顺序依次处理消息，是最好的办法。
 
 
-##工程下载
+## 工程下载
 
 传送门：[下载](http://pan.baidu.com/s/1dEoEVgl)

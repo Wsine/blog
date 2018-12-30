@@ -1,8 +1,8 @@
-#Jsp实现form的file和text传递(multipart/form-data)
+# Jsp实现form的file和text传递(multipart/form-data)
 
 首先是form部分，因为要有`<input type="file" />`的类型，所以需要添加`enctype="multipart/form-data"`这一参数，实现大文件传递
 
-####表单部分
+#### 表单部分
 
 ```
 <form action="addHomework.jsp" method="post" enctype = "multipart/form-data">
@@ -22,7 +22,7 @@
 </form>
 ```
 
-####Java部分
+#### Java部分
 
 ```
 <%@ page import="java.util.*" %>

@@ -1,10 +1,10 @@
-#Java实现Package编译和访问
+# Java实现Package编译和访问
 
 **说明**
 1. 所有文件都是使用UTF-8编码来写的，请不要用Windows记事本随便打开
 2. Test.java文件中注释的方法说明了该类是不能访问其方法的
 
-##文件目录树
+## 文件目录树
 
 - bin
 	- Test1.class
@@ -31,7 +31,7 @@
 	- Test3.java
 - Makefile
 
-##代码一览
+## 代码一览
 
 ```java
 /* A.java */
@@ -222,6 +222,6 @@ clean:
 	rm -rf ./lib/*.jar
 ```
 
-##样例代码
+## 样例代码
 
 传送门：[下载](http://pan.baidu.com/s/1eRqGf30)

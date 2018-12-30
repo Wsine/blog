@@ -1,16 +1,16 @@
-#Android实现AppWidget、Broadcast动态注册
+# Android实现AppWidget、Broadcast动态注册
 
 开发工具：Andorid Studio 1.3
 运行环境：Android 4.4 KitKat
 
-##工程内容
+## 工程内容
 
 1. 主界面可以编辑广播的信息，点击发送广播的按钮发送广播
 2. 主页面上设置一个按钮进行广播接收器的注册与注销
 3. 广播接收器若已被注册，发送的广播信息能够及时更新桌面上Widget上文字内容
 4. 点击Widget可以跳转回主页面
 
-##代码实现
+## 代码实现
 
 添加一个自定义Widget类，继承自AppWidgetProvider，重写onUpdate函数，通过RemoteView对象修改Widget中的TextView的值，AppWidgetManager被调用更新Widget
 
@@ -102,18 +102,18 @@ send.setOnClickListener(new View.OnClickListener() {
 </receiver>
 ```
 
-##效果图
+## 效果图
 
 没注册时敲hello world并发送->界面没有内容出现->注册后发送->widget中出现hello world
 
 <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129154658552-388074970.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129154703599-1141757332.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129154711739-1509549936.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129154719099-1205487377.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
 
-##一些总结
+## 一些总结
 
 1.	新建一个widget的时候尽量使用代码自己添加，不要使用菜单new文件出来，android studio还不是很完善，new出来的widget附带很多不必要的东西，重载的时候会出错
 2.	新建一个类的时候要注意不同的类放在哪个包里面，只有在同一个包中才能省略前面的包名，否则连接时需要敲上全部的包名及路径
 3.	Widget中的默认样式没有底色，字体颜色也容易和背景融合在一块，所以便于我们调试开发，可以暂时把底色改成别的颜色，易于观察开发即可
 
-##工程下载
+## 工程下载
 
 传送门：[下载](http://pan.baidu.com/s/1kUkxnjL)

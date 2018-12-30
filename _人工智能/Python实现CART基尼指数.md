@@ -1,11 +1,11 @@
-#Python实现CART(基尼指数)
+# Python实现CART(基尼指数)
 
-##运行环境
+## 运行环境
 - Pyhton3
 - treePlotter模块(画图所需，不画图可不必)
 - matplotlib(如果使用上面的模块必须)
 
-##计算过程
+## 计算过程
 
 ```flow
 st=>start: 开始
@@ -23,7 +23,7 @@ cond(no)->su->op5->op3->su
 cond(yes)->op4->e
 ```
 
-##输入样例
+## 输入样例
 
 ```
 /* Dataset.txt */
@@ -51,7 +51,7 @@ cond(yes)->op4->e
     rain        mild           high         true         
 ```
 
-##代码实现
+## 代码实现
 
 ```python
 # -*- coding: utf-8 -*-
@@ -255,7 +255,7 @@ if __name__ == '__main__':
 	main()
 ```
 
-##输出样例
+## 输出样例
 
 ```
 desicionTree:
@@ -266,7 +266,7 @@ classifyResult:
 
 ![递归建树](http://images2015.cnblogs.com/blog/701997/201602/701997-20160203181237225-1060579590.jpg)
 
-##附加文件
+## 附加文件
 
 treePlotter.py
 

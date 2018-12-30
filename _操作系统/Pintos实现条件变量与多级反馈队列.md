@@ -1,4 +1,4 @@
-#Pintos实现条件变量与多级反馈队列
+# Pintos实现条件变量与多级反馈队列
 
 因为原来pintos的初始仅仅是留下了一些空函数，并没有任何实现，因此不可能通过这些test 。需要根据官方文档，自己实现后才能通过。
 
@@ -7,7 +7,7 @@
 本次部分需要参考的官方文档：
 http://www.ccs.neu.edu/home/amislove/teaching/cs5600/fall10/pintos/pintos_7.html
 
-###代码修改
+### 代码修改
 
 首先这次的load_average需要用到浮点数运行，而pintos是不支持double类型的运行的，只能通过整形 使用17.14格式，17位整数，14位小数，整型左移14位即为浮点型 这种方法模拟浮点数运算。官方文档说明如下：
 
@@ -221,7 +221,7 @@ static void init_thread (struct thread *t, const char *name, int priority);
 
 至此，该部分完成了。
 
-###传送门
+### 传送门
 
 开源学习地址：
 https://github.com/Wsine/pintos-ubuntu

@@ -1,10 +1,10 @@
-#Jsp实现筛选并压缩文件批量下载
+# Jsp实现筛选并压缩文件批量下载
 
 首先明确一下需求，网页端点击一下button，传递特定的参数到download.jsp网页，筛选文件，对过滤得到的文件进行压缩，然后返回前端一个压缩包下载。
 
 > 以下的代码来源于网络，没找到源发地出处，经过了自定义的修改。
 
-###方法声明
+### 方法声明
 
 ```jsp
 <%@ page 
@@ -348,7 +348,7 @@ public class JspFileDownload {
 %>
 ```
 
-###代码调用
+### 代码调用
 
 ```jsp
 <%@ include file="downloadFilesHelper.jsp" %>

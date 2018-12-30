@@ -1,9 +1,9 @@
-#Android实现传感器应用及位置服务
+# Android实现传感器应用及位置服务
 
 开发工具：Andorid Studio 1.3
 运行环境：Android 4.4 KitKat
 
-##代码实现
+## 代码实现
 
 这里需用获取加速度传感器和地磁传感器，手机获取旋转的方向都是通过加速度传感器和地磁传感器共同计算得出来的，给传感器注册监听器，这里由于精度要求，需要使用SENSOR_DELAY_GAME来提高传感器更新速率
 
@@ -130,12 +130,12 @@ public void onDestroy() {
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-##效果图
+## 效果图
 
 初始化界面->偏转手机->点击按钮->刷出经纬度
 
 <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202162614866-1977779062.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202162625819-1517190013.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202162638944-757171592.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202162633116-1400568131.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
-##工程下载
+## 工程下载
 
 传送门：[下载](http://pan.baidu.com/s/1hrxwv1i)

@@ -1,9 +1,9 @@
-#Android实现KSOAP2访问WebService
+# Android实现KSOAP2访问WebService
 
 开发工具：Andorid Studio 1.3
 运行环境：Android 4.4 KitKat
 
-##代码实现
+## 代码实现
 
 写一个工具类来给主界面使用，作用是使用Ksoap访问特定的网站服务，获取返回的验证码图片字节码，发送Message给主界面
 
@@ -128,7 +128,7 @@ public static Handler handler = new Handler() {
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-##效果图
+## 效果图
 
 初始化界面->点击Create界面->成功获取验证码界面->Create空白验证码界面->
 
@@ -138,7 +138,7 @@ public static Handler handler = new Handler() {
 
 <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202152116741-1298214102.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202152121350-941916298.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
-##一些总结
+## 一些总结
 
 1.	最大的问题在于访问该网络服务的时候经常超时，因此使用try语句运行，后面捕获异常即可。
 2.	本来打算ProgressDialog可以取消，然后停止或注销相应的子线程，但是发现该做法会造成内存泄漏，在官方文档和Android Studio中均有说明，后来选择使用boolean成员变量达到相同目的。
@@ -158,6 +158,6 @@ public static Handler handler = new Handler() {
 	该方法使用了Google的开源Web浏览器渲染特定的Web页面在一定的手机区域，有UI界面，可以直观得看到上网的内容。
 
 
-##工程下载
+## 工程下载
 
 传送门：[下载](http://pan.baidu.com/s/1dEsIKG5)

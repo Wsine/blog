@@ -1,10 +1,10 @@
-#C++实现禁忌搜索解决TSP问题
+# C++实现禁忌搜索解决TSP问题
 
 使用的搜索方法是Tabu Search（禁忌搜索）
 
 ![frame](http://images0.cnblogs.com/blog2015/701997/201507/252337482038376.png)
 
-###程序设计
+### 程序设计
 
 1)	文件读入坐标点计算距离矩阵/读入距离矩阵
 
@@ -100,7 +100,7 @@ finish = clock();
 double run_time = (double)(finish - start) / CLOCKS_PER_SEC;
 ```
 
-###运行效果样例
+### 运行效果样例
 
 默认搜索代数为10000
 
@@ -108,7 +108,7 @@ double run_time = (double)(finish - start) / CLOCKS_PER_SEC;
 
 修改搜索代数可以线性控制搜索时间，但是搜索效果也会相应地改变，自行斟酌
 
-###完整代码
+### 完整代码
 
 ```
 #include<iostream>
@@ -403,7 +403,7 @@ void printDebug(int* arr, string message){
 }
 ```
 
-###测试样例
+### 测试样例
 
 读入坐标
 

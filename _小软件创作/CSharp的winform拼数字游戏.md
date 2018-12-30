@@ -1,12 +1,12 @@
-#C#的winform拼数字游戏
+# C#的winform拼数字游戏
 
 ----------
 声明：阅读了别人的代码学习修改而来，增加了美观度和游戏乐趣。（作者出处忘了不好意思）
 
-###程序截图
+### 程序截图
 ![](http://images.cnitblog.com/blog/701997/201502/231410550491338.png)
 
-###关键代码
+### 关键代码
 ```
 using System;
 using System.Collections.Generic;
@@ -142,5 +142,5 @@ namespace PingNumberGame {
 
 ```
 
-###完整工程
+### 完整工程
 [度盘下载](http://pan.baidu.com/s/1c0hcgzY)

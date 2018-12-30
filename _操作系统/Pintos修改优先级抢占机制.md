@@ -1,6 +1,6 @@
-#Pintos修改优先级抢占机制
+# Pintos修改优先级抢占机制
 
-###代码修改
+### 代码修改
 
 创建线程的时候，放入ready队列中，遍历所有线程，如果新线程的优先级比所以线程的优先级都高，则当前线程让出CPU
 
@@ -32,7 +32,7 @@ thread_set_priority(int new_priority)
 
 至此，该部分完成了。
 
-###传送门
+### 传送门
 
 开源学习地址：
 https://github.com/Wsine/pintos-ubuntu

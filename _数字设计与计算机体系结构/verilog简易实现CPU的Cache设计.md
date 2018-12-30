@@ -1,14 +1,14 @@
-#verilog简易实现CPU的Cache设计
+# verilog简易实现CPU的Cache设计
 
 该文是基于博主之前一篇博客[http://www.cnblogs.com/wsine/p/4661147.html](http://www.cnblogs.com/wsine/p/4661147.html)所增加的Cache，相同的内容就不重复写了，可点击链接查看之前的博客。
 
-###Cache结构
+### Cache结构
 
 ![struct](http://images0.cnblogs.com/blog2015/701997/201507/202159193017748.png)
 
 采用的是2-way，循环5遍的测试方式，和书本上一致，4个set
 
-###Cache设计
+### Cache设计
 
 首先在PCPU模块里面增加寄存器
 
@@ -32,7 +32,7 @@
 
 书本和ppt上的样例，初始化了datamemory的值
 
-###仿真结果
+### 仿真结果
 
 从仿真器可以比较容易观察数据的变化，特别是hit0和hit1的变化
 

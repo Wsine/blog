@@ -1,9 +1,9 @@
-#Android实现SharePreferences和AutoCompletedTextView
+# Android实现SharePreferences和AutoCompletedTextView
 
 开发工具：Andorid Studio 1.3
 运行环境：Android 4.4 KitKat
 
-##工程内容
+## 工程内容
 
 1.	登录界面，使用SharedPreferences记录登陆状态，点击Register按钮，能够将User和Password写入SharedPreferences，写入后使用Toast提示写入成功
 2.	注册账号成功后，输入账号和密码，点击登陆按钮，若账号与密码正确，则跳转到文件操作界面，否则使用Toast提示登陆错误
@@ -13,7 +13,7 @@
 6.	点击Delete File控件能够删除文件，并且文件名自动提示已经更新，重新点击Read File，发现已经不能够读取文件内容了
 7.	检查是否成功生成文件
 
-##代码实现
+## 代码实现
 
 新建一个类Filetils作为工具类，让别的类调用以进行文件操作。主要功能有三点：
 
@@ -210,7 +210,7 @@ protected void onResume() {
 }
 ```
 
-##效果图
+## 效果图
 
 初始化界面->填入账号密码(掩码)并选择记住密码->点击登陆正确则跳转页面->输入部分提示
 
@@ -224,12 +224,12 @@ protected void onResume() {
 
 <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141904632-909052830.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141909100-247323991.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141914835-1359489365.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141921100-1497743934.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
-##一些总结
+## 一些总结
 
 1.	测试的时候由于跳转页面时没有清除当前页面，导致返回原界面的时候用户名和密码都还在，解决方案是跳转页面后，清除用户名和密码两个字段，同时注销页面
 2.	测试AutuCompletedTextView的时候，输入法的响应令人比较苦恼，明明已经自动填充完毕，输入法还处在这个界面，这用户体验不能忍，然后就加入了AutuCompletedTextView的Item点击响应
 3.	还发现一个问题就在于，界面在onResume的时候检测保存的isChecked是否为true，如果为true则填充用户名和密码，但是checkbox的状态并没有更新，例如退出app后重新进入只有username和password是填充了，checkbox并没有，因此修改了上面的onResume函数重载的代码，更加符合实际
 
-##工程下载
+## 工程下载
 
 传送门：[下载](http://pan.baidu.com/s/1hrnSPqk)
