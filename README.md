@@ -1,6 +1,6 @@
 # Wsine's Blog
 
-[![Build Status](https://travis-ci.com/Wsine/Blog.svg?branch=master)](https://travis-ci.com/Wsine/Blog)
+[![Build Status](https://travis-ci.com/Wsine/blog.svg?branch=master)](https://travis-ci.com/Wsine/blog)
 
 强烈建议安装Consolas字体，大大提高博客的浏览效果，相信你也会喜欢这款字体
 
