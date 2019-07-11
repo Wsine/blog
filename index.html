@@ -7,18 +7,98 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
 </head>
 <body>
   <div id="app"></div>
   <script>
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
     window.$docsify = {
-      repo: 'Wsine/Blog',
+      repo: 'Wsine/blog',
       loadSidebar: true,
       subMaxLevel: 2,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
       auto2top: true,
-      name: 'Wsine Blog'
+      name: 'Wsine Blog',
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "flow") {
+              (async () => {
+                await sleep(500);
+                var diagram = flowchart.parse(code);
+                diagram.drawSVG('flow');
+              })();
+              return '<div id="flow"></div>';
+            } else if (lang === "sequence") {
+              (async () => {
+                await sleep(500);
+                var diagram = Diagram.parse(code);
+                diagram.drawSVG('sequence', {theme: 'simple'});
+              })();
+              return '<div id="sequence"></div>';
+            } else if (lang === "mermaid") {
+              return (
+                '<div class="mermaid">' + mermaid.render(lang, code) + "</div>"
+              );
+            } else if (lang === "c++") {
+              lang = "cpp";
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.doneEach(function() {
+            document.querySelectorAll(".sidebar-nav > ul > li").forEach(
+              function(node, index, nodelist) {
+                var span = document.createElement("span");
+                span.innerHTML = node.firstChild.data;
+                span.style.cursor = "pointer";
+                span.onclick = function(event) {
+                  var ul = event.target.nextElementSibling;
+                  if (ul.style.display === "none") {
+                    ul.style.display = "block";
+                  } else {
+                    ul.style.display = "none";
+                  }
+                };
+                node.firstChild.replaceWith(span);
+                node.lastChild.style.display = "none";
+            });
+            var active = document.querySelector(".sidebar-nav li.active");
+            if (active) {
+              active.parentElement.style.display = "block";
+            }
+          });
+        }
+      ]
     }
   </script>
+  <!-- docsify -->
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <!-- language highlight -->
+  <script src="//unpkg.com/prismjs/components/prism-python.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-clike.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-c.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-cpp.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-cmake.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-html.min.js"></script>
+  <!-- flowchart requirements -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/flowchart/1.12.0/flowchart.min.js"></script>
+  <!-- sequence diagram requirments -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+  <!-- mermaid erquirements -->
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script type="text/javascript">mermaid.initialize({ startOnLoad: false });</script>
 </body>
 </html>
