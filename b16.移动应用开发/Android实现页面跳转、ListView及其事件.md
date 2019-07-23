@@ -186,7 +186,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 初始状态->点击cherry->跳转页面->点击Back ->回到上一个界面->长按banana->删除条目
 
-<img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129151723864-790413298.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129151729146-913600329.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129151739099-1887175644.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129151743177-965886348.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image378.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image379.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image380.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image381.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
 
 ## 一些总结
 
@@ -213,7 +213,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	当一个已经stop的活动需要重新显示在屏幕的时候，调用这个函数
 
 引用一张图来说明，图片来自水印：
-![feisky](http://images.cnblogs.com/cnblogs_com/feisky/WindowsLiveWriter/6aad9ec8a679_D53B/activity_lifecycle_2.png)
+![feisky](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image382.png)
 
 **活动的启动模式有四种，standard,singleTop,singleTask以及singleInstance，列表说明不同的启动方式有什么不同**
 

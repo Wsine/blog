@@ -2,7 +2,7 @@
 
 思路很简单，随手装逼呗。根据时间来控制背景图和文字，背景图加了毛玻璃效果，效果直接看图，用javascript来实现。
 
-![效果图](http://images.cnitblog.com/blog/701997/201502/170207180337090.png)
+![效果图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image301.png)
 
 ### 完整代码
 

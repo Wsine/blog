@@ -14,7 +14,7 @@
 ### 过程
 流程图：
 从 人声的模拟信号 得到 MFCC的梅尔倒谱
-![流程图](http://images0.cnblogs.com/blog2015/701997/201507/101332557838865.jpg)
+![流程图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image35.jpg)
 
 
 - 录音得到人声音频信号，保存到本地
@@ -53,7 +53,7 @@ int main()
 
 - 设置窗函数（海明窗、汉宁窗、布拉克曼窗）
 
-![窗函数](http://images0.cnblogs.com/blog2015/701997/201507/101333353778036.jpg)
+![窗函数](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image36.jpg)
 
 
 ```
@@ -81,7 +81,7 @@ void setBlackManWindow(float* frameWindow){
 
 - 分帧加窗操作
 
-![分帧](http://images0.cnblogs.com/blog2015/701997/201507/101334133145981.jpg)
+![分帧](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image37.jpg)
 
 
 ```
@@ -124,7 +124,7 @@ void FFT_Power(float* in, float* energySpectrum){
 
 - 计算梅尔谱
 
-![梅尔谱1](http://images0.cnblogs.com/blog2015/701997/201507/101334530808164.jpg)
+![梅尔谱1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image38.jpg)
 
 
 ```
@@ -133,7 +133,7 @@ void computeMel(float* mel, int sampleRate, const float* energySpectrum){
 	float maxMelFreq = 1125 * log(1 + fmax / 700);
 ```
 
-![梅尔谱2](http://images0.cnblogs.com/blog2015/701997/201507/101335125801807.jpg)
+![梅尔谱2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image39.jpg)
 
 
 ```
@@ -145,7 +145,7 @@ for(int i = 0; i < NUM_FILTER + 2; i++){
 }
 ```
 
-![梅尔谱3](http://images0.cnblogs.com/blog2015/701997/201507/101335496437652.jpg)
+![梅尔谱3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image40.jpg)
 
 
 ```
@@ -164,8 +164,8 @@ for(int i = 0; i < NUM_FILTER; i++){
 
 一共选择了40个三角滤波器，最后的梅尔谱也是40个点
 - 计算梅尔倒谱
-![梅尔倒谱1](http://images0.cnblogs.com/blog2015/701997/201507/101336176748587.jpg)
-![梅尔倒谱2](http://images0.cnblogs.com/blog2015/701997/201507/101336408465342.jpg)
+![梅尔倒谱1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image41.jpg)
+![梅尔倒谱2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image42.jpg)
 
 
 
@@ -183,8 +183,8 @@ void DCT(const float* mel, float* melRec){
 
 把40个点的梅尔谱映射到13维的倒谱上。取对数做离散余弦变换
 - 归一化处理
-![归一化1](http://images0.cnblogs.com/blog2015/701997/201507/101337097527377.jpg)
-![归一化2](http://images0.cnblogs.com/blog2015/701997/201507/101337306437262.jpg)
+![归一化1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image43.jpg)
+![归一化2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image44.jpg)
 
 
 ```
@@ -242,20 +242,20 @@ title('梅尔倒谱的色域（归一化）');
 
 ### 结果
 **录音后的原始音频信号**
-![原始音频](http://images0.cnblogs.com/blog2015/701997/201507/101338048462880.jpg)
+![原始音频](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image45.jpg)
 总共有6000个采样点，量化为16bit，因此数据量级能达到10^4
 
 **MFCC操作中，第五帧的结果流程**
-![流程](http://images0.cnblogs.com/blog2015/701997/201507/101338369869626.jpg)
+![流程](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image46.jpg)
 
 原始音频分帧后，每一帧是400的点，从结果来看，在一帧的时间长度里面，数据变化不大，幅值维持在 [-1  1] 之间浮动。（如选取其他帧可以看到变化比较明显，看看原始音频就知道了）
 加窗操作后，端点值被明显收敛到0，因此不会对能量谱的计算产生突变的情况。
 能量谱和梅尔谱可以看出，与我们已知的人声特点相关。
 **归一化之前的梅尔倒谱**
-![输出1](http://images0.cnblogs.com/blog2015/701997/201507/101339010188952.jpg)
+![输出1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image47.jpg)
 高频能量集中在较低的维度，和能量谱的显示吻合
 **归一化的梅尔倒谱**
-![输出2](http://images0.cnblogs.com/blog2015/701997/201507/101339260497404.jpg)
+![输出2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image48.jpg)
 归一化之后，相比未归一化的图，较高维度的能量能够较好地被分辨出来，易于分析
 
 至此，梅尔倒谱工作完成。

@@ -132,11 +132,11 @@ public static Handler handler = new Handler() {
 
 初始化界面->点击Create界面->成功获取验证码界面->Create空白验证码界面->
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202152055804-1680426632.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202152059397-922334520.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202152104600-323868279.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202152108210-1627968771.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image317.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image318.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image319.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image320.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 中文测试->获取验证码超时界面
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202152116741-1298214102.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202152121350-941916298.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image321.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image322.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 ## 一些总结
 

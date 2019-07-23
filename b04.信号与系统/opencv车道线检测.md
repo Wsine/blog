@@ -12,20 +12,20 @@
 
 ----------
 ## 实现的效果
-![图1](http://images.cnitblog.com/blog/701997/201502/231341219712857.jpg)
+![图1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image12.jpg)
 在亮度良好道路条件良好的情况下，检测车前区域的车道线实现比较成功，排除掉高速护栏的影响，而且原图像还能完整体现。
 
-![图2](http://images.cnitblog.com/blog/701997/201502/231341581746130.jpg)
+![图2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image13.jpg)
 车子行驶在高速公路大型弯道上，可以在一定角度范围内认定车道线仍是直线，检测出为直线。
 
-![图3](http://images.cnitblog.com/blog/701997/201502/231342176273787.jpg)
+![图3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image14.jpg)
 车子切换过程中只有一根车道线被识别，但是稳定回变换车道后，实现效果良好。减速线为黄色，二值化是也被过滤，没造成影响。
 
-![图4](http://images.cnitblog.com/blog/701997/201502/231342400492170.jpg)
-![图5](http://images.cnitblog.com/blog/701997/201502/231342597837040.jpg)
+![图4](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image15.jpg)
+![图5](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image16.jpg)
 刚进入隧道时，摄像机光源基本处于高光状态，拍摄亮度基本不变，二值化图像时情况良好，噪声比较多但是没产生多大线状影响；当摄像头自动调节亮度，图像亮度变低，二值化时同一阈值把车道线给过滤掉，造成无法识别车道线的现象。
 
-![图7](http://images.cnitblog.com/blog/701997/201502/231343235649909.jpg)
+![图7](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image17.jpg)
 在道路损坏的情况下，由于阈值一定，基本上检测不出车道线。
 
 ## 结论

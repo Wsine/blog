@@ -2,11 +2,11 @@
 
 时域上的表达式为
 
-![1](http://images0.cnblogs.com/blog2015/701997/201507/231436276463607.png)
+![1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image52.png)
 
 调制器模型为
 
-![2](http://images0.cnblogs.com/blog2015/701997/201507/231436384746700.png)
+![2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image53.png)
 
 这个实验中需要相位偏移比较多，因为一共用了四个信号仿真器，一个是无偏移的调制信号，一个是偏移的调制信号，一个是无偏移的载波信号，一个是偏移的载波信号。然后根据调制器模型进行相应的操作。
 最后的输出为载波信号的时域图像，结果信号的单边带调制下边带的频域图像，结果信号的单边带调制的上边带的频域图像。
@@ -14,10 +14,10 @@
 
 ### 实现效果
 
-![3](http://images0.cnblogs.com/blog2015/701997/201507/231438362242928.png)
+![3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image54.png)
 
 载波频率为280的大小，以280为中界的原正弦信号为两个双峰，经过了移相法得到两个单峰。
 
 ### 后端实现
 
-![4](http://images0.cnblogs.com/blog2015/701997/201507/231438502712801.jpg)
+![4](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image55.jpg)

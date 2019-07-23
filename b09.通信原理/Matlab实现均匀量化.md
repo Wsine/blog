@@ -17,9 +17,9 @@
 红色的是原始声音信号的波形
 蓝色的是4 bits量化后的波形
 
-![1](http://images0.cnblogs.com/blog2015/701997/201507/231454496935859.png)
+![1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image103.png)
 
-![2](http://images0.cnblogs.com/blog2015/701997/201507/231454562711483.png)
+![2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image104.png)
 
 ### 代码实现
 

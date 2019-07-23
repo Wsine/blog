@@ -5,24 +5,24 @@
 
 本身已安装过其它软件，所以之前就安装好了一些必备的依赖库。
 安装方法都是`sudo apt-get stall xxx`比较简单
-![1](http://images0.cnblogs.com/blog2015/701997/201507/212207453812915.png)
-![2](http://images0.cnblogs.com/blog2015/701997/201507/212207590994290.png)
+![1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image24.png)
+![2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image25.png)
 
 接着就是解压两个软件到本地中，我选择的目录是`~/Software/OS_Concepts`
-![3](http://images0.cnblogs.com/blog2015/701997/201507/212208398814531.png)
+![3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image26.png)
 
 初始化bochs的配置，命令行完成，然后打开configure文件却不知道该如何查看，截图这个以示完成（我用的文本编辑器是sublime）
-![4](http://images0.cnblogs.com/blog2015/701997/201507/212209023819657.png)
+![4](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image27.png)
 
 接着是修改ubuntu的环境变量，添加pintos进去，并运行试试
-![5](http://images0.cnblogs.com/blog2015/701997/201507/212209409903528.png)
-![6](http://images0.cnblogs.com/blog2015/701997/201507/212210007714384.png)
+![5](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image28.png)
+![6](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image29.png)
 
 更改pintos下src/utils文件夹下面的Makefile文件
-![7](http://images0.cnblogs.com/blog2015/701997/201507/212210238341639.png)
+![7](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image30.png)
 
 然后make命令执行之后，进行make check操作后截图可见
-![8](http://images0.cnblogs.com/blog2015/701997/201507/212210393491200.png)
+![8](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image31.png)
 
 ### 后记
 

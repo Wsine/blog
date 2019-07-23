@@ -2,23 +2,23 @@
 
 时域上的表达式：
 
-![1](http://images0.cnblogs.com/blog2015/701997/201507/231405091627262.png)
+![1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image59.png)
 
 其中，m(t)是交流信号分量，均值为0，需要被调制的信号，此处选择一个正弦信号，正好满足要求。
 A0是一个直流分量，表示叠加的直流分量，用加法器可直接叠加在被调制信号上。
 载波信号根据题目要求为余弦信号，在labview中用正弦信号仿真器相位偏移90度得到余弦信号。
 接着根据下面的调制器模型
 
-![2](http://images0.cnblogs.com/blog2015/701997/201507/231405200068883.png)
+![2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image60.png)
 
 得到Sm(t)信号。结果输出载波信号的时域图像和频域图像，Sm(t)的时域图像和频域图像。
 
 ### 实现效果
 
-![3](http://images0.cnblogs.com/blog2015/701997/201507/231405306465331.png)
+![3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image61.png)
 
 被调制信号原本为余弦信号，经过直流分量的叠加，均值为30。对应的频谱为双峰，经过载波信号的调制，从频谱图中可以看出，频谱偏移了正好是载波频率的大小。
 
 ### 后端实现
 
-![4](http://images0.cnblogs.com/blog2015/701997/201507/231410411931858.jpg)
+![4](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image62.jpg)

@@ -197,11 +197,11 @@ View.OnTouchListener clearTouchListener = new View.OnTouchListener() {
 
 初始界面->依次输入->短按清除->长按清除
 
-<img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144927833-1424051815.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144933349-1566338237.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144938489-230455039.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144944130-762308960.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image355.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image356.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image357.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image358.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
 
 空白呼叫->最长三行->输入电话号码->成功呼叫
 
-<img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144948677-1936642997.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144953239-592553562.jpg" alt="cant show" style="display: inline-block; width: 22%; " /><img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129144957614-1378734194.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129145002161-181732559.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image359.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image360.jpg" alt="cant show" style="display: inline-block; width: 22%; " /><img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image361.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image362.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
 
 ## 一些总结
 

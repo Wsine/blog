@@ -13,7 +13,7 @@ http://www.ccs.neu.edu/home/amislove/teaching/cs5600/fall10/pintos/pintos_7.html
 
 > The following table summarizes how fixed-point arithmetic operations can be implemented in C. In the table, x and y are fixed-point numbers, n is an integer, fixed-point numbers are in signed p.q format where p + q = 31, and f is 1 << q:
 
-![fixpoint](http://images0.cnblogs.com/blog2015/701997/201507/221544160539540.png)
+![fixpoint](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image22.png)
 
 根据官方文档的说明，我的实现方法是位运算模拟浮点数运算：
 
@@ -36,7 +36,7 @@ typedef int64_t fixed_t;
 
 官方文档的说明：
 
-![state](http://images0.cnblogs.com/blog2015/701997/201507/221544496934029.png)
+![state](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image23.png)
 
 得到了关于priority 、recent_cpu 、load_avg的计算公式
 具体实现：

@@ -280,8 +280,8 @@ public void onDestroy() {
 
 打开界面->播放一会儿进度条实时变化->拖动进度条->点击暂停->点击Stop->点击下一首（歌曲时间变化）->点击上一首->点击退出
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135247804-1526416708.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135253397-1623986004.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135258491-1819953533.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135303288-1052914881.png" alt="cant show" style="display: inline-block; width: 22%; " />
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135308288-1470186544.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135312491-1881287969.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135317554-1751431966.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135323616-2074071411.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image363.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image364.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image365.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image366.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image367.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image368.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image369.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image370.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 ## 一些总结
 
@@ -297,7 +297,7 @@ Service的生命周期简单到不能再简单了，一条流水线表达了整�
 service的活动生命周期是在onStart()之后，这个方法会处理通过startServices()方法传递来的Intent对象。音乐service可以通过开打intent对象来找到要播放的音乐，然后开始后台播放。注： service停止时没有相应的回调方法，即没有onStop()方法，只有onDestroy()销毁方法。
 onCreate()方法和onDestroy()方法是针对所有的services，无论它们是否启动，通过Context.startService()和Context.bindService()方法都可以访问执行。然而，只有通过startService()方法启动service服务时才会调用onStart()方法。
 
-![Service](http://images2015.cnblogs.com/blog/701997/201602/701997-20160202135346038-241591351.png)
+![Service](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image371.png)
 图片来自网络，忘记出处了
 
 **简述如何使用Handler实时更新UI**

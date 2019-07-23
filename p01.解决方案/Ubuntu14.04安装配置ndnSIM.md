@@ -43,7 +43,7 @@ git clone git://github.com/NDN-Routing/ndnSIM.git ns-3/src/ndnSIM
 ns-3目前的版本更新到了v2.1，但是ndnSIM版本没支持这么高，这些选用论文中相同的版本，都是v0.4.3，使用git版本回退功能到v0.4.3版本的Release，可以使用`git branch`查看当前版本信息，注意使用cd命令改变路径
 
 下载修改完成后目录结构如下
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151119221213905-2111826342.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image437.png)
 
 请主动忽略其余文件夹，关键目录结构树如下
 - ndnSIM
@@ -78,7 +78,7 @@ sudo ./waf install
 `-j4`这个参数是使用4核同时编译，加快速度，考虑自己环境实际使用，如果使用不当会更慢，编译过程，对于`make`指令也适用
 
 安装完成后模块信息如图所示
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151119221456483-1053914837.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image438.png)
 
 注意检查关键模块ndnSIM模块成功安装与否
 

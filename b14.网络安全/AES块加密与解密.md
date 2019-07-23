@@ -15,18 +15,18 @@
 
 **CBC模式**观察下图：
 
-![](http://images2015.cnblogs.com/blog/701997/201606/701997-20160627154011874-134666816.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image237.png)
 
 这幅图就是CBC解密的整个流程图，注意到Key指的是已经给出了的
 
 Key的Expansion形式，也就是经过了扩展成44个Byte的Key，给出的Key是4个Byte的形式。这里的Initialization Vector实际上就是给出的密文中的前16位。Ciphertext的一个单位长度是16个Byte，最后的操作如果不足16个Byte的，需要补足16个Byte，再进行AES块解密操作。中间的Block Cipher Decryption在此处是一个黑盒子，用于AES的解密操作，后面再说AES的认识和理解。注意到，AES算法中的数据类型都是定义好的，详细可以看教材的P194页，总的来说分为四个部分：Byte、Word、Block和State。
 
-![](http://images2015.cnblogs.com/blog/701997/201606/701997-20160627154058249-534691678.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image238.png)
 
 在这里，四种数据类型之间是可以转换的，但是遵循一定的规则。
 在实验中主要用到了Block转State和State转Block两种数据类型，对应的转换规则为：
 
-![](http://images2015.cnblogs.com/blog/701997/201606/701997-20160627154302140-1578927038.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image239.png)
 
 可以看到，Block是按照人类阅读规则，从左往右的顺序排列的，但是State是反人类规则，竖式排列的规则，这个坑好累。
 
@@ -34,7 +34,7 @@ Key的Expansion形式，也就是经过了扩展成44个Byte的Key，给出的Ke
 
 **CTR模式**观察下图：
 
-![](http://images2015.cnblogs.com/blog/701997/201606/701997-20160627154344812-112507046.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image240.png)
 
 CTR模式与CBC模式相比，不同的地方在于，进行AES解密的时候，使用的是一个Counter来进行AES加密，Counter的初始值就是Initialization Vector，每一轮加密就对Counter的值进行+1操作。最后通过AES加密后的结果，与密文进行异或操作，从而得到对应的原文。注意，这里是解密的过程，但是中间的黑盒子也是使用AES加密操作来进行。
 
@@ -53,7 +53,7 @@ AddRoundKey：
 
 整个流程可以看这样一幅图：
 
-![](http://images2015.cnblogs.com/blog/701997/201606/701997-20160627154443906-849166852.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image241.png)
 
 ### 代码分析
 

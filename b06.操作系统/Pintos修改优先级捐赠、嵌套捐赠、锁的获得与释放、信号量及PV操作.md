@@ -60,17 +60,17 @@ lock_init (struct lock *lock)
 单独捐赠的情况：
 当高优先级线程因为低优先级线程占用资源而阻塞时，应将低优先级线程的优先级提升到等待它所占有的资源的最高优先级线程的优先级。即将优先级较高的线程的优先级 donate 给持有资源的优先级的进程，让其先执行。
 
-![single](http://images0.cnblogs.com/blog2015/701997/201507/221139209742870.png)
+![single](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image19.png)
 
 多重捐赠的情况：
 struct thread 中的 list locks, 还有 struct locks 中的 lock_priority，两者配合使用,应对 multiple-donate 的情况。由于每次 donate 的时候都是因为优先级高的一个进程需要申请一个握在优先级比较低的线程手中的,因此锁在涉及到 priority-donate 的时候维护一个lock_priority,记录获得这个锁的线程此时的优先级,因为存在 multiple-donate,线程可能会接受几个不同的优先级,因此需要在锁中,而不是在线程的结构中维护这样一个信息,以在释放锁,undonate 的时候能够将线程优先级恢复到正确的值。
 
-![multi](http://images0.cnblogs.com/blog2015/701997/201507/221139363188014.png)
+![multi](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image20.png)
 
 嵌套捐赠的情况：
 通过检测被捐赠的线程是否已经获得了所需要的全部锁来判断是否出现嵌套捐赠的情况，如是则设置好参数来进行下一轮的优先级捐赠。和情况一差不多，也就是多捐赠一次，知道被捐赠线程获得了所需要的全部的锁。
 
-![nest](http://images0.cnblogs.com/blog2015/701997/201507/221139553496201.png)
+![nest](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image21.png)
 
 ```
 void

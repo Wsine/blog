@@ -3,13 +3,13 @@
 ------
 ## 整体电路图
 
-![整体电路图](http://images.cnitblog.com/blog/701997/201502/151420243083962.png)
+![整体电路图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image193.png)
 
-![整体电路图](http://images.cnitblog.com/blog/701997/201502/151421063706244.png)
+![整体电路图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image194.png)
 
 #### CPU状态图
 
-![CPU状态图](http://images.cnitblog.com/blog/701997/201502/151421363867308.png)
+![CPU状态图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image195.png)
 
 
 idle代表没有工作，exec代表在工作

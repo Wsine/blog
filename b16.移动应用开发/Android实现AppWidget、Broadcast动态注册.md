@@ -106,7 +106,7 @@ send.setOnClickListener(new View.OnClickListener() {
 
 没注册时敲hello world并发送->界面没有内容出现->注册后发送->widget中出现hello world
 
-<img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129154658552-388074970.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129154703599-1141757332.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129154711739-1509549936.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201601/701997-20160129154719099-1205487377.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image302.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image303.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image304.jpg" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image305.jpg" alt="cant show" style="display: inline-block; width: 22%; " />
 
 ## 一些总结
 

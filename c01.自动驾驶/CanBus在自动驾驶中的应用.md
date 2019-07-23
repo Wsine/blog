@@ -22,7 +22,7 @@
 >
 > **ISO 11898-2**，也称为高速度CAN。它在总线的两端均接有120Ω电阻。
 
-![can](https://upload.wikimedia.org/wikipedia/commons/b/bc/CAN_ISO11898-2_Network.png)
+![can](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image392.png)
 
 实际应用中，并不是只要满足了这样的连接方式就可以的，我来列举一下潜在的几个坑：
 

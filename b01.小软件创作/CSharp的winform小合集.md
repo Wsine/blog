@@ -16,7 +16,7 @@
 10. 输出ASCII码，初学编程不想写'a'-'A'这样看起来不美观的东西为方便自己所写
 
 ### 截图
-![](http://images.cnitblog.com/blog/701997/201502/231436455332156.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image1.png)
 
 ### 文件
 [度盘下载](http://pan.baidu.com/s/1i36AsZV)

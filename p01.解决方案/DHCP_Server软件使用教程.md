@@ -10,25 +10,25 @@
 
 首先以管理员权限打开 dhcpwiz.exe 这个软件
 
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151109223121650-661789014.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image418.png)
 
 这里以太网的IP-Adress应显示为上面配置的192.168.1.1
 
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151109223203837-745613458.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image419.png)
 
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151109223221181-1034817960.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image420.png)
 
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151109223234853-744985202.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image421.png)
 
 这里点击一下Write INI file再下一步
 
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151109223452681-1505239798.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image422.png)
 
 这里依次点击Configure->Install-> Start，勾选Run DHCP server immediatly，如下图显示，点击完成
 
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151109223647009-1170923699.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image423.png)
 
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151109223713212-45818515.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image424.png)
 
 这是选择Continue as tray app，然后DHCP服务启动，右下角任务栏有图标显示
 
@@ -36,13 +36,13 @@
 
 然后你会看到这个显示（这是Win10界面，不同的系统不同，就是一个系统通知
 
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151109224032806-706885774.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image425.png)
 
 上图就是ip地址了
 
 然后用Putty软件进入即可
 
-![](http://images2015.cnblogs.com/blog/701997/201511/701997-20151109224105478-1398212918.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image426.png)
 
 ### 后记
 
