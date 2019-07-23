@@ -177,7 +177,7 @@ clean:
 
 ## 运行截图
 
-![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204145755772-872748234.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image216.png)
 
 ## 问题解决方案
 

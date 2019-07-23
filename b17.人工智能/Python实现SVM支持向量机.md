@@ -333,6 +333,6 @@ b =
  [[-2.89901748]]
 finish all in 2.5683854014099112
 ```
-![结果图](http://images2015.cnblogs.com/blog/701997/201602/701997-20160203221749554-691812019.jpg)
+![结果图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image391.jpg)
 
 绘图方面还存在一些bug。

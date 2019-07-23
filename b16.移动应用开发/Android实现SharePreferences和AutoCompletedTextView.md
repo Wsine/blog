@@ -214,15 +214,15 @@ protected void onResume() {
 
 初始化界面->填入账号密码(掩码)并选择记住密码->点击登陆正确则跳转页面->输入部分提示
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141750600-222985508.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141754882-34956978.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141759538-985980227.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141803288-1058219011.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image323.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image324.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image325.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image326.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 点击读取文件->新建并保存文件->删除文件->重新读取返回失败
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141845366-1694182649.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141849304-1713469100.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141852397-98649218.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141856663-985727093.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image327.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image328.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image329.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image330.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 返回按钮登陆信息还在(页面已注销了的)->取消记住密码->登陆跳转->返回按钮登陆密码消失
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141904632-909052830.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141909100-247323991.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141914835-1359489365.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202141921100-1497743934.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image331.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image332.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image333.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image334.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 ## 一些总结
 

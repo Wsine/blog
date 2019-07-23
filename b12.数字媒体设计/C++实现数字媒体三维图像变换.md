@@ -116,9 +116,9 @@ C++实现了用glut画物体对象的功能。并附带放大缩小，旋转，�
 
 ### 程序截图
 
-![132](http://images0.cnblogs.com/blog2015/701997/201507/151702581268376.png)
+![132](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image221.png)
 
-![456](http://images0.cnblogs.com/blog2015/701997/201507/151703075327769.png)
+![456](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image222.png)
 
 ### 完整代码
 

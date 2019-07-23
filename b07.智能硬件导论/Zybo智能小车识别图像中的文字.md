@@ -54,9 +54,9 @@ op1 = {
 }
 
 op2 = {
-	#'Url': 'http://ww2.sinaimg.cn/bmiddle/6a6a6ffdjw1evhnx9hb3ij20hs0np40m.jpg'
-	#'Url': 'http://ww3.sinaimg.cn/bmiddle/6a6a6ffdjw1evhlb459dfj20hs0npdha.jpg'
-	'Url': 'http://ww4.sinaimg.cn/bmiddle/6a6a6ffdjw1evi6s14no4j20hs0npq43.jpg'
+	#'Url': 'https://wsine.cn-gd.ufileos.com/image/wsine-blog-image32.jpg'
+	#'Url': 'https://wsine.cn-gd.ufileos.com/image/wsine-blog-image33.jpg'
+	'Url': 'https://wsine.cn-gd.ufileos.com/image/wsine-blog-image34.jpg'
 }
 
 r = requests.get('http://api.projectoxford.ai/vision/v1/ocr',params=op1, timeout=15)

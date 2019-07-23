@@ -19,7 +19,7 @@
 5. 修改网络ID和通道这个参数，和其他人的不一样就可以了。
 6. 最后点击保存设置。
 
-![USB修改后的](http://images2015.cnblogs.com/blog/701997/201606/701997-20160620141530865-186956651.jpg)
+![USB修改后的](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image393.jpg)
 
 **数传模块（telem接口）：**
 1. 首先电脑安装usb-ttl模块的驱动，一般购买时店家会提供驱动。（必须正确驱动）
@@ -37,7 +37,7 @@ TTL->telem: GND ------------ GND
 6. 修改网络ID和通道这个参数，和USB口的数传模式保持一致。
 7. 最后点击保存设置。
 
-![telem修改后的](http://images2015.cnblogs.com/blog/701997/201606/701997-20160620141621772-1662028527.jpg)
+![telem修改后的](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image394.jpg)
 
 **特殊修改**
 
@@ -49,7 +49,7 @@ TTL->telem: GND ------------ GND
 
 1. 使用无线连接同时修改本地端和无线端的参数不靠谱，因为无线连接不稳定（我就是这么挂掉的）。
 2. 国内最好使用433MHz的数传模块，相比于国外的频谱分布，国内的915MHz和联通公司的GSM网络使用同一频段，会产生一定干扰。
-![频段图](http://images2015.cnblogs.com/blog/701997/201510/701997-20151025224758474-1128696317.jpg)
+![频段图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image395.jpg)
 
 3. 在一定的范围内，保存默认的57600的波特率已经足够使用，打开ECC端口能使连接速度提高。
 

@@ -7,17 +7,17 @@
 
 ### 实现效果
 
-![1](http://images0.cnblogs.com/blog2015/701997/201507/241318284741503.png)
+![1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image66.png)
 
-![2](http://images0.cnblogs.com/blog2015/701997/201507/241318343964025.png)
+![2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image67.png)
 
 PDM输出图2：
 
-![3](http://images0.cnblogs.com/blog2015/701997/201507/241318409125135.png)
+![3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image68.png)
 
 对比分析两次的PDM图形，方波信号的占空比一直在持续变化，变化的根据就是正弦信号的幅值。
 结果图中，正弦信号恢复准确
 
 ### 后端实现
 
-![4](http://images0.cnblogs.com/blog2015/701997/201507/241318506621957.png)
+![4](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image69.png)

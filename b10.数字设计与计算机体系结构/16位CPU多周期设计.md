@@ -3,12 +3,12 @@
 这个工程完成了16位CPU的多周期设计，模块化设计，有包含必要的分析说明。
 
 ### 多周期CPU结构图
-![MultiCycle](http://images0.cnblogs.com/blog2015/701997/201507/180047039545979.jpg)
+![MultiCycle](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image109.jpg)
 
 
 ### 多周期CPU设计真值表
 对应某一指令的情况，但仅当对应周期时才为对应的输出，不是组合逻辑
-![TrueTable](http://images0.cnblogs.com/blog2015/701997/201507/180049013138791.jpg)
+![TrueTable](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image110.jpg)
 
 ### 设计思路
 1. Instruction/Data Memory：
@@ -16,32 +16,32 @@
 	1、	输入8位的地址PC，输出对应内存的16位指令内容
 	2、	输入8位的地址Address，输出对应内存的DataMemory的内容
 输入写入内容WD，当WE写入信号为真的时候，写入到地址为Address的内存里面
-![IM](http://images0.cnblogs.com/blog2015/701997/201507/180050578763948.png)
+![IM](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image111.png)
 
 2. Control Unit
 唯一输入16位的指令，根据状态转移图和真值表，输出唯一信号列表，转移方向有指令的高五位Op来决定，并且地址输出集成在控制单元模块中，简化了框图。
-![456](http://images0.cnblogs.com/blog2015/701997/201507/180051472357468.png)
+![456](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image112.png)
 
 
 3. Register File
 输入三个地址和写入内容，写入信号，输出两个地址对应的内容
 由于单周期内不能一边读一边写，故有一个时钟信号，通过一级缓存，在下一个时钟信号来临时立即写入内存
-![RF](http://images0.cnblogs.com/blog2015/701997/201507/180052076413967.png)
+![RF](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image113.png)
 
 
 4. ALU
 输入运算数和指令，输出运算结果以及标志位
 由于单周期内，标志位并不在当前周期而在下一周期使用，故增加时钟信号，通过一级缓存，在下一个周期时判断使用
-![ALU](http://images0.cnblogs.com/blog2015/701997/201507/180052313459093.png)
+![ALU](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image114.png)
 
 
 5. PC-NextPC
 根据分支指令，跳转指令和标志位的组合逻辑，决定PC是+1还是到某目标位置，且这里需要一个enable信号进行PC写入控制
-![PC](http://images0.cnblogs.com/blog2015/701997/201507/180052535483777.png)
+![PC](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image115.png)
 
 
 ### 多周期CPU状态转移图
-![PCFSM](http://images0.cnblogs.com/blog2015/701997/201507/180053130798176.jpg)
+![PCFSM](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image116.jpg)
 
 - 写入指令：需要最长的5个周期，读取指令一个周期，指令解码一个周期，寄存器寻址一个周期，读取Data一个周期，写入寄存器一个周期，总共用了五个周期。
 - 存储指令：需要4个周期，读取指令一个周期，指令解码一个周期，寄存器寻址一个周期，写入寄存器一个周期，总共用了4个周期。

@@ -108,13 +108,13 @@ public class nslookup {
 ## 运行截图
 
 - 输入域名的结果
-	![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204143006710-1982078121.png)
+	![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image206.png)
 
 - 输入IP地址的结果
-	![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204143017085-499810690.png)
+	![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image207.png)
 
 - 输入本机上IP地址的结果
-	![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204143024382-1622255024.png)
+	![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image208.png)
 
 ------
 
@@ -238,7 +238,7 @@ public class nslookupAdvanced {
 ## 增强版运行结果
 
 - 输入一个绑定到多个IP地址上的域名的结果
-	![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204143101882-1091686689.png)
+	![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image209.png)
 
 - 输入IP地址的结果
-	![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204143109038-1970401423.png)
+	![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image210.png)

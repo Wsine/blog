@@ -12,7 +12,7 @@
 
 调制格式识别过程如下：
 
-![1](http://images0.cnblogs.com/blog2015/701997/201507/241405410991553.png)
+![1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image80.png)
 
 **信号预处理**
 
@@ -22,11 +22,11 @@
 
 令s ̅(t)表示信号s(t)的均值，即
 
-![2](http://images0.cnblogs.com/blog2015/701997/201507/241405590997453.png)
+![2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image81.png)
 
 则去除直流后的信号表示为
 
-![3](http://images0.cnblogs.com/blog2015/701997/201507/241406116158828.png)
+![3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image82.png)
 
 ```
 %去除直流成分
@@ -37,11 +37,11 @@ CMAOUT = CMAOUT - mean(CMAOUT);
 
 由于信道衰落影响到接收信号的功率，提取有关幅度的特征参量时会出现不一致的情况。因此需要对接收信号进行功率归一化，以消除信号功率的影响。令σ_x^2表示已经经过去除直流分量之后的信号x(t)的平均功率，即
 
-![4](http://images0.cnblogs.com/blog2015/701997/201507/241406477246831.png)
+![4](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image83.png)
 
 那么经过功率归一化后的信号表示为
 
-![5](http://images0.cnblogs.com/blog2015/701997/201507/241406548812112.png)
+![5](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image84.png)
 
 ```
 %normalization接收信号功率归一化
@@ -54,28 +54,28 @@ CMAOUT=CMAOUT/sqrt(mean(abs(CMAOUT).^2));
 
 随机过程的k阶累积量为
 
-![6](http://images0.cnblogs.com/blog2015/701997/201507/241407131462997.png)
+![6](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image85.png)
 
 则根据定义，随机过程的二阶和四阶累积量为
 
-![7](http://images0.cnblogs.com/blog2015/701997/201507/241407304902499.png)
+![7](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image86.png)
 
-如果定义![8](http://images0.cnblogs.com/blog2015/701997/201507/241407523964739.png)
+如果定义![8](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image87.png)
 
-，令![9](http://images0.cnblogs.com/blog2015/701997/201507/241408024284476.png)
+，令![9](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image88.png)
 
 ，则上面累积量的表达式化简为：
 
-![10](http://images0.cnblogs.com/blog2015/701997/201507/241408280218355.png)
+![10](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image89.png)
 
 在信号的实际处理中，要从有限的接收数据中估计信号的累积量，可以采用采样点的平均代替理论的平均。例如，给定观察数据r_k,k=1,2,⋯,N,则可以使用下来的估计表达式。当信号和噪声的8阶矩存在并为有限值的时候，其不同定义的4阶累积量的估计是渐进无偏的一致估计。
 
-![11](http://images0.cnblogs.com/blog2015/701997/201507/241408522404924.png)
+![11](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image90.png)
 
 由于处理的信号是在AWGN信道下接收的，所以对于C21这个二阶累积量来说，由于是信号模的平方近似计算得到的，因此噪声的功率会也包含进去了。所以，需要处理C21这个累积量。由于信噪比已知，则可以计算信号功率根据信噪比关系求得噪声功率。
 令snr为信噪比，则
 
-![12](http://images0.cnblogs.com/blog2015/701997/201507/241409153189706.png)
+![12](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image91.png)
 
 C21的累积量的更新为
 
@@ -101,21 +101,21 @@ C40_normal = C40_hat/C21_hat.^2;
 
 从论文中得知的一些四阶累积量的性质：
 
-![13](http://images0.cnblogs.com/blog2015/701997/201507/241409369597962.png)
+![13](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image92.png)
 
 但是，对于实际接收到的信号，由于信号功率的影响，无法从累积量的绝对值中进行信号的区分。为了能够各阶累积量相比较，必须采取将信号功率归一化的方法，使得不同信号的累积量具有可比性。归一化是假设信号具有单位功率，即C_21=1,其他四阶累积量利用C_21进行归一化：
 
-![14](http://images0.cnblogs.com/blog2015/701997/201507/241409498038239.png)
+![14](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image93.png)
 
 查询可得不同调制方式的归一化四阶累积量理论值
 
-![15](http://images0.cnblogs.com/blog2015/701997/201507/241410057095512.png)
+![15](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image94.png)
 
-![16](http://images0.cnblogs.com/blog2015/701997/201507/241410099901038.png)
+![16](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image95.png)
 
 根据以上表格内容可以做出判断
 
-![17](http://images0.cnblogs.com/blog2015/701997/201507/241410276623739.png)
+![17](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image96.png)
 
 ```
 AbsC40 = abs(C40_normal);
@@ -189,19 +189,19 @@ M = 2^System.BitPerSymbol;
 由于没有找到32QAM的累积量的理论值，但是通过实验探究可以观察在32QAM的调制方式下。
 通过输出语句我们可以观察到如下
 
-![18](http://images0.cnblogs.com/blog2015/701997/201507/241410515061122.png)
+![18](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image97.png)
 
 当信噪比在不同的取值情况下面，由于归一化处理，32QAM的C40的模值的理论值应为0.2
 
 在不同的信噪比下面，识别正确率如下图：
 
-![19](http://images0.cnblogs.com/blog2015/701997/201507/241411033189111.png)
+![19](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image98.png)
 
 要求的信噪比是12—15，在信噪比的比较低的时候，识别会有一定的误差，例如信噪比只有5的情况下比较明显，随着信噪比的提升，噪声的影响减少，分类识别的方法体现出来良好的稳定性。可以看到，信噪比大于10之后的识别率几乎都达到了100%。其中PSK的识别率是最好的。64QAM在累积量的识别方法里面低信噪比时稍微差点。
 
 对应的调制方式星座图如下：
 
-![20](http://images0.cnblogs.com/blog2015/701997/201507/241411128967218.png)
+![20](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image99.png)
 
 其中64QAM的区分没有特别明显，这就是低信噪比时产生的识别困难情况。但是稍微提高信噪比就能很好的识别。
 

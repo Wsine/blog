@@ -346,15 +346,15 @@ lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
 初始化界面->点击添加->填入错误信息点击确定->填入正确信息
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145058194-1282877638.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145102569-886392416.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145106663-1292635277.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145111788-1078852475.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image335.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image336.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image337.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image338.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 正确信息确定后主界面增加->点击张三进入修改->修改为正确内容->确定确定后更新
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145121600-231845151.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145125819-2077936640.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145130132-1292244035.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145134444-1438995011.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image339.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image340.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image341.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image342.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 长按李四提示是否删除->点击确认删除后更新界面
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145141772-546697164.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202145148054-189841865.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image343.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image344.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 ## 一些总结
 

@@ -16,17 +16,17 @@
 
 **该CPU用到的指令集,16位8个通用寄存器**
 
-![CPUregister](http://images0.cnblogs.com/blog2015/701997/201507/201304091603243.png)
+![CPUregister](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image148.png)
 
 **该CPU的全部指令一览**
 
-![Op1](http://images0.cnblogs.com/blog2015/701997/201507/201304362236809.png)
-![Op2](http://images0.cnblogs.com/blog2015/701997/201507/201304470668430.png)
-![Op3](http://images0.cnblogs.com/blog2015/701997/201507/201304549102866.png)
+![Op1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image149.png)
+![Op2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image150.png)
+![Op3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image151.png)
 
 **该CPU的系统框图**
 
-![BlockDiagram](http://images0.cnblogs.com/blog2015/701997/201507/201305089102456.png)
+![BlockDiagram](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image152.png)
 
 ### 设计思路：(部分代码太长处理为伪代码)
 
@@ -34,74 +34,74 @@
 
 时序逻辑，表示CPU当前状态，有两个枚举值exec和idle，分别是正在运行和空闲两种状态
 
-![CPU Control](http://images0.cnblogs.com/blog2015/701997/201507/201305443633060.png)
+![CPU Control](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image153.png)
 
 - Instruction Fetch
 
 时序逻辑，每一个上升沿从Instruction Memory中根据地址pc取出一条指令，LOAD指令需要根据不同的指令从当前CPU运算中特定位置读取；Branch指令及其标志位为true则Flush掉一条指令；跳转指令则直接跳转并处理pc值延后一个周期的情况，其余情况直接读取下一条指令
 
-![IF1](http://images0.cnblogs.com/blog2015/701997/201507/201306045048872.png)
-![IF2](http://images0.cnblogs.com/blog2015/701997/201507/201306116604152.png)
-![IF3](http://images0.cnblogs.com/blog2015/701997/201507/201306182231248.png)
+![IF1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image154.png)
+![IF2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image155.png)
+![IF3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image156.png)
 
 - Instruction Decode （以reg_A为例子）
 
 时序逻辑，根据不同的指令，从通用寄存器中取出相应的值出来作运算或者存储到Data Memory中；如果为Branch指令且标志位为true则需要Flush掉当前内容；否则如果冲突出现，则需要根据不同的运算指令从不同的地方取出内容
 
-![ID1](http://images0.cnblogs.com/blog2015/701997/201507/201306331135166.png)
-![ID2](http://images0.cnblogs.com/blog2015/701997/201507/201306430518229.png)
-![ID3](http://images0.cnblogs.com/blog2015/701997/201507/201306503014481.png)
-![ID4](http://images0.cnblogs.com/blog2015/701997/201507/201306563797190.png)
+![ID1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image157.png)
+![ID2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image158.png)
+![ID3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image159.png)
+![ID4](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image160.png)
 
 - Execute
 
 时序逻辑，根据不同的运算指令作不同的运算；如果为存储指令则直接转移到下一级寄存器，并将写入指令标记为true；如果为其余指令，则保持当前内容不变
 
-![EX](http://images0.cnblogs.com/blog2015/701997/201507/201307100359351.png)
+![EX](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image161.png)
 
 - ALU
 
 组合逻辑，根据不同的指令进行不同的运算，得注意SLA和SRA两条指令在verilog里面的做法。同时注意进位操作的处理。详细看代码。
 
-![ALU](http://images0.cnblogs.com/blog2015/701997/201507/201307249264270.png)
+![ALU](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image162.png)
 
 - Memory Access
 
 时序逻辑，只有当LOAD指令需要从Data Memory里面取出内容，其余情况把reg_C传递给reg_C1即可。cf进位标志在此阶段更新。
 
-![MEM](http://images0.cnblogs.com/blog2015/701997/201507/201307373792132.png)
+![MEM](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image163.png)
 
 - Write Back
 
 时序逻辑，对需要写回到寄存器的指令把运算结果写回到寄存器中，其余情况只需让寄存器保持不变
 
-![WB](http://images0.cnblogs.com/blog2015/701997/201507/201307493015323.png)
+![WB](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image164.png)
 
 - Instruction Memory
 
 组合逻辑，根据地址的读入，输出一条指令
 
-![IM](http://images0.cnblogs.com/blog2015/701997/201507/201307591298886.png)
+![IM](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image165.png)
 
 - Data Memory
 
 读取Data是组合逻辑，根据地址直接读取一条指令输出。
 写入Data是时序逻辑，每一个周期可能会进行一次写入，根据dw信号进行写入，Memory的时钟频率需要比CPU的时钟快。
 
-![DM](http://images0.cnblogs.com/blog2015/701997/201507/201308102381194.png)
+![DM](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image166.png)
 
 ### CPU仿真测试
 
 Testbench内容
 
-![Testbench](http://images0.cnblogs.com/blog2015/701997/201507/201308296442865.png)
+![Testbench](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image167.png)
 
 在test中，通过每隔5个ns，时钟取反一次，CPU从button每20个ns进行一次反转即时钟周期为20ns，Memory时钟的设置为三个clk即15个ns反转一次，通过输出用到的通用寄存器和用到的data memory里面的变量来观察整个CPU的流程结果，测试CPU是否正确工作。以及观察仿真流程的变化过程测试CPU是否正常工作。
 
 Instruction Memory:
 
-![Instructino1](http://images0.cnblogs.com/blog2015/701997/201507/201308464261238.png)
-![Instructino2](http://images0.cnblogs.com/blog2015/701997/201507/201309034882526.png)
+![Instructino1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image168.png)
+![Instructino2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image169.png)
 
 **下面结果用16进制表示，括号内为10进制**
 指令0：gr1原本初始化时为0，把gr1加上一个立即数AB，gr1为00AB
@@ -139,8 +139,8 @@ Instruction Memory:
 
 **仿真结果**
 
-![re1](http://images0.cnblogs.com/blog2015/701997/201507/201309192542842.png)
-![re2](http://images0.cnblogs.com/blog2015/701997/201507/201309264107121.png)
+![re1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image170.png)
+![re2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image171.png)
 
 **结果分析**
 1. 指令0~3，测试立即数加法和加法，计算00AB+3C00，得到3CAB存储在dm0上。此处有Data Hazard的产生，ADD指令取gr1和gr2的时候，ADDI和LDIH指令都还没有到达WB指令，因此要提前从结果取出。而结果显示dm0的结果为3CAB正确。√
@@ -157,18 +157,18 @@ Instruction Memory:
 补充说明：
 结果中出现两个PC = 6，三个PC = 10，两个PC = 16的情况，是由于ISE中的检测机制$monitor函数产生的，只要有值变化就会多输出一条，由于Memory的时钟频率比CPU的时钟频率高，因此Memory的变化先于CPU里面的，所以多输出一条，后面的情况类似。实际情况为一个PC = 6，两个PC = 10，一个PC = 16，其中两个PC = 10的情况是LOAD指令产生的Stall，这是正确的。附仿真波形图（较难看清）：
 
-![fangzhen](http://images0.cnblogs.com/blog2015/701997/201507/201309451132109.png)
+![fangzhen](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image172.png)
 
 **三个实用测试**
 
-![Pro13](http://images0.cnblogs.com/blog2015/701997/201507/201312056138918.jpg)
-![Pro14](http://images0.cnblogs.com/blog2015/701997/201507/201313418167861.jpg)
-![Pro15](http://images0.cnblogs.com/blog2015/701997/201507/201314179106933.jpg)
+![Pro13](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image173.jpg)
+![Pro14](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image174.jpg)
+![Pro15](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image175.jpg)
 
 **一些感言**
 刚开始做的时候对Hazard的情况不是很理解，原本以为只需要判断指令的操作数域是否发生冲突就算做完Data Hazard的冲突处理，就像PPT上面的图指示的一样。
 
-![ppt](http://images0.cnblogs.com/blog2015/701997/201507/201314427548143.png)
+![ppt](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image176.png)
 
 但是自己开始做了之后就发现并不是这样的，指令的类型很多，例如运算指令，比较指令，分支指令，跳转指令，存储指令，读取指令，单纯判断操作数域的冲突是不足以判断是否产生Hazard的，因为有些指令时立即数也可能和gr寄存器的编号相同。所以需要连同op域一同比较。
 个人对Hazard的理解是，指令都是每一个时钟周期下来流水线往前流动一级，但是一次完整的周期包括读取指令、判断指令、运算指令、存储指令、回写指令这五个周期。Data Hazard是指前一周期的指令还没到达WB回写寄存器这一阶段，后一周期就需要在ID判断指令阶段读取相应寄存器，因此需要把Data Forwarding操作，也就是优先把运算完成的内容取出来；Stall是针对LOAD指令的特殊操作，LOAD只能在MEM阶段才能得到相应的内容，如果下一周期的指令想要Data是不能Forwarding得到的，只能通过延后一周期才能配合Data Forwarding得到相应的内容；Flush是指分支和跳转指令需要到达EX阶段才能知道标志位Flag的判断是否应该跳转，如果需要跳转，则需要把后两个周期读进来的指令冲掉，否则会对结果有无关的影响；如果不需要Flush，则流水线继续往前流动即可。

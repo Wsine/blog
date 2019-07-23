@@ -21,11 +21,11 @@ sin(2 * pi * 60 * t) + cos(2 * pi * 25 * t) + sin(2 * pi * 30 * t)
 
 **正弦信号：**
 
-![1](http://images0.cnblogs.com/blog2015/701997/201507/231525010212255.png)
+![1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image105.png)
 
 恢复的波形为
 
-![2](http://images0.cnblogs.com/blog2015/701997/201507/231525095535250.png)
+![2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image106.png)
 
 对比80Hz的信号和121Hz的信号可知，原信号为60Hz的信号，至少需要120Hz才能不失真地恢复信号，由图可得，80Hz的信号虽然还是正弦信号，但是相位信息已经失真了。121Hz和150Hz的抽样信息则准确地恢复了原信号
 
@@ -50,9 +50,9 @@ subplot(4, 2, 2); plot(W, origin_F); title('原信号频域');
 
 运行效果图：
 
-![3](http://images0.cnblogs.com/blog2015/701997/201507/231525342094517.png)
+![3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image107.png)
 
-![4](http://images0.cnblogs.com/blog2015/701997/201507/231525406151426.png)
+![4](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image108.png)
 
 这个信号明显地可以看出80Hz采样的失真情况。由于混合信号中频率最高的那个信号为60Hz，因此也是至少需要120Hz才能不失真地恢复原始信号。
 

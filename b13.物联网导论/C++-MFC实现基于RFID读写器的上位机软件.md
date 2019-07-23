@@ -279,7 +279,7 @@ void CDebugger::DoDataExchange(CDataExchange* pDX) {
 
 安装过程省略，首先需要建表，双击`ZD124UE_DEMO.sql`即可新建一个数据库及其相应的表格。然后配置数据源，参照下图，点击Test查看连通情况
 
-![数据源截图](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204230911694-290884794.jpg)
+![数据源截图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image234.jpg)
 
 ### 连接数据库
 
@@ -622,6 +622,6 @@ BOOL CRecordHelper::EmptyRecords(){
 
 这里贴两张运行截图，运行结果都是正确的，只是展示一下界面和字体及颜色
 
-![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204230809350-783568354.jpg)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image235.jpg)
 
-![](http://images2015.cnblogs.com/blog/701997/201602/701997-20160204230847413-100364212.jpg)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image236.jpg)

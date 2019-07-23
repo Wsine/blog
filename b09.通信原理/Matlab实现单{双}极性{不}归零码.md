@@ -50,7 +50,7 @@ subplot(2, 1, 2);plot(t, se2);grid on;axis([0 20 0 2]);title('RZ');
 
 求信号的功率谱，功率谱 = 信号的频率的绝对平方 / 传输序列的持续时间， 求得的功率谱进行单位换算以dB值表示
 
-![4](http://images0.cnblogs.com/blog2015/701997/201507/241339579592257.png)
+![4](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image100.png)
 
 ```
 %% 功率谱密度计算
@@ -120,7 +120,7 @@ subplot(2, 2, 4);plot(PEL2, PE1); grid on; axis([-50 50 -50 50]); title('density
 
 单极性归零信号和单极性不归零信号及其功率谱密度：
 
-![re1](http://images0.cnblogs.com/blog2015/701997/201507/241340118492347.png)
+![re1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image101.png)
 
 分析：单个码元信号的周期是1，图中很坐标以2显示一个点，实际为1。占空比的设置为50%。以0~1时间段为例，图一的信号一直都是1，这是不归零的信号，图二在0~0.5时为1，0.5~1时为0，也就是在下一个码元来临前回归零，这是归零信号的特性。而两者信号的功率谱密度显示，在0频率处能量最集中，各个平垫的能量分布较为均衡，向两极逐渐递减，这适应于一个随机信号的特性
 
@@ -128,7 +128,7 @@ subplot(2, 2, 4);plot(PEL2, PE1); grid on; axis([-50 50 -50 50]); title('density
 
 双极性归零信号和单极性不归零信号及其功率谱密度：
 
-![re2](http://images0.cnblogs.com/blog2015/701997/201507/241340322404617.png)
+![re2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image102.png)
 
 分析：双极性信号不归零信号只有1 -1 两种幅值，而归零信号则多一个0幅值。由于与单极性信号相比，只是幅值上面有所差异，对于频域的没有太大的影响，因而其功率谱密度也是十分相似的
 

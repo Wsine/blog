@@ -4,8 +4,8 @@
 
 ### 游戏界面
 
-![123](http://images0.cnblogs.com/blog2015/701997/201507/170012188768902.png)
-![456](http://images0.cnblogs.com/blog2015/701997/201507/170012329857991.png)
+![123](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image232.png)
+![456](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image233.png)
 
 ### 控制代码
 

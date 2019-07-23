@@ -86,7 +86,7 @@ glut窗口显示和恢复显示的时候调用的函数
 
 ### 重要函数说明
 画直线函数，把二维坐标区域分成8个区域，从第四象限靠近y轴的负半轴的区域开始算起为1号区域，逆时针计算。
-![adflkjsdf](http://images0.cnblogs.com/blog2015/701997/201507/111731086275835.png)
+![adflkjsdf](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image218.png)
 
 
 注意的是，1号区域和5号区域是用同样的函数控制的，唯一不同的是xy_interchange的值。1号区域的画线方向是从原点画到数字1的区域，5号区域的画线是从数字5画到原点。实质上画线的方向是一致的。因此5~8号区域可以按照1~4号区域的相反来运算。
@@ -155,7 +155,7 @@ void DrawLine(int x0, int x1, int y0, int y1) {
 ```
 
 绘制圆形，将一个圆分成1/8个圆，如图所示
-![dsfasdf](http://images0.cnblogs.com/blog2015/701997/201507/111731332211589.png)
+![dsfasdf](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image219.png)
 可以通过8个点之间相互关系，绘制出整个圆
 （x, y） -> （y, x）->（x, -y）->（y, -x）->（-x, -y）->（-y, -x）->（-x, y）->（-y, x）
 假设圆的半径为R，只需要计算（0, R）->（R/2, R/2）即可
@@ -179,7 +179,7 @@ void CirclePoints(int x, int y, int center_x, int center_y){
 
 ### 实现效果
 求轻喷~
-![picture](http://images0.cnblogs.com/blog2015/701997/201507/111737540805034.png)
+![picture](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image220.png)
 
 
 ### 完整代码

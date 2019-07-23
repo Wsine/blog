@@ -4,7 +4,7 @@
 声明：阅读了别人的代码学习修改而来，增加了美观度和游戏乐趣。（作者出处忘了不好意思）
 
 ### 程序截图
-![](http://images.cnitblog.com/blog/701997/201502/231410550491338.png)
+![](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image2.png)
 
 ### 关键代码
 ```

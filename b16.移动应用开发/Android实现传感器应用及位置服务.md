@@ -134,7 +134,7 @@ public void onDestroy() {
 
 初始化界面->偏转手机->点击按钮->刷出经纬度
 
-<img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202162614866-1977779062.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202162625819-1517190013.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202162638944-757171592.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="http://images2015.cnblogs.com/blog/701997/201602/701997-20160202162633116-1400568131.png" alt="cant show" style="display: inline-block; width: 22%; " />
+<img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image345.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image346.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image347.png" alt="cant show" style="display: inline-block; width: 22%; " /> <img src="https://wsine.cn-gd.ufileos.com/image/wsine-blog-image348.png" alt="cant show" style="display: inline-block; width: 22%; " />
 
 ## 工程下载
 
