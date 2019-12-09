@@ -22,6 +22,8 @@ Terminal 采用了 JSON 文件作为它的配置文件，这就意味着你可�
 
 由于是 JSON 纯文本配置文件，总是有可能出现手抖或者配置出错的问题，这时候保存配置文件会被提示文件哪里的配置有问题，而该次的保存不会生效，实际调试样式还是十分方便的。
 
+![vim](http://wsine.cn-gd.ufileos.com/image/52104FB432B5BCF495FA7E7C056DBA6C.gif)
+
 ## Less is More 的配置项
 
 Terminal 提供的配置项不多，但我觉得 98% 的人也只需要修改到这些配置项就足够了，下面来跟大家陈列一下它提供的配置项吧（我只挑重点的来展示）：
@@ -53,9 +55,17 @@ Terminal 提供的配置项不多，但我觉得 98% 的人也只需要修改到
 
 这个就属于新时代的终端模拟器的代表功能了，之前在 Manjaro 下面使用 Alacritty 终端模拟器时才体会到在GPU加速的这一功能。在大量的文本打印的时候，得益于GPU的加速，丝毫没有那种播放PPT的卡顿感，这个对于长时间在终端下工作的我来说还是十分舒服的。
 
+![vim](http://wsine.cn-gd.ufileos.com/image/CC87571D29A2461C0502CF5A3C9268A9.gif)
+
 ### 多标签
 
 诚然，很多的终端模拟器都自带了多标签，比如 xshell，mobaxterm 和 cmder 等。前两者在工作用途上是收费的，后者总是占用了太多的 Linux 快捷键。之前我不得不使用 CMD 代替它们（发现意外的好用），现在 Terminal 来将 CMD 缺失的多标签功能给补齐了。
+
+### Emoji支持
+
+虽然微软平台的Emoji真的很丑，但是有总比没有好不是嘛，我还是很喜欢在Git commit里面加点emoji让它好看一点的。
+
+![vim](http://wsine.cn-gd.ufileos.com/image/E56D8ABFB6EA3F8AF3782EC3B0DBFF0B.png)
 
 ### NCURSES的支持
 
