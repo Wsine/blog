@@ -1,0 +1,35 @@
+name: REPLACE_IMAGE
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  replace-imgs:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Get file changes
+        id: file_changes
+        uses: trilom/file-changes-action@v1.2.3
+        with:
+          output: ' '
+      - name: Custom script
+        env:
+          ucloud_private_key: ${{secrets.UCLOUD_PRIVATE_KEY}}
+          added_files: ${{steps.file_changes.outputs.files_added}}
+        run: |
+          cd $GITHUB_WORKSPACE
+          ./.github/replace_img.sh
+      - name: Commit files
+        env:
+          head_branch: ${{github.head_ref}}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ${{steps.file_changes.outputs.files_added}}
+          git commit -m "CI Automated: $(git --no-pager log $head_branch -1 --pretty=%B)"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
