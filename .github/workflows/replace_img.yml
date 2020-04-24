@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
+        with:
+          ref: ${{github.head_ref}}
       - name: Get file changes
         id: file_changes
         uses: trilom/file-changes-action@v1.2.3
@@ -22,14 +24,13 @@ jobs:
           cd $GITHUB_WORKSPACE
           ./.github/replace_img.sh
       - name: Commit files
-        env:
-          head_branch: ${{github.head_ref}}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add ${{steps.file_changes.outputs.files_added}}
-          git commit -m "CI Automated: $(git --no-pager log $head_branch -1 --pretty=%B)"
+          git commit -m "CI Automated: $(git --no-pager log -1 --pretty=%B)"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
+          branch: ${{github.head_ref}}
