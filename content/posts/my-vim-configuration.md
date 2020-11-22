@@ -1,4 +1,12 @@
-# 我的Vim配置
+---
+title: "我的Vim配置"
+date: 2019-07-23
+published: true
+tags: ['Solution', 'Vim']
+series: false
+canonical_url: false
+description: "今天来分享一下我对于Vim的一下配置和心得"
+---
 
 ## 前言
 

@@ -1,4 +1,12 @@
-# 我的科研方法论
+---
+title: "我的科研方法论"
+date: 2020-01-12
+published: true
+tags: ['Research']
+series: false
+canonical_url: false
+description: "经历了一个学期的博士生学习，来聊聊我掌握的科研方法论"
+---
 
 [TOC]
 

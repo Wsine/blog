@@ -1,4 +1,13 @@
-# Microsoft Terminal 颜值在线的终端模拟器
+---
+title: "Microsoft Terminal 颜值在线的终端模拟器"
+date: 2019-12-09
+published: true
+tags: ['Terminal', 'Windows']
+series: false
+cover_image: ./images/beautiful-microsoft-terminal.jpg
+canonical_url: false
+description: "最后一块拼图，Microsoft Terminal能够很好地用于日常工作中了"
+---
 
 在 Microsoft Build 2019 的大会上，微软给我们带来了一款全新设计的终端模拟器 Microsoft Terminal. 虽然过度好看的宣传片和实际的效果有着巨大的落差，但是也不影响它在 Windows 阵营里取得最高的颜值称号。
 

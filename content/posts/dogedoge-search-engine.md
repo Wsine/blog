@@ -1,4 +1,13 @@
-# 国产优质搜索引擎 Dogedoge 多吉搜索
+---
+title: "国产优质搜索引擎Dogedoge多吉搜索"
+date: 2019-08-25
+published: true
+tags: ['Search']
+series: false
+cover_image: ./images/dogedoge-search-engine.jpg
+canonical_url: false
+description: "聊聊我喜欢的一款国内搜索引擎"
+---
 
 今天想跟大家聊聊的是一个新晋的搜索引擎。
 
@@ -8,7 +17,7 @@
 
 ## 第一印象
 
-多吉搜索的网址是：[https://www.dogedoge.com/](https://www.dogedoge.com/)，从首页中可以看到项目的 Slogan 是 
+多吉搜索的网址是：[https://www.dogedoge.com/](https://www.dogedoge.com/)，从首页中可以看到项目的 Slogan 是
 
 > 「不追踪，不误导」。
 

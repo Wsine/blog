@@ -1,4 +1,13 @@
-# 个人博客的方案推荐，你只负责编写
+---
+title: "个人博客的方案推荐，你只负责编写"
+date: 2019-07-20
+published: true
+tags: ['Blog', 'Solution']
+series: false
+cover_image: ./images/personal-blog-writting-solution.jpg
+canonical_url: false
+description: "基于Docsify的无配置无服务器博客方案"
+---
 
 今天想要谈谈的是一套我在用的个人博客解决方案，它能带给我最大的便利。
 

@@ -1,4 +1,12 @@
-# 从 iOS 13 到 ColorOS 6 的用户体验
+---
+title: "从 iOS 13 到 ColorOS 6 的用户体验"
+date: 2020-01-20
+published: true
+tags: ['Evaluation']
+series: false
+canonical_url: false
+description: "纠结了很久，退了iPhone 11购买OPPO Reno Ace尝试回归一下安卓生态"
+---
 
 [TOC]
 

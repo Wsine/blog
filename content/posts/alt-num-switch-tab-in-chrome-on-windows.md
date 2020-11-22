@@ -1,4 +1,13 @@
-# Chrome 在 Windows 找回熟悉的 Alt + Num 切换标签页
+---
+title: "Chrome在Windows找回熟悉的Alt + Num切换标签页"
+date: 2019-11-24
+published: true
+tags: ['Chrome', 'Windows', 'Solution']
+series: false
+cover_image: ./images/alt-num-switch-tab-in-chrome-on-windows.png
+canonical_url: false
+description: "使用Alt+Num在Chrome浏览器中切换标签页，统一多平台的体验"
+---
 
 在不同的系统和软件中，我都喜欢尽可能用同一套快捷键方案去完成相同的功能，以减少自己的学习和记忆成本，最大化效率。但是，哪怕是同一个应用，由于不同平台的默认快捷键不一样，频繁切换平台的迁移学习也很辛苦。
 

@@ -1,4 +1,13 @@
-# 2019年科学且免费的复合密码管理策略
+---
+title: "2019年科学且免费的复合密码管理策略"
+date: 2019-06-26
+published: true
+tags: ['Password', 'Solution']
+series: false
+cover_image: ./images/2019-scientific-overlapping-password-policy.jpg
+canonical_url: false
+description: "基于Keepass的多平台密码管理方案"
+---
 
 [TOC]
 
@@ -79,7 +88,7 @@ P.S. 如果你也会编程的话，完全可以fork一份后修改来定制自�
 
 我采用的密码管理软件是[KeePass](https://keepass.info/)，首先引用一下的它的官方介绍：
 
-> KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master password or select the key file to unlock the whole database. The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish). For more information, see the [features page](https://keepass.info/features.html). 
+> KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master password or select the key file to unlock the whole database. The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish). For more information, see the [features page](https://keepass.info/features.html).
 >
 > 我知道部分人可能看不懂，没关系，我大发慈悲来做一下简短的翻译：
 >
