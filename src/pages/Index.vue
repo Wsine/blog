@@ -11,12 +11,19 @@
         :post="edge.node"
       />
     </div>
+
+    <!-- Pagination -->
+    <Pager :info="$page.posts.pageInfo" linkClass="pager__link" class="pager" />
   </Layout>
 </template>
 
 <page-query>
-query {
-  posts: allPost(filter: { published: { eq: true }}) {
+query ($page: Int) {
+  posts: allPost(perPage: 5, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         id
@@ -38,11 +45,13 @@ query {
 </page-query>
 
 <script>
+import { Pager } from "gridsome";
 import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
 
 export default {
   components: {
+    Pager,
     Author,
     PostCard,
   },
@@ -51,3 +60,29 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.pager {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  text-align: center;
+
+  &__link {
+    color: var(--link-color);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+
+    &:hover:not(.active) {
+      background-color: var(--bg-content-color);
+      border-radius: 5px;
+      color: var(--link-color);
+    }
+  }
+}
+
+.active {
+  background-color: var(--bg-content-color);
+  border-radius: 5px;
+}
+</style>
