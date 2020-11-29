@@ -4,7 +4,10 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const marked = require('marked')
+
 module.exports = {
+  siteUrl: 'https://wsine.github.io/blog/',
   siteName: "Wsine's Blog",
   siteDescription: '爱分享爱写文章的科研狗',
 
@@ -28,6 +31,29 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      use: '@microflash/gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Post'],
+        feedOptions: {
+          title: "Wsine's Blog",
+          description: '爱分享爱写文章的科研狗',
+          image: 'https://wsine.github.io/blog/author.jpg',
+          favicon: 'https://wsine.github.io/blog/author.jpg',
+        },
+        rss: {
+          enabled: true,
+          output: '/feed.xml',
+        },
+        htmlFields: ['description', 'content'],
+        enforceTrailingSlashes: false,
+        nodeToFeedItem: node => ({
+          title: node.title,
+          date: node.date,
+          content: marked(node.content),
+        }),
+      },
     }
   ],
 
