@@ -31,11 +31,11 @@ body {
 
 // Override variables for Dark theme
 body[data-theme="dark"] {
-  --bg-color: #0d2538;
-  --bg-content-color: #0f2d44;
+  --bg-color: #222831;
+  --bg-content-color: #30475e;
   --bg-code: rgba(0, 0, 0, 0.3);
   --border-color: rgba(255, 255, 255, 0.1);
-  --body-color: #ced8de;
+  --body-color: #ececec;
   --title-color: #fff;
-  --link-color: #af9cef;
+  --link-color: #f2a365;
 }
