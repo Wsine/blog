@@ -1,0 +1,41 @@
+// Default variables
+html {
+  --base-font-size: 17px;
+}
+
+// Light default theme
+body {
+  --bg-color: #f3f7f9;
+  --bg-content-color: #fff;
+  --bg-code: #fffbf3;
+  --body-color: #444;
+  --title-color: #111;
+  --link-color: #6b17e6;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --space: 3.5rem;
+  --content-width: 860px;
+  --header-height: 80px;
+  --radius: 5px;
+}
+
+// Make  things smaller for mobile
+@media screen and (max-width: 650px) {
+  html {
+    --base-font-size: 17px;
+  }
+  body {
+    --space: 1.5rem;
+    --header-height: 60px;
+  }
+}
+
+// Override variables for Dark theme
+body[data-theme="dark"] {
+  --bg-color: #222831;
+  --bg-content-color: #30475e;
+  --bg-code: rgba(0, 0, 0, 0.3);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --body-color: #ececec;
+  --title-color: #fff;
+  --link-color: #f2a365;
+}
