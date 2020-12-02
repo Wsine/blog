@@ -13,9 +13,11 @@
       {{ $static.metadata.siteName }}
     </h1>
 
+    <p>
     <g-link href="//wsine.github.io/blog/feed.xml" target="_blank">
       <img src="https://img.shields.io/badge/RSS-Atom-orange"/>
     </g-link>
+    </p>
 
     <p class="author__intro">日常写写文章赚点小钱加鸡腿，欢迎订阅交流</p>
   </div>

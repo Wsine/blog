@@ -7,7 +7,8 @@
 const marked = require('marked')
 
 module.exports = {
-  siteUrl: 'https://wsine.github.io/blog/',
+  siteUrl: 'https://wsine.github.io',
+  pathPrefix: '/blog',
   siteName: "Wsine's Blog",
   siteDescription: '爱分享爱写文章的科研狗',
 
