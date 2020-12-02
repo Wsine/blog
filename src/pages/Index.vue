@@ -56,7 +56,7 @@ export default {
     PostCard,
   },
   metaInfo: {
-    title: "🖌",
+    title: "Cool",
   },
 };
 </script>

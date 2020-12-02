@@ -40,7 +40,7 @@ module.exports = {
           title: "Wsine's Blog",
           description: '爱分享爱写文章的科研狗',
           image: 'https://wsine.github.io/blog/author.jpg',
-          favicon: 'https://wsine.github.io/blog/author.jpg',
+          favicon: 'https://wsine.github.io/blog/favicon.ico',
         },
         rss: {
           enabled: true,
