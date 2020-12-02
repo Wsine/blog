@@ -1,21 +1,14 @@
 <template>
   <g-link class="logo" to="/">
-    <span class="logo__text"> &larr; {{ $static.metadata.siteName }} </span>
+    <span class="logo__text"> &lArr; Back to Home </span>
   </g-link>
 </template>
-
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
 
 <style lang="scss">
 .logo {
   text-decoration: none;
   color: var(--body-color) !important;
+  background-color: var(--bg-color) !important;
   font-size: 0.9em;
 
   &__image {
