@@ -1,0 +1,97 @@
+---
+title: "我的科研软件流分享"
+date: 2020-12-01
+published: true
+tags: ['Research', 'Solution']
+series: false
+canonical_url: false
+description: "经历了一年多的博士生学习，来聊聊我目前在科研生活中使用的软件"
+---
+
+在少数派2019的年度征文里，我分享了我积累的「[科研方法论](https://sspai.com/post/58386)」。经过一年多的对科研软件的使用，我也逐渐积累了一套自己的软件流程，现整理为文章，希望对你有用。
+
+在科研的过程中，我经常经历的过程大概只有这几个：阅读论文，讨论 idea，实验记录。所以本文主要还是以这 3 点作为切入点来聊聊，如何将这3个过程变成一个电子化的，系统化的软件流程。
+
+## 阅读论文
+
+首先科研离不开的是阅读论文，而一个好的文献管理工具能让你快速的收纳和回顾你所看过的文章。我使用过的文献管理工具有主流的 3 大工具，Mendeley，Endnote 和 Zotero，最后选择的是 Zotero。下面先来说说我为什么喜欢它的独特理由，其他的功能其实都大同小异。
+
+### 桌面端管理
+
+在桌面端，我的需求是筛选论文并且可以快速入库；当论文阅读完觉得值得保留，从 Inbox 转移到特定的 Collection 时，我能够快速编辑相应的字段；当我想起来某篇论文，能够快速找到并查看 PDF 上面的标记。这就是我在桌面端会使用到的最常用的功能了。
+
+**文章编号导入**
+
+这个算是 Zotero 里比较让我眼前一亮的功能了。我们知道，出版商发行出版的书籍会有一个对应的ISBN号，这个编号是唯一的。在文献的领域里面，一般会使用 Digital Object Identifier (DOI) 来作为文章的唯一编号。但是在生命和医学等领域，他们会使用 PubMed Unique Identifier (PMID) 来作为唯一编号。哪怕是对于未发表的文章，比如 arxiv 这种平台的编号，在 Zotero 中通通都支持自动导入。
+
+但是值得注意的是，这种导入功能还是会跟你的出口 IP 有关系的。因为只有你所在的学校或机构购买对应出版商的访问资格权限，才能直接使用该导入功能，而服务器是根据你的请求所在的 IP 来判断你所在的机构的。
+
+![iShot2020-11-29 21.10.51](http://wsine.cn-gd.ufileos.com/image/7d9fbb3aad49338f7b937d244fba4e24.gif)
+
+**字段管理**
+
+另一个让我比较喜欢的功能就是简洁的字段管理了。因为 Zotero 本身虽然可以通过 Group 的方式来区分不同子领域的文章，但是实际上当你加入的文章比较多的时候，你的眼睛其实很难检索你脑海中的一篇文章。
+
+但是，实际上我们对文章记忆比较深的，除了 idea 本身以外，更多的是文章的 short title/short name。这个 short title 在 Zotero 中有专门一个字段「Short Title」，相比于其它的软件，确实更加符合实际的使用需求。
+
+另一个记忆比较深刻的字段应该属于 Publication 的 short name . 比如机器学习领域的顶会是 ICML，总比记忆 International Conference on Machine Learning 来得实在吧。这个字段在 Zotero 中被称之为 「Series」. 一般情况下对于出名的顶刊 / 顶会都是可以自动填充的。偶尔不能填充的时候，就需要靠自己手动管理了。
+
+第三个我的使用习惯会对阅读完的文献打上一些标签。那么根据什么来打这个 Tag 呢？我的实战经验是根据论文中约定俗成的分类来打标签。举个例子，假如你的研究课题是模型压缩，那么常见的方法有模型剪枝、模型量化、模型蒸馏等。当你习惯性地打好标签，在实际撰写自己的论文的时候，写 Related Work 的时候基本上就是得心应手。
+
+**分离的存储系统**
+
+Zotero 作为一款开源的产品，使用上是免费的。但是同时，它也有提供有限的免费云存储额度，作为一个轻中度使用的我来说（精挑细选入库），这个额度也是不够的。以我自己的情况举例，Zotero 免费额度为 300M，一年的时间内收纳的论文空间大约为 200M+，基本上不足以承担更长时间的科研学习。
+
+在 Zotero 的设计中，它允许 Library 中的 Metadata 和文件分开存储计算。由于 Metadata 只是一些结构化的文本信息，存储在 Zotero云 上基本不会占用多大的存储空间，十分充足。对于文件类的存储，Zotero 允许通过 WebDAV 的方式外部存储。
+
+在这里我选择的是 [Koofr](https://koofr.eu/) 作为我的存储服务，目前的提供 WebDAV 服务的云盘选择已经不多了，Koofr 对于免费用户能默认提供 2G 的存储空间，不限制流量。对于文献管理这一需求来专用已经足够了。
+
+![image-20201129213729416](http://wsine.cn-gd.ufileos.com/image/55cf8435ea0ad6d893afd536f4e7b57d.png)
+
+### 平板端管理
+
+平常情况下，我的阅读都是在 iPad 端完成的。我最大的需求，就是能够在 iPad 上配合 Apple Pencil 书写，然后将我的标记和手写笔记都同步到云端，就足够了。
+
+**流畅的书写体验**
+
+首先，第一点我追求的就是书写体验，主要有两点，流畅性和笔尖连续。由于编辑的对象是一个通用的 PDF 格式，而不是笔记应用常见的矢量格式。因此完全支持 Apple Pencil 全部功能的 iPad PDF 应用，其实也不多，但是要是再加一个云存储的特性，我能筛选下来的就只剩下 PDF Expert 和 Papership 两款应用了。
+
+我有大半年的时间都在使用 PDF Expert，在转订阅制前付费购买，在 PDF 编辑领域，它真的可以说是Expert。书写感觉，手势缩放，快速切换自己选择好的笔，基本没有比它更好的选择了。但是它开始转订阅制后，无论是和Onedrive双向同步的云端文件还是纯iPad本地端的，都出现了明显的卡顿，也正是此契机，我才会开始寻找下一款能支撑我需求的软件。
+
+而我找到的就是 Papership，这也是一款内购应用。开发者甚至非常用心，内置了一份开放的 PDF 文件给用户试用标注和笔记等功能，然后再决定是否付费内购。我认为这种开发模式非常值得借鉴。在书写体验方面，Papership 我认为做到了和 PDF Expert 一样的体验，切换笔这方面有所缺失，我也致信开发者提了该建议。但是选择它更重要的下面的这个特性。
+
+![fluent-writing](http://wsine.cn-gd.ufileos.com/image/21e1ca086b4d64d987ca3a70b79e3533.png)
+
+**WebDAV 同步**
+
+Papership 在我的理解中，更像是一款为适配 Zotero 的第三方应用，但是它做得很棒。首先，它的登陆账号直接就是 Zotero 的账号，用于下载和同步论文的结构化数据。另一方面，也配合 Zotero 的方式，提供 WebDAV 外部存储方式。因此，只要和桌面端填写的内容是一致的，就是同步的，体验非常棒。
+
+这里有一个小插曲，Papership 对于WebDAV 的Zotero空白存储文件夹同步有一点问题，需要自行加入`lastsync.txt`文件。详情解决方案可以看这里：https://koofr.eu/blog/posts/using-papership-with-zotero-and-koofr-on-your-mobile-devices
+
+> **Note**: If you are receiving an error and are not able to **Verify Server**, check if you have a *lastsync.txt* file in the **zotero folder** in Koofr. Sometimes the connection doesn't work without this file. You can create the text file in your **zotero folder** in Koofr yourself. The file can be empty and the connection will still work.
+
+## 草稿本
+
+在日常的科研工作中，我们经常需要构思 idea，一边写一边构思，能十分有效地帮助你进行思考。这个需求我推荐两种工具。
+
+第一种是货真价实的笔记本+签字笔。很多时候，你不仅仅是只有自己在科研，当你和别人讨论的时候，其实大家都需要在纸上表达自己正在说的思路。我也尝试过把 iPad 和 Apple Pencil 一起带上，也递给别人用，但是对方毕竟不是长期用户，并不习惯，总是打断了思维的碰撞。因此和别人讨论的时候，我还是建议使用一个传统的工具，有利于沟通的进行。
+
+另一方面，对于自己的思维构建，我推荐的是少数派上的自荐的一款应用「无限草稿 InfDraft」，它很简单，就是一款使用了苹果官方 ApplePenKit 开发的无限画布类的纯本地应用。但也正是因为简单，它比起大厂比如微软的 WhiteBoard 和谷歌的 Jamboard 的体验都要好，主要就是在流畅这点上。大牌的应用对于手掌识别或者是笔的套件的适配我认为都还没达到理想的状态，但是我也会持续观察。
+
+总而言之，有了便利的草稿本，日常就能为地球环保节省下很多的纸张，也能快捷地修改自己写错的地方，这就是电子草稿的优势。
+
+![inf-draft](http://wsine.cn-gd.ufileos.com/image/08bbfbcbc3bbebbab52253682dfcf064.png)
+
+## 笔记记录
+
+最后一项想聊聊的是，实验数据的记录整理。我的选择是 Notion，一款标称 All-in-one 的笔记 Web 应用。可以做快速的图片混合排版，记录你对自己 Research Problem 的 Timeline。包括在这个 Topic 中你的 target 是什么，遇到的问题，你当前思考的解决方案，next step 要尝试什么，都可以快速记录在案并得到一个相对赏心悦目的页面，而不用花太多时间。
+
+我比较喜欢它的一点是笔记内嵌了一个 Database，正好适合用来做实验数据的记录，少数派网站上面有很多的关于 Notion 的高级用法，用于科研生活中真的挺顺手的。因为在实际的需求，你不仅仅只用一个表格记录数字，你还需要做统计，Notion Database 自带的 Formula 真的特别方便，不用管理 EXCEL 文件了。
+
+![Snipaste_2020-12-02_13-22-30](http://wsine.cn-gd.ufileos.com/image/bd1a166da542c0b094db49dbd329a45e.png)
+
+另一点，我喜欢的是它的分享功能，作为一个网页，不需要注册登陆也能看到。当你最终做完实验的时候，分享实验数据给老板，说服 Supervisor 信服你的实验结果也是一个很重要的科研过程。你的数据越完整，支撑的信息越多，潜在地更有说服力。
+
+----
+
+以上，就是我在科研工作中日常使用的软件了，也欢迎在评论区留言分享互相学习。
