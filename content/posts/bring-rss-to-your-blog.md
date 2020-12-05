@@ -73,18 +73,18 @@ RSS 的本质其实很简单，只是一份定制化的 XML 文件，我们先�
 
 通过不同的编程语言控制文件输出到 XML 这不难。根据自己选择的编程语言生成即可。
 
-这里，我建议大家对生成的 XML 进行校验，确保生成的 RSS 是正确并能够解析的。W3C 联盟提供了标准的 RSS 文件校验服务：https://validator.w3.org/feed/，可以在线输入和链接校验两种方式。
+这里，我建议大家对生成的 XML 进行校验，确保生成的 RSS 是正确并能够解析的。W3C 联盟提供了标准的 RSS 文件校验服务：https://validator.w3.org/feed/ ,可以在线输入和链接校验两种方式。
 
 **发布 RSS**
 
 对于静态博客，最直接的方法是将 XML 文件推送到静态服务平台，然后以 RAW 格式访问，即为一个合格的 RSS 订阅链接。
 
-更进阶一步的方法，可以利用前端框架里面的静态路由方式，解析通用的 `/feed` 路由到生成的 RSS 文件中，配合标准的图标 ![rss icon](https://www.rssboard.org/images/rss-icon.png)，能够让人清晰直观的发现该博客提供了 RSS 订阅链接。
+更进阶一步的方法，可以利用前端框架里面的静态路由方式，解析通用的 `/feed` 路由到生成的 RSS 文件中，配合标准的 RSS 图标 ，能够让人清晰直观的发现该博客提供了 RSS 订阅链接。
 
 ## 后记
 
 上述的说明只描述了我认为在这个方案中需要注意的事项，隐去了每一步的操作细节。想要抄作业的各位同学，可以移步到 https://github.com/Wsine/blog/blob/master/build.sh 查看具体的实现方法，直接复制到自己的仓库中就可以使用。
 
-具体的展示可以查看我的博客看看具体效果：https://wsine.github.io/blog [![rss icon](https://www.rssboard.org/images/rss-icon.png)](https://wsine.github.io/blog/feed.xml)，也欢迎订阅~
+具体的展示可以查看我的博客看看具体效果：https://wsine.github.io/blog ，也欢迎订阅~
 
 在这里，我也呼吁大家为自己的博客增加 RSS 订阅链接，如想分享可以在评论区留下你的订阅链接~
