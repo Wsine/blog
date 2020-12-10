@@ -15,12 +15,22 @@
     </main>
 
     <footer class="footer">
-      <span class="footer__copyright">
-        Copyright © {{ new Date().getFullYear() }}.
-      </span>
-      <span class="footer__links">
-        Powered by <a href="//gridsome.org"> Gridsome </a>
-      </span>
+      <div>
+        <span class="footer__copyright">
+          Copyright © 2019-{{ new Date().getFullYear() }}. |
+        </span>
+        <span class="footer__links">
+          CC <a href="//creativecommons.org/licenses/by-nc-sa/4.0/deed.en">BY-NC-SA 4.0</a>.
+        </span>
+      </div>
+      <div>
+        <span class="footer__links">
+          Powered by <a href="//gridsome.org">Gridsome</a>.
+        </span>
+        <span class="footer__links">
+          Deployed on <a href="//wsine.github.io/blog">Github Pages</a>.
+        </span>
+      </div>
     </footer>
   </div>
 </template>
@@ -69,7 +79,7 @@ export default {
 }
 
 .footer {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   padding: calc(var(--space) / 2);
