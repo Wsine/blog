@@ -101,6 +101,10 @@ query Post ($id: ID!) {
   }
 
   &__content {
+    p {
+      word-break: break-word;
+    }
+
     h2:first-child {
       margin-top: 0;
     }
