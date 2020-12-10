@@ -7,8 +7,7 @@
 const marked = require('marked')
 
 module.exports = {
-  siteUrl: 'https://wsine.github.io',
-  pathPrefix: '/blog',
+  siteUrl: 'https://blog.wsine.top',
   siteName: "Wsine's Blog",
   siteDescription: '爱分享爱写文章的科研狗',
 
@@ -40,8 +39,8 @@ module.exports = {
         feedOptions: {
           title: "Wsine's Blog",
           description: '爱分享爱写文章的科研狗',
-          image: 'https://wsine.github.io/blog/author.jpg',
-          favicon: 'https://wsine.github.io/blog/favicon.ico',
+          image: 'https://blog.wsine.top/author.jpg',
+          favicon: 'https://blog.wsine.top/favicon.ico',
         },
         rss: {
           enabled: true,
