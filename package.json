@@ -15,7 +15,7 @@
     "@gridsome/transformer-remark": "^0.3.0",
     "@microflash/gridsome-plugin-feed": "^1.1.7",
     "gridsome": "^0.7.0",
-    "marked": "^1.2.5"
+    "marked": "^2.0.0"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
