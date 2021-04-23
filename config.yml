@@ -1,0 +1,114 @@
+baseURL: "https://wsine.github.io/blog/"
+title: "Wsine's blog"
+paginate: 5
+theme: PaperMod
+copyright: "Copyright &copy; 2019-Now &middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: true
+buildExpired: true
+enableEmoji: true
+# googleAnalytics: UA-123-45
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON  # is necessary
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: "Wsine's blog"
+    description: "爱分享爱写文章的科研狗"
+    keywords: [Blog, Research]
+    author: Wsine
+    images: ["author.jpg"]
+    DateFormat: "2006, January 2"
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: false
+    ShowShareButtons: false
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: false
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: false
+    hidemeta: false
+    hideSummary: false
+    showtoc: true
+    tocopen: false
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "favicon.ico"
+        favicon16x16: "favicon-16x16.png"
+        favicon32x32: "favicon-32x32.png"
+        apple_touch_icon: "apple-touch-icon.png"
+        safari_pinned_tab: "favicon.png"
+
+    label:
+        text: "Wsine's blog"
+        # icon: "https://github.com/Wsine/blog/raw/master/src/assets/images/author.jpg"
+        iconHeight: 35
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Hi friend \U0001F44B"
+        Content: Welcome to my blog, here is something about life and productivity. hope you enjoy.
+
+    socialIcons:
+        - name: email
+          url: "mailto:weizhy3@hotmail.com"
+        - name: github
+          url: "https://github.com/Wsine"
+        - name: sspai
+          url: "https://sspai.com/u/wsine/posts"
+        - name: rss
+          url: "https://wsine.github.io/blog/feed.xml"
+
+    # analytics:
+    #     google:
+    #         SiteVerificationTag: "XYZabc"
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    editPost:
+        URL: "https://github.com/Wsine/blog/blob/master/content"
+        Text: "Suggest Changes" # edit text
+        appendFilePath: true # to append file path to Edit link
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+menu:
+    main:
+        - identifier: Archive
+          name: Archive
+          url: /archives/
+          weight: 10
+        - identifier: Tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: Search
+          name: Search
+          url: /search/
+          weight: 30
