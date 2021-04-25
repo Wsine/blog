@@ -1,0 +1,27 @@
+{{ $icon_name := ( trim .name " " | lower )}}
+{{- if (eq $icon_name "email") -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+{{- else if (eq $icon_name "github") -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+{{- else if (eq $icon_name "sspai") -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.558 93.558" fill="none" stroke="currentColor" stroke-width="5"
+		stroke-linecap="round" stroke-linejoin="round">
+		<path d="M72.766,74.275c-13.366-10.451-3.933-53.438-3.933-53.438s14.631,0,16.336,0s8.389-1.072,8.389-9.076    c0-9.846-8.168-9.241-8.168-9.241s-44.774,0-60.147,0c-9.873,0-18.784,11.304-23.899,19.389c-2.723,4.318-1.183,5.528,3.493,3.493    c16.392-7.178,21.012-4.593,21.012-4.593c1.155,5.528,1.54,30.473-2.667,40.318c-4.263,9.269-12.128,21.012-0.578,27.915    c9.021,5.115,18.481-5.391,17.546-23.268c-0.44-9.461-1.183-44.938-1.183-44.938h15.072c-0.469,5.528-3.025,33.745-0.357,50.467    c2.777,27.915,33.112,22.497,38.777,6.685c1.402-4.373,1.073-7.729,0.027-10.26c-1.926-4.702-5.144-4.949-4.785-2.75    c0.221,1.402,0.083,2.777-0.138,4.016C86.902,72.817,79.092,78.811,72.766,74.275z"/>
+</svg>
+{{- else if (eq $icon_name "rss") -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+{{- end -}}
