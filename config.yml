@@ -1,4 +1,4 @@
-baseURL: "https://wsine.github.io/blog/"
+baseURL: "https://wsine.github.io/"
 title: "Wsine's blog"
 paginate: 5
 theme: PaperMod
