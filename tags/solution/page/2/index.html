@@ -1,0 +1,90 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Solution | Wsine's blog</title><meta name=keywords content><meta name=description content="爱分享爱写文章的科研狗"><meta name=author content="Wsine"><link rel=canonical href=https://wsine.github.io/tags/solution/><link href=/assets/css/stylesheet.min.642e2a0657439d758aca2aedf3ef6ad1415d2d970562c281dd262c6aad4686b1.css integrity="sha256-ZC4qBldDnXWKyirt8+9q0UFdLZcFYsKB3SYsaq1GhrE=" rel="preload stylesheet" as=style><link rel=icon href=https://wsine.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://wsine.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://wsine.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://wsine.github.io/apple-touch-icon.png><link rel=mask-icon href=https://wsine.github.io/favicon.png><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.82.1"><link rel=alternate type=application/rss+xml href=https://wsine.github.io/tags/solution/index.xml><meta property="og:title" content="Solution"><meta property="og:description" content="爱分享爱写文章的科研狗"><meta property="og:type" content="website"><meta property="og:url" content="https://wsine.github.io/tags/solution/"><meta property="og:image" content="https://wsine.github.io/author.jpg"><meta property="og:site_name" content="Wsine's blog"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://wsine.github.io/author.jpg"><meta name=twitter:title content="Solution"><meta name=twitter:description content="爱分享爱写文章的科研狗"></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://wsine.github.io/ accesskey=h title="Wsine's blog (Alt + H)">Wsine's blog</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu onscroll=menu_on_scroll()><li><a href=https://wsine.github.io/archives/ title=Archive><span>Archive</span></a></li><li><a href=https://wsine.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://wsine.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>Solution</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2>我的资料存储方案分享</h2></header><section class=entry-content><p>[TOC]
+今天打算来聊一下存储相关的事情，分享一下我现在所使用的方案。
+相信有不少的小伙伴都经历过数据丢失的事情，比如经典的如下场景：
+我换/丢手机了，手机号码都丢失了，大家发我一下手机号码呀 我写了几个月的毕业论文，电脑硬盘就坏了，没有备份…… 我以前拍了好多照片，换手机后没有，好怀念啊 我以前做过这个，但是很久以前了，现在找不到了 机器有价，数据无价，本文的目的就是希望能够给大家一个视角分享一下我是如何规避这些问题的。
+数据策略 相比起单纯的分享我使用了什么软件，更重要的我认为是分享如何约束指导自己选择这些方案。
+整体来说，我考察一个软件/服务是否适合我，我看重这3个方面。
+便携性：2014年3月27日，微软CEO纳德拉提出了 【移动为先云为先】的战略指导方针，基本上预告了后面5年网络世界的发展，同时也成为了我数据存储的重要考虑因素——云存储。这个概念相信大家已不陌生。在2020年的今天，数据流量和随时随地访问互联网已经不再成为大多数人的瓶颈，所以云存储也就顺势地成为了一个特别方便的工具。
+易用性：用云存储连接一切，已经成为了我生活方式的一部分。它能充当一个桥梁的作用，在不同的应用和设备间进行访问。协议和文件格式是其中比较重要的部分。磨刀不误砍柴工，研究效率的人常爱挂在嘴边的话，我很享受高效率的感觉。
+持久性：除了云存储本身带来的持久化存储，更重要的我觉得是不能够太轻易被一个平台/工具所绑定。虽然我在这方面也没办法100%做到，但是尽量去做总归是好的。最后，有一份自己的本地拷贝，虽然云存储服务商做了很多容灾工作，但是事故发生的时候谁也不希望的，历史上也发生过。你可能会得到赔偿，但你的数据还是不见了。
+用云存储连接一切 多说无益，下面就直接开始我现在的方案。
+文件 文件，应该是云存储看起来比较直观的存储形式了。在这里，我关注的有三个要素。
+一，是能够快速便捷的访问。如果你不能随存随用，那么这个云存储带给你的体验感会大幅度下降。也即要求你访问网盘的直连速度充足。
+二，是容量足够。它没必要是一个超巨大的网盘，只需要满足你的需求即可，定时整理归档文件也是很重要的。
+三，是真实的存储容量。相比百度云，微云之类的超大云盘，我更推荐使用固定有限的容量。因为它是真实拷贝一份数据到云端，而不是多存一个哈希值。
+在这里，我的日常使用的网盘有两个，其一是 OneDrive，我有30G的固定配额+1T的Office 365空间，光是前者就满足了我的需要了，它作为我多文件存储访问的桥梁，链接着我不同的设备，比如我在 PC 设备上写好了一份文件能够在 iPad 上读取并快速展示。其二，是坚果云，这里我仅使用免费账户，主要是使用其中的 WebDAV 协议同步很多应用的数据，比如 Keepass 的密码库和 Zotero 的文件。
+邮箱/联系人/待办事项/日历事件 「Microsoft Exchange ActiveSync」是我现在使用的服务，直白点来说，其实就是注册了一个微软账号。
+在 Windows 设备中，当我登陆了我的微软账号，它会同时登陆了 Mail、People、To Do、Calendar 这四个应用，你可以正常的收发邮件，管理你的 GTD 流程。
+同时在你的移动设备，Android / iOS 你也可以相应得添加账号，以 iOS 为例，你可以在 Mail、Contacts、Reminders、Calendar 找到对应的数据。安卓系统上可能会根据不同的系统有不同的情况，这里就不阐述了，Android 是原生支持这个服务的。
+更重要的时候，数据本身是保存在云端数据库中的，无论哪天手机被盗/丢失/损坏，也不会丢失珍贵的联系人，包括联系人头像（这个我很喜欢）。服务本身是双向同步的，在任意一台设备上更新了数据，都会同步到其他所有的数据中，十分方便。我的整个 GTD 流程都是依托这服务展开的，轻量够用~
+照片存储和分享 照片应该是我们当今生活中产生的最大量的数据信息了。每个人都会或多或少的积累照片，而且会因为历史进程的推进而不断增大。无论它是一张美丽的风景照片，还是一个屏幕截图，都代表着背后你的一段回忆。比如，我很喜欢我初三的那个课室的那个座位的照片，可能它平平无奇，但是它印证着我人生思想的一个蜕变。
+「Google Photos」是一个如今比较优秀的在线图片存储服务。它提供有限压缩的无限存储，付费可升级无压缩无限存储。对我而言，保存下来照片背后的那一刻回忆，比起一味追求高画质要重要得多。它同时提供了 Web端/iOS平台/Android平台三个客户端，它在多设备后台同步是无感的，也就是当你突然想起来某张照片你可以随时在任一设备访问，无论当时用哪一台移动设备拍摄的。一次共同出游，上传照片后也能建立相册快捷分享。在国内，也有一个类似的服务叫「一刻相册」，是百度技术团队出品。
+这里，我还想补充一点，照片需要定时整理，否则照片一多在巨大的信息流里寻找一张特定的照片，是很困难的。在这种大规模的图片服务，绝对不要将个人隐私照片上传，既是为了自己好也是为别人好。软件代码是人写的，难免会有出错的时候。我身边有不少人贪图方便全量同步，这是只要使用 iOS 相册的隐藏相册功能就不会被同步到云端喔。
+手写笔记/电子笔记 笔记分为两种，一种是手写式电子笔记，一种是富文本电子笔记。...</p></section><footer class=entry-footer>2020, March 9&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to 我的资料存储方案分享" href=https://wsine.github.io/posts/my-file-storage-solution/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>Chrome在Windows找回熟悉的Alt + Num切换标签页</h2></header><section class=entry-content><p>在不同的系统和软件中，我都喜欢尽可能用同一套快捷键方案去完成相同的功能，以减少自己的学习和记忆成本，最大化效率。但是，哪怕是同一个应用，由于不同平台的默认快捷键不一样，频繁切换平台的迁移学习也很辛苦。
+比如 Chrome 浏览器中，切换标签页的方式在不同的平台上不一样：
+Windows：Ctrl + Num Linux：Alt + Num Mac：Cmd + Num 后两者由于键位所处的位置大致相同，所以哪怕没有记忆也不会造成多大的割裂感。但是，Windows 下面的这套快捷键实在是太难受了，本文就是教你如何找回熟悉的感觉。
+这里我们需要借助的软件是 Vimium，相信已经有不少文章介绍过它了。在这里我们需要用到它 Custom key mappings 的功能。Vimium 本身提供很多优秀的内建功能。而我们这里需要用到的是 firstTab 的功能。
+你可能会觉得这个功能并不足够完成 Alt + 2或 Alt + 3 等映射，其实不然，仔细阅读它的开源代码你会发现它本身还提供 option 的功能，简单点来说配置方案是酱紫的。
+这里我把映射也一并附上。我个人只习惯用前面几个固定的标签页，你可以根据自己习惯增减。
+map &lt;a-1> firstTab map &lt;a-2> firstTab count=2 map &lt;a-3> firstTab count=3 map &lt;a-4> firstTab count=4 有了这套方案，我可以很容易的快速回到长期放在第一个标签的 Gmail 页面或者从 Jupyter Notebook 的编程页面中跳出去快速搜索一些东西，而不用借助鼠标，从而提高效率。</p></section><footer class=entry-footer>2019, November 24&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to Chrome在Windows找回熟悉的Alt + Num切换标签页" href=https://wsine.github.io/posts/alt-num-switch-tab-in-chrome-on-windows/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>我的Vim配置</h2></header><section class=entry-content><p>前言 为什么选择vim？ 曾经我也是一个小白，使用Dev-C++来学习C++语言，使用Visual Studio开发工程，它们都被称为IDE(Integrated development environment)。但是，逐渐的，我渐渐意识到，你只能遵循它制定的一系列的流程来开发程序，自定义程度不高，而且大型的IDE消耗计算资源严重。
+后来，我认识到了编辑和编译应该是一个分开的过程，便转战到了文本编辑器，选择Sublime Text。Sublime优秀的UI界面，优秀的快捷键，拥有插件系统，着实让我着迷。它的初始环境便可直接上手，它的默认配色Monokai让人看得很舒服。
+但是，离开Sublime选择Vim的原因有三点，一是Sublime依赖于图形化界面，二是Sublime移动光标需要移动右手使用方向键，三是Sublime编辑远程文件要么借助工具要么经常传输。至此，我终于理解了那个古老的梗。
+世界上只有三种程序员，一种是使用Vim的，一种是使用Emacs的，还有一种是其他
+而这篇博文也是放置于效率分类下
+*加个小彩蛋：*我实验室的Boss爱用Emacs，我们互视为异教徒，我说“你的手指会变形的”，他说“程序员谁的手指不变形”，我“……[冷漠]”
+如何学习Vim 我的观点是，自己一行一行写自己的配置文件才会深入学会Vim。如果一开始就用配置好的，那和直接使用IDE没有太大的差别。知道配置文件每一行干了些什么，不懂就搜，想加功能想改功能就动手，最后这就是一份你的配置文件。相信每个Vim大牛都是这样做的。同样的，我的Vim配置也会不断更新，可能会持续n年也不一定。而这也是为什么我的文章标题起名如此。
+原则 我的Vim配置有一定的原则，遵循原则才会让配置不会超出自己的控制
+插件能用轻量级的就不用复杂的 非需要的功能不会添加 尽量消耗更少的资源 配色一定不能忍 尽可能的做到一键配置 正文 配色 说得多还不如先看看总体的配色，配色我采用了vim自带的desert主题，在这个基础上加了一点自定义
+从左往右说起好了，左侧我添加了一个目录树，使用的是scrooloose/nerdtree的插件，并且绑定了&lt;leader>q来启动和隐藏目录树，使用起来还是蛮方便的
+中间的配色我刻意挑了一个黑色的主题。我不喜欢那种惨淡的白色，函数名和命名空间是白色就和变量名看起来没有区分度了，因此搜了好久，找到了octol/vim-cpp-enhanced-highlight插件能满足这个需求，修改了一下它的颜色。弹出菜单的颜色我也自己修改了。颜色都采用了暗色调的color，确保不会刺眼，同时也能将不同的元素区分出来。set t_Co=256 " Enable status bar color很重要。
+顶部和底部采用的是比较出名的vim-airline/vim-airline插件，以及其相应的vim-airline/vim-airline-themes，主题我选择了let g:airline_theme='luna'，并且启用了powerline字体，也就是你能看到的三角形符号
+因为还在不断的修改中，未来可能会考虑把配色做成插件易于安装吧，目前的安装方式比较麻烦
+管理 插件管理上我选用了Vundle，目前一款比较流行的Vim插件管理器，基本上我只使用github上的vim插件
+按键 一直以来我对于那种秀配置不讲按键绑定的文章比较反感，除非你一个键都没改
+模式 按键 映射 功能 说明 全局 , leader &lt;leader> leader键是vim中的一个特殊键 正常 j gj 下一行 视觉上往下移动(行太长导致分行时) 正常 k gk 上一行 视觉上往上移动(行太长导致分行时) 正常 &lt;leader>w :w&lt;CR> 快速保存 没有权限保存的时候也是不行的 正常 &lt;leader>q :bd&lt;CR>:q&lt;CR> 快速退出 前提所有buffer都保存了，防止意外 正常 K :bnext&lt;CR> 切换到右边的buffer 仿照Vimuim的标签切换 正常 J :bprevious&lt;CR> 切换到左边的buffer 仿照Vimuim的标签切换 正常 &lt;leader>bn :enew&lt;CR> 新开一个buffer buffer new 正常 &lt;leader>bd :bd&lt;CR> 关闭当前buffer buffer delete 正常 空格键 smooth_scroll 向下平滑滚动 避免思维跳跃，仿照Chrome的设定 正常 减号键 smooth_scroll 向上平滑滚动 避免思维跳跃 编辑 Ctrl + b 方向键-左 向左移动一个字符 仿照Bash的控制方式 编辑 Ctrl + f 方向键-右 向右移动一个字符 仿照Bash的控制方式 编辑 Ctrl + e Home键 跳到行首 仿照Bash的控制方式 编辑 Ctrl + a End键 跳到行尾 仿照Bash的控制方式 编辑 Tab键 方向键-下 选择下一个候选词 可连续按 编辑 Esc键 Ctrl + 回车 清除菜单 无 可视化 // y/&lt;C-R>"&lt;CR> 快速搜索 需要先选择内容 其实可以看出我是比较喜欢统一各大软件的按键方式的，主要是可以让自己不用记忆太多，快捷键是效率的主要生产力，所以终端、编辑器、浏览器这三大离不开的软件，我都会尽可能地去统一它们的按键...</p></section><footer class=entry-footer>2019, July 23&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to 我的Vim配置" href=https://wsine.github.io/posts/my-vim-configuration/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>个人博客的方案推荐，你只负责编写</h2></header><section class=entry-content><p>今天想要谈谈的是一套我在用的个人博客解决方案，它能带给我最大的便利。
+首先我想先插播一个讨论，为什么要写博客？从我上大学开始，我就喜欢上了写博客。这主要是受到了一位前辈说的话而引发的思考：“当你能够将你所学的有条理地写下来成为一篇文章，那么就证明你学会了。” 当我越是实践这一点，我就越能体会到 写与不写 两者之间的差异。
+以我的经历来揣测，大多数人的博客方案可能经历如下几个阶段：
+主流博客网站：需要考虑的因素就比较多，包括Markdown支持、CSS支持、Javascript支持等，更重要的是原始数据不能很容易地访问； 私有博客服务器：维护VPS，维护域名，维护流量 是这一方案最大的成本； 静态网页托管：hexo、jekyll、pelican都是比较主流的方案，但是对客户端本身比较依赖 直到我遇到了docsify，我更愿意将它称为第四阶段“动态生成网页托管”。
+Docsify是什么 官方的描述是这样子的：一个神奇的文档网站生成工具
+docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo 的地方是它不会生成将 .md 转成 .html 文件，所有转换工作都是在运行时进行。
+这将非常实用，如果只是需要快速的搭建一个小型的文档网站，或者不想因为生成的一堆 .html 文件“污染” commit 记录，只需要创建一个 index.html 就可以开始写文档而且直接部署在 GitHub Pages。
+第一次看到这样的描述的时候，我就觉得它也很适合用来构建一个博客系统，事实证明确实如此。
+Docsify有什么 Markdown支持 在2019年写博客，几乎主流的选择都是使用 Markdown 标记性语言，它很轻量，能让关注在内容本身而不是调格式上。
+但是，Docsify 提供的 Markdown 是原生的美好的感觉，不需要你刻意遵循什么，想怎么写就怎么写的自由；相对的，Hexo 和 Jekyll 都需要遵循一些特殊的格式，比如 {{ 日期 }} 等。这是我很喜爱它的一点。
+官方内置的 Markdown 解析器是marked，如果不喜欢还可以参考文档来自定义。
+###CSS支持
+docsify 提供了内置的5款主题，分别 vue.css buble.css dark.css pure.css dolphin.css，我个人是比较喜欢绿色的主题的，所以选了还是默认的 vue.css 风格。另外，Github 上还有很多优秀的第三方主题可供选择。
+当然作为一个开放的系统，它也允许用户自定义，如果有兴趣，撸一个符合自己审美好看的主题也蛮不错的。
+详细的主题 Demo 可以看这里~
+Javascript支持 流程图 & 序列图 有 js 的支持，对我来说意味着能够加入扩展 Markdown 语法，比如流程图、序列图等的支持。我很喜欢 Typora 这款 MD 编辑器，它自身加入了流程图和序列图等的支持，这对于技术博客来说还是很有用的一大功能。而借助 docsify 的插件系统，简单的配置了一下就能加入这些功能，然后就能做到桌面端编辑和网页端展示是完全一样的效果。...</p></section><footer class=entry-footer>2019, July 20&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to 个人博客的方案推荐，你只负责编写" href=https://wsine.github.io/posts/personal-blog-writting-solution/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>2019年科学且免费的复合密码管理策略</h2></header><section class=entry-content><p>[TOC]
+前言 今天想要谈谈的是一套我在用的密码管理方案，我认为还是比较安全又易用的。
+回想一下，大多数人的密码管理策略可能有如下几个：
+纯大脑记忆所有的密码 几乎使用一套密码来注册所有网站 分重要等级用几套密码来注册所有网站 使用记忆因子，实时大脑计算出正确密码 使用流行的密码管理工具，如1password、Lastpass、Keychain等 第一种情况，无疑这样的解决方案十分痛苦，这种情况很常见于不常使用互联网服务的父辈或祖父辈；第二种情况，基本上遇到密码泄露事件，撞库攻击，危险性是最高的；第三种情况，也是我上一种使用策略，虽然减轻的第二种情况的危险性，但还是有一定的危险；第四种情况，我陪朋友去ATM取款的时候，在他旁边陪了10多分钟，才算好密码取出现金🙂；第五种情况，要么太贵，要么平台限制，还不拥有密码的存储权。
+本文要解决的就是现有的这些痛点。在2019年的今天，我还是很推荐你尝试一下这套密码管理策略的。
+我的解决方案 密码安全 && 便携 **首先要解决的第一个痛点是密码安全的问题。**我找的解决方案是花密，引用一下官方的宣传语
+不一样的密码管理工具：可记忆、非存储、更安全
+跨平台应用支持：桌面版、移动版，随处方便使用
+无需存储密码：计算获得最终密码，没有存储过程，更安全
+它的工作原理大概是这样子的：输入一个"记忆密码"+“区分代号”，然后经过一个特定的Hash算法，获得一个“最终密码”。这个Hash算法主体是由多个md5算法混淆而来，重复概率极其低，而且具有不可逆推导的特性。由于不同的网站使用不同的密码，因此安全性大大提高。
+但是，花密本身还有一定的缺陷。首先，它的网页版工具没有做移动端适配，而我并不想在每个平台多装一个软件来实现这个小的功能。其次，它的密码输出位数强制为16位，仅包含英文字母和数字，很多时候会超出网站的密码位数限制，而且评估的密码强度只能达到中等。
+因此，我决定自己写一个小工具来改进这些问题。
+觅密 受到花密的启发，我实现的工具名为觅密，并且开源在Github中，在此再次感谢花密的idea。
+该工具的整体思路如下：第一部分，基本上是复刻花密的思路，在此就不再复述了。第二部分，我加入了特殊字符进行混淆，基本上评估的密码强度能够达到强级别。第三部分，我将密码长度默认10，暂时没遇到密码长度限制不包含10的网站。第四部分，考虑到部分网站的密码内容限制，我增加了选项去除特殊字符的加入。一键复制密码也有实现，但是由于精简体积和不同的浏览器特性不一样，并没有加入弹窗功能提示复制成功，知道有复制功能就行了。
+因此该工具拥有如下的特性：
+完全开源 移动端适配 高强度密码 更友好的密码长度 这个只是一个小网页，依托Github Page运行，采用纯本地端计算，不涉及与服务器的交互，因此密码安全有保证，且开源。网页链接：https://wsine.github.io/seekpassword/。
+P.S. 如果你也会编程的话，完全可以fork一份后修改来定制自己的安全策略。普通用户直接使用这个网页也完全没有问题。
+这里顺便提醒一下，“记忆密码"和“区分代码”并不一定要恒定。记忆密码还是很推荐使用等级策略来记忆，简单分2~3级我觉得就足够了，毕竟安全性已经大大提高了，也就是说你仅需要记忆2~3个短密码即可。区分代码其实可以根据自己对网站的第一反应来记忆，比如昵称、别称、域名、拼音缩写等等，按照自己的喜欢即可。
+这个网页其实也解决了一个便携性的痛点。
+不知道各位有没有这样的痛苦，当你临时来到一个新的机器想要登陆一个账号，但是由于是复杂的强密码完全无法记忆，所以你得要么得重新安装密码管理软件同步过来，或者用手机查看密码后手动输入，这种体验本身都不友好。由于觅密它本身只是一个网页，保存为浏览器书签即可快速使用查看，或直接在新电脑打开网页输入一下就得到最终密码了。
+密码存储 密码的安全性是提高了，下一个点要解决的是所有权的问题。
+无论是笔记还是其他东西，我都希望我的数据能够掌握在我的手里。我来讨论一下极端的几种情况：
+哪天我发疯了，将整个软件仓库删了，你不记得算法的流程了怎么办 哪天Github服务被block了或者倒下了，你不知道我将新的网站部署在哪了怎么办 哪天1password / Lasspass等服务倒下了，你的高强度密码都丢失了怎么办 哪天你更换了常用平台不用Apple的硬件了，你存储在keychain的密码怎么导出呢 虽然这些情况都比较难达到，但我依然将这种情况考虑进去了
+KeePass 我采用的密码管理软件是KeePass，首先引用一下的它的官方介绍：
+KeePass is a free open source password manager, which helps you to manage your passwords in a secure way....</p></section><footer class=entry-footer>2019, June 26&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to 2019年科学且免费的复合密码管理策略" href=https://wsine.github.io/posts/2019-scientific-overlapping-password-policy/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://wsine.github.io/tags/solution/>« Prev Page</a>
+<a class=next href=https://wsine.github.io/tags/solution/page/3/>Next Page »</a></nav></footer></main><footer class=footer><span>Copyright © 2019-Now · CC <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en>BY-NC-SA 4.0</a></span>
+<span>&#183;</span>
+<span>Powered by <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a></span>
+<span>&#183;</span>
+<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position"))};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft)}document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

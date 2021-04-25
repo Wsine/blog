@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://wsine.github.io/sitemap.xml

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Live on Wsine&#39;s blog</title>
+    <link>https://wsine.github.io/tags/live/</link>
+    <description>Recent content in Live on Wsine&#39;s blog</description>
+    <image>
+      <url>https://wsine.github.io/author.jpg</url>
+      <link>https://wsine.github.io/author.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+    <lastBuildDate>Mon, 15 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/live/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>疫情之下提升心情的方法</title>
+      <link>https://wsine.github.io/posts/improve-mood-under-covid19/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wsine.github.io/posts/improve-mood-under-covid19/</guid>
+      <description>&lt;p&gt;2020 年，在疫情的笼罩之下，对我而言最大的课题就是情绪管理。当然，这也跟我的经历相关。产生低落的情绪并不可怕，可怕的是自己无法打败这样的情绪。本篇文章就是我在 2020 年的实践中总结的一些调节心情的方法。&lt;/p&gt;
+&lt;p&gt;千言万语总结成一句话:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;让自己开心最重要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h3&gt;
+&lt;p&gt;我是一名 2019 年秋季入学的香港博士生。不幸的是，由于座位紧张，我入学被分在一个地下办公室。没办法和师兄师姐在同一个办公室，也就没办法产生更多的联系。&lt;/p&gt;
+&lt;p&gt;没多久，香港社会暴乱，学校率先停课/推出网课，这一动乱就是两个月之久。缺少的线下授课使得认识同级小伙伴的数量变得更加少。&lt;/p&gt;
+&lt;p&gt;2020年初，Covid-19 席卷全球，由于是一年级生，出于稳定的网络环境考虑，赶在封关之前回到香港继续课业，没想到和朋友的断联到现在也还没恢复。&lt;/p&gt;
+&lt;p&gt;但是，无论生活如何糟糕，还是要笑对人生。&lt;/p&gt;
+&lt;h3 id=&#34;给情绪找一个出口&#34;&gt;给情绪找一个出口&lt;/h3&gt;
+&lt;p&gt;在我们的现代观念中，生活往往要求人们积极乐观向上，大家总是报喜不报忧，尤其是面对家长，不想家长担心；但自己的朋友圈中，也需要顾虑到面子，不能畅所欲言。在最近的氛围中，也提出了高情商vs低情商这样的对比，使得人们说一句话反而要考虑得更多了。&lt;/p&gt;
+&lt;p&gt;但是，人总是会有悲欢离合。那些失落的情绪被掩埋了，它就真的不在了吗？&lt;/p&gt;
+&lt;p&gt;在 20 年 4 月的时候，少数派有一位作者提出了 「b言b语」的想法，作者初始的想法是保卫表达欲的同时避免社交兴奋。有兴趣的可以详细阅读这篇文章：https://sspai.com/post/60024 。但是对我而言，更重要的是给情绪一个出口，让知己能够聆听。&lt;/p&gt;
+&lt;h4 id=&#34;我的搭建方案&#34;&gt;我的搭建方案&lt;/h4&gt;
+&lt;p&gt;遵循类似的架构设计，我使用了Github Page + Airtable，我的方案改进了一下的几点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 Airtable 替代 Leancloud 作为后端，避免了Leancloud一定时间内没使用会归档应用的限制，避免被迫营业，毕竟我的希冀是这个自留地发得越少越好，说明自己的心境在提高甚至走了出来。&lt;/li&gt;
+&lt;li&gt;使用 Material Design 作为设计语言，良好的视图也能影响心情。&lt;/li&gt;
+&lt;li&gt;发布方式增加了更加易用的网页端，密钥本地保存。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/B409AD5F4CB5520011A92C25D6D64EFC.png&#34; alt=&#34;页面展示&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;但由于私密性相关，我不打算开放给非亲密好友。源代码可以从该链接获取 &lt;a href=&#34;https://gist.github.com/Wsine/00cd48e8a266e78ff988adde87fd401b&#34;&gt;Gist&lt;/a&gt;. Airtable 自身提供的API已经考虑了翻页的功能，且可访问频率高，不限制过长时间的访问，非常适合这个系统。你只需根据自己的API token 替换对应的位置即可部署。最重要的是把入口只告诉给你信赖的亲密好友。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# airtable base scheme&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;Created&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Date&lt;/span&gt;
+  - &lt;span style=&#34;color:#f92672&#34;&gt;Date format&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Local&lt;/span&gt;
+  - &lt;span style=&#34;color:#f92672&#34;&gt;Time format&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;hour&lt;/span&gt;
+  - &lt;span style=&#34;color:#ae81ff&#34;&gt;Do not use the same time zone&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;Content&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Long text&lt;/span&gt;
+  - &lt;span style=&#34;color:#ae81ff&#34;&gt;Do not enable rich text formatting&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;Index&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Autonumber&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果有更多的问题，也欢迎和我讨论。&lt;/p&gt;
+&lt;h3 id=&#34;用暗示鼓励自己&#34;&gt;用暗示鼓励自己&lt;/h3&gt;
+&lt;p&gt;上面的方法解决了把负能量从自己的身上释放出去，接下来的方法想要解决的是从外部把正能量引入自身，而最好的方法还是朋友。&lt;/p&gt;
+&lt;p&gt;在疫情的环境中，我们可能因为不能跨省跨市地和朋友们见面，但是我们对于朋友的情谊其实也不会因为这个而减少。大家都思念朋友，但是碍于情感也不好太过于直白地表达。因此，我们需要一些含蓄一点的方法。&lt;/p&gt;
+&lt;p&gt;同时，2020 年也是桌面文化流行的一年，需要互联网人也在不断分享自己日益丰富的桌面。从节省的角度上来考虑，我打算顺便拯救一下吃灰的 Kindle 设备。相信大家都有一台吃灰的 Kindle 吧（笑）。&lt;/p&gt;
+&lt;p&gt;我的方案很简单，就是打算利用 Kindle 设备来作为载体变成一本翻页日历，这本日历就是一本书籍，上面有朋友们给你的鼓励话语，你每天翻一页日历就能看到一句来自自己朋友的激励，也能在工作的眼睛余光中瞥见它形成鼓舞。&lt;/p&gt;
+&lt;p&gt;网络上一些方案依赖于 Kindle 内置的浏览器，通过联网来更新每日日历，操作繁琐还费电。同时地址栏也关闭不了，我这个方案会显得更友好一些。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/4C9456FAE609EF20EE6E0BCBC07B2925.png&#34; alt=&#34;Presentation2&#34;  /&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;我的构建方案&#34;&gt;我的构建方案&lt;/h4&gt;
+&lt;p&gt;首先第一步，你需要收集来自自己朋友们的励志语。这里，我选择使用传播更为方便的腾讯问卷来进行收集。同时，我也在线征集给 2021 年做一个少数派网友们专属的日历，以此作为演示，最后我会把生成的日历放在评论区供下载。问卷入口：https://wj.qq.com/s2/7997978/79df/&lt;/p&gt;
+&lt;p&gt;问卷只包含两个简单的问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;你的网络 ID ？(14个字以内)&lt;/li&gt;
+&lt;li&gt;你想对日历用户说的正能量话语？(60字以内)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;问题1的回答会显示在昵称中，问题2的答案就是正能量语录了，由于Kindle屏幕有限，因此只能包含60个字以内，太长了不好瞥见不是。&lt;/p&gt;
+&lt;p&gt;收集到足够 365 条鼓励话语后，就可以导出 CSV 格式的文件，供下一步处理使用了。如果没法收集这么多也是可以的，程序会自动 duplicate 一份，其实每个人也可以写多条，建议收集一半以上，这样重复率不会太高。&lt;/p&gt;
+&lt;p&gt;打开该项目的地址：https://github.com/Wsine/kindle-calendar&lt;/p&gt;
+&lt;p&gt;你可以 Clone 下来在本地操作，也可以使用 README 里面的链接，在 Google Cloud Shell 中使用。整个操作流程都可以在网页端完成，不用在自己机器上配置环境。Awesome！&lt;/p&gt;
+&lt;p&gt;这里我用一个动图给你演示一下，整个操作的流程。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/2ACCEF5B5A9670F8DB77D8FE354F73A3.gif&#34; alt=&#34;一键使用&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;最后，很简单的步骤，就是用自己设定的白名单邮箱把日历作为附件发送到 Kindle 的邮箱中即可，注意，不要在标题栏加入 “Convert” 这个关键词。Kindle 关闭睡眠模式只需要在搜索栏中输入&lt;code&gt;~ds&lt;/code&gt;即可。&lt;/p&gt;
+&lt;p&gt;同样的，如果有更多的问题，也欢迎和我讨论。&lt;/p&gt;
+&lt;h3 id=&#34;多出去走走&#34;&gt;多出去走走&lt;/h3&gt;
+&lt;p&gt;最后的方法，我还是鼓励大家多出去走走。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;感受阳光&lt;/strong&gt;：结合我自己的情况来看，因为常年在地下办公室，全靠灯光来供应光源，没有办法感受阳光，因此一天中如果长时间工作了，不妨出去走10分钟回来，对心情的调节有意想不到的效果。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;多运动&lt;/strong&gt;：同时，运动也是解决心理压力的重要途经。在保持合适的社交距离的情况下，还是要运动，否则就算没有生理疾病，反而积压了心理疾病，也是得不偿失的一件事情。&lt;/p&gt;
+&lt;p&gt;这个疫情年里，很多博士生可能都或多或少出现了抑郁情绪（非抑郁症），我只想说去它的论文，先暂时放一放，调节好心情才能有更大的能量科研，硬着头皮做实验写论文，也不会有很大的产出的。&lt;/p&gt;
+&lt;p&gt;最后，祝 2021 年的疫情都能消散，我们都能恢复以往的自由交流。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

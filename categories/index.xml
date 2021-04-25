@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Wsine&#39;s blog</title>
+    <link>https://wsine.github.io/categories/</link>
+    <description>Recent content in Categories on Wsine&#39;s blog</description>
+    <image>
+      <url>https://wsine.github.io/author.jpg</url>
+      <link>https://wsine.github.io/author.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><atom:link href="https://wsine.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
