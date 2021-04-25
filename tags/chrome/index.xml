@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chrome on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/chrome/</link>
+    <link>https://blog.wsine.top/tags/chrome/</link>
     <description>Recent content in Chrome on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Sun, 24 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chrome在Windows找回熟悉的Alt &#43; Num切换标签页</title>
-      <link>https://wsine.github.io/posts/alt-num-switch-tab-in-chrome-on-windows/</link>
+      <link>https://blog.wsine.top/posts/alt-num-switch-tab-in-chrome-on-windows/</link>
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/alt-num-switch-tab-in-chrome-on-windows/</guid>
+      <guid>https://blog.wsine.top/posts/alt-num-switch-tab-in-chrome-on-windows/</guid>
       <description>&lt;p&gt;在不同的系统和软件中，我都喜欢尽可能用同一套快捷键方案去完成相同的功能，以减少自己的学习和记忆成本，最大化效率。但是，哪怕是同一个应用，由于不同平台的默认快捷键不一样，频繁切换平台的迁移学习也很辛苦。&lt;/p&gt;
 &lt;p&gt;比如 Chrome 浏览器中，切换标签页的方式在不同的平台上不一样：&lt;/p&gt;
 &lt;ul&gt;

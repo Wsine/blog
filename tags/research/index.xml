@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Research on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/research/</link>
+    <link>https://blog.wsine.top/tags/research/</link>
     <description>Recent content in Research on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我的科研软件流分享</title>
-      <link>https://wsine.github.io/posts/my-research-software-solution/</link>
+      <link>https://blog.wsine.top/posts/my-research-software-solution/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/my-research-software-solution/</guid>
+      <guid>https://blog.wsine.top/posts/my-research-software-solution/</guid>
       <description>&lt;p&gt;在少数派2019的年度征文里，我分享了我积累的「&lt;a href=&#34;https://sspai.com/post/58386&#34;&gt;科研方法论&lt;/a&gt;」。经过一年多的对科研软件的使用，我也逐渐积累了一套自己的软件流程，现整理为文章，希望对你有用。&lt;/p&gt;
 &lt;p&gt;在科研的过程中，我经常经历的过程大概只有这几个：阅读论文，讨论 idea，实验记录。所以本文主要还是以这 3 点作为切入点来聊聊，如何将这3个过程变成一个电子化的，系统化的软件流程。&lt;/p&gt;
 &lt;h2 id=&#34;阅读论文&#34;&gt;阅读论文&lt;/h2&gt;
@@ -73,10 +73,10 @@
     
     <item>
       <title>我的科研方法论</title>
-      <link>https://wsine.github.io/posts/my-research-methodology/</link>
+      <link>https://blog.wsine.top/posts/my-research-methodology/</link>
       <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/my-research-methodology/</guid>
+      <guid>https://blog.wsine.top/posts/my-research-methodology/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;p&gt;去年9月份开学，一只脚正式踏进了科研圈。经过了一个多学期的学习，现在也总结了一些经验。所以今天就打算来聊聊，我在科研上面的一些方法和经验。但是，我的这些思考也只是经过了半年的迭代而已，可能还需要完善，但希望对你有用。&lt;/p&gt;
 &lt;h2 id=&#34;科研新人&#34;&gt;科研新人&lt;/h2&gt;

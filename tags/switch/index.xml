@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Switch on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/switch/</link>
+    <link>https://blog.wsine.top/tags/switch/</link>
     <description>Recent content in Switch on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/switch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/switch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NS大屏共享的小众方案</title>
-      <link>https://wsine.github.io/posts/switch-screen-to-laptop-or-pc/</link>
+      <link>https://blog.wsine.top/posts/switch-screen-to-laptop-or-pc/</link>
       <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/switch-screen-to-laptop-or-pc/</guid>
+      <guid>https://blog.wsine.top/posts/switch-screen-to-laptop-or-pc/</guid>
       <description>&lt;p&gt;你是否曾经苦恼在宿舍里生活，偶尔想跟舍友来打一把大乱斗却苦于NS屏幕太小不尽兴？&lt;/p&gt;
 &lt;p&gt;你是否曾经苦恼租房在外只有自己一个小房间，无法跟朋友一起欢畅地众乐乐？&lt;/p&gt;
 &lt;p&gt;本文就是提供一个相对廉价的方案来解决以上的烦恼。&lt;/p&gt;
@@ -58,10 +58,10 @@
     
     <item>
       <title>Switch移动TV模式杂谈</title>
-      <link>https://wsine.github.io/posts/switch-tv-mode/</link>
+      <link>https://blog.wsine.top/posts/switch-tv-mode/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/switch-tv-mode/</guid>
+      <guid>https://blog.wsine.top/posts/switch-tv-mode/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;今天想要谈谈的是 Switch 游戏主机的 TV 模式。&lt;/p&gt;
 &lt;p&gt;Switch 最美好的地方，除了能够 Play Anywhere 之外，还有分享的快乐。但是要分享得够快乐，除了手柄以外，如果只通过 Switch 的桌面模式来打游戏，游戏体验大打折扣。TV 模式才是正确打开多人游戏的方式。它能使你在客厅的大电视，宿舍的显示器，&lt;del&gt;办公室的显示器&lt;/del&gt; 上和不同的小伙伴分享快乐。由于 Switch 的底座太大太重了，携带很不方便，然后你就会想能不能通过 typc to hdmi 的拓展坞来实现。&lt;/p&gt;

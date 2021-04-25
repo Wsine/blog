@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Evaluation on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/evaluation/</link>
+    <link>https://blog.wsine.top/tags/evaluation/</link>
     <description>Recent content in Evaluation on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/evaluation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/evaluation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从 iOS 13 到 ColorOS 6 的用户体验</title>
-      <link>https://wsine.github.io/posts/from-ios13-to-coloros6/</link>
+      <link>https://blog.wsine.top/posts/from-ios13-to-coloros6/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/from-ios13-to-coloros6/</guid>
+      <guid>https://blog.wsine.top/posts/from-ios13-to-coloros6/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;2020年到了，国内厂商不断迭代进化的安卓手机用户体验到底如何呢？抱着这个疑问，我也十分好奇。适逢单卡手机不太适合我的现状，且最近双11、双12都没怎么买买买，手痒痒之下决定换到 Android 平台体验一下。不过最近适逢 5G 快速普及的时代，我也曾十分纠结买哪一款手机比较好，也写下了如下小杂文，记录了我的思考过程。&lt;/p&gt;

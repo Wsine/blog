@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SSPAI on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/sspai/</link>
+    <link>https://blog.wsine.top/tags/sspai/</link>
     <description>Recent content in SSPAI on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/sspai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/sspai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows平台下的少数派新写稿流程</title>
-      <link>https://wsine.github.io/posts/writting-for-sspai-on-windows/</link>
+      <link>https://blog.wsine.top/posts/writting-for-sspai-on-windows/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/writting-for-sspai-on-windows/</guid>
+      <guid>https://blog.wsine.top/posts/writting-for-sspai-on-windows/</guid>
       <description>&lt;p&gt;谈及写作，不少的用户都是使用 Mac 平台配合多样的 App 完成从写稿到发布的一条龙服务。但是在 Windows 平台上，往往需要很多手动的过程。比如，在少数派平台上，官方提供了专用的接口给 MWeb App 完成从写稿、插图、发布的完善服务，但是 MWeb App 仅在 Mac 平台上提供，Windows 用户常常因为插图图床问题困扰。&lt;/p&gt;
 &lt;p&gt;最近，随着两大写作好伴侣 App 的更新，这一情况得以改善。PicGo 迎来了 v2.0 版本的大更新，剥离了核心功能同时支持 CLI 调用和 API 调用。Typora 集成了 PicGo 并提供一键上传图片服务。如果需要更详细的资料，请看这两篇文章：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sspai.com/post/52527&#34;&gt;图床「神器」PicGo v2.0更新，插件系统终于来了&lt;/a&gt;&lt;/p&gt;

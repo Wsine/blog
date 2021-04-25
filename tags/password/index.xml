@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Password on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/password/</link>
+    <link>https://blog.wsine.top/tags/password/</link>
     <description>Recent content in Password on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Wed, 26 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/password/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/password/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2019年科学且免费的复合密码管理策略</title>
-      <link>https://wsine.github.io/posts/2019-scientific-overlapping-password-policy/</link>
+      <link>https://blog.wsine.top/posts/2019-scientific-overlapping-password-policy/</link>
       <pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/2019-scientific-overlapping-password-policy/</guid>
+      <guid>https://blog.wsine.top/posts/2019-scientific-overlapping-password-policy/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;今天想要谈谈的是一套我在用的密码管理方案，我认为还是比较安全又易用的。&lt;/p&gt;

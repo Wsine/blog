@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RSS on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/rss/</link>
+    <link>https://blog.wsine.top/tags/rss/</link>
     <description>Recent content in RSS on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/rss/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/rss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>给你的静态博客带来 RSS 订阅</title>
-      <link>https://wsine.github.io/posts/bring-rss-to-your-blog/</link>
+      <link>https://blog.wsine.top/posts/bring-rss-to-your-blog/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/bring-rss-to-your-blog/</guid>
+      <guid>https://blog.wsine.top/posts/bring-rss-to-your-blog/</guid>
       <description>&lt;p&gt;最近对于千篇一律的科技新闻，感到了一丝的阅读疲倦。因此，想要寻找一些有有趣的灵魂或者独立思考的博文，打发平时无聊的摸鱼时光。但是，随着在互联网上探索有意思的博客，发现绝大部分都没有提供相关的订阅链接，这将很难追踪新博客的发布。这其中，相当一部分博客是通过静态方式发布博客的。&lt;/p&gt;
 &lt;p&gt;因此，本文的内容就是通过我的实践展示一下如何给静态博客增加 RSS 订阅。&lt;/p&gt;
 &lt;h2 id=&#34;什么是-rss&#34;&gt;什么是 RSS&lt;/h2&gt;

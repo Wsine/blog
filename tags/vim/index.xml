@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/vim/</link>
+    <link>https://blog.wsine.top/tags/vim/</link>
     <description>Recent content in Vim on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我的Vim配置</title>
-      <link>https://wsine.github.io/posts/my-vim-configuration/</link>
+      <link>https://blog.wsine.top/posts/my-vim-configuration/</link>
       <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/my-vim-configuration/</guid>
+      <guid>https://blog.wsine.top/posts/my-vim-configuration/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;h4 id=&#34;为什么选择vim&#34;&gt;为什么选择vim？&lt;/h4&gt;
 &lt;p&gt;曾经我也是一个小白，使用Dev-C++来学习C++语言，使用Visual Studio开发工程，它们都被称为IDE(Integrated development environment)。但是，逐渐的，我渐渐意识到，你只能遵循它制定的一系列的流程来开发程序，自定义程度不高，而且大型的IDE消耗计算资源严重。&lt;/p&gt;

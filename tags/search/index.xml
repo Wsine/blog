@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Search on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/search/</link>
+    <link>https://blog.wsine.top/tags/search/</link>
     <description>Recent content in Search on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Sun, 25 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/search/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/search/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>国产优质搜索引擎Dogedoge多吉搜索</title>
-      <link>https://wsine.github.io/posts/dogedoge-search-engine/</link>
+      <link>https://blog.wsine.top/posts/dogedoge-search-engine/</link>
       <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/dogedoge-search-engine/</guid>
+      <guid>https://blog.wsine.top/posts/dogedoge-search-engine/</guid>
       <description>&lt;p&gt;今天想跟大家聊聊的是一个新晋的搜索引擎。&lt;/p&gt;
 &lt;p&gt;自从百度加入了竞价排名，对于搜索的成本无形中增加了很多；使用浏览器插件去除广告，也是道高一尺魔高一丈，搜索成本不断在波动，而且也对不起一些优秀的小型网站；使用谷歌搜索，每次想快速搜索一些东西，总是需要多花点时间做前期 setup，这时间成本高于我手动筛选的百度搜索结果；使用 DuckDuckGo 一段时间后，也无法使用了；而必应搜索引擎给我感觉并没有跟前者拉开明显的差距。&lt;/p&gt;
 &lt;p&gt;因此，通过不断的尝试，也让我遇到了今天的主角 —— 多吉搜索。下面仅从用户体验方面介绍一下这款搜索引擎。&lt;/p&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terminal on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/terminal/</link>
+    <link>https://blog.wsine.top/tags/terminal/</link>
     <description>Recent content in Terminal on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Microsoft Terminal 颜值在线的终端模拟器</title>
-      <link>https://wsine.github.io/posts/beautiful-microsoft-terminal/</link>
+      <link>https://blog.wsine.top/posts/beautiful-microsoft-terminal/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/beautiful-microsoft-terminal/</guid>
+      <guid>https://blog.wsine.top/posts/beautiful-microsoft-terminal/</guid>
       <description>&lt;p&gt;在 Microsoft Build 2019 的大会上，微软给我们带来了一款全新设计的终端模拟器 Microsoft Terminal. 虽然过度好看的宣传片和实际的效果有着巨大的落差，但是也不影响它在 Windows 阵营里取得最高的颜值称号。&lt;/p&gt;
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/1746B559BC9685F1E4D9BFFF9F5F9EAC.png&#34; alt=&#34;terminal&#34;  /&gt;
 &lt;/p&gt;

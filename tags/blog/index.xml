@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/blog/</link>
+    <link>https://blog.wsine.top/tags/blog/</link>
     <description>Recent content in Blog on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>给你的静态博客带来 RSS 订阅</title>
-      <link>https://wsine.github.io/posts/bring-rss-to-your-blog/</link>
+      <link>https://blog.wsine.top/posts/bring-rss-to-your-blog/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/bring-rss-to-your-blog/</guid>
+      <guid>https://blog.wsine.top/posts/bring-rss-to-your-blog/</guid>
       <description>&lt;p&gt;最近对于千篇一律的科技新闻，感到了一丝的阅读疲倦。因此，想要寻找一些有有趣的灵魂或者独立思考的博文，打发平时无聊的摸鱼时光。但是，随着在互联网上探索有意思的博客，发现绝大部分都没有提供相关的订阅链接，这将很难追踪新博客的发布。这其中，相当一部分博客是通过静态方式发布博客的。&lt;/p&gt;
 &lt;p&gt;因此，本文的内容就是通过我的实践展示一下如何给静态博客增加 RSS 订阅。&lt;/p&gt;
 &lt;h2 id=&#34;什么是-rss&#34;&gt;什么是 RSS&lt;/h2&gt;
@@ -70,10 +70,10 @@
     
     <item>
       <title>个人博客的方案推荐，你只负责编写</title>
-      <link>https://wsine.github.io/posts/personal-blog-writting-solution/</link>
+      <link>https://blog.wsine.top/posts/personal-blog-writting-solution/</link>
       <pubDate>Sat, 20 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/personal-blog-writting-solution/</guid>
+      <guid>https://blog.wsine.top/posts/personal-blog-writting-solution/</guid>
       <description>&lt;p&gt;今天想要谈谈的是一套我在用的个人博客解决方案，它能带给我最大的便利。&lt;/p&gt;
 &lt;p&gt;首先我想先插播一个讨论，为什么要写博客？从我上大学开始，我就喜欢上了写博客。这主要是受到了一位前辈说的话而引发的思考：“当你能够将你所学的有条理地写下来成为一篇文章，那么就证明你学会了。” 当我越是实践这一点，我就越能体会到 写与不写 两者之间的差异。&lt;/p&gt;
 &lt;p&gt;以我的经历来揣测，大多数人的博客方案可能经历如下几个阶段：&lt;/p&gt;

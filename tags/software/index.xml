@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software on Wsine&#39;s blog</title>
-    <link>https://wsine.github.io/tags/software/</link>
+    <link>https://blog.wsine.top/tags/software/</link>
     <description>Recent content in Software on Wsine&#39;s blog</description>
     <image>
-      <url>https://wsine.github.io/author.jpg</url>
-      <link>https://wsine.github.io/author.jpg</link>
+      <url>https://blog.wsine.top/author.jpg</url>
+      <link>https://blog.wsine.top/author.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Mon, 18 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wsine.github.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一个5年工科生的软件解决方案与故事</title>
-      <link>https://wsine.github.io/posts/5-years-cs-student-software-solution/</link>
+      <link>https://blog.wsine.top/posts/5-years-cs-student-software-solution/</link>
       <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wsine.github.io/posts/5-years-cs-student-software-solution/</guid>
+      <guid>https://blog.wsine.top/posts/5-years-cs-student-software-solution/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;工欲善其事必先利其器&lt;/p&gt;
 &lt;/blockquote&gt;
