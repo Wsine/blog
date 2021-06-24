@@ -10,7 +10,113 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 YADM 整理你的 dotfiles</title>
+      <link>https://blog.wsine.top/posts/manage-your-dotfiles-with-yadm/</link>
+      <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wsine.top/posts/manage-your-dotfiles-with-yadm/</guid>
+      <description>&lt;p&gt;说起收纳与整理，大家首先映入脑海中的应该都是家居收纳和书桌的整理。但是对于虚拟的东西是否也应该收纳与整理，一个干净的工作环境必定也能对工作有正面的帮助效果。&lt;/p&gt;
+&lt;p&gt;在我的日常工作环境中，主要使用命令行相关的工具，不得不面对很多的配置文件来使工具的表现更符合自己的需求。这种配置文件一般以一个 &lt;code&gt;.&lt;/code&gt; 符号为前缀，所以被大家习惯性称为 dotfiles .&lt;/p&gt;
+&lt;p&gt;对于 dotfiles，我们一般有如下的痛点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;配置文件太零散了&lt;/li&gt;
+&lt;li&gt;配置文件无法同步&lt;/li&gt;
+&lt;li&gt;配置文件在不同平台下面有部分不同&lt;/li&gt;
+&lt;li&gt;软件需要载入配置文件&lt;/li&gt;
+&lt;li&gt;部分信息既想同步又不想公开&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://yadm.io&#34;&gt;YADM&lt;/a&gt; 是一个比较新的管理器。在我的实际使用中，很好地解决了上述的痛点。我也不断摸索出自己的最佳实践，在这里分享给大家。&lt;/p&gt;
+&lt;h2 id=&#34;用约束管理凌乱&#34;&gt;用约束管理凌乱&lt;/h2&gt;
+&lt;p&gt;首先，如果文件没有办法按照一定的规则来存放，那么无论哪个软件管理器都只能是做掩埋，掩耳盗铃。&lt;/p&gt;
+&lt;p&gt;我们来看一个例子，一个使用多年 Linux 的用户，它需要管理的配置文件到底有多乱。我就在 Github 搜索 dotfiles 找一个最高 star 的作为例子。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/8afff2990d81d862953c9acc087c1574.jpg&#34; alt=&#34;github-com-mathiasbynens-dotfiles&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;实际上它总共包含了29个文件在一级目录里面。当然平时都是隐藏的状态，但是你总是会因为需要查看文件权限，不小心被这堆「垃圾」压倒。&lt;/p&gt;
+&lt;p&gt;为了避免被压倒，我们需要遵循规则，而这个规则就是 &lt;strong&gt;&lt;a href=&#34;https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html&#34;&gt;XDG Base Directory Specification&lt;/a&gt;&lt;/strong&gt; . 先来看一眼 XDG 官方的定义：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Various specifications specify files and file formats. This specification defines where these files should be looked for by defining one or more base directories relative to which files should be located.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;XDG 给大家一份约束规范，约束了不同类型的文件的存放位置和命名规则，主要包括配置文件，缓存文件，数据文件等。它的提出能极大地改善上述配置文件太凌乱的情况，截止2021年5月，目前绝大部分的软件也已经跟进了这份规范。具体的支持情况可以看 Arch Wiki 上面的软件列表：https://wiki.archlinux.org/title/XDG_Base_Directory#Support&lt;/p&gt;
+&lt;p&gt;XDG 主要定义了三个很必须的路径，它很好地告诉了你，哪些是配置文件应该保留，哪些是缓存当空间不够时可以勇敢地删除，软件依赖了哪些数据文件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;XDG_CONFIG_HOME
+&lt;ul&gt;
+&lt;li&gt;软件的配置文件存放位置&lt;/li&gt;
+&lt;li&gt;默认：&lt;code&gt;$HOME/.config&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;XDG_CACHE_HOME
+&lt;ul&gt;
+&lt;li&gt;软件的缓存应该存放的位置&lt;/li&gt;
+&lt;li&gt;默认：&lt;code&gt;$HOME/.cache&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;XDG_DATA_HOME
+&lt;ul&gt;
+&lt;li&gt;软件的依赖数据存放的位置&lt;/li&gt;
+&lt;li&gt;默认：&lt;code&gt;$HOME/.local/share&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;XDG_CONFIG_HOME 就是我们这里需要定义约束的统一配置文件存放位置。&lt;/p&gt;
+&lt;h5 id=&#34;实践一让不支持也变得支持&#34;&gt;实践一：让不支持也变得支持&lt;/h5&gt;
+&lt;p&gt;一般来说，配置文件默认的在为 &lt;code&gt;~/.config/&amp;lt;software name&amp;gt;/&amp;lt;config file&amp;gt;&lt;/code&gt;，只有第一级目录前面有 &lt;code&gt;.&lt;/code&gt; 的前缀。以 neovim 为例，它的配置文件就是 &lt;code&gt;~/.config/nvim/init.vim&lt;/code&gt;. 你只需要保存这份文件，就可以在不同的机器上得到相同的软件行为。&lt;/p&gt;
+&lt;p&gt;另一方面，对于那些还不在 support list 的软件，这里就需要小窍门了。&lt;/p&gt;
+&lt;p&gt;技巧一：通过环境变量指定配置文件。以 npm 为例，可以设置 &lt;code&gt;export NPM_CONFIG_USERCONFIG=&amp;quot;$XDG_CONFIG_HOME/npm/npmrc&amp;quot;&lt;/code&gt; ，这样就可以设置 npm 安装 package 到 &lt;code&gt;$XDG_DATA_HOME/npm&lt;/code&gt; 下面，而不需要 sudo 权限。啊不是，就可以把配置文件放在 XDG_CONFIG_HOME 下面。&lt;/p&gt;
+&lt;p&gt;技巧二：通过命令别名指定配置文件。以 tmux 为例，可以设置 &lt;code&gt;alias tmux=&amp;quot;tmux -f ~/.config/tmux/tmux.conf&amp;quot;&lt;/code&gt;， 这样启动 tmux 的时候就会使用XDG_CONFIG_HOME 下面的配置文件。&lt;/p&gt;
+&lt;h2 id=&#34;云为先&#34;&gt;云为先&lt;/h2&gt;
+&lt;p&gt;云存储在现在已经比较普及了，而 Github 就是 Linux 用户一般习惯存储 dotfiles 的地方。对于 yadm 这款新的管理器来说，它选择支持的就是 git 的协议。因此，理所当然的可以用 Github 作为云存储。也方便了分享自己的配置文件给别人，共同进步。&lt;/p&gt;
+&lt;p&gt;git 协议要求整个仓库都在同一个文件夹下面，文件夹下面所有的文件都是潜在跟踪目标。但 yadm 改进了这一点，它会创建一个 barebones repository，只追踪用户主动添加的文件。相比老前辈 &lt;code&gt;GNU stow&lt;/code&gt; 依赖软链接来维护一个仓库目录，yadm 的做法更简洁干净。它很好地反映了你当前 Home 目录下的文件布局。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/cc32942feae46ac9e7cd4cb699677607.png&#34; alt=&#34;image-20210527213229208&#34;  /&gt;
+&lt;/p&gt;
+&lt;h5 id=&#34;实践二新增仓库和日常的维护更新工作&#34;&gt;实践二：新增仓库和日常的维护更新工作&lt;/h5&gt;
+&lt;p&gt;它的使用方法很简单，把 git 命令替换成 yadm 命令即可，上手完全没有难度。同时，它也会使用你 git 配置好的 ssh key 。&lt;code&gt;yadm init/add/commit/push&lt;/code&gt;一套操作行云流水，就能轻易地把文件上传到 Github 中了。&lt;/p&gt;
+&lt;p&gt;技巧三：快速添加所有修改。在传统 git 仓库中，我们可以通过 &lt;code&gt;git add .&lt;/code&gt;一次性添加文件夹下全部文件到暂存区。但是在 yadm 中，需要使用 &lt;code&gt;git add -u&lt;/code&gt; 来添加所有已经被追踪到文件。&lt;/p&gt;
+&lt;p&gt;关于其他的使用方法，可以参考&lt;a href=&#34;https://yadm.io/docs/install&#34;&gt;官方手册&lt;/a&gt;，写得非常地详细。&lt;/p&gt;
+&lt;h2 id=&#34;求同存异&#34;&gt;求同存异&lt;/h2&gt;
+&lt;p&gt;在实际的使用中，我们往往会遇到不同的平台使用的配置文件不尽相同。但是又不希望那些小小的不同点对整体的管理产生太大的变化，比如额外管理两份不同的文件，每次手动修改等等。yadm 中有两个很实用的功能很好的解决了这个问题。&lt;/p&gt;
+&lt;p&gt;技巧四：不同平台下安装同一个软件。举个栗子，安装 neovim 这个软件。在 Linux 下我习惯使用 AppImage 软件包，而在 macOS 下却只能使用传统的 tar 包解压。我可以创建两个文件 &lt;code&gt;install_neovim.sh##os.Linux&lt;/code&gt;和&lt;code&gt;install_neovim.sh##os.Darwin&lt;/code&gt;分别对应上述的两个平台，但是在相应的平台就会有软链接指向相应的文件，👍。&lt;/p&gt;
+&lt;p&gt;技巧五：根据平台创建命令别名。如果说在 CLI 中 macOS 和 Linux 最大的不同，那就是一个是基于 BSD 的而后者基于 GNU，这使得命令的软件参数有很大的不同。这个问题可以创建 &lt;code&gt;aliases##template&lt;/code&gt;文件产生不同的别名。它能根据不同的平台生成不同内容的 &lt;code&gt;aliases&lt;/code&gt;文件，文件中的其余部分内容相同，👍。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ~/.config/zsh/aliases##template&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;% &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; yadm.os &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Darwin&amp;#34;&lt;/span&gt; %&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+alias ls&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ls -G&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;% &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; %&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+alias ls&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ls --color=auto --group-directories-first&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;% endif %&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+alias rm&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rm -i&amp;#34;&lt;/span&gt;
+alias mv&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mv -i&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;自动化&#34;&gt;自动化&lt;/h2&gt;
+&lt;p&gt;如果说还有什么不足，那就是并不是有配置文件就行，还得有相应的软件，而一个一个安装软件实在是太麻烦了。能不能用一个脚本完成安装呢？&lt;/p&gt;
+&lt;p&gt;技巧六：自动化安装软件。创建&lt;code&gt;~/.config/yadm/bootstrap&lt;/code&gt;文件，它可以是任意可执行文件，不过一般为 bash 脚本。把你想要自动化安装的软件写到里面，记得判断一下是否已安装避免重复执行。剩下的就是点火，“挞着佢”(bootstrap)&lt;/p&gt;
+&lt;p&gt;技巧七：过滤仓库中不必要的文件。一般仓库都会放一个README来说明仓库的作用，但我们并不想把这个文件污染我们的 HOME 目录。那么你可以借助 sparse-checkout 来做这个过滤，把以下内容放到 &lt;code&gt;~/.config/yadm/hooks/post_clone&lt;/code&gt;中，当你克隆完仓库后它就会自动执行了。是的，yadm 支持钩子！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# remove yadm readme&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt; ! -f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;YADM_HOOK_REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/info/sparse-checkout&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]]&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+  yadm gitconfig core.sparseCheckout true
+  cat &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;&amp;lt; EOF &amp;gt; &amp;#34;${YADM_HOOK_REPO}/info/sparse-checkout&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;# Generated by $0
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/*
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;!README.md
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;!UNLICENSE
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;EOF&lt;/span&gt;
+  yadm checkout --quiet
+&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;实践三快速部署一台新机器&#34;&gt;实践三：快速部署一台新机器&lt;/h5&gt;
+&lt;p&gt;思路也很简单，下载 yadm 并执行 &lt;code&gt;yadm clone &amp;lt;your url&amp;gt;&lt;/code&gt;，所有的配置文件就会被下载好，而且是可以根据不同的机器配置的。然后 post_clone 自动执行钩子，bootstrap 被调用，同时过滤掉不必要的文件。&lt;/p&gt;
+&lt;p&gt;然后就真的就是一行命令部署了, awesome&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -fsSL https://git.io/JL3ZE | bash -s clone &amp;lt;your git url&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里我把 yadm 提供的链接给缩短了，原始链接为 &lt;a href=&#34;https://github.com/TheLocehiliosan/yadm/raw/master/yadm&#34;&gt;https://github.com/TheLocehiliosan/yadm/raw/master/yadm&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;你的小秘密&#34;&gt;你的小秘密&lt;/h2&gt;
+&lt;p&gt;但是 dotfiles 并不尽然都是配置文件，它也可以是一些别的重要的文件，比如你的 ssh key 等，这种文件我们并不想把它公开，因为它藏着我们的「秘密」。&lt;/p&gt;
+&lt;p&gt;技巧八：加密你的秘密。yadm 支持使用 gpg 来加密你的文件，默认地它使用对称加密，也可以配置使用非对称加密。将 &lt;code&gt;.ssh/id_rsa&lt;/code&gt;添加到&lt;code&gt;~/.config/yadm/encrypt&lt;/code&gt;中，然后执行 &lt;code&gt;yadm encrypt&lt;/code&gt;，将生成的 &lt;code&gt;~/.local/share/yadm/archive&lt;/code&gt;和刚才的 encrypt 文件一起加入到 yadm 的跟踪列表中即可。&lt;/p&gt;
+&lt;h5 id=&#34;实践四多机器共用-ssh-key&#34;&gt;实践四：多机器共用 SSH KEY&lt;/h5&gt;
+&lt;p&gt;首先生成一对公钥和私钥，把公钥上传到自己 Github 账号的后台。然后把私钥用 yadm 加密管理，在不同的机器上都会同步好，只需要执行解密这个步骤就可以了。这样，你就可以把一份 ssh key 同步在你不同的机器上，而不用每次一台新机器都配置一遍 ssh，那个真的很麻烦喔。如果一旦泄露了，只需要把 Github 账号后台的公钥删掉就好，泄漏的私钥也没什么作用了。&lt;/p&gt;
+&lt;p&gt;不过正如官方所建议的一般，我也强烈建议如果你使用这个功能，请务必使用私有仓库以减少风险。&lt;/p&gt;
+&lt;p&gt;以上，就是我使用 yadm 作为 dotfiles 管理器的全部心得，如果有什么想交流的，欢迎在评论区留言～&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>使用 Airtable 构建个人单词本</title>
       <link>https://blog.wsine.top/posts/airtable-as-personal-lexicon/</link>
