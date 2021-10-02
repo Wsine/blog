@@ -4,7 +4,7 @@ date: 2020-06-02
 published: true
 tags: ['Windows', 'Solution', 'SSPAI']
 series: false
-cover_image: ./images/writting-for-sspai-on-windows.jpg
+cover_image: ./images/bcf36126e162a7d610effe869dc8b8c1.jpg
 canonical_url: false
 description: "谈及写作，不少的用户都是使用 Mac 平台配合多样的 App 完成从写稿到发布的一条龙服务"
 ---

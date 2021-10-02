@@ -4,7 +4,7 @@ date: 2020-04-21
 published: true
 tags: ['Solution']
 series: false
-cover_image: ./images/single-sim-to-dual-sim.png
+cover_image: ./images/2920b61ca8b10d744a993506cfce4cee.png
 canonical_url: false
 description: "今天想来聊聊的是一个单卡手机也能媲美双卡手机的使用方案"
 ---

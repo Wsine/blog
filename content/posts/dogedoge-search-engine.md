@@ -4,7 +4,7 @@ date: 2019-08-25
 published: true
 tags: ['Search']
 series: false
-cover_image: ./images/dogedoge-search-engine.jpg
+cover_image: ./images/1664818bd215fdef486dbfd738804a5e.jpg
 canonical_url: false
 description: "聊聊我喜欢的一款国内搜索引擎"
 ---

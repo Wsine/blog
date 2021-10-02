@@ -4,7 +4,7 @@ date: 2019-12-09
 published: true
 tags: ['Terminal', 'Windows']
 series: false
-cover_image: ./images/beautiful-microsoft-terminal.jpg
+cover_image: ./images/b1398c74eae46ef8491492a1b6deccbe.jpg
 canonical_url: false
 description: "最后一块拼图，Microsoft Terminal能够很好地用于日常工作中了"
 ---

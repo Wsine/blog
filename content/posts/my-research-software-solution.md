@@ -4,7 +4,7 @@ date: 2020-12-01
 published: true
 tags: ['Research', 'Solution']
 series: false
-cover_image: ./images/my-research-software-solution.png
+cover_image: ./images/ba7d37965807a31c8ff2ed6f60a24ed6.png
 canonical_url: false
 description: "经历了一年多的博士生学习，来聊聊我目前在科研生活中使用的软件"
 ---

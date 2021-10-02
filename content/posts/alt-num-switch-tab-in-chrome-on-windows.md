@@ -4,7 +4,7 @@ date: 2019-11-24
 published: true
 tags: ['Chrome', 'Windows', 'Solution']
 series: false
-cover_image: ./images/alt-num-switch-tab-in-chrome-on-windows.png
+cover_image: ./images/afb1377e03549388b08d28088c66fa1a.png
 canonical_url: false
 description: "使用Alt+Num在Chrome浏览器中切换标签页，统一多平台的体验"
 ---

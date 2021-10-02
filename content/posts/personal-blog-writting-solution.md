@@ -4,7 +4,7 @@ date: 2019-07-20
 published: true
 tags: ['Blog', 'Solution']
 series: false
-cover_image: ./images/personal-blog-writting-solution.jpg
+cover_image: ./images/df79af2c03cc6570d3e243a22a052abb.jpg
 canonical_url: false
 description: "基于Docsify的无配置无服务器博客方案"
 ---
@@ -55,13 +55,13 @@ docsify 提供了内置的5款主题，分别 `vue.css buble.css dark.css pure.c
 
 有 js 的支持，对我来说意味着能够加入扩展 Markdown 语法，比如流程图、序列图等的支持。我很喜欢 [Typora](<https://typora.io/>) 这款 MD 编辑器，它自身加入了流程图和序列图等的支持，这对于技术博客来说还是很有用的一大功能。而借助 docsify 的插件系统，简单的配置了一下就能加入这些功能，然后就能做到桌面端编辑和网页端展示是完全一样的效果。
 
-![sequence diagram](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image490.jpg)
+![sequence diagram](https://wsine.cn-gd.ufileos.com/image/7e81db0357153a234f1ed0a8c7b80c02.jpg)
 
 #### 评论系统
 
 docsify 官方支持 Disqus 和 Gitalk 两种评论系统，如果有需要的话也可以很轻易的配置。我个人是比较推荐使用 Gitalk 的，毕竟 Github 账号很多人都有。
 
-![discuss](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image491.jpg)
+![discuss](https://wsine.cn-gd.ufileos.com/image/7a7280f5f68996d1cf074853a3b1c100.jpg)
 
 还有其他很有用的一下功能官方都提供了，具体可以看这里的[插件列表](<https://docsify.js.org/#/zh-cn/plugins>)。如果需要实现一些特殊的功能也可以自定义，拥有可修改能力就感觉拥有一切一样，这感觉还是很美好的。
 
@@ -137,7 +137,7 @@ last(no)->cooperation->upload
 
 ### 样例Demo
 
-![Demo](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image492.jpg)
+![Demo](https://wsine.cn-gd.ufileos.com/image/0f23072a7635d7f9925d75b94461b0b0.jpg)
 
 博客地址：https://wsine.github.io/blog
 
@@ -155,7 +155,7 @@ last(no)->cooperation->upload
 
 后来，它很早开始支持Markdown也是我喜欢它的一点之一。但是，正值移动端崛起，网站本身对移动端的适配不足且我自定义了UI加大了难度，哪怕我辛苦得做了一版本移动端适配，效果也只是差强人意。
 
-![Old](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image493.png)
+![Old](https://wsine.cn-gd.ufileos.com/image/038adfb2b0b6b9233d75dd323c018cc4.png)
 
 ### 私有博客平台
 

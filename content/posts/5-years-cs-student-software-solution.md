@@ -18,7 +18,7 @@ description: "由于朋友们的咨询比较多，这篇文章就是来聊聊软
 
 ## 一图以蔽之
 
-![软件导图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image464.jpg)
+![软件导图](https://wsine.cn-gd.ufileos.com/image/945c2eb9fbd4643098ff47f8cd0ca793.jpg)
 
 ## 导航
 
@@ -40,7 +40,7 @@ description: "由于朋友们的咨询比较多，这篇文章就是来聊聊软
 
 在登录了google的账号后，就能够无缝同步书签，这一点在多设备同步的情况下还是很有用的。但是书签本身是需要被整理和维护的，否则无法快速检索，那保存下来的书签也会变得没有意义。我是在大二的时候接触到这一方法论的，它能使我在未来的这几年里更快找到所需要的东西。同步书签本身依赖于google服务，微软的edge浏览器也在切换为chromium内核，这点我不予置评，如果体验好的话相信我会切换为edge浏览器的。😘
 
-![浏览器书签](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image465.jpg)
+![浏览器书签](https://wsine.cn-gd.ufileos.com/image/e9d049b168fdc7fbcd6c2bffb8166f6d.jpg)
 
 拥有大量的插件支持也是Chrome本身胜于其他家的因素之一，下面着重讲讲我用到的插件。
 
@@ -48,7 +48,7 @@ description: "由于朋友们的咨询比较多，这篇文章就是来聊聊软
 
 这是一个利用键盘来控制网页浏览的工具，多用键盘毫无疑问能提高效率，但是要注意按组合键时候的舒适性，有空多活动活动手指关节。🤞
 
-![Vimium.gif](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image466.gif)
+![Vimium.gif](https://wsine.cn-gd.ufileos.com/image/5ff63aebaeac101adcc82bdbf58a9c10.gif)
 
 我来说一下我日常使用到的按键及其功能
 
@@ -78,15 +78,15 @@ description: "由于朋友们的咨询比较多，这篇文章就是来聊聊软
 
 首先你可以设置一个你自己喜欢的代理
 
-![代理](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image467.jpg)
+![代理](https://wsine.cn-gd.ufileos.com/image/985e45c3ea943cbf1b5ed66071668bce.jpg)
 
 然后再设置一个[规则列表](https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt)，满足规则的流量走proxy代理，不满足规则的流量走直连，也可以互换，随你喜欢哈~
 
-![代理2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image468.jpg)
+![代理2](https://wsine.cn-gd.ufileos.com/image/58d00a2e435c25e912cfe324f414c591.jpg)
 
 但是，这个但是很关键哈。一个规则列表肯定不能满足全部的需求的，所以Switchy酱还提供了手动选择的option。
 
-![代理3](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image469.jpg)
+![代理3](https://wsine.cn-gd.ufileos.com/image/b9cf2887e6eed8c2520ef4bedf67e8d5.jpg)
 
 大部分情况下我们只需要访问网站就好，体验感直升。👍
 
@@ -96,11 +96,11 @@ description: "由于朋友们的咨询比较多，这篇文章就是来聊聊软
 
 印象笔记的剪裁功能才让我领略到什么叫做剪裁。我就用知乎这样的瀑布流来展示一下好了，剪藏的格式巨多，而且隐藏广告这个真的是赞赞赞，试问谁收纳还把垃圾一起收纳进来啊
 
-![印象笔记](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image470.jpg)
+![印象笔记](https://wsine.cn-gd.ufileos.com/image/42a538a09a1bda3313d4a1281524f766.jpg)
 
 **更重要的是**，知识收纳最怕的是只收不二次阅读，然后重复一遍又一遍地收纳。
 
-![印象搜索](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image471.jpg)
+![印象搜索](https://wsine.cn-gd.ufileos.com/image/e96980907cf79945c5cf3258e58d48ab.jpg)
 
 不过检索深度还有成功率还很低就是了，目前应该只停留在title级别搜索？但总归是一个好的开始。
 
@@ -146,7 +146,7 @@ description: "由于朋友们的咨询比较多，这篇文章就是来聊聊软
 
 还有一个字体渲染的问题一直困扰着我，微软拼音的字体渲染就像用mactype一样，但怎么样才能将这种字体也应用在别的软件啊😞
 
-![字体渲染](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image472.jpg)
+![字体渲染](https://wsine.cn-gd.ufileos.com/image/0c655fdc5065e6a420d398ec6ff31231.jpg)
 
 #### 音乐：QQ音乐
 
@@ -164,7 +164,7 @@ description: "由于朋友们的咨询比较多，这篇文章就是来聊聊软
 | -------------------------- | ------ | -------------------------------- |
 | ThunderSpeed1.0.35.366.exe | 23.2MB | ab002005168e0e6439ac4667dbecff84 |
 
-![迅雷极速版](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image473.jpg)
+![迅雷极速版](https://wsine.cn-gd.ufileos.com/image/4d9493a8cd8f0ee19a49edb16dc79a89.jpg)
 
 #### 密码管理：Keepass
 
@@ -217,7 +217,7 @@ Edge本身的阅读功能我觉得真心棒，无论是mobi等格式电子书也
 
 OneDrive本身就是Win10自带的云存储，我喜欢把将重要的文档和照片都保存到OneDrive中，同步完云端之后，还可以选择释放本地空间。这样哪怕是一台32G的小容量设备，也能发挥它巨大的价值。
 
-![释放本地空间](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image474.jpg)
+![释放本地空间](https://wsine.cn-gd.ufileos.com/image/7b8012c6c8cc01ede2ec421ce3890992.jpg)
 
 OneDrive的速度其实本身并不慢，但是貌似在不同的地区有不同的速度表现，实测在国内的4个一线城市和几个二线城市速度我都能接受，基本满足我的差旅需求了。
 
@@ -233,7 +233,7 @@ OneDrive的速度其实本身并不慢，但是貌似在不同的地区有不同
 
 GTD（Getting Thing Done）是一个优秀的理念，它能帮助你在茫然时打开电脑的时候告诉你下一步有什么事情可以做的。但是这个依赖一个习惯，通过手机端收集整理Thing，在打开电脑的时候瞄一眼Todo软件，然后将事情Done。这能节省了你大量浪费在视频网站的时间。
 
-![Todo](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image475.jpg)
+![Todo](https://wsine.cn-gd.ufileos.com/image/c7f2534e6bda61bc5db00677e6615d42.jpg)
 
 #### 思维导图：XMind ZEN
 
@@ -262,7 +262,7 @@ ZEN本身的设计非常棒(๑•̀ㅂ•́)و✧，加入了禅模式，专注
 
 列举了这么多相信很多小伙伴看到都要吐槽我了，但是我每天有大量的时间花费在这个ssh工具上面，工欲善其事必先利其器，我一定会选出最适合自己的方案。不过鱼与熊掌不可兼得，比如这个solution就不支持多标签，挑选最合适就好。其实我自己也没想到Win10上面的进步这么快，打开cmd直接`ssh username@ip`就可以连上服务器，真的特别省心，速度极快。最后上一张图镇楼😀
 
-![cmd+ssh](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image476.jpg)
+![cmd+ssh](https://wsine.cn-gd.ufileos.com/image/35bd1a89f669b8462f4643899f8b394c.jpg)
 
 #### Linux：WSL - Ubuntu
 
@@ -284,7 +284,7 @@ Typora针对这两个问题有相应的解决方案：
 
 最后再配合一个图床服务，Typora无愧于颜值与功能齐飞~~~👍
 
-![typora](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image477.jpg)
+![typora](https://wsine.cn-gd.ufileos.com/image/764ef69183fec00b789313c17ebe0ed6.jpg)
 
 #### 键鼠共享：Synergy
 
@@ -296,9 +296,9 @@ Typora针对这两个问题有相应的解决方案：
 
 最终整体的体验就是，我可以利用台式机的机械键盘和人体工程学鼠标，移动鼠标平滑切换两个桌面，各自操作不同的软件，在A机器复制文字，在B机器粘贴文字，得到更好的软件体验。可能还比较期待的是，如果新版本中能加入复制粘贴截图功能和内置键盘快捷键（可自主配置实现）切换桌面功能，我还是愿意为其付费的。
 
-![server](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image478.jpg)
+![server](https://wsine.cn-gd.ufileos.com/image/fa7d71917966b4a2cbea23e1c2e6cb11.jpg)
 
-![client](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image479.jpg)
+![client](https://wsine.cn-gd.ufileos.com/image/3660300f833cf1708ac28fc4f0b1270c.jpg)
 
 ## Ubuntu 16.04
 
@@ -314,13 +314,13 @@ Typora针对这两个问题有相应的解决方案：
 
 学习曲线有多难，相信这点是不用我多说的，它本身很适合想要理解软件编译链接构建等过程的开发者，如果只是单纯想要搞开发，那用什么其实都是ok的。
 
-![vim](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image480.jpg)
+![vim](https://wsine.cn-gd.ufileos.com/image/334b54b985a61de1ce4340c3e91e8d2a.jpg)
 
 #### 输入法：Rime
 
 Rime算是在Linux下最方便，最稳定的输入法了。可以通过apt一键安装，然后也不需要配置，也不太需要考虑ibus/ficix底层引擎，反正都有。颜值的话我觉得是ok的，自动联想功能我感觉可以打7分。软件本身也支持很多定制化，贴一个默认的图以示赞赏。
 
-![rime](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image481.jpg)
+![rime](https://wsine.cn-gd.ufileos.com/image/daa76cd691d2aed0dd4beb1f0a849c18.jpg)
 
 #### Shell：Zsh + Bash
 
@@ -472,19 +472,19 @@ Office Lens最近终于更新了可以让用户手动调节自动捕捉边缘的
 
 通过整合一系列的动作到一个按钮，一次性触发，颇有编程的思想。举个栗子，我最常用的两个shortcuts分别是“取快递提醒”和“12306出行事件”，一般快递到达快递箱之后会有一条短信提醒，我只需要复制这条短信，然后触发这个shortcut，再配合iphone的位置服务，当我走到快递箱附近时就会有通知告诉我取件码，这体验真的挺棒的。12306出行事件也是类似的。
 
-![shortcus](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image482.jpg)
+![shortcus](https://wsine.cn-gd.ufileos.com/image/6eb18a5e73c15a6f6356cb92f53e8032.jpg)
 
 #### 日程Widget：Agenda+
 
 Agenda+ app能够读取你的日历事件，然后生成agenda。系统日历app的widget只能显示今天的事件，但是我想要的明明是提前就要告诉我“女朋友生日啦”，否则你怎么准备啊，不用跪搓衣板吗。💄 🙏
 
-![agenda](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image483.jpg)
+![agenda](https://wsine.cn-gd.ufileos.com/image/dfdc381355f010a88385b5fd0a81f569.jpg)
 
 #### Todo Widget：Reminder+
 
 Todo List的作用就是先收纳，然后赶紧做，但你其实并不知道应该什么时候开始做，如果有item需要remind，那岂不成了event了？所以我自己的需求更需要一个Todo List能够显示再widget中的，会在不小心翻到的时候瞄一眼，提醒自己还有很多没干的，没有浪费时间在视频上。
 
-![reminder](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image484.jpg)
+![reminder](https://wsine.cn-gd.ufileos.com/image/c4e2205bb24d9be5136aa3612678c95a.jpg)
 
 #### 分词：Pin
 
@@ -492,7 +492,7 @@ Todo List的作用就是先收纳，然后赶紧做，但你其实并不知道�
 
 https://github.com/cyanzhong/app-tutorials
 
-![pin](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image485.jpg)
+![pin](https://wsine.cn-gd.ufileos.com/image/845f28aee9b39bd3bc5e4cb24692a983.jpg)
 
 ## Web
 
@@ -504,7 +504,7 @@ https://github.com/cyanzhong/app-tutorials
 
 实用功能还是蛮多的，有兴趣的慢慢挖掘吧。
 
-![tools](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image486.jpg)
+![tools](https://wsine.cn-gd.ufileos.com/image/c0b061381f5fbb7b7f7fa7b103491cdb.jpg)
 
 #### 流程图：ProcessOn
 
@@ -514,9 +514,9 @@ https://github.com/cyanzhong/app-tutorials
 
 随手截图两张看看效果吧，没有ipad或者surface的时候，这个还是挺好用的
 
-![sketchboard1](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image487.jpg)
+![sketchboard1](https://wsine.cn-gd.ufileos.com/image/899e21d5ec6b142911cad227f6f82cf3.jpg)
 
-![sketchboard2](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image488.jpg)
+![sketchboard2](https://wsine.cn-gd.ufileos.com/image/f57b4954c04f3aef6930a8e6f2cf82aa.jpg)
 
 #### Markdown：马克飞象
 
@@ -530,7 +530,7 @@ https://github.com/cyanzhong/app-tutorials
 
 处理PDF的好工具，基本上和pdf相关的操作它都有了。
 
-![pdf](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image489.jpg)
+![pdf](https://wsine.cn-gd.ufileos.com/image/98a225f66d536ef35491eeb3c6055d21.jpg)
 
 #### Latex：Overleaf
 
