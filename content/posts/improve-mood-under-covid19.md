@@ -44,7 +44,7 @@ description: "生活不易，但也不要放弃"
 2. 使用 Material Design 作为设计语言，良好的视图也能影响心情。
 3. 发布方式增加了更加易用的网页端，密钥本地保存。
 
-![页面展示](http://wsine.cn-gd.ufileos.com/image/B409AD5F4CB5520011A92C25D6D64EFC.png)
+![页面展示](https://image.wsine.top/B409AD5F4CB5520011A92C25D6D64EFC.png)
 
 但由于私密性相关，我不打算开放给非亲密好友。源代码可以从该链接获取 [Gist](https://gist.github.com/Wsine/00cd48e8a266e78ff988adde87fd401b). Airtable 自身提供的API已经考虑了翻页的功能，且可访问频率高，不限制过长时间的访问，非常适合这个系统。你只需根据自己的API token 替换对应的位置即可部署。最重要的是把入口只告诉给你信赖的亲密好友。
 
@@ -75,7 +75,7 @@ Index: Autonumber
 
 网络上一些方案依赖于 Kindle 内置的浏览器，通过联网来更新每日日历，操作繁琐还费电。同时地址栏也关闭不了，我这个方案会显得更友好一些。
 
-![Presentation2](http://wsine.cn-gd.ufileos.com/image/4C9456FAE609EF20EE6E0BCBC07B2925.png)
+![Presentation2](https://image.wsine.top/4C9456FAE609EF20EE6E0BCBC07B2925.png)
 
 #### 我的构建方案
 
@@ -96,7 +96,7 @@ Index: Autonumber
 
 这里我用一个动图给你演示一下，整个操作的流程。
 
-![一键使用](http://wsine.cn-gd.ufileos.com/image/2ACCEF5B5A9670F8DB77D8FE354F73A3.gif)
+![一键使用](https://image.wsine.top/2ACCEF5B5A9670F8DB77D8FE354F73A3.gif)
 
 最后，很简单的步骤，就是用自己设定的白名单邮箱把日历作为附件发送到 Kindle 的邮箱中即可，注意，不要在标题栏加入 “Convert” 这个关键词。Kindle 关闭睡眠模式只需要在搜索栏中输入`~ds`即可。
 

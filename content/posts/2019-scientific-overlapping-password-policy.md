@@ -4,7 +4,7 @@ date: 2019-06-26
 published: true
 tags: ['Password', 'Solution']
 series: false
-cover_image: ./images/001cbe85e3702d136293e4e2df25b9f9.jpg
+cover_image: https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9.jpg
 canonical_url: false
 description: "基于Keepass的多平台密码管理方案"
 ---
@@ -69,7 +69,7 @@ P.S. 如果你也会编程的话，完全可以fork一份后修改来定制自�
 
 不知道各位有没有这样的痛苦，当你临时来到一个新的机器想要登陆一个账号，但是由于是复杂的强密码完全无法记忆，所以你得要么得重新安装密码管理软件同步过来，或者用手机查看密码后手动输入，这种体验本身都不友好。由于觅密它本身只是一个网页，保存为浏览器书签即可快速使用查看，或直接在新电脑打开网页输入一下就得到最终密码了。
 
-![seekpass](https://wsine.cn-gd.ufileos.com/image/001cbe85e3702d136293e4e2df25b9f9459.jpg)
+![seekpass](https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9459.jpg)
 
 ### 密码存储
 
@@ -126,11 +126,11 @@ KeePass的官网下载为：[https://keepass.info/download.html](https://keepass
 
 坚果云的官网为：[https://www.jianguoyun.com](https://www.jianguoyun.com/)，注册并登陆后，通过下面如下的步骤，添加一个授权的应用密码
 
-![WebDAV](https://wsine.cn-gd.ufileos.com/image/001cbe85e3702d136293e4e2df25b9f9460.jpg)
+![WebDAV](https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9460.jpg)
 
 然后创建你喜欢的路径，并将刚刚得到的两份文件上传到坚果云中，文件路径和文件名都可以自定义
 
-![jianguo_file](https://wsine.cn-gd.ufileos.com/image/001cbe85e3702d136293e4e2df25b9f9461.jpg)
+![jianguo_file](https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9461.jpg)
 
 顺带一提，坚果云的免费版本每个月限制上传和下载流量，如图片左下角显示，但如果你看我实际的数据库大小其实也只有几kb（当然如果你要用keepass存储大文件当我没说），所以我认为流量是完全不用担心的，而且由于服务器在国内且没有限制可以跑满带宽，作为常用云存储也不错。
 
@@ -153,7 +153,7 @@ KeePass的官网下载为：[https://keepass.info/download.html](https://keepass
 
 填好这5个参数后你就可以直接打开远端的数据库了，每次编辑完之后记得点保存就好，它就会同步到远端的数据库了~
 
-![Keepass](https://wsine.cn-gd.ufileos.com/image/001cbe85e3702d136293e4e2df25b9f9462.jpg)
+![Keepass](https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9462.jpg)
 
 #### Web客户端Tusk
 
@@ -180,7 +180,7 @@ KeePass的官网下载为：[https://keepass.info/download.html](https://keepass
 
 上述的每一个功能，我认为都是优胜于官方下载页面推荐的iOS客户端miniKeepass的。作为日常稳定使用的app，是完全没有问题的。使用上只要明白了上面的5个参数，那么这个app的使用也不会遇到什么问题就不再赘述了。
 
-![fantasypass](https://wsine.cn-gd.ufileos.com/image/001cbe85e3702d136293e4e2df25b9f9463.jpg)
+![fantasypass](https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9463.jpg)
 
 目前在App Store中的售价为一次性买断制12元，我认为这个app还是非常值得的。
 

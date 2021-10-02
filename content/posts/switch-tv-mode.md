@@ -4,7 +4,7 @@ date: 2019-08-01
 published: true
 tags: ['Switch']
 series: false
-cover_image: ./images/47ea24ddb87354bfc953bb803a275d73.jpg
+cover_image: https://image.wsine.top/47ea24ddb87354bfc953bb803a275d73.jpg
 canonical_url: false
 description: "谈谈如何正确触发Switch的TV模式与配件购买"
 ---

@@ -4,7 +4,7 @@ date: 2020-03-09
 published: true
 tags: ['Solution', 'Storage']
 series: false
-cover_image: ./images/a5c0a34def45567724d8730ba796f380.png
+cover_image: https://image.wsine.top/a5c0a34def45567724d8730ba796f380.png
 canonical_url: false
 description: "今天来聊聊存储相关的事情，分享一下我现在所使用的方案"
 ---
@@ -40,7 +40,7 @@ description: "今天来聊聊存储相关的事情，分享一下我现在所使
 
 ### 文件
 
-![Slide1](http://wsine.cn-gd.ufileos.com/image/9EA9FB10AB81276E2D7F5039A85863B6.PNG)
+![Slide1](https://image.wsine.top/9EA9FB10AB81276E2D7F5039A85863B6.PNG)
 
 文件，应该是云存储看起来比较直观的存储形式了。在这里，我关注的有三个要素。
 
@@ -54,7 +54,7 @@ description: "今天来聊聊存储相关的事情，分享一下我现在所使
 
 ### 邮箱/联系人/待办事项/日历事件
 
-![Slide2](http://wsine.cn-gd.ufileos.com/image/B4C0CD1F65B0636F9F7254EEF4DF9575.PNG)
+![Slide2](https://image.wsine.top/B4C0CD1F65B0636F9F7254EEF4DF9575.PNG)
 
 「Microsoft Exchange ActiveSync」是我现在使用的服务，直白点来说，其实就是注册了一个微软账号。
 
@@ -66,7 +66,7 @@ description: "今天来聊聊存储相关的事情，分享一下我现在所使
 
 ### 照片存储和分享
 
-![9EA9FB10AB81276E2D7F5039A85863B6](http://wsine.cn-gd.ufileos.com/image/E7576D11E3C6CE8FF7DA3F1D3968E11D.PNG)
+![9EA9FB10AB81276E2D7F5039A85863B6](https://image.wsine.top/E7576D11E3C6CE8FF7DA3F1D3968E11D.PNG)
 
 照片应该是我们当今生活中产生的最大量的数据信息了。每个人都会或多或少的积累照片，而且会因为历史进程的推进而不断增大。无论它是一张美丽的风景照片，还是一个屏幕截图，都代表着背后你的一段回忆。比如，我很喜欢我初三的那个课室的那个座位的照片，可能它平平无奇，但是它印证着我人生思想的一个蜕变。
 
@@ -76,7 +76,7 @@ description: "今天来聊聊存储相关的事情，分享一下我现在所使
 
 ### 手写笔记/电子笔记
 
-![](http://wsine.cn-gd.ufileos.com/image/CD7F7A143D6E68C825DAD7318DCC38FD.PNG)
+![](https://image.wsine.top/CD7F7A143D6E68C825DAD7318DCC38FD.PNG)
 
 笔记分为两种，一种是手写式电子笔记，一种是富文本电子笔记。
 
@@ -86,7 +86,7 @@ description: "今天来聊聊存储相关的事情，分享一下我现在所使
 
 ### 代码/个人博客/个人网站
 
-![](http://wsine.cn-gd.ufileos.com/image/DE1EF9EB021ABBCB65660C30E147FA12.PNG)
+![](https://image.wsine.top/DE1EF9EB021ABBCB65660C30E147FA12.PNG)
 
 代码库方面，我相信绝大部分人的选择都是 Github。它除了能存储代码还能作为一个优秀的静态网站展示一些内容，比较大众的使用方式是 个人博客、个人网站和开发文档等。
 
@@ -102,7 +102,7 @@ description: "今天来聊聊存储相关的事情，分享一下我现在所使
 
 ### 密码管理和同步
 
-![](http://wsine.cn-gd.ufileos.com/image/ACECFBFBF0B16921BB4ACECC44EF7C95.PNG)
+![](https://image.wsine.top/ACECFBFBF0B16921BB4ACECC44EF7C95.PNG)
 
 密码管理，是我认为在生物认证技术没有普及之前是十分有必要的。现在我们使用的互联网服务越来越多，每一个都需要你有独立的账号密码，一般人是无法记忆如此多的密码的。而加密技术趋于同质化，操作运营的服务商的能力水平却并不都在统一高水准。一旦发生密码泄露，是一件很可怕的事情。
 
@@ -112,7 +112,7 @@ description: "今天来聊聊存储相关的事情，分享一下我现在所使
 
 ### 思维导图/文献管理和同步
 
-![](http://wsine.cn-gd.ufileos.com/image/8037D0B2E00457884697A3763D63759D.PNG)
+![](https://image.wsine.top/8037D0B2E00457884697A3763D63759D.PNG)
 
 思维导图是我在日常工作学习中使用得比较频繁的工具。XMind 是一个良心的软件，它允许你一直无限期试用该产品，除了一些高级功能需要订阅。在电脑端可以使用 XMind Zen，它独有的禅模式能让你沉浸式地发散思维，完成结构后稍加美化，将文件保存在 OneDrive 的同步目录中；在 iPad 可以下载 XMind 的应用，它支持访问文件app直接打开 OneDrive 上的文件，这样就能高效地跟老板 Meeting 整体的结构了。
 
