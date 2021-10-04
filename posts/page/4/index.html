@@ -1,5 +1,78 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Posts | Wsine's blog</title><meta name=keywords content><meta name=description content="爱分享爱写文章的科研狗"><meta name=author content="Wsine"><link rel=canonical href=https://blog.wsine.top/posts/><link href=/assets/css/stylesheet.min.746a86b58bb2b052b5e4df8216510494f04f81e62c08d626150c26c69ca929da.css integrity="sha256-dGqGtYuysFK15N+CFlEElPBPgeYsCNYmFQwmxpypKdo=" rel="preload stylesheet" as=style><link rel=icon href=https://blog.wsine.top/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://blog.wsine.top/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://blog.wsine.top/favicon-32x32.png><link rel=apple-touch-icon href=https://blog.wsine.top/apple-touch-icon.png><link rel=mask-icon href=https://blog.wsine.top/favicon.png><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.84.0"><link rel=alternate type=application/rss+xml href=https://blog.wsine.top/posts/index.xml><meta property="og:title" content="Posts"><meta property="og:description" content="爱分享爱写文章的科研狗"><meta property="og:type" content="website"><meta property="og:url" content="https://blog.wsine.top/posts/"><meta property="og:image" content="https://blog.wsine.top/author.jpg"><meta property="og:site_name" content="Wsine's blog"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.wsine.top/author.jpg"><meta name=twitter:title content="Posts"><meta name=twitter:description content="爱分享爱写文章的科研狗"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.wsine.top/posts/"}]}</script></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://blog.wsine.top/ accesskey=h title="Wsine's blog (Alt + H)">Wsine's blog</a>
-<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu onscroll=menu_on_scroll()><li><a href=https://blog.wsine.top/archives/ title=Archive><span>Archive</span></a></li><li><a href=https://blog.wsine.top/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://blog.wsine.top/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>Posts</h1></header><article class=post-entry><header class=entry-header><h2>我的Vim配置</h2></header><section class=entry-content><p>前言 为什么选择vim？ 曾经我也是一个小白，使用Dev-C++来学习C++语言，使用Visual Studio开发工程，它们都被称为IDE(Integrated development environment)。但是，逐渐的，我渐渐意识到，你只能遵循它制定的一系列的流程来开发程序，自定义程度不高，而且大型的IDE消耗计算资源严重。
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Posts | Wsine's blog</title>
+<meta name=keywords content>
+<meta name=description content="爱分享爱写文章的科研狗">
+<meta name=author content="Wsine">
+<link rel=canonical href=https://blog.wsine.top/posts/>
+<link href=/assets/css/stylesheet.min.746a86b58bb2b052b5e4df8216510494f04f81e62c08d626150c26c69ca929da.css integrity="sha256-dGqGtYuysFK15N+CFlEElPBPgeYsCNYmFQwmxpypKdo=" rel="preload stylesheet" as=style>
+<link rel=icon href=https://blog.wsine.top/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://blog.wsine.top/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://blog.wsine.top/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://blog.wsine.top/apple-touch-icon.png>
+<link rel=mask-icon href=https://blog.wsine.top/favicon.png>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=alternate type=application/rss+xml href=https://blog.wsine.top/posts/index.xml>
+<meta property="og:title" content="Posts">
+<meta property="og:description" content="爱分享爱写文章的科研狗">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.wsine.top/posts/"><meta property="og:image" content="https://blog.wsine.top/author.jpg"><meta property="og:site_name" content="Wsine's blog">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://blog.wsine.top/author.jpg">
+<meta name=twitter:title content="Posts">
+<meta name=twitter:description content="爱分享爱写文章的科研狗">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.wsine.top/posts/"}]}</script>
+</head>
+<body class=list id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<noscript>
+<style type=text/css>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://blog.wsine.top/ accesskey=h title="Wsine's blog (Alt + H)">Wsine's blog</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu onscroll=menu_on_scroll()>
+<li>
+<a href=https://blog.wsine.top/archives/ title=Archive>
+<span>Archive</span>
+</a>
+</li>
+<li>
+<a href=https://blog.wsine.top/tags/ title=Tags>
+<span>Tags</span>
+</a>
+</li>
+<li>
+<a href=https://blog.wsine.top/search/ title="Search (Alt + /)" accesskey=/>
+<span>Search</span>
+</a>
+</li></ul>
+</nav>
+</header>
+<main class=main>
+<header class=page-header>
+<h1>Posts</h1>
+</header>
+<article class=post-entry>
+<header class=entry-header>
+<h2>
+我的Vim配置
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 为什么选择vim？ 曾经我也是一个小白，使用Dev-C++来学习C++语言，使用Visual Studio开发工程，它们都被称为IDE(Integrated development environment)。但是，逐渐的，我渐渐意识到，你只能遵循它制定的一系列的流程来开发程序，自定义程度不高，而且大型的IDE消耗计算资源严重。
 后来，我认识到了编辑和编译应该是一个分开的过程，便转战到了文本编辑器，选择Sublime Text。Sublime优秀的UI界面，优秀的快捷键，拥有插件系统，着实让我着迷。它的初始环境便可直接上手，它的默认配色Monokai让人看得很舒服。
 但是，离开Sublime选择Vim的原因有三点，一是Sublime依赖于图形化界面，二是Sublime移动光标需要移动右手使用方向键，三是Sublime编辑远程文件要么借助工具要么经常传输。至此，我终于理解了那个古老的梗。
 世界上只有三种程序员，一种是使用Vim的，一种是使用Emacs的，还有一种是其他
@@ -14,7 +87,21 @@
 因为还在不断的修改中，未来可能会考虑把配色做成插件易于安装吧，目前的安装方式比较麻烦
 管理 插件管理上我选用了Vundle，目前一款比较流行的Vim插件管理器，基本上我只使用github上的vim插件
 按键 一直以来我对于那种秀配置不讲按键绑定的文章比较反感，除非你一个键都没改
-模式 按键 映射 功能 说明 全局 , leader &lt;leader> leader键是vim中的一个特殊键 正常 j gj 下一行 视觉上往下移动(行太长导致分行时) 正常 k gk 上一行 视觉上往上移动(行太长导致分行时) 正常 &lt;leader>w :w&lt;CR> 快速保存 没有权限保存的时候也是不行的 正常 &lt;leader>q :bd&lt;CR>:q&lt;CR> 快速退出 前提所有buffer都保存了，防止意外 正常 K :bnext&lt;CR> 切换到右边的buffer 仿照Vimuim的标签切换 正常 J :bprevious&lt;CR> 切换到左边的buffer 仿照Vimuim的标签切换 正常 &lt;leader>bn :enew&lt;CR> 新开一个buffer buffer new 正常 &lt;leader>bd :bd&lt;CR> 关闭当前buffer buffer delete 正常 空格键 smooth_scroll 向下平滑滚动 避免思维跳跃，仿照Chrome的设定 正常 减号键 smooth_scroll 向上平滑滚动 避免思维跳跃 编辑 Ctrl + b 方向键-左 向左移动一个字符 仿照Bash的控制方式 编辑 Ctrl + f 方向键-右 向右移动一个字符 仿照Bash的控制方式 编辑 Ctrl + e Home键 跳到行首 仿照Bash的控制方式 编辑 Ctrl + a End键 跳到行尾 仿照Bash的控制方式 编辑 Tab键 方向键-下 选择下一个候选词 可连续按 编辑 Esc键 Ctrl + 回车 清除菜单 无 可视化 // y/&lt;C-R>"&lt;CR> 快速搜索 需要先选择内容 其实可以看出我是比较喜欢统一各大软件的按键方式的，主要是可以让自己不用记忆太多，快捷键是效率的主要生产力，所以终端、编辑器、浏览器这三大离不开的软件，我都会尽可能地去统一它们的按键...</p></section><footer class=entry-footer>2019, July 23&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to 我的Vim配置" href=https://blog.wsine.top/posts/my-vim-configuration/></a></article><article class=post-entry><header class=entry-header><h2>个人博客的方案推荐，你只负责编写</h2></header><section class=entry-content><p>今天想要谈谈的是一套我在用的个人博客解决方案，它能带给我最大的便利。
+模式 按键 映射 功能 说明 全局 , leader &lt;leader> leader键是vim中的一个特殊键 正常 j gj 下一行 视觉上往下移动(行太长导致分行时) 正常 k gk 上一行 视觉上往上移动(行太长导致分行时) 正常 &lt;leader>w :w&lt;CR> 快速保存 没有权限保存的时候也是不行的 正常 &lt;leader>q :bd&lt;CR>:q&lt;CR> 快速退出 前提所有buffer都保存了，防止意外 正常 K :bnext&lt;CR> 切换到右边的buffer 仿照Vimuim的标签切换 正常 J :bprevious&lt;CR> 切换到左边的buffer 仿照Vimuim的标签切换 正常 &lt;leader>bn :enew&lt;CR> 新开一个buffer buffer new 正常 &lt;leader>bd :bd&lt;CR> 关闭当前buffer buffer delete 正常 空格键 smooth_scroll 向下平滑滚动 避免思维跳跃，仿照Chrome的设定 正常 减号键 smooth_scroll 向上平滑滚动 避免思维跳跃 编辑 Ctrl + b 方向键-左 向左移动一个字符 仿照Bash的控制方式 编辑 Ctrl + f 方向键-右 向右移动一个字符 仿照Bash的控制方式 编辑 Ctrl + e Home键 跳到行首 仿照Bash的控制方式 编辑 Ctrl + a End键 跳到行尾 仿照Bash的控制方式 编辑 Tab键 方向键-下 选择下一个候选词 可连续按 编辑 Esc键 Ctrl + 回车 清除菜单 无 可视化 // y/&lt;C-R>"&lt;CR> 快速搜索 需要先选择内容 其实可以看出我是比较喜欢统一各大软件的按键方式的，主要是可以让自己不用记忆太多，快捷键是效率的主要生产力，所以终端、编辑器、浏览器这三大离不开的软件，我都会尽可能地去统一它们的按键...</p>
+</section>
+<footer class=entry-footer>
+2019, July 23&nbsp;·&nbsp;Wsine
+</footer>
+<a class=entry-link aria-label="post link to 我的Vim配置" href=https://blog.wsine.top/posts/my-vim-configuration/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>
+个人博客的方案推荐，你只负责编写
+</h2>
+</header>
+<section class=entry-content>
+<p>今天想要谈谈的是一套我在用的个人博客解决方案，它能带给我最大的便利。
 首先我想先插播一个讨论，为什么要写博客？从我上大学开始，我就喜欢上了写博客。这主要是受到了一位前辈说的话而引发的思考：“当你能够将你所学的有条理地写下来成为一篇文章，那么就证明你学会了。” 当我越是实践这一点，我就越能体会到 写与不写 两者之间的差异。
 以我的经历来揣测，大多数人的博客方案可能经历如下几个阶段：
 主流博客网站：需要考虑的因素就比较多，包括Markdown支持、CSS支持、Javascript支持等，更重要的是原始数据不能很容易地访问； 私有博客服务器：维护VPS，维护域名，维护流量 是这一方案最大的成本； 静态网页托管：hexo、jekyll、pelican都是比较主流的方案，但是对客户端本身比较依赖 直到我遇到了docsify，我更愿意将它称为第四阶段“动态生成网页托管”。
@@ -29,7 +116,21 @@ Docsify有什么 Markdown支持 在2019年写博客，几乎主流的选择都�
 docsify 提供了内置的5款主题，分别 vue.css buble.css dark.css pure.css dolphin.css，我个人是比较喜欢绿色的主题的，所以选了还是默认的 vue.css 风格。另外，Github 上还有很多优秀的第三方主题可供选择。
 当然作为一个开放的系统，它也允许用户自定义，如果有兴趣，撸一个符合自己审美好看的主题也蛮不错的。
 详细的主题 Demo 可以看这里~
-Javascript支持 流程图 & 序列图 有 js 的支持，对我来说意味着能够加入扩展 Markdown 语法，比如流程图、序列图等的支持。我很喜欢 Typora 这款 MD 编辑器，它自身加入了流程图和序列图等的支持，这对于技术博客来说还是很有用的一大功能。而借助 docsify 的插件系统，简单的配置了一下就能加入这些功能，然后就能做到桌面端编辑和网页端展示是完全一样的效果。...</p></section><footer class=entry-footer>2019, July 20&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to 个人博客的方案推荐，你只负责编写" href=https://blog.wsine.top/posts/personal-blog-writting-solution/></a></article><article class=post-entry><header class=entry-header><h2>给大学新生学子的一个思考</h2></header><section class=entry-content><p>前言 笔者是一个多年前已毕业的老师兄，也已经历完了大学4年的学习。作为一个过来人，想把我个人的一些经验分享一下。
+Javascript支持 流程图 & 序列图 有 js 的支持，对我来说意味着能够加入扩展 Markdown 语法，比如流程图、序列图等的支持。我很喜欢 Typora 这款 MD 编辑器，它自身加入了流程图和序列图等的支持，这对于技术博客来说还是很有用的一大功能。而借助 docsify 的插件系统，简单的配置了一下就能加入这些功能，然后就能做到桌面端编辑和网页端展示是完全一样的效果。...</p>
+</section>
+<footer class=entry-footer>
+2019, July 20&nbsp;·&nbsp;Wsine
+</footer>
+<a class=entry-link aria-label="post link to 个人博客的方案推荐，你只负责编写" href=https://blog.wsine.top/posts/personal-blog-writting-solution/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>
+给大学新生学子的一个思考
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 笔者是一个多年前已毕业的老师兄，也已经历完了大学4年的学习。作为一个过来人，想把我个人的一些经验分享一下。
 很多时候你们能接触到比自己高 1～2个年级的师兄师姐们，他们能够帮助你们很好很快地适应大学生活；但是从我的经验上来说，光有这些似乎还不够，这也是我想写这篇文章的目的，希望能对你们有所帮助。
 正文 高中毕业（高考）和本科毕业 （GPA/简历）是我认为在学生生涯中最重要的两个点（p.s 我更愿意将深造和考职称归为一类）。当你们看到这篇短文的时候，我想你们应该已经选择好了自己心仪的大学。换句话说，你们已经完成了1/2的目标。而我的建议是你们从现在开始就准备剩下的1/2.
 当然我的意思并不是让大家开始拼命刻苦学习，预习大学4年的课程，我并不是一个这么“残忍”的师兄。尽管高三那年，每个老师都不约而同地告诉大家：“考完高考，你们就解放啦。” 这句话放在当时对于需要激励的你们是没有错的。但是，如果现在完全停下脚步，我觉得可能就真的错了。
@@ -43,7 +144,21 @@ Javascript支持 流程图 & 序列图 有 js 的支持，对我来说意味着�
 大学给了你无限种可能，但你的时间精力是有限的，你需要学会根据自己的目标制定合适的方案。为了成为研究生，了解加分政策，多参加比赛追求额外加分；为了成功高技能人才，不断磨练技能，接点私活；为了成功优秀的商人，大部分时间投入到社团活动；为了成功游戏大触，只保证毕业要求而花时间熟练游戏技巧。无论你想成为什么样的人，只要你认真思考，热爱享受且无悔，并为之付出努力，这种选择都是最正确的选择。
 我曾思考过，最重要的两件事之一是“好好努力”而不是“好好学习”，个中原因可能就是在此吧。
 后记 希望以上的内容能引发你的一点点思考。在这个超长的暑假，一边放松释放压力的同时，也能一边收集信息，并认真思考。
-祝愿大家有一个愉快的暑假和能够经历一段不悔的大学4年时光。</p></section><footer class=entry-footer>2019, July 4&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to 给大学新生学子的一个思考" href=https://blog.wsine.top/posts/a-thought-for-freshman/></a></article><article class=post-entry><header class=entry-header><h2>2019年科学且免费的复合密码管理策略</h2></header><section class=entry-content><p>[TOC]
+祝愿大家有一个愉快的暑假和能够经历一段不悔的大学4年时光。</p>
+</section>
+<footer class=entry-footer>
+2019, July 4&nbsp;·&nbsp;Wsine
+</footer>
+<a class=entry-link aria-label="post link to 给大学新生学子的一个思考" href=https://blog.wsine.top/posts/a-thought-for-freshman/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>
+2019年科学且免费的复合密码管理策略
+</h2>
+</header>
+<section class=entry-content>
+<p>[TOC]
 前言 今天想要谈谈的是一套我在用的密码管理方案，我认为还是比较安全又易用的。
 回想一下，大多数人的密码管理策略可能有如下几个：
 纯大脑记忆所有的密码 几乎使用一套密码来注册所有网站 分重要等级用几套密码来注册所有网站 使用记忆因子，实时大脑计算出正确密码 使用流行的密码管理工具，如1password、Lastpass、Keychain等 第一种情况，无疑这样的解决方案十分痛苦，这种情况很常见于不常使用互联网服务的父辈或祖父辈；第二种情况，基本上遇到密码泄露事件，撞库攻击，危险性是最高的；第三种情况，也是我上一种使用策略，虽然减轻的第二种情况的危险性，但还是有一定的危险；第四种情况，我陪朋友去ATM取款的时候，在他旁边陪了10多分钟，才算好密码取出现金🙂；第五种情况，要么太贵，要么平台限制，还不拥有密码的存储权。
@@ -67,7 +182,21 @@ P.S. 如果你也会编程的话，完全可以fork一份后修改来定制自�
 无论是笔记还是其他东西，我都希望我的数据能够掌握在我的手里。我来讨论一下极端的几种情况：
 哪天我发疯了，将整个软件仓库删了，你不记得算法的流程了怎么办 哪天Github服务被block了或者倒下了，你不知道我将新的网站部署在哪了怎么办 哪天1password / Lasspass等服务倒下了，你的高强度密码都丢失了怎么办 哪天你更换了常用平台不用Apple的硬件了，你存储在keychain的密码怎么导出呢 虽然这些情况都比较难达到，但我依然将这种情况考虑进去了
 KeePass 我采用的密码管理软件是KeePass，首先引用一下的它的官方介绍：
-KeePass is a free open source password manager, which helps you to manage your passwords in a secure way....</p></section><footer class=entry-footer>2019, June 26&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to 2019年科学且免费的复合密码管理策略" href=https://blog.wsine.top/posts/2019-scientific-overlapping-password-policy/></a></article><article class=post-entry><header class=entry-header><h2>一个5年工科生的软件解决方案与故事</h2></header><section class=entry-content><p>工欲善其事必先利其器
+KeePass is a free open source password manager, which helps you to manage your passwords in a secure way....</p>
+</section>
+<footer class=entry-footer>
+2019, June 26&nbsp;·&nbsp;Wsine
+</footer>
+<a class=entry-link aria-label="post link to 2019年科学且免费的复合密码管理策略" href=https://blog.wsine.top/posts/2019-scientific-overlapping-password-policy/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>
+一个5年工科生的软件解决方案与故事
+</h2>
+</header>
+<section class=entry-content>
+<p>工欲善其事必先利其器
 适合自己的才是最好的
 首先这篇文章的初衷呢，很单纯，仅仅只是因为平时是一个工具控的爱好者，而身边朋友又大量和我咨询如何提高效率，解决痛点，所以特意写一篇文章，分享一下我在多平台下使用的软件，仅供参考。😀
 风向标：轻量够用、跨平台、效率、联动、键盘优先、正版
@@ -79,9 +208,31 @@ Windows 10 1809 作为一个有编写Office文档和IM聊天需求的人，我�
 拥有大量的插件支持也是Chrome本身胜于其他家的因素之一，下面着重讲讲我用到的插件。
 键盘控制：Vimium 这是一个利用键盘来控制网页浏览的工具，多用键盘毫无疑问能提高效率，但是要注意按组合键时候的舒适性，有空多活动活动手指关节。🤞
 我来说一下我日常使用到的按键及其功能
-按键 功能 ctrl + t 新建标签 alt + d 定位到地址栏 gi 定位到第一个编辑框 f 在当前标签页打开链接 Shift + F 在新标签页打开链接 space 滚动条下拉半屏 Shift + space 滚动条上拉半屏 j 滚动条下拉10个pixel k 滚动条上拉10个pixel Shift + J 切换到左边的标签页 Shift + K 切换到右边的标签页 ctrl/alt + num 跳转到特定标签页 x / ctrl + w 关闭当前标签页 有了上面的这一套衔接的流程，基本上覆盖了网页浏览的全流程了。还剩打开书签的工作还是留个小红点/触摸板吧👻 ，虽然绝大部分情况下我都能记住域名。😁...</p></section><footer class=entry-footer>2019, February 18&nbsp;·&nbsp;Wsine</footer><a class=entry-link aria-label="post link to 一个5年工科生的软件解决方案与故事" href=https://blog.wsine.top/posts/5-years-cs-student-software-solution/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://blog.wsine.top/posts/page/3/>« Prev Page</a></nav></footer></main><footer class=footer><span>Copyright © 2019-Now · CC <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en>BY-NC-SA 4.0</a></span>
+按键 功能 ctrl + t 新建标签 alt + d 定位到地址栏 gi 定位到第一个编辑框 f 在当前标签页打开链接 Shift + F 在新标签页打开链接 space 滚动条下拉半屏 Shift + space 滚动条上拉半屏 j 滚动条下拉10个pixel k 滚动条上拉10个pixel Shift + J 切换到左边的标签页 Shift + K 切换到右边的标签页 ctrl/alt + num 跳转到特定标签页 x / ctrl + w 关闭当前标签页 有了上面的这一套衔接的流程，基本上覆盖了网页浏览的全流程了。还剩打开书签的工作还是留个小红点/触摸板吧👻 ，虽然绝大部分情况下我都能记住域名。😁...</p>
+</section>
+<footer class=entry-footer>
+2019, February 18&nbsp;·&nbsp;Wsine
+</footer>
+<a class=entry-link aria-label="post link to 一个5年工科生的软件解决方案与故事" href=https://blog.wsine.top/posts/5-years-cs-student-software-solution/></a>
+</article>
+<footer class=page-footer>
+<nav class=pagination>
+<a class=prev href=https://blog.wsine.top/posts/page/3/>« Prev Page</a>
+</nav>
+</footer>
+</main><footer class=footer>
+<span>Copyright © 2019-Now · CC <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en>BY-NC-SA 4.0</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a></span>
 <span>&#183;</span>
-<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
-<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position"))};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft)}document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>
+<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)">
+<button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</button>
+</a>
+<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position"))};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft)}document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

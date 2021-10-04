@@ -33,7 +33,7 @@
 &lt;p&gt;在 iOS 平台，你可以登陆微软账号，借助 Exchange 服务，你可以快速地同步你的通讯录、记事本、待办列表和日历事件。哪怕在一个相对封闭的苹果生态里，Apple 也不至于封杀所有的开放协议，将用户锁定在这个平台。&lt;/p&gt;
 &lt;p&gt;可是，在 ColorOS 6 中，我找不到同等的设置。在 Android 平台上，一般情况下是通过 设置 - 账户 选项卡来添加一个 &lt;code&gt;Microsoft Exchange ActiveSync&lt;/code&gt; 服务来添加同样的事情的。但是，在 ColorOS 6 中，连一个普通的邮箱 app 也没有，我怀疑系统顺便把这个同步设置也砍掉了。这让我很痛苦。&lt;/p&gt;
 &lt;p&gt;诚然，邮箱 App 的缺失可以通过下载第三方来解决，但我认为这不属于一个一线大厂可以省略的事情。虽然，我现在找到了不少方法去 work around，但是这些操作都是反直觉的。你能想象你需要打电话给某个联系人的时候不是打开联系人而是打开一个叫 Outlook 的 App 再多层跳转吗？更不必说，少了这套对日常的 GTD 管理产生了不少的困扰。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/7B28716735306A1B4CD64ED46BD5FA6E.PNG&#34; alt=&#34;1&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/7B28716735306A1B4CD64ED46BD5FA6E.PNG&#34; alt=&#34;1&#34;  /&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;依旧糟糕的权限管理&#34;&gt;依旧糟糕的权限管理&lt;/h3&gt;
 &lt;p&gt;在购买手机之前，我也曾打听安卓系统现在的权限管理到底怎么样了？朋友跟我说，比以前进步很大了，能单独设置不同的权限，也不至于不给权限就完全不能用。我的实际体验又如何呢？&lt;/p&gt;
@@ -41,7 +41,7 @@
 &lt;p&gt;同样的，每一次系统帮忙阻止了 App 索取某一项权限，它也会好心地弹小窗告诉用户它帮你阻止了，可是你吵到我看屏幕了好吗？后来，我知道了在 Phone Manager App 中可以取消这个 Toast，但是，为什么不是在 Settings 中？我本来不想打开任何的鸡肋系统 App 以及授予任何权限的，你让我破戒了。&lt;/p&gt;
 &lt;p&gt;**摸不着头脑的 Storage 权限：**绝大部分的 App 都申请权限访问存储权限，理由有很多缓存需要，下载需要等。不给这个权限就不让用了: (  可是，为什么有部分 App 就可以不需要该权限就能正常使用呢？我知道的，Android 没有相册权限，授予了 Storage 权限也等同于授予了整个相册可读了。&lt;/p&gt;
 &lt;p&gt;**无效的不再打扰：**当你想阻止某些权限的时候，可以直接选择 Cancel 且勾选 Don&amp;rsquo;t ask again。但是，不是每一次这个选项都有效的。比如，Bose Connect 这个 App，每当我连接蓝牙的时候，都有弹窗显示希望授权 Contacts 权限，无论你上一次是否让它 Don&amp;rsquo;t ask again。我看过的，Bose Connect 的索取权限列表并没有 Contacts，可能是系统嫁祸你索取的这个权限，也有可能是一个你是一个假的乖宝宝。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/A971B421F2D21462D9475CBA97A97BE5.PNG&#34; alt=&#34;1&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/A971B421F2D21462D9475CBA97A97BE5.PNG&#34; alt=&#34;1&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;但是，总的来说，安卓手机在权限管理这一块给了我很大的改观，进步非常明显，甚至高于我的预期。授权的方式细化了很多，优质的 App 们也不再过多地索取权限了，各司其职其乐融融相处地还算是挺愉快的。不过呢，再吐槽一句，为什么 OPPO+ App 默认有全部权限~  : )&lt;/p&gt;
 &lt;h3 id=&#34;严重不足的小红点&#34;&gt;严重不足的小红点&lt;/h3&gt;
@@ -58,14 +58,14 @@
 &lt;li&gt;陌生人社交应用们：更加不配拥有  Number Badge 权限&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;我真的不能够理解，对于开放的安卓系统，一视同仁给用户自由的选择权力不好吗？上述这些举例里面，缺失了的通知数量的功能，给我增加了不少的麻烦，不是特别重要的软件还好，邮箱 App 的缺失是最难受的，越是重要的事情越是通过正式邮件发送的。尤其是，课程调整、社会安全、会议邀请等事宜。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/69A31389A0C9C44B3855262324C1552E.PNG&#34; alt=&#34;1&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/69A31389A0C9C44B3855262324C1552E.PNG&#34; alt=&#34;1&#34;  /&gt;
 &lt;/p&gt;
 &lt;h4 id=&#34;低效或无效的小红点&#34;&gt;低效或无效的小红点&lt;/h4&gt;
 &lt;p&gt;何谓低效？在 ColorOS 6 系统中的 Dot Badge 功能，并不是以【小红点】的形式提醒你有新通知的，而是通过当前 App 的图标颜色均值通知你的。颜色的基调更偏向于图标底色，而且圆点的大小和图标的大小比例悬殊，在这样的情况下其实没有办法起到有效的通知作用。&lt;/p&gt;
 &lt;p&gt;何谓无效？在 Gmail 和 Outlook 中，Dot Badge 功能直接失效，哪怕功能是开启的。缺少数字通知已经让我很难受了，连最后的小圆点通知也没有了，真的不合适。如果我没有主动轮询通知中心，我是不会知道有新邮件到来的。&lt;/p&gt;
 &lt;h4 id=&#34;软件更新的小红点&#34;&gt;软件更新的小红点&lt;/h4&gt;
 &lt;p&gt;准确的来说，这个也不是【小红点】，而是【小蓝点】。我习惯性打开应用商场软件自动更新，但一个软件更新了之后提醒用户，真的这么重要吗？我没有办法关掉桌面的小蓝点，这只是在变相地让我回归“满屏幕的小红点的恐惧”。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/C02FC48070A685A71838C0DDB7F6D097.PNG&#34; alt=&#34;1&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/C02FC48070A685A71838C0DDB7F6D097.PNG&#34; alt=&#34;1&#34;  /&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;breeno-要你何用&#34;&gt;Breeno 要你何用&lt;/h3&gt;
 &lt;h4 id=&#34;breeno-space&#34;&gt;Breeno Space&lt;/h4&gt;
@@ -78,7 +78,7 @@
 &lt;h3 id=&#34;图库管理逻辑成谜&#34;&gt;图库管理逻辑成谜&lt;/h3&gt;
 &lt;p&gt;我还是没有办法搞懂图库的逻辑，先说明我从未打开过任何文件管理 App。首先从 Photos 栏目并不是显示所有图片的，比如我从 App 中下载了一张图，它会存在于 图库/Albums/App 里面，但是如果我需要从微信扫码或分享该张照片，我并不能快速找到它，因为它似乎需要一会儿才会被微信的图库管理给索引到。但是呢，某些 App 中非主动下载的图片，却有可能出现在 Photos 栏目中。&lt;/p&gt;
 &lt;p&gt;重复出现的图片问题也比较困扰我，写文章的拍照图片在我图库里出现了两重备份。截图功能没有主动保存功能，但我触发截图时往往需要编辑区域和加标注等，但是编辑完没有保存功能，返回就是保存=。=，我多害怕辛苦编辑的图片丢失重来。同时，它还造成了原截图和二次编辑截图在图库中各存一份。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://wsine.cn-gd.ufileos.com/image/A03F176BCF4F8184754E7865AC045659.PNG&#34; alt=&#34;1&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/A03F176BCF4F8184754E7865AC045659.PNG&#34; alt=&#34;1&#34;  /&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;其他的一些杂项&#34;&gt;其他的一些杂项&lt;/h3&gt;
 &lt;p&gt;一些比较小的事项，我就在这里简单说一下吧，通过 + 代表我得到了一些正面的体验，- 代表我失去了一些体验，但这些都是在我预期之中的。&lt;/p&gt;

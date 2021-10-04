@@ -27,7 +27,7 @@
 &lt;p&gt;仔细阅读第二个英文全称，它表达的是 RSS 是一个十分简单的聚合技术，最主要的目的就是给个人网站和博客提供信息聚合，并通知所有订阅的阅读者，使信息能够更高效的传播。这正是我们想要的目的。&lt;/p&gt;
 &lt;h2 id=&#34;rss-的格式&#34;&gt;RSS 的格式&lt;/h2&gt;
 &lt;p&gt;RSS 的本质其实很简单，只是一份定制化的 XML 文件，我们先来看看该文件的基础定义。这份定义参考自 &lt;a href=&#34;https://www.rssboard.org/rss-specification&#34;&gt;RSSBoard&lt;/a&gt; 网站对于 RSS 2.0 版本的定义所提供的最简单的版本。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rss&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xmlns:atom=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.w3.org/2005/Atom&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rss&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xmlns:atom=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.w3.org/2005/Atom&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;channel&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;blog_title&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;atom:link&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blog_link&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rel=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;self&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;application/rss+xml&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
@@ -102,18 +102,18 @@
 &lt;h3 id=&#34;javascript支持&#34;&gt;Javascript支持&lt;/h3&gt;
 &lt;h4 id=&#34;流程图--序列图&#34;&gt;流程图 &amp;amp; 序列图&lt;/h4&gt;
 &lt;p&gt;有 js 的支持，对我来说意味着能够加入扩展 Markdown 语法，比如流程图、序列图等的支持。我很喜欢 &lt;a href=&#34;https://typora.io/&#34;&gt;Typora&lt;/a&gt; 这款 MD 编辑器，它自身加入了流程图和序列图等的支持，这对于技术博客来说还是很有用的一大功能。而借助 docsify 的插件系统，简单的配置了一下就能加入这些功能，然后就能做到桌面端编辑和网页端展示是完全一样的效果。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image490.jpg&#34; alt=&#34;sequence diagram&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/7e81db0357153a234f1ed0a8c7b80c02.jpg&#34; alt=&#34;sequence diagram&#34;  /&gt;
 &lt;/p&gt;
 &lt;h4 id=&#34;评论系统&#34;&gt;评论系统&lt;/h4&gt;
 &lt;p&gt;docsify 官方支持 Disqus 和 Gitalk 两种评论系统，如果有需要的话也可以很轻易的配置。我个人是比较推荐使用 Gitalk 的，毕竟 Github 账号很多人都有。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image491.jpg&#34; alt=&#34;discuss&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/7a7280f5f68996d1cf074853a3b1c100.jpg&#34; alt=&#34;discuss&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;还有其他很有用的一下功能官方都提供了，具体可以看这里的&lt;a href=&#34;https://docsify.js.org/#/zh-cn/plugins&#34;&gt;插件列表&lt;/a&gt;。如果需要实现一些特殊的功能也可以自定义，拥有可修改能力就感觉拥有一切一样，这感觉还是很美好的。&lt;/p&gt;
 &lt;h3 id=&#34;数据独立&#34;&gt;数据独立&lt;/h3&gt;
 &lt;p&gt;这是我最喜欢也是最重要的一点，它不需要你像 Hexo 等系统一样，编写 md 文件，然后通过工具转化为 html 网页静态托管。在 docsify 你只需要专注编写 md 内容本身，保存的也是 md 文件本身，docsify 就会自己读取 md 文件然后渲染成网页展示。&lt;/p&gt;
 &lt;p&gt;我认为这是一件很棒的事情，不用再过多的依赖工具本身，编写-&amp;gt;部署-&amp;gt;托管的三个步骤中，我只需要在意第一个步骤就好了。甚者，由于没有了中间文件，我能直接管理 md 源文件，也相当于一个很好的备份，将数据掌握在自己手中的感觉。&lt;/p&gt;
 &lt;p&gt;你的整个目录将会很整洁，就像这样：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;.
 ├── index.html
 ├── p01.解决方案
 │   ├── Markdown标题格式化.md
@@ -131,7 +131,7 @@
 &lt;p&gt;由于 Web 技术本身的限制，docsify 想要读取你服务端的文件需要用户主动提供路径，否则随便就能读取文件，想想还是很可怕的。&lt;/p&gt;
 &lt;p&gt;要想增加侧边栏显示目录，docsify 需要用户自行提供 &lt;code&gt;_sidebar.md&lt;/code&gt; 文件，里面用 List 记录着你的目录结构。&lt;/p&gt;
 &lt;p&gt;但是，很明显，你只想好好写文章，并不想管理这些部署的事情，每新增一篇文章都要同步修改一遍 &lt;code&gt;_sidebar.md&lt;/code&gt; 文件，还是很麻烦的一件事情。因此，我想到了请一个佣人来帮我完成这件事情，那就是 &lt;a href=&#34;https://travis-ci.com/&#34;&gt;Travis CI&lt;/a&gt;，一个比较流行的 Github 上的自动化部署服务。然后再花 30s 写一行脚本来生成这个目录。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;find . -mindepth &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.md&amp;#34;&lt;/span&gt; | awk -F&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;BEGIN {RS=&amp;#34;.md&amp;#34;} {arr[$2]=arr[$2]&amp;#34;\n    - [&amp;#34;$3&amp;#34;](/&amp;#34;$2&amp;#34;/&amp;#34;$3&amp;#34;)&amp;#34;} END { num = asorti(arr, indices); for (i=1; i&amp;lt;=num; ++i) if (indices[i]) print &amp;#34;- &amp;#34;indices[i], arr[indices[i]]}&amp;#39;&lt;/span&gt; &amp;gt; _sidebar.md
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;find . -mindepth &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.md&amp;#34;&lt;/span&gt; | awk -F&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;BEGIN {RS=&amp;#34;.md&amp;#34;} {arr[$2]=arr[$2]&amp;#34;\n    - [&amp;#34;$3&amp;#34;](/&amp;#34;$2&amp;#34;/&amp;#34;$3&amp;#34;)&amp;#34;} END { num = asorti(arr, indices); for (i=1; i&amp;lt;=num; ++i) if (indices[i]) print &amp;#34;- &amp;#34;indices[i], arr[indices[i]]}&amp;#39;&lt;/span&gt; &amp;gt; _sidebar.md
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;具体如何配置 Travis CI 与 Github 之间的联动我这里就不放教程了，官网上有教程，也可以参考仓库里的这个配置：&lt;a href=&#34;https://github.com/Wsine/blog/blob/master/.travis.yml&#34;&gt;.travis.yml&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;目录折叠&#34;&gt;目录折叠&lt;/h3&gt;
 &lt;p&gt;这是一个在 docsify 的仓库 issue 中呼声比较高的一个功能，很遗憾这个功能现在还没有，所以就自己做一个吧。&lt;/p&gt;
@@ -139,7 +139,7 @@
 &lt;h2 id=&#34;我的写作流程&#34;&gt;我的写作流程&lt;/h2&gt;
 &lt;p&gt;首先我的写作工具其实有很多地方，我会用手机随时记录灵感，用 iPad 在咖啡厅稍微写点东西，用笔记本电脑在图书馆认认真真写文章，晚上在家里享受机械键盘的声音~~~；无论我用什么工具编写，写完后我都可以通过 Github 网页上传新建一份 md 文件到一个新分支上；借助 Github  的功能，我可以很好地和朋友一起协作；当终稿完成的时候，只需要发一个 Pull Request 合并到 master 分支上即可；这时候会触发 Travis CI 的自动化，帮我生成一个目录到 gh-pages 分支上；然后文章就展示到博客中了。&lt;/p&gt;
 &lt;p&gt;如果要用一个流程图来表达会是这个样子的：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-flow&#34; data-lang=&#34;flow&#34;&gt;st=&amp;gt;start: 开始
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-flow&#34; data-lang=&#34;flow&#34;&gt;st=&amp;gt;start: 开始
 ed=&amp;gt;end: 结束
 write=&amp;gt;operation: 写作
 cooperation=&amp;gt;operation: 协作
@@ -153,7 +153,7 @@ st-&amp;gt;write-&amp;gt;upload-&amp;gt;last
 last(yes)-&amp;gt;merge-&amp;gt;generate-&amp;gt;deploy-&amp;gt;ed
 last(no)-&amp;gt;cooperation-&amp;gt;upload
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;样例demo&#34;&gt;样例Demo&lt;/h3&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image492.jpg&#34; alt=&#34;Demo&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/0f23072a7635d7f9925d75b94461b0b0.jpg&#34; alt=&#34;Demo&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;博客地址：https://wsine.github.io/blog&lt;/p&gt;
 &lt;p&gt;至此，正文部分就结束了，如果还有兴趣的话可以继续阅读下面的部分。docsify 是一块面向文档设计的工具，但是能做成什么取决于使用工具的人，它也不仅仅只能用于说明文档。&lt;/p&gt;
@@ -163,7 +163,7 @@ last(no)-&amp;gt;cooperation-&amp;gt;upload
 &lt;p&gt;我最开始的写作是在&lt;a href=&#34;https://www.cnblogs.com/&#34;&gt;博客园&lt;/a&gt;平台上。它本身很不错，我最开始选择它的理由是相对小众，以及它的slogan&lt;code&gt;代码改变世界&lt;/code&gt;很抓我的心，博文页完全没有广告阻挡正文，这些都是我选择它的初衷。&lt;/p&gt;
 &lt;p&gt;还有两点我想说，可定制化的页面与可定制化的插件。我很喜欢其中的一款主题：&lt;code&gt;Less is more&lt;/code&gt;，它基本完全没有样式，但正是如此才最方便地定制一个符合自己审美的CSS，能让写作更加充满动力。其次，博客园平台允许用户申请 JavaScript 权限，这就相当于你可以自由地动态改变页面的内容，比如增加官方不支持的 flowchart 、隐藏彩蛋、&lt;del&gt;删除页面广告(划掉)&lt;/del&gt; 等。&lt;/p&gt;
 &lt;p&gt;后来，它很早开始支持Markdown也是我喜欢它的一点之一。但是，正值移动端崛起，网站本身对移动端的适配不足且我自定义了UI加大了难度，哪怕我辛苦得做了一版本移动端适配，效果也只是差强人意。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image493.png&#34; alt=&#34;Old&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/038adfb2b0b6b9233d75dd323c018cc4.png&#34; alt=&#34;Old&#34;  /&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;私有博客平台&#34;&gt;私有博客平台&lt;/h3&gt;
 &lt;p&gt;我花了一年的时间折腾在Azure上面搭建了自己的博客平台，我很享受这个过程，完全自定义的过程也能让我学到很多。从购买域名，选择技术栈，搭建测试，维护数据库等，这些其实都是无与伦比的经验。专业相关的也建议折腾一番。&lt;/p&gt;

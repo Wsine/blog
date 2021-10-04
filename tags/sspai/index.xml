@@ -25,7 +25,7 @@
 &lt;h2 id=&#34;typora-之功能增强&#34;&gt;Typora 之功能增强&lt;/h2&gt;
 &lt;p&gt;首先，从 Typora 官网上能够下载 Win / Linux / OSX 对应平台的安装文件并正确安装。&lt;/p&gt;
 &lt;p&gt;然后，我们需要启用图片上传功能。点击 File -&amp;gt; Preferences -&amp;gt; Image，在 Image Upload Setting 那栏，选择 PicGo-Core (command line) ，然后点击 Download and Upgrade，即可完成安装。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/628cb7601505f1aaf9d736a4f59f68a6.png&#34; alt=&#34;enhance&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/628cb7601505f1aaf9d736a4f59f68a6.png&#34; alt=&#34;enhance&#34;  /&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;picgo-之少数派插件&#34;&gt;PicGo 之少数派插件&lt;/h2&gt;
 &lt;p&gt;得益于 PicGo 的插件系统，我们可以为少数派平台编写插件，快捷完成图片上传到少数派的服务器。那么，如何安装少数派插件？&lt;/p&gt;
@@ -38,14 +38,14 @@
 &lt;p&gt;在 PicGo 配置文件夹下创建&lt;code&gt;node_modules&lt;/code&gt;文件夹，并在里面创建同名快捷方式/软链接，指向刚才下载的仓库文件夹。&lt;/p&gt;
 &lt;p&gt;步骤三&lt;/p&gt;
 &lt;p&gt;编辑`package.json``文件，修改里面的依赖项。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;dependencies&amp;#34;&lt;/span&gt;: {
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;picgo-plugin-sspai&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;file:picgo-plugin-sspai&amp;#34;&lt;/span&gt;
   }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;步骤四&lt;/p&gt;
 &lt;p&gt;创建`package-lock.json``，内容填充如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;picgo-plugins&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;requires&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lockfileVersion&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,
@@ -57,7 +57,7 @@
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;验证&lt;/p&gt;
 &lt;p&gt;最终配置文件夹中的目录结构如应如下图所示&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~/.picgo &amp;gt; tree
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~/.picgo &amp;gt; tree
 .
 ├── config.json
 ├── node_modules
@@ -75,7 +75,7 @@
 &lt;p&gt;打开少数派官网，登陆自己的账号，然后按F12打开开发者模式，找到 Console 选项卡，输入&lt;/p&gt;
 &lt;p&gt;`document.cookie.split(&#39;; sspai_cross_token=&#39;).pop().split(&#39;;&#39;).shift()``&lt;/p&gt;
 &lt;p&gt;该命令会返回一串字符串，记住该字符串，并重新在 Typora 中打开 PicGo 的配置文件，替换下面样例的 token 占位符，保存&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;picBed&amp;#34;&lt;/span&gt;: {
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;current&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sspai&amp;#34;&lt;/span&gt;,
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;uploader&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sspai&amp;#34;&lt;/span&gt;,
@@ -91,7 +91,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好了，至此为止，你已完成了全部的配置，那么来看看效果如何吧。&lt;/p&gt;
 &lt;h2 id=&#34;样例效果&#34;&gt;样例效果&lt;/h2&gt;
 &lt;p&gt;我们就以本文作为目标图片展示一下该写作流程的优化吧，通过菜单栏的 Format -&amp;gt; Image -&amp;gt; Upload All Local Images 能够一键上传该文章下面的全部图片，也可以通过右击图片的方式单张图片上传&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/4472f6471191c61072d1e54de3f941d9.gif&#34; alt=&#34;example&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/4472f6471191c61072d1e54de3f941d9.gif&#34; alt=&#34;example&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;最后，打开少数派网站的编辑器，复制全文富文本格式进去，即可完成发布流程。&lt;/p&gt;
 &lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;

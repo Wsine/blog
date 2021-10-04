@@ -56,7 +56,7 @@
 &lt;p&gt;这里顺便提醒一下，&amp;ldquo;记忆密码&amp;quot;和“区分代码”并不一定要恒定。记忆密码还是很推荐使用等级策略来记忆，简单分2~3级我觉得就足够了，毕竟安全性已经大大提高了，也就是说你仅需要记忆2~3个短密码即可。区分代码其实可以根据自己对网站的第一反应来记忆，比如昵称、别称、域名、拼音缩写等等，按照自己的喜欢即可。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;这个网页其实也解决了一个便携性的痛点&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;不知道各位有没有这样的痛苦，当你临时来到一个新的机器想要登陆一个账号，但是由于是复杂的强密码完全无法记忆，所以你得要么得重新安装密码管理软件同步过来，或者用手机查看密码后手动输入，这种体验本身都不友好。由于觅密它本身只是一个网页，保存为浏览器书签即可快速使用查看，或直接在新电脑打开网页输入一下就得到最终密码了。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image459.jpg&#34; alt=&#34;seekpass&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9459.jpg&#34; alt=&#34;seekpass&#34;  /&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;密码存储&#34;&gt;密码存储&lt;/h3&gt;
 &lt;p&gt;密码的安全性是提高了，&lt;strong&gt;下一个点要解决的是所有权的问题。&lt;/strong&gt;&lt;/p&gt;
@@ -81,7 +81,7 @@
 &lt;p&gt;还有多样性，Keepass不仅能存储密码，还能存储notes和文件等等，像我将数字密码锁和路由器管理密码丢到这里真的好实用，我经常不用就忘记了。&lt;/p&gt;
 &lt;p&gt;最后但也是最重要的一点是，它是免费的。无论1password还是Lastpass，价格基本都是3刀每个月，两百多一年吧，作为密码数据存储服务提供商，承担的风险不小，这个价格其实也合理。&lt;/p&gt;
 &lt;p&gt;KeePass的官网下载为：&lt;a href=&#34;https://keepass.info/download.html&#34;&gt;https://keepass.info/download.html&lt;/a&gt;，通过一步一步创建一个本地数据库，我个人推荐同时使用 主密码 (Master Password) 和密钥文件 (Key File) 来加密，十分不推荐启用微软账户 (Windows User Account) 来加密。然后你就能得到如下两个文件：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~
 ├── PasswordDatabase.kdbx
 └── PasswordDatabase.key
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;主密码建议记忆在你的大脑中，或通过纸质方式存储；密钥文件建议存储多份，至少有一份在云盘有一份在移动硬盘中。&lt;/p&gt;
@@ -93,10 +93,10 @@
 &lt;p&gt;简单点来说WebDAV仅是一个扩展的HTTP协议，允许客户端授权并远程访问和修改服务端的内容。这正是我们所需要的功能。&lt;/p&gt;
 &lt;p&gt;2019年的各大网盘服务提供商中，支持WebDAV协议仅有&lt;a href=&#34;https://www.jianguoyun.com/&#34;&gt;坚果云&lt;/a&gt;和&lt;a href=&#34;https://www.dropbox.com/&#34;&gt;Dropbox&lt;/a&gt;两家，后者由于众所周知的原因，本文仅讨论前者。&lt;/p&gt;
 &lt;p&gt;坚果云的官网为：&lt;a href=&#34;https://www.jianguoyun.com/&#34;&gt;https://www.jianguoyun.com&lt;/a&gt;，注册并登陆后，通过下面如下的步骤，添加一个授权的应用密码&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image460.jpg&#34; alt=&#34;WebDAV&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9460.jpg&#34; alt=&#34;WebDAV&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;然后创建你喜欢的路径，并将刚刚得到的两份文件上传到坚果云中，文件路径和文件名都可以自定义&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image461.jpg&#34; alt=&#34;jianguo_file&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9461.jpg&#34; alt=&#34;jianguo_file&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;顺带一提，坚果云的免费版本每个月限制上传和下载流量，如图片左下角显示，但如果你看我实际的数据库大小其实也只有几kb（当然如果你要用keepass存储大文件当我没说），所以我认为流量是完全不用担心的，而且由于服务器在国内且没有限制可以跑满带宽，作为常用云存储也不错。&lt;/p&gt;
 &lt;h3 id=&#34;密码易用&#34;&gt;密码易用&lt;/h3&gt;
@@ -113,7 +113,7 @@
 &lt;li&gt;Key File：保存在本地的密钥文件路径&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;填好这5个参数后你就可以直接打开远端的数据库了，每次编辑完之后记得点保存就好，它就会同步到远端的数据库了~&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image462.jpg&#34; alt=&#34;Keepass&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9462.jpg&#34; alt=&#34;Keepass&#34;  /&gt;
 &lt;/p&gt;
 &lt;h4 id=&#34;web客户端tusk&#34;&gt;Web客户端Tusk&lt;/h4&gt;
 &lt;p&gt;介绍链接：&lt;a href=&#34;https://subdavis.com/Tusk/&#34;&gt;https://subdavis.com/Tusk/&lt;/a&gt;，支持Chrome和Firefox，也是支持WebDAV的，非常棒(๑•̀ㅂ•́)و✧，不过我自己没有需求没用过就不截图了。&lt;/p&gt;
@@ -134,7 +134,7 @@
 &lt;li&gt;支持备份通讯录&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;上述的每一个功能，我认为都是优胜于官方下载页面推荐的iOS客户端miniKeepass的。作为日常稳定使用的app，是完全没有问题的。使用上只要明白了上面的5个参数，那么这个app的使用也不会遇到什么问题就不再赘述了。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image463.jpg&#34; alt=&#34;fantasypass&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9463.jpg&#34; alt=&#34;fantasypass&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;目前在App Store中的售价为一次性买断制12元，我认为这个app还是非常值得的。&lt;/p&gt;
 &lt;p&gt;下载链接：&lt;a href=&#34;https://apps.apple.com/cn/app/fantasypass-ikeepass/id1357961740&#34;&gt;https://apps.apple.com/cn/app/fantasypass-ikeepass/id1357961740&lt;/a&gt;&lt;/p&gt;

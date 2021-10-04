@@ -41,7 +41,7 @@
 &lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;h4 id=&#34;配色&#34;&gt;配色&lt;/h4&gt;
 &lt;p&gt;说得多还不如先看看总体的配色，配色我采用了vim自带的desert主题，在这个基础上加了一点自定义&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image494.png&#34; alt=&#34;配色图&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/468539c3f437335584ebdfa2f8c4aa34.png&#34; alt=&#34;配色图&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;从左往右说起好了，左侧我添加了一个目录树，使用的是&lt;code&gt;scrooloose/nerdtree&lt;/code&gt;的插件，并且绑定了&lt;code&gt;&amp;lt;leader&amp;gt;q&lt;/code&gt;来启动和隐藏目录树，使用起来还是蛮方便的&lt;/p&gt;
 &lt;p&gt;中间的配色我刻意挑了一个黑色的主题。我不喜欢那种惨淡的白色，函数名和命名空间是白色就和变量名看起来没有区分度了，因此搜了好久，找到了&lt;code&gt;octol/vim-cpp-enhanced-highlight&lt;/code&gt;插件能满足这个需求，修改了一下它的颜色。弹出菜单的颜色我也自己修改了。颜色都采用了暗色调的color，确保不会刺眼，同时也能将不同的元素区分出来。&lt;code&gt;set t_Co=256 &amp;quot; Enable status bar color&lt;/code&gt;很重要。&lt;/p&gt;
@@ -49,7 +49,7 @@
 &lt;p&gt;因为还在不断的修改中，未来可能会考虑把配色做成插件易于安装吧，目前的安装方式比较麻烦&lt;/p&gt;
 &lt;h4 id=&#34;管理&#34;&gt;管理&lt;/h4&gt;
 &lt;p&gt;插件管理上我选用了Vundle，目前一款比较流行的Vim插件管理器，基本上我只使用github上的vim插件&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wsine.cn-gd.ufileos.com/image/wsine-blog-image495.png&#34; alt=&#34;插件列表&#34;  /&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/fe535df15cf240c8bc5474da7fcf1b28.png&#34; alt=&#34;插件列表&#34;  /&gt;
 &lt;/p&gt;
 &lt;h4 id=&#34;按键&#34;&gt;按键&lt;/h4&gt;
 &lt;p&gt;一直以来我对于那种秀配置不讲按键绑定的文章比较反感，除非你一个键都没改&lt;/p&gt;
@@ -216,7 +216,7 @@
 &lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;p&gt;参照https://github.com/VundleVim/Vundle.vim，下载Vundle管理器到指定目录&lt;/p&gt;
 &lt;p&gt;将对应的文件放置在你的家目录&lt;code&gt;~&lt;/code&gt;下&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~
 ├── .vimrc
 └── .vim
      ├── bundle
@@ -227,7 +227,7 @@
 &lt;a href=&#34;https://github.com/Wsine/Backup/blob/master/vim/desert.vim&#34;&gt;desert.vim文件下载&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;打开Vim，使用&lt;code&gt;:PluginInstall&lt;/code&gt;即可&lt;/p&gt;
 &lt;h2 id=&#34;配置文件&#34;&gt;配置文件&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
 &amp;quot; =&amp;gt; Vundle
 &amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
 set nocompatible              &amp;quot; be iMproved, required
