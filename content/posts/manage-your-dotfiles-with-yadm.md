@@ -27,7 +27,7 @@ canonical_url: false
 
 我们来看一个例子，一个使用多年 Linux 的用户，它需要管理的配置文件到底有多乱。我就在 Github 搜索 dotfiles 找一个最高 star 的作为例子。
 
-![github-com-mathiasbynens-dotfiles](http://wsine.cn-gd.ufileos.com/image/8afff2990d81d862953c9acc087c1574.jpg)
+![github-com-mathiasbynens-dotfiles](https://image.wsine.top/8afff2990d81d862953c9acc087c1574.jpg)
 
 实际上它总共包含了29个文件在一级目录里面。当然平时都是隐藏的状态，但是你总是会因为需要查看文件权限，不小心被这堆「垃圾」压倒。
 
@@ -67,7 +67,7 @@ XDG_CONFIG_HOME 就是我们这里需要定义约束的统一配置文件存放�
 
 git 协议要求整个仓库都在同一个文件夹下面，文件夹下面所有的文件都是潜在跟踪目标。但 yadm 改进了这一点，它会创建一个 barebones repository，只追踪用户主动添加的文件。相比老前辈 `GNU stow` 依赖软链接来维护一个仓库目录，yadm 的做法更简洁干净。它很好地反映了你当前 Home 目录下的文件布局。
 
-![image-20210527213229208](http://wsine.cn-gd.ufileos.com/image/cc32942feae46ac9e7cd4cb699677607.png)
+![image-20210527213229208](https://image.wsine.top/cc32942feae46ac9e7cd4cb699677607.png)
 
 ##### 实践二：新增仓库和日常的维护更新工作
 

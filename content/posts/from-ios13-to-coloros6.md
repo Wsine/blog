@@ -40,7 +40,7 @@ description: "纠结了很久，退了iPhone 11购买OPPO Reno Ace尝试回归�
 
 诚然，邮箱 App 的缺失可以通过下载第三方来解决，但我认为这不属于一个一线大厂可以省略的事情。虽然，我现在找到了不少方法去 work around，但是这些操作都是反直觉的。你能想象你需要打电话给某个联系人的时候不是打开联系人而是打开一个叫 Outlook 的 App 再多层跳转吗？更不必说，少了这套对日常的 GTD 管理产生了不少的困扰。
 
-![1](http://wsine.cn-gd.ufileos.com/image/7B28716735306A1B4CD64ED46BD5FA6E.PNG)
+![1](https://image.wsine.top/7B28716735306A1B4CD64ED46BD5FA6E.PNG)
 
 ### 依旧糟糕的权限管理
 
@@ -54,7 +54,7 @@ description: "纠结了很久，退了iPhone 11购买OPPO Reno Ace尝试回归�
 
 **无效的不再打扰：**当你想阻止某些权限的时候，可以直接选择 Cancel 且勾选 Don't ask again。但是，不是每一次这个选项都有效的。比如，Bose Connect 这个 App，每当我连接蓝牙的时候，都有弹窗显示希望授权 Contacts 权限，无论你上一次是否让它 Don't ask again。我看过的，Bose Connect 的索取权限列表并没有 Contacts，可能是系统嫁祸你索取的这个权限，也有可能是一个你是一个假的乖宝宝。
 
-![1](http://wsine.cn-gd.ufileos.com/image/A971B421F2D21462D9475CBA97A97BE5.PNG)
+![1](https://image.wsine.top/A971B421F2D21462D9475CBA97A97BE5.PNG)
 
 但是，总的来说，安卓手机在权限管理这一块给了我很大的改观，进步非常明显，甚至高于我的预期。授权的方式细化了很多，优质的 App 们也不再过多地索取权限了，各司其职其乐融融相处地还算是挺愉快的。不过呢，再吐槽一句，为什么 OPPO+ App 默认有全部权限~  : )
 
@@ -76,7 +76,7 @@ description: "纠结了很久，退了iPhone 11购买OPPO Reno Ace尝试回归�
 
 我真的不能够理解，对于开放的安卓系统，一视同仁给用户自由的选择权力不好吗？上述这些举例里面，缺失了的通知数量的功能，给我增加了不少的麻烦，不是特别重要的软件还好，邮箱 App 的缺失是最难受的，越是重要的事情越是通过正式邮件发送的。尤其是，课程调整、社会安全、会议邀请等事宜。
 
-![1](http://wsine.cn-gd.ufileos.com/image/69A31389A0C9C44B3855262324C1552E.PNG)
+![1](https://image.wsine.top/69A31389A0C9C44B3855262324C1552E.PNG)
 
 #### 低效或无效的小红点
 
@@ -88,7 +88,7 @@ description: "纠结了很久，退了iPhone 11购买OPPO Reno Ace尝试回归�
 
 准确的来说，这个也不是【小红点】，而是【小蓝点】。我习惯性打开应用商场软件自动更新，但一个软件更新了之后提醒用户，真的这么重要吗？我没有办法关掉桌面的小蓝点，这只是在变相地让我回归“满屏幕的小红点的恐惧”。
 
-![1](http://wsine.cn-gd.ufileos.com/image/C02FC48070A685A71838C0DDB7F6D097.PNG)
+![1](https://image.wsine.top/C02FC48070A685A71838C0DDB7F6D097.PNG)
 
 ### Breeno 要你何用
 
@@ -112,7 +112,7 @@ description: "纠结了很久，退了iPhone 11购买OPPO Reno Ace尝试回归�
 
 重复出现的图片问题也比较困扰我，写文章的拍照图片在我图库里出现了两重备份。截图功能没有主动保存功能，但我触发截图时往往需要编辑区域和加标注等，但是编辑完没有保存功能，返回就是保存=。=，我多害怕辛苦编辑的图片丢失重来。同时，它还造成了原截图和二次编辑截图在图库中各存一份。
 
-![1](http://wsine.cn-gd.ufileos.com/image/A03F176BCF4F8184754E7865AC045659.PNG)
+![1](https://image.wsine.top/A03F176BCF4F8184754E7865AC045659.PNG)
 
 ### 其他的一些杂项
 

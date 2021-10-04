@@ -4,7 +4,7 @@ date: 2020-08-26
 published: true
 tags: ['Blog', 'RSS', 'Solution']
 series: false
-cover_image: ./images/bring-rss-to-your-blog.jpg
+cover_image: https://image.wsine.top/9c6e4b17c12785eacd19b87fe1565057.jpg
 canonical_url: false
 description: "最近对于千篇一律的科技新闻，感到了一丝的阅读疲倦。因此，想要寻找一些有有趣的灵魂或者独立思考的博文，打发平时无聊的摸鱼时光。"
 ---

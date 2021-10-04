@@ -4,7 +4,7 @@ date: 2020-06-15
 published: true
 tags: ['Solution', 'Switch']
 series: false
-cover_image: ./images/switch-screen-to-laptop-or-pc.png
+cover_image: https://image.wsine.top/deec419a79c3fae239072a2ef4ca928a.png
 canonical_url: false
 description: "你是否曾经苦恼在宿舍里生活，偶尔想跟舍友来打一把大乱斗却苦于NS屏幕太小不尽兴？"
 ---
@@ -41,7 +41,7 @@ description: "你是否曾经苦恼在宿舍里生活，偶尔想跟舍友来打
 
 我买的是 Acasis 家的采集卡，我在亚马逊上面买的，国内淘宝也有售，最低只需要 200+ 的价格即可满足 NS 大屏共享的需求。唯一的前置要求是需要你有一台自己的电脑，无论是笔记本还是台式都可以。
 
-![Slide1](https://wsine.cn-gd.ufileos.com/image/640f7b287e0c26c1a60cabdbb9b94398.jpg)
+![Slide1](https://image.wsine.top/640f7b287e0c26c1a60cabdbb9b94398.jpg)
 
 对比采集卡本身的体积和鼠标，可以看出采集卡本身非常的小。
 
@@ -49,13 +49,13 @@ description: "你是否曾经苦恼在宿舍里生活，偶尔想跟舍友来打
 
 绝大部分的电脑配备的 HDMI 接口都是输出口，所以不能接收 NS 底座传输过来的视频信号。采集卡的作用，就是接收 NS 底座的视音频信号转换为数字信号，通过 USB 接口传输给电脑播放。用一张图来表示是这样子的：
 
-![Slide2](https://wsine.cn-gd.ufileos.com/image/920173607cb6084d97dc80d7cdfa8822.png)
+![Slide2](https://image.wsine.top/920173607cb6084d97dc80d7cdfa8822.png)
 
 **电脑设置**
 
 采集卡本身是免驱的，直接连接电脑就可以使用。常用的软件都支持打开串流的，这里以 PotPlayer 为例。右击界面，依次点击「打开」，「设备设置」，「模拟TV」，选择「ACASIS」设备即可。
 
-![Slide3](https://wsine.cn-gd.ufileos.com/image/4874740a0d7232ac2946e6a9e216d2da.PNG)
+![Slide3](https://image.wsine.top/4874740a0d7232ac2946e6a9e216d2da.PNG)
 
 实际体验下来，实际的延迟只有0.1s，几乎感受不到，玩大乱斗这种对延迟要求高的游戏也没有问题。
 
@@ -65,7 +65,7 @@ description: "你是否曾经苦恼在宿舍里生活，偶尔想跟舍友来打
 
 如果设备性能真的过低，这里有一个小技巧可以教你。在软件端关掉声音的捕获，在系统端直接<侦听>采集设备。这样子设置，不需要经过软件图音同步减少处理量，用硬件直出声音对性能要求更低。
 
-![Slide4](https://wsine.cn-gd.ufileos.com/image/6f784cf5f9f82aded688ddd7e2215414.PNG)
+![Slide4](https://image.wsine.top/6f784cf5f9f82aded688ddd7e2215414.PNG)
 
 ### 用户体验
 

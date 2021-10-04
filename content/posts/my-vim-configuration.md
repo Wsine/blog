@@ -44,7 +44,7 @@ description: "今天来分享一下我对于Vim的一下配置和心得"
 
 说得多还不如先看看总体的配色，配色我采用了vim自带的desert主题，在这个基础上加了一点自定义
 
-![配色图](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image494.png)
+![配色图](https://image.wsine.top/468539c3f437335584ebdfa2f8c4aa34.png)
 
 从左往右说起好了，左侧我添加了一个目录树，使用的是`scrooloose/nerdtree`的插件，并且绑定了`<leader>q`来启动和隐藏目录树，使用起来还是蛮方便的
 
@@ -58,7 +58,7 @@ description: "今天来分享一下我对于Vim的一下配置和心得"
 
 插件管理上我选用了Vundle，目前一款比较流行的Vim插件管理器，基本上我只使用github上的vim插件
 
-![插件列表](https://wsine.cn-gd.ufileos.com/image/wsine-blog-image495.png)
+![插件列表](https://image.wsine.top/fe535df15cf240c8bc5474da7fcf1b28.png)
 
 #### 按键
 

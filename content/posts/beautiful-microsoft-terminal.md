@@ -4,14 +4,14 @@ date: 2019-12-09
 published: true
 tags: ['Terminal', 'Windows']
 series: false
-cover_image: ./images/beautiful-microsoft-terminal.jpg
+cover_image: https://image.wsine.top/b1398c74eae46ef8491492a1b6deccbe.jpg
 canonical_url: false
 description: "最后一块拼图，Microsoft Terminal能够很好地用于日常工作中了"
 ---
 
 在 Microsoft Build 2019 的大会上，微软给我们带来了一款全新设计的终端模拟器 Microsoft Terminal. 虽然过度好看的宣传片和实际的效果有着巨大的落差，但是也不影响它在 Windows 阵营里取得最高的颜值称号。
 
-![terminal](http://wsine.cn-gd.ufileos.com/image/1746B559BC9685F1E4D9BFFF9F5F9EAC.png)
+![terminal](https://image.wsine.top/1746B559BC9685F1E4D9BFFF9F5F9EAC.png)
 
 从 Preview v0.2 版本开始我就试用了这款工具，到今天的 Preview v0.6 版本最后关键的问题修复后我才想说来跟大家分享一下这个工具。
 
@@ -31,7 +31,7 @@ Terminal 采用了 JSON 文件作为它的配置文件，这就意味着你可�
 
 由于是 JSON 纯文本配置文件，总是有可能出现手抖或者配置出错的问题，这时候保存配置文件会被提示文件哪里的配置有问题，而该次的保存不会生效，实际调试样式还是十分方便的。
 
-![vim](http://wsine.cn-gd.ufileos.com/image/52104FB432B5BCF495FA7E7C056DBA6C.gif)
+![vim](https://image.wsine.top/52104FB432B5BCF495FA7E7C056DBA6C.gif)
 
 ## Less is More 的配置项
 
@@ -64,7 +64,7 @@ Terminal 提供的配置项不多，但我觉得 98% 的人也只需要修改到
 
 这个就属于新时代的终端模拟器的代表功能了，之前在 Manjaro 下面使用 Alacritty 终端模拟器时才体会到在GPU加速的这一功能。在大量的文本打印的时候，得益于GPU的加速，丝毫没有那种播放PPT的卡顿感，这个对于长时间在终端下工作的我来说还是十分舒服的。
 
-![vim](http://wsine.cn-gd.ufileos.com/image/CC87571D29A2461C0502CF5A3C9268A9.gif)
+![vim](https://image.wsine.top/CC87571D29A2461C0502CF5A3C9268A9.gif)
 
 ### 多标签
 
@@ -74,7 +74,7 @@ Terminal 提供的配置项不多，但我觉得 98% 的人也只需要修改到
 
 虽然微软平台的Emoji真的很丑，但是有总比没有好不是嘛，我还是很喜欢在Git commit里面加点emoji让它好看一点的。
 
-![vim](http://wsine.cn-gd.ufileos.com/image/E56D8ABFB6EA3F8AF3782EC3B0DBFF0B.png)
+![vim](https://image.wsine.top/E56D8ABFB6EA3F8AF3782EC3B0DBFF0B.png)
 
 ### NCURSES的支持
 
@@ -82,9 +82,9 @@ Terminal 提供的配置项不多，但我觉得 98% 的人也只需要修改到
 
 通过我两周以来的实际体验，在我的日常使用中完全没有问题，因此才会想推荐给大家。
 
-![vim](http://wsine.cn-gd.ufileos.com/image/63A4C2739333EFDD11711E7F9D791BA8.png)
+![vim](https://image.wsine.top/63A4C2739333EFDD11711E7F9D791BA8.png)
 
-![tmux](http://wsine.cn-gd.ufileos.com/image/C85D32FC99D632208A9B029AAD6E2FB3.png)
+![tmux](https://image.wsine.top/C85D32FC99D632208A9B029AAD6E2FB3.png)
 
 ### 复制与粘贴
 
@@ -102,6 +102,6 @@ Terminal 本身还支持 xterm-256 color ，UTF-8 和 unicode 编码，这些我
 
 我用的是里面默认的 "One Half Dark" 配色，我觉得很好看，搭配 70% 的透明度和 5 pixel 的外边距，整体效果很不错。
 
-![configuration](http://wsine.cn-gd.ufileos.com/image/8480A1CD36C62A350D33E5F09904EDAC.png)
+![configuration](https://image.wsine.top/8480A1CD36C62A350D33E5F09904EDAC.png)
 
 最后放上我的配置图，剩下的就大家去尝试一下吧~

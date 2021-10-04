@@ -38,7 +38,7 @@ Count - Number - Integer
 
 访问 https://airtable.com/api，点击对应的 Table，选择左侧的 AUTHENTICATION，点击右上角的 show API key，你就能找到对应的 `<your table id>` 和 `<your app token>`。
 
-![image-20210418170007299](http://wsine.cn-gd.ufileos.com/image/be43f6cae2b8bfe861c079839a5e484f.png)
+![image-20210418170007299](https://image.wsine.top/be43f6cae2b8bfe861c079839a5e484f.png)
 
 4. (可选) 在 Airtable 里增加 Gallery View，制作你自己的单词卡片，点击 Share View 可获取访问链接
 
@@ -50,7 +50,7 @@ Count - Number - Integer
 
 最终你获得的有两个关键的字符串：`<your app key>` and `your app scret`, 这里的 app 指的是有道智云 AI 开放平台上面的一个实例。
 
-![image-20210418163029079](http://wsine.cn-gd.ufileos.com/image/4a795606d3a43f92ce84c18e620967ed.png)
+![image-20210418163029079](https://image.wsine.top/4a795606d3a43f92ce84c18e620967ed.png)
 
 ## JSBox as a Client
 
@@ -71,17 +71,17 @@ Count - Number - Integer
 
 为了在调用菜单里简化一级跳转逻辑，我们还需要借助 捷径APP 调用 JSBox
 
-![IMG_67ECF7225B1E-1](http://wsine.cn-gd.ufileos.com/image/4b9f5491dfbe2b491043598ba06d2a4f.jpeg)
+![IMG_67ECF7225B1E-1](https://image.wsine.top/4b9f5491dfbe2b491043598ba06d2a4f.jpeg)
 
 ## Workflow Demo
 
 由于我阅读论文的设备是 iPad，因此这里用 iPad 做个演示。在你喜欢的论文阅读软件中选中相应的单词/短语，通过系统分享菜单选择对应的捷径。
 
-![ezgif-3-a15650ace542](http://wsine.cn-gd.ufileos.com/image/73fbf90a6725cf9bb97918582be0d916.gif)
+![ezgif-3-a15650ace542](https://image.wsine.top/73fbf90a6725cf9bb97918582be0d916.gif)
 
 对应的 Gallery View 的单词卡效果是这样子的，而且对响应式网站有适配，写论文的时候它给了我很大的帮助。
 
-![image-20210418173436005](http://wsine.cn-gd.ufileos.com/image/2f2fd4042d29293dd78df86a9653b11c.png)
+![image-20210418173436005](https://image.wsine.top/2f2fd4042d29293dd78df86a9653b11c.png)
 
 理论上，这个 worflow 也支持句子摘抄和翻译，新增一个 Gallery View 和 Filtering 就可以，只不过我没有这个需求而已。
 

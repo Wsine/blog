@@ -4,7 +4,7 @@ date: 2020-06-02
 published: true
 tags: ['Windows', 'Solution', 'SSPAI']
 series: false
-cover_image: ./images/writting-for-sspai-on-windows.jpg
+cover_image: https://image.wsine.top/bcf36126e162a7d610effe869dc8b8c1.jpg
 canonical_url: false
 description: "谈及写作，不少的用户都是使用 Mac 平台配合多样的 App 完成从写稿到发布的一条龙服务"
 ---
@@ -25,7 +25,7 @@ description: "谈及写作，不少的用户都是使用 Mac 平台配合多样�
 
 然后，我们需要启用图片上传功能。点击 File -> Preferences -> Image，在 Image Upload Setting 那栏，选择 PicGo-Core (command line) ，然后点击 Download and Upgrade，即可完成安装。
 
-![enhance](https://wsine.cn-gd.ufileos.com/image/628cb7601505f1aaf9d736a4f59f68a6.png)
+![enhance](https://image.wsine.top/628cb7601505f1aaf9d736a4f59f68a6.png)
 
 ## PicGo 之少数派插件
 
@@ -125,7 +125,7 @@ Linux 和 OSX 平台位于`~/.picgo/``
 
 我们就以本文作为目标图片展示一下该写作流程的优化吧，通过菜单栏的 Format -> Image -> Upload All Local Images 能够一键上传该文章下面的全部图片，也可以通过右击图片的方式单张图片上传
 
-![example](https://wsine.cn-gd.ufileos.com/image/4472f6471191c61072d1e54de3f941d9.gif)
+![example](https://image.wsine.top/4472f6471191c61072d1e54de3f941d9.gif)
 
 最后，打开少数派网站的编辑器，复制全文富文本格式进去，即可完成发布流程。
 

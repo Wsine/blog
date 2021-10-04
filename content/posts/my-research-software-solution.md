@@ -4,7 +4,7 @@ date: 2020-12-01
 published: true
 tags: ['Research', 'Solution']
 series: false
-cover_image: ./images/my-research-software-solution.png
+cover_image: https://image.wsine.top/ba7d37965807a31c8ff2ed6f60a24ed6.png
 canonical_url: false
 description: "经历了一年多的博士生学习，来聊聊我目前在科研生活中使用的软件"
 ---
@@ -27,7 +27,7 @@ description: "经历了一年多的博士生学习，来聊聊我目前在科研
 
 但是值得注意的是，这种导入功能还是会跟你的出口 IP 有关系的。因为只有你所在的学校或机构购买对应出版商的访问资格权限，才能直接使用该导入功能，而服务器是根据你的请求所在的 IP 来判断你所在的机构的。
 
-![iShot2020-11-29 21.10.51](http://wsine.cn-gd.ufileos.com/image/7d9fbb3aad49338f7b937d244fba4e24.gif)
+![iShot2020-11-29 21.10.51](https://image.wsine.top/7d9fbb3aad49338f7b937d244fba4e24.gif)
 
 **字段管理**
 
@@ -47,7 +47,7 @@ Zotero 作为一款开源的产品，使用上是免费的。但是同时，它�
 
 在这里我选择的是 [Koofr](https://koofr.eu/) 作为我的存储服务，目前的提供 WebDAV 服务的云盘选择已经不多了，Koofr 对于免费用户能默认提供 2G 的存储空间，不限制流量。对于文献管理这一需求来专用已经足够了。
 
-![image-20201129213729416](http://wsine.cn-gd.ufileos.com/image/55cf8435ea0ad6d893afd536f4e7b57d.png)
+![image-20201129213729416](https://image.wsine.top/55cf8435ea0ad6d893afd536f4e7b57d.png)
 
 ### 平板端管理
 
@@ -61,7 +61,7 @@ Zotero 作为一款开源的产品，使用上是免费的。但是同时，它�
 
 而我找到的就是 Papership，这也是一款内购应用。开发者甚至非常用心，内置了一份开放的 PDF 文件给用户试用标注和笔记等功能，然后再决定是否付费内购。我认为这种开发模式非常值得借鉴。在书写体验方面，Papership 我认为做到了和 PDF Expert 一样的体验，切换笔这方面有所缺失，我也致信开发者提了该建议。但是选择它更重要的下面的这个特性。
 
-![fluent-writing](http://wsine.cn-gd.ufileos.com/image/21e1ca086b4d64d987ca3a70b79e3533.png)
+![fluent-writing](https://image.wsine.top/21e1ca086b4d64d987ca3a70b79e3533.png)
 
 **WebDAV 同步**
 
@@ -81,7 +81,7 @@ Papership 在我的理解中，更像是一款为适配 Zotero 的第三方应�
 
 总而言之，有了便利的草稿本，日常就能为地球环保节省下很多的纸张，也能快捷地修改自己写错的地方，这就是电子草稿的优势。
 
-![inf-draft](http://wsine.cn-gd.ufileos.com/image/08bbfbcbc3bbebbab52253682dfcf064.png)
+![inf-draft](https://image.wsine.top/08bbfbcbc3bbebbab52253682dfcf064.png)
 
 ## 笔记记录
 
@@ -89,7 +89,7 @@ Papership 在我的理解中，更像是一款为适配 Zotero 的第三方应�
 
 我比较喜欢它的一点是笔记内嵌了一个 Database，正好适合用来做实验数据的记录，少数派网站上面有很多的关于 Notion 的高级用法，用于科研生活中真的挺顺手的。因为在实际的需求，你不仅仅只用一个表格记录数字，你还需要做统计，Notion Database 自带的 Formula 真的特别方便，不用管理 EXCEL 文件了。
 
-![Snipaste_2020-12-02_13-22-30](http://wsine.cn-gd.ufileos.com/image/bd1a166da542c0b094db49dbd329a45e.png)
+![Snipaste_2020-12-02_13-22-30](https://image.wsine.top/bd1a166da542c0b094db49dbd329a45e.png)
 
 另一点，我喜欢的是它的分享功能，作为一个网页，不需要注册登陆也能看到。当你最终做完实验的时候，分享实验数据给老板，说服 Supervisor 信服你的实验结果也是一个很重要的科研过程。你的数据越完整，支撑的信息越多，潜在地更有说服力。
 

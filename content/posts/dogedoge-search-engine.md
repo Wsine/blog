@@ -4,7 +4,7 @@ date: 2019-08-25
 published: true
 tags: ['Search']
 series: false
-cover_image: ./images/dogedoge-search-engine.jpg
+cover_image: https://image.wsine.top/1664818bd215fdef486dbfd738804a5e.jpg
 canonical_url: false
 description: "聊聊我喜欢的一款国内搜索引擎"
 ---
@@ -23,7 +23,7 @@ description: "聊聊我喜欢的一款国内搜索引擎"
 
 言下之意，我理解它的初衷，前者更接近 DuckDuckGo 的宗旨，保护用户的隐私，后者是拒绝无用信息涌入引擎，不误导用户。
 
-![FC8B48B38EA35963C7745570491353E3](http://wsine.cn-gd.ufileos.com/image/FC8B48B38EA35963C7745570491353E3.png)
+![FC8B48B38EA35963C7745570491353E3](https://image.wsine.top/FC8B48B38EA35963C7745570491353E3.png)
 
 不过，作者本人说明前端的页面就是像素级借鉴 duckduckgo。 毕竟对于有限的精力来说，优先做好搜索引擎的核心功能比优化一个精美的界面来说有用得多。在这一点上，我还是很理解开发者的。希望这个项目能够持续的优化发展下去。
 
@@ -41,15 +41,15 @@ Instant Result 背后的本质其实也是百度提出的 Box Computing。首先
 
 - 天气预报
 
-![254167A71CF648F992CF1B615002AD7F](http://wsine.cn-gd.ufileos.com/image/254167A71CF648F992CF1B615002AD7F.png)
+![254167A71CF648F992CF1B615002AD7F](https://image.wsine.top/254167A71CF648F992CF1B615002AD7F.png)
 
 - 我的 IP
 
-![29A8FFFACFDC9A1ED5FD1B8EFF99EF23](http://wsine.cn-gd.ufileos.com/image/29A8FFFACFDC9A1ED5FD1B8EFF99EF23.png)
+![29A8FFFACFDC9A1ED5FD1B8EFF99EF23](https://image.wsine.top/29A8FFFACFDC9A1ED5FD1B8EFF99EF23.png)
 
 - 汇率兑换
 
-![36B8F05D655ADB851191403B95CD96F1](http://wsine.cn-gd.ufileos.com/image/36B8F05D655ADB851191403B95CD96F1.png)
+![36B8F05D655ADB851191403B95CD96F1](https://image.wsine.top/36B8F05D655ADB851191403B95CD96F1.png)
 
 目前根据我的测试，也只发现了这 3 个搜索结果，但我相信后面会有更多的数据源合作，然后给用户最快捷且优质的用户体验的。
 
@@ -61,15 +61,15 @@ Instant Result 背后的本质其实也是百度提出的 Box Computing。首先
 
 - 搜索结果过滤
 
-![8A0B7A5968F04C05811F038F68656631](http://wsine.cn-gd.ufileos.com/image/8A0B7A5968F04C05811F038F68656631.png)
+![8A0B7A5968F04C05811F038F68656631](https://image.wsine.top/8A0B7A5968F04C05811F038F68656631.png)
 
 - 指定网站搜索
 
-![57DD9C101E4D702497F5885E944B60C4](http://wsine.cn-gd.ufileos.com/image/57DD9C101E4D702497F5885E944B60C4.png)
+![57DD9C101E4D702497F5885E944B60C4](https://image.wsine.top/57DD9C101E4D702497F5885E944B60C4.png)
 
 - 指定文档类型搜索
 
-![WeChat Screenshot_20190825175331](http://wsine.cn-gd.ufileos.com/image/0CE986FCB89E0DC3C0D5B67FB03F95E3.png)
+![WeChat Screenshot_20190825175331](https://image.wsine.top/0CE986FCB89E0DC3C0D5B67FB03F95E3.png)
 
 虽然不知道为什么第二第三条搜索结果不是 PDF 类型的，但是页面后面的搜索结果都是 PDF 类型的，说明指定文件类型还是生效的。
 
@@ -79,9 +79,9 @@ Instant Result 背后的本质其实也是百度提出的 Box Computing。首先
 
 相信这个是很多人关心的地方，但我觉得从 2019年8月的情况来看，这个结果是毫无疑问的。
 
-![F9AD646883B9A4D4D32274D35F78585B](http://wsine.cn-gd.ufileos.com/image/F9AD646883B9A4D4D32274D35F78585B.png)
+![F9AD646883B9A4D4D32274D35F78585B](https://image.wsine.top/F9AD646883B9A4D4D32274D35F78585B.png)
 
-![C4D63E797BE7D9A56EE95BA71C0B04EB](http://wsine.cn-gd.ufileos.com/image/C4D63E797BE7D9A56EE95BA71C0B04EB.png)
+![C4D63E797BE7D9A56EE95BA71C0B04EB](https://image.wsine.top/C4D63E797BE7D9A56EE95BA71C0B04EB.png)
 
 多吉搜索 在搜索结果中没有广告，而且也没有右边侧边栏的一些冗余信息，我认为还是比较简洁与高效的。
 

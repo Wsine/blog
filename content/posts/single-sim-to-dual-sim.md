@@ -4,7 +4,7 @@ date: 2020-04-21
 published: true
 tags: ['Solution']
 series: false
-cover_image: ./images/single-sim-to-dual-sim.png
+cover_image: https://image.wsine.top/2920b61ca8b10d744a993506cfce4cee.png
 canonical_url: false
 description: "今天想来聊聊的是一个单卡手机也能媲美双卡手机的使用方案"
 ---
@@ -39,7 +39,7 @@ description: "今天想来聊聊的是一个单卡手机也能媲美双卡手机
 
 当你把副卡重新连接基站的时候，这个 App 的接听短信功能就会关闭。当你再次关机或移出sim卡的时候，就能够手动再次开启该功能，我觉得是非常贴心的设计。
 
-![Slide1](https://wsine.cn-gd.ufileos.com/image/1330edde4a43554b1e1f65c16872804f.PNG)
+![Slide1](https://image.wsine.top/1330edde4a43554b1e1f65c16872804f.PNG)
 
 ### 无忧行：还真是出国神器
 
@@ -66,6 +66,6 @@ description: "今天想来聊聊的是一个单卡手机也能媲美双卡手机
 
 最后，分享一个实用的小神器。从此快速换卡真的方便了很多很多，对于经常出入海关的人来说太方便了。
 
-![Slide2](https://wsine.cn-gd.ufileos.com/image/f2253357952ee19c0e6b1999ae1340ef.PNG)
+![Slide2](https://image.wsine.top/f2253357952ee19c0e6b1999ae1340ef.PNG)
 
 方法总比困难多，我们下篇文章再见~
