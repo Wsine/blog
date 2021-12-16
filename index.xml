@@ -10,7 +10,416 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright &amp;copy; 2019-Now &amp;middot; CC [BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
-    <lastBuildDate>Thu, 27 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Github Action 编译 Android 项目</title>
+      <link>https://blog.wsine.top/posts/use-github-action-to-compile-android-project/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wsine.top/posts/use-github-action-to-compile-android-project/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;和 Android 系统一样，很多 Android 应用也会选择将源码进行开放，一方面供开源社区对代码进行审查保证安全性，另一方面也能「集思广益」，经其它开发者之手发展、演变出更多有意思的代码分支和功能。&lt;/p&gt;
+&lt;p&gt;更重要的是，因为源码人人可获取，当这些应用的商店版本（如 Play 商店）因为各种原因更新缓慢，或原始分支不再维护时，我们也可以直接绕过商店、借助源码编译「原汁原味」的最新版本。&lt;/p&gt;
+&lt;p&gt;本文就为大家介绍一种相对简单、能够自给自足的 Android 应用编译方法。&lt;/p&gt;
+&lt;h2 id=&#34;编译-android-项目所需工具&#34;&gt;编译 Android 项目所需工具&lt;/h2&gt;
+&lt;p&gt;要想编译 Android 项目，首先我们就先来看看项目源码的一般目录结构，了解我们需要一些什么样的编译工具。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/e290608b0930f14d4801fd8aaa7341fb.png&#34; alt=&#34;image-20211216205520582&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;**编程语言：**2021 年 Android 项目主要支持的编程语言是 Java 和 Kotlin。两者语言都是运行在 JVM 环境中，都需要各自的编译器 javac 和 kotlinc 把源码编译为 JVM 的字节码。&lt;/p&gt;
+&lt;p&gt;**包管理器：**Android 项目常见的包管理器是 Gradle，它负责管理和下载项目的第三方依赖，并且构建出可安装运行的 Android 安装包 (apk)。&lt;/p&gt;
+&lt;p&gt;**开发套件：**开发套件在图中是一个隐藏的依赖 —— Android SDK 。在大部分的平台架构上开发 GUI 程序，基本绕不开平台的 SDK。&lt;/p&gt;
+&lt;p&gt;至此，我们了解清楚了我们所需要的工具，那么下一个问题就是从哪里获取这些工具。&lt;/p&gt;
+&lt;h2 id=&#34;传统方法的弊端&#34;&gt;传统方法的弊端&lt;/h2&gt;
+&lt;p&gt;传统的办法编译 Android 项目是下载 Android Studio 集成开发环境，作为一个 IDE 它包含了上述所需要的全部的工具，但是它也有以下的弊端：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从 Android Studio 下载指定的 Android SDK 版本也还需要一定的步骤&lt;/li&gt;
+&lt;li&gt;Android Studio 自带的 Java 版本较新，不一定能编译通过旧代码&lt;/li&gt;
+&lt;li&gt;Gradle 下载依赖的时候由于服务器在外网，需要一些特殊的技巧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些都是我认为对于小白用户来说比较困难的地方，因此我并不推荐使用大家只是为了构建 APK 就下载 Android Studio 折腾一番。&lt;/p&gt;
+&lt;h2 id=&#34;巧用-github-action-构建&#34;&gt;巧用 Github Action 构建&lt;/h2&gt;
+&lt;p&gt;我个人比较推荐 Github Action ，它有两个重要且十分合适我们场景的特点，这里也提供一个实例展示如何使用。&lt;/p&gt;
+&lt;h3 id=&#34;为什么选择-github-action&#34;&gt;为什么选择 Github Action&lt;/h3&gt;
+&lt;p&gt;**开箱即用的环境。**从 Github 官方的&lt;a href=&#34;https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md&#34;&gt;虚拟环境仓库&lt;/a&gt;可以看到，Ubuntu 20.04 的环境中自带了 Java 11，Kotlin 1.6.0，Gradle 7.3，和 Android SDK 的常用版本。相比上面的传统方法，Ubuntu 这套环境其实已经解决了很多编译环境问题了，且合适大部分的 Android 项目的构建，如果遇到不满足的地方，下面也有方法告诉你怎么轻易地解决。&lt;/p&gt;
+&lt;p&gt;**足够的免费配额。**Github Action 对于免费的账户也是有&lt;a href=&#34;https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions&#34;&gt;一定的限制&lt;/a&gt;的，具体表现在：每个仓库的构建产物限制是 500MB，每个月的运行时长是 2000 分钟。对于我们只是构建一个普通的 Android 项目安装包来说，也够用了，运行时长也是绰绰有余。&lt;/p&gt;
+&lt;h3 id=&#34;如何使用-github-action&#34;&gt;如何使用 Github Action&lt;/h3&gt;
+&lt;p&gt;下面就通过实战来看看如何方便快捷地用 Github Action 来构建一个开源 Android 项目的 APK 安装包吧。我这里选择的是 &lt;a href=&#34;https://github.com/FolioReader/FolioReader-Android&#34;&gt;FolioReader&lt;/a&gt;，一个 Java 编写的 ePub 阅读器，在 Github 上开源并获得 2k ⭐。&lt;/p&gt;
+&lt;p&gt;这里是我编写的 Github Action 运行的配置文件并开源在 &lt;a href=&#34;https://github.com/Wsine/android_builder/blob/main/.github/workflows/build.yaml&#34;&gt;Wsine/android_builder&lt;/a&gt;，我会详细地说明一下每个步骤都做了什么。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-YAML&#34; data-lang=&#34;YAML&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;android_build&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;workflow_dispatch&lt;/span&gt;:
+
+&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;build&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-latest&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Checkout the code&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v2&lt;/span&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Set up JDK&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/setup-java@v1&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;java-version&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1.8&lt;/span&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;get-project&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Get project name&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;echo &amp;#34;::set-output name=PROJECT::$(cat project-to-build)&amp;#34;&lt;/span&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Clone project&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project&lt;/span&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Build the app&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;working-directory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;./project&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: |&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          if [ ! -f &amp;#34;gradlew&amp;#34; ]; then gradle wrapper; fi
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          chmod +x gradlew
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          ./gradlew assembleDebug --stacktrace&lt;/span&gt;          
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Upload APK&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/upload-artifact@v2&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;my-build-apk&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;./**/*.apk&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个 Workflow 的触发条件设置为手动触发，因为还需要一些修改才能满足目标 Android 项目的构建条件，因此没有设置为常规的基于文件改动就触发。虚拟环境这里我使用的是 &lt;code&gt;ubuntu-latest&lt;/code&gt;，在此时就是指向 Ubuntu 20.04 这个 LTS 版本，日常开发中可能不建议使用这种不确定的版本，但在我们的场景中还是毕竟合适的，因为一个还在维护的 Android 项目一般都会适配较新的 LTS 版本的。&lt;/p&gt;
+&lt;p&gt;Workflow 中的第一步是拉取 android_builder 的源代码，主要目的是获取 project-to-build 这份文件，里面包含了我们的目标 Android 项目的 Github 地址。在我们这个实战中就是 &lt;a href=&#34;https://github.com/FolioReader/FolioReader-Android&#34;&gt;https://github.com/FolioReader/FolioReader-Android&lt;/a&gt; 这个地址，如需编译其它的项目，把该地址替换为其相应的 Github 地址即可。&lt;/p&gt;
+&lt;p&gt;第二步是设置运行环境，这里是重点。一般情况下，Android 项目中的 Java 代码语法需要一定的 Java 编译器版本，因此我这里引入了 &lt;a href=&#34;https://github.com/actions/setup-java&#34;&gt;actions/setup-java&lt;/a&gt; 这个 action 来快捷地设置 Java 的版本，如这里我使用了 1.8 版本（Java 8）覆盖环境中自带的 Java 11 版本。同样地，设置 Gradle 和 Android SDK 也有快捷的 action 可以复用，分别为 &lt;a href=&#34;https://github.com/gradle/gradle-build-action&#34;&gt;gradle/gradle-build-action&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/android-actions/setup-android&#34;&gt;android-actions/setup-android&lt;/a&gt;。Github 官方的 Ubuntu 20.04 的环境中自带的版本已经是比较高的版本了，一般情况下程序都有后向兼容，所以大部分的情况下你其实可以完全不用设置。这里仅是一个例子来展示如何轻松地修改版本。&lt;/p&gt;
+&lt;p&gt;第三步的目标是从 project-to-build 这份文件中读取 Android 项目的开源地址并传递给下一步进行拉取Android 项目源码。注意，目标 Android 项目要开源并且是处于公开的状态。&lt;code&gt;cat project-to-build &lt;/code&gt;可以读取这份文件包含的地址，然后通过 Github Action 中特殊的语法 &lt;code&gt;::set-output name=PROJECT::XXX&lt;/code&gt;设置地址为该步骤的输出。&lt;/p&gt;
+&lt;p&gt;第四步是拉取目标 Android 项目源码到虚拟环境中准备编译。首先通过 &lt;code&gt;${{ steps.get-project.outputs.PROJECT }}&lt;/code&gt; 获取上一步的输出地址，然后用 Git 命令克隆 Android 项目源码到虚拟环境的本地中。至此，编译前的准备工作已完成。&lt;/p&gt;
+&lt;p&gt;第五步是构建 APK 的关键步骤，这里假设目标 Android 项目是已经能够编译通过的了。gradlew 是 Gradle 包管理工具自己产生的一个 bash 脚本，用于命令行环境下的自动构建，绝大部分的开源项目已经包含了该文件，因此我加了个判断，如果不存在该文件则用 Gradle 生成出来，并赋予执行权限。得益于优秀的包管理器，Android 项目下只需要一句命令即可构建出 APK 安装包——&lt;code&gt;./gradlew assembleDebug --stacktrace&lt;/code&gt;，该命令用于构建调试版 APK，调试版本已满足个人的使用，折腾应用签名就没有必要了。后面的 &lt;code&gt;stacktrace&lt;/code&gt; 参数只是为了显示更多的运行信息。执行完这步， APK 就已经生成好了。&lt;/p&gt;
+&lt;p&gt;最后一步，把生成的 APK 文件打包上传到 Github Action 的网页端，方便下载。你也可以上&lt;a href=&#34;https://github.com/Wsine/android_builder/actions/runs/1561922173&#34;&gt;这里&lt;/a&gt;看看我构建的 APK 输出，最后会得到一个 zip 压缩包，包含了最终生成的 APK 文件。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/f4dcff2a76b6651ef4674ba2fd4a0a9a.png&#34; alt=&#34;image-20211216205539491&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;整个构建过程只需要 2m 47s，就得到了我们的 APK 文件，其中包含了下载全部依赖库和从零开始编译两个过程，相比自己下载到本地编译从运行速度和网速两个角度来说，整个过程就显得非常快了。然后就可以把 APK 文件传输到自己的手机，在设置中打开「允许安装未知来源应用」的选项，就能够顺利安装到手机中。&lt;/p&gt;
+&lt;h3 id=&#34;如何复刻该-workflow&#34;&gt;如何复刻该 Workflow&lt;/h3&gt;
+&lt;p&gt;首先 fork 一下 &lt;a href=&#34;https://github.com/Wsine/android_builder&#34;&gt;Wsine/android_builder&lt;/a&gt; 这个仓库，根据上面第三步的操作，修改 project-to-build 这个文件改为你需要编译的 Android 项目的 Github 地址，然后如下图所示点击，即可运行该 Workflow。运行完毕后点开 Workflow 在 Summary 的选项卡中找到 Artifacts，即可下载带 APK 的压缩包。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/0fab346b98a0a2cf789043791c138135.png&#34; alt=&#34;image-20211216205547944&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/9b5cd9a75a22a8a35a94466a98e9b9a8.png&#34; alt=&#34;image-20211216205555364&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;感谢 Github Action，让我们的生活更加的简单快捷。现在就开始上手试试吧。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>balena：你的树莓派的强力后援</title>
+      <link>https://blog.wsine.top/posts/your-raspberry-pi-housekeeper/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wsine.top/posts/your-raspberry-pi-housekeeper/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;树莓派是一个小巧的设备，由英国树莓派基金会开发的微型单板，设计的目标是以低价硬件和自由软件促进学校的基本计算机科学教学。麻雀虽小，树莓派本身也是一个五脏俱全的计算机，并且提供通用的 USB 接口、RJ45 网口以及 GPIO 排针接口予以扩展。且由于其较低的售价，受到了各种人群的喜欢。&lt;/p&gt;
+&lt;p&gt;但是，并不是喜欢树莓派的所有人都有计算机科学的背景，相当大一部分小白都在通过关注极客玩家们的教程，一步一步跟着教程操作来复刻他们做出来的东西。可是，尽管有了教程的帮助，小白在实际操作的过程中也还是会遇到很多失败的情况且不知道如何独立解决。&lt;/p&gt;
+&lt;p&gt;所以我打算向大家介绍 Balena 这个一站式的解决方案。&lt;/p&gt;
+&lt;h2 id=&#34;balena-完整的生态&#34;&gt;Balena： 完整的生态&lt;/h2&gt;
+&lt;p&gt;Balena 是一套完整用于开发、部署、管理 IOT 设备，并提供了云用于连接这些 IOT 设备们的工具和服务。它包括了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;balenaEngine 是一个为嵌入式设备优化的运行引擎，等同于 Docker 的存在，但胜在软件体积更小，需要传输的镜像层更小，内存占用也更少。&lt;/li&gt;
+&lt;li&gt;balenaOS 是一个极简的 Linux 系统，不同于 Raspberry Pi OS，仅包含了 balenaEngine 以及一些必要的系统组件，使得硬件资源能够被最大化目标软件的使用，但借助 Balena 的其他服务，又可以很轻松的部署我们想要的工具。。&lt;/li&gt;
+&lt;li&gt;balenaHub 是一个类似 Github 的地方，开发者把软件装载进 balenaOS 中并发布到这里，用户可以从这里免费下载已经打包好的「系统镜像」。&lt;/li&gt;
+&lt;li&gt;balenaEtcher 是一个开源跨平台的系统镜像烧录工具，有精美易用的 UI 界面，可以把上述系统镜像烧录到 tf 卡中，然后插入树莓派直接开始使用。&lt;/li&gt;
+&lt;li&gt;balenaFin 一个建立于树莓派计算模块之上的开发板，有更好的存储和电源扩展等。&lt;/li&gt;
+&lt;li&gt;balenaCloud 就是承载了上述的开发交互界面，包括打包镜像、管理设备的云端等功能，balenaCloud 我们后面展开细说。&lt;/li&gt;
+&lt;li&gt;openbalena 则是 balenaCloud 的开源版本，如果不信任由 Balena 这家商业公司提供的云，那么就可以考虑自己部署云端，不过只支持单用户，也没有 Web UI。后者在 Github 上有第三方的开源版本可以使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从该生态版图可见，Balena 基本包含了嵌入式开发中的所有环节，哪怕你会说没有树莓派，都给你考虑到了。&lt;/p&gt;
+&lt;p&gt;Balena 服务的定价策略比较良心，对于个人用户来说，前 10 个设备使用 balenaCloud 都是全功能且免费的，基本上普通的用户也不会超过 10 个 IOT 设备需要连接云吧。后续的服务收费档位主要是根据设备的数量来决定的。&lt;/p&gt;
+&lt;p&gt;对于上述的小白用户来说，最有价值的莫过于 balenaHub 这个大仓库，可以直接下载极客玩家们开发打包好的应用程序的系统镜像，然后烧录到自己的树莓派中即可享用。&lt;/p&gt;
+&lt;h2 id=&#34;balenahub-airplay-服务器&#34;&gt;balenaHub： Airplay 服务器&lt;/h2&gt;
+&lt;p&gt;下面我将以 &lt;a href=&#34;https://hub.balena.io/gh_rahul_thakoor/balena-rpiplay&#34;&gt;balena-rpiplay&lt;/a&gt; 项目作为案例在树莓派进行部署，让大家可以清晰直观的看到项目部署的流程有多简单。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/rahul-thakoor/balena-rpiplay&#34;&gt;balena-rpiplay&lt;/a&gt; 可以把你的树莓派变成 Airplay Server，用户把苹果设备的屏幕镜像串流到树莓派上，而树莓派则通过 HDMI 连接电视/显示器/投影仪，部署了这个项目以后算是 Apple TV 盒子中 Airplay 功能的平替。&lt;/p&gt;
+&lt;p&gt;balena-rpiplay 项目包含了 &lt;a href=&#34;https://github.com/FD-/RPiPlay&#34;&gt;RPiPlay &lt;/a&gt;项目，后者的安装原本需要你手动安装 cmake 包管理器、一堆 C 语言的依赖库、OpenMAX 库和客户端。直接在 Raspberry Pi OS 安装时需要从源码开始构建软件，对于没有 Linux 基础的普通玩家来说，整个部署流程十分硬核且枯燥。但是如果进入 &lt;a href=&#34;https://github.com/rahul-thakoor/balena-rpiplay&#34;&gt;balena-rpiplay&lt;/a&gt; 的项目主页看，里面没有一行实体代码，只有简单的配置文件描述，整个过程被大幅度地简化了。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/b2ec202be31ff854264ccdde268bb665.png&#34; alt=&#34;image-20211216203458740&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;那么实际部署流程是怎么样的呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先在 balenaHub 找到 &lt;a href=&#34;https://hub.balena.io/gh_rahul_thakoor/balena-rpiplay&#34;&gt;balena-rpiplay&lt;/a&gt; ，点击图中的 Get started 按钮。&lt;/li&gt;
+&lt;li&gt;在弹出界面选择自己的树莓派版本。&lt;/li&gt;
+&lt;li&gt;输入自己家的 WiFi 连接方式（SSID 和密码），也可以选择用网线连接。&lt;/li&gt;
+&lt;li&gt;下载镜像，通过 balenaEtcher 刷入到 tf 卡中，并插入到树莓派中。&lt;/li&gt;
+&lt;li&gt;(可选) 对于没有自带 WiFi 模块的树莓派 （2代及以下），需要自备 WiFi 适配器。&lt;/li&gt;
+&lt;li&gt;然后通电，静待几分钟，就拥有了自己的 Airplay 服务器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/5fcad0b590ea46075ed321d7cbe2ba64.png&#34; alt=&#34;image-20211216203548715&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;整个过程不需要用户用终端配置任何的东西，最麻烦的步骤仅是烧录系统到 tf 卡中。烧录镜像到树莓派的步骤，可以参考这篇文章：&lt;a href=&#34;https://sspai.com/post/66938&#34;&gt;《从选购到入手：树莓派零基础入坑指南》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/cacb0cff9c2fb87f1e2d7ce5f64e637b.png&#34; alt=&#34;image-20211216203605818&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;整个部署上没有手动输入命令，修改配置文件的体验，背后多亏 balenaCloud 的帮助。当你烧录好系统的时候，它的软件架构是上图这个样子的。当你第一次给硬件通电的时候，首先如同绝大多数 Linux 发行版一样，systemd 作为第一个守护进程启动，并带起 NetworkManager 通过预设的 WiFi 信息连接你家里的网络，另一方面唤醒并守护你安装的容器，完成整个工作流程。&lt;/p&gt;
+&lt;p&gt;而从用户的角度来看，整个过程就像是通了电就能自动完成安装 Airplay Server 一样，最后只需要拿出的苹果设备搜索并连接上该树莓派就可以进行投屏了。&lt;/p&gt;
+&lt;h2 id=&#34;balenacloud你的-iot-管家&#34;&gt;balenaCloud：你的 IOT 管家&lt;/h2&gt;
+&lt;p&gt;细心的同学可能还会发现，图中还有一个抓眼球的 Device Supervisor Container (DSC)，它一方面跟云端的 balenaCloud 进行通讯，一方面也在本地网络广播自己的存在，使得整个开发部署管理流程有了更多的可能。根据我自己的经验，我会从几个痛点聊聊 balena 是如何帮助开发者更好地解决 DevOps 的问题的。&lt;/p&gt;
+&lt;h3 id=&#34;开发&#34;&gt;开发&lt;/h3&gt;
+&lt;p&gt;当要利用树莓派进行开发的时候，我们首先遇到的问题就是「如何交互」。一般来说，在树莓派上开发，你需要准备一个键盘、一个鼠标、一个显示器以及一根 HDMI 线，才能满足基本的开发要求。&lt;/p&gt;
+&lt;p&gt;虽然新的 Raspberry Pi OS 系统版本支持了通过 txt 配置 WiFi 连接和启动 sshd 服务，让你可以通过无线 ssh 直接操作终端命令行。但是你又会发现缺少顺手的开发工具、必要的运行时等，等把这些又千辛万苦地安装好后，相信你的热情已经被消磨了一大半了。&lt;/p&gt;
+&lt;p&gt;DSC 是帮助开发者解决这个问题的关键。首先，balena 提供了 balenaOS base 镜像给用户烧录到 tf 卡中，启动它，DSC 会不断广播自己的存在。然后，用户在自己熟悉的 PC/Laptop 中安装 balena 这个 client 软件，通过 &lt;code&gt;sudo balena scan&lt;/code&gt; 命令即可搜索到自己的树莓派的 ip 地址。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Plain%20Text&#34; data-lang=&#34;Plain%20Text&#34;&gt;Reporting scan results
+-
+  host:          63ec46c.local
+  address:       192.168.86.45
+  dockerInfo:
+    Containers:        1
+    ContainersRunning: 1
+    ContainersPaused:  0
+    ContainersStopped: 0
+    Images:            4
+    Driver:            aufs
+    SystemTime:        2020-01-09T21:17:11.703029598Z
+    KernelVersion:     4.19.71
+    OperatingSystem:   balenaOS 2.43.0+rev1
+    Architecture:      armv7l
+  dockerVersion:
+    Version:    18.09.8-dev
+    ApiVersion: 1.39
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;假设你已经在 PC/Laptop 开发并测试好了软件和应用，下一步需要的就是验证在树莓派上也可运行。那只需要一行命令 &lt;code&gt;balena push 63ec46c.local&lt;/code&gt; 即可把当前项目的信息一键发送到树莓派中，DSC 负责接收并自动执行构建和运行，所有的命令行输出会回传到自己的 PC/Laptop 中，查看并解决可能的错误，大大减轻了需要反复查看日志的繁琐过程。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Plain%20Text&#34; data-lang=&#34;Plain%20Text&#34;&gt;[Info]    Starting build on device 63ec46c.local
+[Info]    Creating default composition with source: .
+[Build]   [main] Step 1/9 : FROM balenalib/raspberrypi3-node:10-stretch-run
+[Build]   [main]  ---&amp;gt; 383e163cf46d
+...
+[Build]   [main] Successfully built 88065a1a3f00
+[Build]   [main] Successfully tagged local_image_main:latest
+
+[Info]    Streaming device logs...
+...
+[Logs]    [1/9/2020, 1:47:03 PM] [main] &amp;gt; node server.js
+[Logs]    [1/9/2020, 1:47:03 PM] [main]
+[Logs]    [1/9/2020, 1:47:04 PM] [main] Example app listening on port  80
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;部署&#34;&gt;部署&lt;/h3&gt;
+&lt;p&gt;到了真正需要部署的时候，一个比较麻烦的事情是，给不同的硬件适配性地打包。回想我们给树莓派开发部署好的软件和应用，由于只有一张 tf 卡且暂时要把树莓派挪作他用，等到想回顾这个应用或者重新玩一下的时候，又需要重头再来折腾。&lt;/p&gt;
+&lt;p&gt;balena 帮助开发者把这件事情放到了 balenaCloud 中执行。开发者只需要编写一份 balena.yml 文件描述一些必要的信息，比如支持的硬件如树莓派 1、2、3、4 等，项目名称等展示在 balenaHub 中。通过输入 &lt;code&gt;balena deploy&lt;/code&gt; 命令，即可把项目信息发送给 balenaCloud 然后构建出所有描述中支持的硬件的系统镜像。当然，必要的 &lt;code&gt;balena login&lt;/code&gt; 步骤还是需要的。&lt;/p&gt;
+&lt;p&gt;只需要开发完成，并上传到 balenaHub 以后，想要重温重温以前的美好随时都可以在 balenaHub 中下载回来这个镜像，只需要做烧录的步骤就可以了。&lt;/p&gt;
+&lt;h3 id=&#34;管理&#34;&gt;管理&lt;/h3&gt;
+&lt;p&gt;管理的需求因人而异，但是对我而言曾经遇到的问题似乎都覆盖到了。balenaCloud 提供了 Web 界面友好地让用户查看自己的设备信息，并实现交互。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/fbd296221b5168fd787ff1797f4832c7.png&#34; alt=&#34;image-20211216203624607&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;**设备状态查看。**有的时候自己编写的软件稳定性不够高，总会发生一些奇奇怪怪的事情，比方说：连不上自己的服务了。这时我们可以 balenaHub 里 Logs 的位置查看服务在命令行的输出，它还支持 Filter 功能方便我们进行筛选分析。通过输出，我们可以查看软件遇到了什么问题，甚至在 Terminal 界面进行交互，相当于提供了远程 SSH 内网穿透。一个机器多个服务的情况下，也可以友好地切换。&lt;/p&gt;
+&lt;p&gt;**远程重启 / 关机。**如果实在是不知道出了什么问题，万能的重启大法总没错，面板上的 Restart 按钮可以重启特定的服务，Reboot 可以重启整个机器。&lt;/p&gt;
+&lt;p&gt;**更新软件。**如果你 debug 能力比较强，在修复 bug 以后，通过 &lt;code&gt;balena deploy&lt;/code&gt; 重新推送新的版本，DSC 会根据系统镜像下载页面中的高级配置项「自动检查更新间隔」来定期自动更新软件。当然，急于用上修复后的版本，也可以通过 Web 界面手动触发更新。&lt;/p&gt;
+&lt;p&gt;**公网访问。**在我们的日常网络中，由于 IPv4 地址的耗尽，一般情况下已经基本没有家用带宽能获得公网地址了。balena 提供了内网穿透服务，如图中的 PUBLIC DEVICE URL，启用该功能即可通过旁边箭头按钮跳转访问服务，不过当你服务比较多的时候要自己手动加端口号。&lt;/p&gt;
+&lt;p&gt;以上，就是我在探索 balena 生态时发现的好功能，着实是惊艳了我一番，后续如果有更好玩实用的用法我会再继续分享。感谢阅读。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>我的失物解决方案</title>
+      <link>https://blog.wsine.top/posts/my-lost-labeling-solution/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wsine.top/posts/my-lost-labeling-solution/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;今年暑假，我买了一个小的运动相机，Insta 360 Go 2，它的身材很小巧，整体设计也很像 Airpods. 包括它容易丢失的特性T^T. 是的，我弄丢了充电盒，并且需要再花 500+ 大洋才能再买一个充电盒，使得相机本体不浪费。从我身边的经验来看，也有不少的人丢失了小物品，今天就打算来聊聊我的思考。&lt;/p&gt;
+&lt;p&gt;当然，现在 AirTag 非常实用方便，但我想探讨的是一种平价的方案，毕竟 AirTag 也不便宜。具体效果请看动图。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/7d338200da5a5051e3f5acb200a37f79.gif&#34; alt=&#34;Picture2&#34;  /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;人之初性本善&#34;&gt;人之初性本善&lt;/h3&gt;
+&lt;p&gt;其实设身处地地思考，如果是我们拾到了失物，我们一般会怎么做？&lt;/p&gt;
+&lt;p&gt;如果是我自己的话，在学校，我会交给失物招领中心，饭堂的小卖部，或者保安室之类的地方。如果在景点景区的话，会交给附近的小商店，或者交给景区的游客中心。所以以己度人，一般人是不会贪心据为己有的，但是最重要的问题其实是，他人拾取了之后也不知道如何能够还给到失主。&lt;/p&gt;
+&lt;p&gt;所以下一个问题其实是如何把自己的联系信息和失物绑定？&lt;/p&gt;
+&lt;h3 id=&#34;万物都能二维码&#34;&gt;万物都能二维码&lt;/h3&gt;
+&lt;p&gt;二维码是一种目前广泛使用的编码方式，它可以存储很多有用的信息。&lt;/p&gt;
+&lt;p&gt;但是，一般常见的二维码中编码的都是一串 URL (&lt;em&gt;Uniform Resource Locator&lt;/em&gt;) 信息，URL 可能是我们常见的网址，e.g., &lt;a href=&#34;https://sspai.com&#34;&gt;https://sspai.com&lt;/a&gt;，也可能是调用 app 某一特定入口的定位符，比如 iOS 系统的 url scheme，e.g., sspai://home . 但是这种编码内容的二维码，最终都依托于互联网或外部来存储和提供内容，一旦服务器出现了问题，可能相应的内容就再也访问不了了。因此，我觉得它并不可靠。&lt;/p&gt;
+&lt;p&gt;但但是，二维码本身是支持很多种内建的信息，并且有对应的触发动作。普通的文本，展示一段文本，常见于贺卡上；WiFi 上网信息，扫码快速连接 wifi；手机号码，扫码拨打电话；短信文本，扫码快速发送短信；邮件信息，扫码快速发送邮件。以及，最适合我们这里场景的，联系人信息，扫码添加联系人，一般可以放置于名片上。&lt;/p&gt;
+&lt;p&gt;那么，我们就来制作我们的失物联系人二维码吧。&lt;/p&gt;
+&lt;p&gt;我选择的二维码在线制作网站是：https://cn.online-qrcode-generator.com/ ，它是免费的，并且网站十分美观，还有很多可以美化二维码选项。&lt;/p&gt;
+&lt;p&gt;然后在联系卡的 Tab 上，填上自己的信息，我这里选填了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;姓名：填写昵称 or X先生 or Y小姐 即可&lt;/li&gt;
+&lt;li&gt;手机：正常填写即可&lt;/li&gt;
+&lt;li&gt;电子邮箱：一般我也会留一个邮箱&lt;/li&gt;
+&lt;li&gt;Note：我会在这一栏填写一些感谢的话语&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在生成选项上，如果是可能失物比较小，我会选择纠错等级为最低，这样二维码的编码点是最少的，即使缩小了也能看清。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/8b2026842bf03fc44ad1a05e48a73325.png&#34; alt=&#34;image-20211216204811967&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;这样，一个能够离线并且编码了自己的二维码信息就得到了。接下来的问题是，如何把这个二维码和失物联系起来了。&lt;/p&gt;
+&lt;h3 id=&#34;贴纸制作&#34;&gt;贴纸制作&lt;/h3&gt;
+&lt;p&gt;一个很直接的解决方案是，贴纸。如果能把这个二维码贴在物品上，那么它们就是最好的捆绑方式了。&lt;/p&gt;
+&lt;p&gt;淘宝上对这类需求的现成的解决方案是「标签机」。它也很方便，通过手机 app 打印对应的图案，然后贴在目标位置。但是，它也有不足。其一，它的标签纸的大小会被标签机所限定，你不能根据失物大小来自由调整；其二，标签机的纸耗材也挺贵的，更不用说标签机本体。&lt;/p&gt;
+&lt;p&gt;综合搜索下来，我发现了一款很便宜的耗材「A4不干胶打印纸」。它有两种类型，光面和哑面材质，分别对应激光打印机和喷墨打印机。使用我们平时常见的打印机即可打印，然后裁剪成自己想要的大小或形状。&lt;/p&gt;
+&lt;p&gt;这里有个小技巧，如果你不确定打印的大小，可以先打印在一个普通的A4纸上确定好最终大小，再打印在可粘贴A4纸上。&lt;/p&gt;
+&lt;p&gt;最终效果展示，这里的图片已被我处理，应该是扫不出来的了~这里的小二维码也是蛮搭的，不算太大的违和感，其实也可以贴在看不见的相机背后。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/83ac96e2a5676d4173e4fead43c25be7.png&#34; alt=&#34;image-20211216204828979&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;至此，所有的工作就算完成了。希望大家都不会丢失东西啦，如果丢失也能找回，这是最大的希冀了。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>修复 Zotero 和 Papership 的联动</title>
+      <link>https://blog.wsine.top/posts/how-to-fix-connection-between-zotero-and-papership/</link>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wsine.top/posts/how-to-fix-connection-between-zotero-and-papership/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zotero.org&#34;&gt;Zotero&lt;/a&gt; 作为一款开源文献管理工具，受到了很多科研工作者的喜爱，尤其是它能够安装插件以增强软件本身的功能。另一方面，&lt;a href=&#34;https://www.papershipapp.com&#34;&gt;Papership&lt;/a&gt; 作为 iOS 及 iPadOS 上目前唯一与之适配的客户端，支持双向同步，综合体验十分出色。&lt;/p&gt;
+&lt;p&gt;然而，随着 Zotero 的不断更新以及 Papership 的年久失修，它们之间的友谊出现了小小的问题，困扰着很多现有用户。我遍寻网络资源，虽然找到了一些解决方案，但我觉得不够优雅，因此提出一套自己的解决方案，以供有类似需求的读者们参考。&lt;/p&gt;
+&lt;h3 id=&#34;zotero-和-papership-之间的问题在哪&#34;&gt;Zotero 和 Papership 之间的问题在哪&lt;/h3&gt;
+&lt;p&gt;在探讨解决方案之前，我们先来聊聊前文提到的问题具体在哪。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://forums.zotero.org/discussion/64967/cant-access-webdav-files-from-papership-or-zotero-org&#34;&gt;https://forums.zotero.org/discussion/64967/cant-access-webdav-files-from-papership-or-zotero-org&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Zotero 本身作为开源工具并不收费，但是免费的文件存储空间只提供 300M 的空间，对于大量阅读 PDF 文献的小伙伴来说，很快就会把这部分的配额给消耗殆尽。如果要进一步购买空间 2G 档位，则需要支付每年 20 美元的费用，对学生党来说有点高。但是好在 Zotero 允许外挂 WebDAV 来存放文件，十分良心，所以不少用户都选择以这种方式同步文献。&lt;/p&gt;
+&lt;p&gt;而 Papership 则是一个支持 Zotero 的第三方客户端，它可以直接登录 Zotero 账号以获取文献库中所有文献的 metadata 的信息，然后通过 WebDAV 链接直接访问文件，最终实现与 Zotero 的完美联动。&lt;/p&gt;
+&lt;p&gt;Papership 唯一额外要求的一点是需要将一个特殊的文本文件 lastsync.txt 放置在 WebDAV 的同步目录内，Papership 在同步文件时会优先检查这个文件，如果发现本地的文件变动时间没有比 lastsync.txt 存储的最后变动文件更新，则采取「懒同步」的方式——也就是不同步。&lt;/p&gt;
+&lt;p&gt;问题就出在 Papership 的同步机制上。随着 Zotero 的更新，不知道出于何种原因，Zotero 在同步 WebDAV 文件的时候会主动删除 lastsync.txt。这个机制让 Papership 失去了「懒同步」的参照系，导致在 Papership 中阅读和标注的内容无法更新到云端，Zotero 的文件变动也无法同步至 Papership。&lt;/p&gt;
+&lt;p&gt;更麻烦的是，Papership 已被确认被 Elsevier 公司收购了，而 Elsevier 旗下有自己的文献管理工具 Mendeley。收购完成后，Papership 的开发重点也转向了母公司的产品，甚至可能不会再修复和 Zotero 相关的 bug。与此同时，Zotero 也在开发自己的 iOS 客户端，beta 版发布至今仍未支持 WebDAV 同步。在各方原因和背景之下，夹在中间的用户们只好自行寻求解决方案。&lt;/p&gt;
+&lt;h3 id=&#34;当前网上流行的解决方案&#34;&gt;当前网上流行的解决方案&lt;/h3&gt;
+&lt;p&gt;目前，网络社群中解决该问题的主要方案是放弃 Papership，使用 Zotero 的插件来解决文件同步的问题。&lt;/p&gt;
+&lt;p&gt;Zotero 中有一个很多人都会安装的插件「zotfile」，它有一个功能可以把待阅读批注的文献发送到平板电脑上，然后等到在平板端阅读和标注后，再取回到整体的文献库中。它背后的工作原理是这样子的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将待阅读标注文献复制到另一个文件夹&lt;/li&gt;
+&lt;li&gt;该文件夹依靠第三方云存储进行同步（如 OneDrive、坚果云等）&lt;/li&gt;
+&lt;li&gt;在 Android 设备或 iPad 上用自己喜欢的批注工具阅读（如 PDF Expert 等）&lt;/li&gt;
+&lt;li&gt;将该文献从同步文件夹中移动并替换文献库的文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/b57bf92e3d21defae1565bf50e2bb715.png&#34; alt=&#34;image-20211216210137802&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;其中，发送和取回两个动作都需要手动操作，因此，从整体的联动性来说，我觉得是不够方便的。而且由于没有自动双向同步，将文献从 A 集合移动到 B 集合，它对应的存储位置不会改变，这对于我习惯使用 Inbox 来消化文章的用户来说，极大地不方便。&lt;/p&gt;
+&lt;h3 id=&#34;如果没有就创造&#34;&gt;如果没有就创造&lt;/h3&gt;
+&lt;p&gt;既然现有的解决方案不满意，那就创造自己的解决方案。&lt;/p&gt;
+&lt;p&gt;通过上文的讨论，我们知道整个问题的关键在于 lastsync.txt 文件身上，如何存储和恢复该文件就成了该解决方案的关键。同样地，我通过查询英文资料得知，哪怕只创建空白的 lastsync.txt ，也能激活 Papership，让它启动正确的同步机制。&lt;/p&gt;
+&lt;p&gt;手动创建 lastsync.txt 是一件很麻烦的事情，但是如今比较流行的 serverless 的技术却能够很好地帮助我们自动化完成这一目标。不少的 serverless 服务都是以 web 作为入口，且使用这些服务或需要绑定信用卡或需要备案，比较麻烦，因此我最终选择了 Github Actions 作为本次的自动化工具。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注：serverless 是一种功能即服务（Function-as-a-Service），它也需要服务器运行，但分离了网页和数据库，仅保留运算部分对外提供服务。&lt;/li&gt;
+&lt;li&gt;注：如果你还不会使用 Github Actions，可以参考阮一峰大神的教程，简单易懂。https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于目标比较简单，因此两行简单的 bash 命令就可以完成核心的目标。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;touch lastsync.txt
+curl -u &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;WEBDAV_EMAIL&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;WEBDAV_DAVPASS&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt; -T lastsync.txt https://your/webdav/url/zotero/lastsync.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这两行的意思分别是：创建空白的 lastsync.txt 文件，上传到 WebDAV 的指定路径上。其中，&lt;code&gt;${WEBDAV_EMAIL}&lt;/code&gt; 是你的 WebDAV 的登录账号或邮箱，&lt;code&gt;${WEBDAV_DAVPASS}&lt;/code&gt; 是你 WebDAV 的应用密码。&lt;/p&gt;
+&lt;p&gt;然后只需要在 GitHub 的任意一个仓库中（可新建），在 &lt;code&gt;.github/workflows/webdav_lastsync.yml&lt;/code&gt;&lt;a href=&#34;https://github.com/Wsine/actions/tree/main/.github/workflows&#34;&gt; &lt;/a&gt;路径下放入这两行代码即可，具体的文件模板我都给大家创建好了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-YAML&#34; data-lang=&#34;YAML&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;webdav_lastsync&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;schedule&lt;/span&gt;:
+    - &lt;span style=&#34;color:#f92672&#34;&gt;cron&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;0 4,16 * * *&amp;#39;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;workflow_dispatch&lt;/span&gt;:
+
+&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;fix&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-18.04&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Fix&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: |&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          export SYNCFILE=&amp;#34;lastsync.txt&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          export REMOTEFILE=&amp;#34;https://app.koofr.net/dav/Koofr/zotero/${SYNCFILE}&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          touch ${SYNCFILE}
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          curl -u ${KOOFR_EMAIL}:${KOOFR_DAVPASS} -T ${SYNCFILE} ${REMOTEFILE}&lt;/span&gt;          
+        &lt;span style=&#34;color:#f92672&#34;&gt;env&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;KOOFR_EMAIL&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.KOOFR_EMAIL }}&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;KOOFR_DAVPASS&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.KOOFR_DAVPASS }}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该文件也是我放在 Github 中的实际文件，以一个具体的例子供大家参考，记得修改为自己的字段。&lt;/p&gt;
+&lt;p&gt;该 workflow 会在北京时间的每天 12 点和 0 点自动运行一遍，我觉得已经能满足我日常的同步需求了，我并不需要完全的实时同步。如果你希望增加同步的频率，在第 5 行中的 &lt;code&gt;4,16&lt;/code&gt; 处增加你想同步的整点时间即可。值得注意的是，这里的时间是以格林威治时间为标准的，换算为北京时间（UTC+8）时，需要将你的目标时间倒推 8 小时。&lt;/p&gt;
+&lt;p&gt;创建完该 workflow 后，别忘了在 GitHub 的 settings -&amp;gt; secrets 中添加你的登录邮箱和应用密码字段。接下来，GitHub Actions 就会依照你设定好的时间，自动生成 lastsync.txt 并同步至你的 WebDAV 目录，Papership 只要识别到该文件，也会保持同步状态啦。&lt;/p&gt;
+&lt;p&gt;该解决方案已正确运行一周，解决了我的巨大的痛点，仅以此文献给有需要的小伙伴。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>科研邮箱的常用用法</title>
+      <link>https://blog.wsine.top/posts/my-favourite-usage-of-email-in-research/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wsine.top/posts/my-favourite-usage-of-email-in-research/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;9月份，有新同学进入了大学走进知识的殿堂，有新的学者进入了科研的队伍拓展知识的尽头，也有新的毕业生进入了企业实现自己的人生目标。邮箱是在学习和工作中必不可少的一个工具之一，本篇就是通过科研作为切入口来聊聊邮箱的一些常见用法。&lt;/p&gt;
+&lt;h3 id=&#34;让人知道这是你&#34;&gt;让人知道这是你&lt;/h3&gt;
+&lt;p&gt;初来乍到一个新的科研机构（大部分情况下是学校），毫无疑问你会被分配一个邮箱地址来代表你在数字网络中属于这所学校的一个证明，同时它也是你对外和对内沟通的一个非常常用的桥梁，所以第一步就是应该让大家知道「这个邮箱地址」是你。&lt;/p&gt;
+&lt;h5 id=&#34;弊端&#34;&gt;弊端&lt;/h5&gt;
+&lt;p&gt;一般情况下，默认分配的邮箱地址形式都类似 &lt;code&gt;eid@xxx.edu.cn&lt;/code&gt;，其中，eid 是一个字符串，由某一算法针对个人信息唯一生成。常见的例子有，王小明 - wangxm3，陈大为 - u1234567，James Smith - jasmith-c 等等。&lt;/p&gt;
+&lt;p&gt;但是，这些例子都有一个重要的弊端，就是只有这个 eid，没有办法感知这个是不是你。毕竟，王小明和王小民的 eid 是基本上没有辨识差异的。&lt;/p&gt;
+&lt;h5 id=&#34;解决方案&#34;&gt;解决方案&lt;/h5&gt;
+&lt;p&gt;这个问题可以通过&lt;strong&gt;设置别称&lt;/strong&gt;（Alias）来解决。一般情况下，科研机构都是购买企业邮箱服务，而市场上主流的企业邮箱服务供应商都是提供别称功能的，比如腾讯企业邮箱和 Office365。而这个设置学校会有提供专门的入口，如果没有，也可以电话/邮件咨询一下管理 IT 的部门（比如：信息管理中心）。&lt;/p&gt;
+&lt;p&gt;以我们学校为例，通过搜索引擎就能搜索到设置的别称的专门入口， Email Alias Management 页面。填写上你想要的 Alias，然后静待数小时使服务器之间的数据同步完全生效，网页上也有相应的提示。至此，你发送出去的邮件都会显示这个别称（e.g.., &lt;a href=&#34;mailto:myalias@xxx.edu.cn&#34;&gt;myalias@xxx.edu.cn&lt;/a&gt;），别人也可以通过这个别称邮箱地址给你发邮件。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/a3d971d55ea86b2dfd106f13c6930ac7.png&#34; alt=&#34;image-20211216205815462&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;在科研用的邮箱地址中，我个人还是比较建议用中规中矩的常见格式，比如 &lt;a href=&#34;mailto:cswangxm@xxx.edu.cn&#34;&gt;cswangxm@xxx.edu.cn&lt;/a&gt; , &lt;a href=&#34;mailto:alex.wang@xxx.edu.cn&#34;&gt;alex.wang@xxx.edu.cn&lt;/a&gt; , etc&amp;hellip; 常规的形式也便于他人搜索到你，而且不容易产生有人问你这个名字是什么意思的情形。&lt;/p&gt;
+&lt;h5 id=&#34;qa&#34;&gt;Q&amp;amp;A&lt;/h5&gt;
+&lt;p&gt;问：我已经使用默认的邮箱地址有一段时间了，更改会不会有什么影响？&lt;/p&gt;
+&lt;p&gt;别称（Alias）其实是相当于给自己同一个邮箱多一个地址，就像我们日常生活中有昵称一样，指代的还是同一个人。因此，无论别人给默认地址发送邮件还是给新别称地址发送邮件，你都能通过同一个邮箱接收到邮件。&lt;/p&gt;
+&lt;p&gt;问：我已经使用默认的邮箱地址发表文章了，更改会不会认为是两个不同的作者？&lt;/p&gt;
+&lt;p&gt;在现代的识别作者的方案中，一般使用 &lt;a href=&#34;https://orcid.org/&#34;&gt;ORCID&lt;/a&gt; (Open Researcher and Contributor ID) 系统来唯一记录同一个作者的贡献。它通过绑定你的邮箱地址到 ORCID 系统中来唯一确定一篇文献是由同一个作者贡献的。&lt;/p&gt;
+&lt;p&gt;如果你还不清楚这个系统，那么很明显新增别称也不会影响到你，而我强烈建议你快去注册一下。如果已经有这个系统账号了，那么你只需要把新的邮箱地址也绑定到系统上即可。&lt;/p&gt;
+&lt;h3 id=&#34;使用更好的系统&#34;&gt;使用更好的系统&lt;/h3&gt;
+&lt;p&gt;除了邮箱地址之外，评判一个邮箱是否好用，更重要的是它的系统。科研机构选购的企业邮箱是已经固定了的（e.g., 腾讯企业邮箱），肯定是不能由我们来自由选择了。但是，腾讯邮箱这种历史悠久的系统，首先界面就很古老，近些年一些较新的功能是没有的（e.g., 语法检查），和其他的产品之间的联动也不足。&lt;/p&gt;
+&lt;h5 id=&#34;解决方案-1&#34;&gt;解决方案&lt;/h5&gt;
+&lt;p&gt;但是，我们可以通过&lt;strong&gt;邮件转发&lt;/strong&gt;（Forwarding）这样的功能来把邮件处理转移到你喜欢的邮箱系统上。感谢科研界，很多事情上都有比较大的自由度，在公司管理上可能很多都禁止对外部系统转发邮件，但是在学校里基本上没有这样的限制，大家可以自由地做选择。&lt;/p&gt;
+&lt;p&gt;简单分享一下，我个人喜欢的邮箱系统是 Gmail。因为得益于 Google 是一个优秀的搜索引擎，本身积累了很多搜索的经验，Gmail 本身有效地检索出自己想要的信息，这一点是最吸引我的。Outlook 平台的搜索体验真的是非常差，默认检索会得到一大堆相关度很低的信息。但是这个从搜索历史邮件是一个非常高频的需求，因此我急切需要更好的系统来满足这个需求。&lt;/p&gt;
+&lt;p&gt;邮件转发的设置也非常的简单，以 Outlook 邮箱为例，登录网页版，在右上角的小齿轮的设置界面里，找到 Forwarding 这个选项卡，Enable 然后填写上要转发的邮箱地址即可。这里建议也在原来的系统中保留一份邮件副本。整个设置过程非常简单。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/63d6b9c5ab3ea6a09ef39a31bb990db1.png&#34; alt=&#34;image-20211216205826733&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;但是，光是转发邮件是不够的，因为我们不仅需要接收邮件，我们还需要发送邮件或者回复邮件。在当前设置下，在被转发邮箱中收到邮件了直接回复，发件人会显示为被转发邮箱。这样从对方角度看很奇怪，我明明发送给的是A，怎么回复的是B。&lt;/p&gt;
+&lt;h5 id=&#34;副作用解药&#34;&gt;副作用解药&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;邮件代理&lt;/strong&gt;（Proxy）可以解决这个问题，注意这个不是通用的名称，不同的邮件服务商有不同的叫法。它可以完美地解决上述的问题，通过授权 SMTP(&lt;em&gt;Simple Mail Transfer Protocol)&lt;/em&gt; 让你的目标邮箱系统可以使用原收件邮箱系统的发送功能。&lt;/p&gt;
+&lt;p&gt;这里我还是使用 Gmail 为例子展示如何设置。也可以查看&lt;a href=&#34;https://support.google.com/mail/answer/22370?hl=zh-Hans&#34;&gt;这里&lt;/a&gt;的官方步骤。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开 Gmail 网页并登录&lt;/li&gt;
+&lt;li&gt;点击右上角的设置齿轮图标&lt;/li&gt;
+&lt;li&gt;点击账号和导入标签页&lt;/li&gt;
+&lt;li&gt;选择这个地址发送邮件 -&amp;gt; 添加其他电子邮件地址&lt;/li&gt;
+&lt;li&gt;输入发件人显示名称和原收件邮箱地址&lt;/li&gt;
+&lt;li&gt;输入 SMTP 服务器及对应的账号用户名和密码&lt;/li&gt;
+&lt;li&gt;添加账号并查看确认邮件点击其中的链接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后你可以在撰写新邮件的时候，选择合适的发件人，也可以把常用的那个设为默认发件人。&lt;/p&gt;
+&lt;p&gt;在 QQ 邮箱中设置会有一些不一样。也可以查看&lt;a href=&#34;https://service.mail.qq.com/cgi-bin/help?id=26&#34;&gt;这里&lt;/a&gt;的官方步骤。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开 QQ 邮箱网页并登录&lt;/li&gt;
+&lt;li&gt;点击左侧菜单栏的其他邮箱 -&amp;gt; 立即添加&lt;/li&gt;
+&lt;li&gt;输入其他邮箱的帐号和密码&lt;/li&gt;
+&lt;li&gt;在其他邮箱的账户设置 -&amp;gt; 发信设置 -&amp;gt; 选择通过其他邮箱的SMTP服务器发送&lt;/li&gt;
+&lt;li&gt;查看确认邮件点击其中的链接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在QQ邮箱的其他邮箱的添加设置中，推荐“只收取最近一个星期/一个月的邮件”以减少同步时间，已经发生的邮件没必要都同步过来，也不会影响后续新邮件的使用。选择“通过其他邮箱的SMTP服务器发送”而不是“由QQ邮箱代发”，这样对方收到的邮件将不再出现“***代发”的字样，对方是无感的。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://image.wsine.top/ac8843a37b2126e790dbb2c6e59362ca.png&#34; alt=&#34;image-20211216205836316&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;至此，上面的邮件转发功能就达到了完美。你可以善用新系统更好的生态以提高生产力和工作效率。在认真学习和认真摸鱼中都能更方便和更高效喔。&lt;/p&gt;
+&lt;h3 id=&#34;发送正确的消息&#34;&gt;发送正确的消息&lt;/h3&gt;
+&lt;p&gt;我们确定了邮箱地址，找好自己喜欢的生态，下一步就是撰写一篇正确的邮件了。&lt;/p&gt;
+&lt;h5 id=&#34;邮件标题&#34;&gt;邮件标题&lt;/h5&gt;
+&lt;p&gt;首先我建议写的是邮件标题，而不是邮件收件人。因为日常中，我们很容易发生手抖的情况，不小心就把没有完成的邮件给发出去了，就很尴尬，但是如果还没填收件人，就有容错的机会。&lt;/p&gt;
+&lt;p&gt;可能有人很纠结怎么起一个邮件的标题，邮件的标题比较常见有两种形式，一种是名词短语，另一种是动词短句。&lt;/p&gt;
+&lt;p&gt;名词短语是最好理解的，因为你邮件的主题肯定会有一个关键的中心词，而这个中心词 + 拓展连词就能很好地代表这封邮件的标题，也更容易让人记忆搜索，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reminder of submission due&lt;/li&gt;
+&lt;li&gt;Solution for Week 1 Execrise&lt;/li&gt;
+&lt;li&gt;Review of the coursework&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;动词短句可以简单理解为祈使句，意味你对外发出的一个动作，比如你要发一个邮件咨询一下奖学金的事宜，比如你需要人手帮忙，等等：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Query about the scholarship&lt;/li&gt;
+&lt;li&gt;Call for the volunteers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然，实际场景肯定不只这些，比如你的心理咨询师会隔一段时间给你发个邮件，你的论文编辑会时不时给你发个广告，你的银行顾问整天想借钱给你。他们的邮件标题都比较 fancy，但掌握了入门的两种形式在日常的场景下是比较不容易出错的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How are you？&lt;/li&gt;
+&lt;li&gt;Confusing on thesis writing? We are here!&lt;/li&gt;
+&lt;li&gt;We are offering loan at xxx.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;邮件正文&#34;&gt;邮件正文&lt;/h5&gt;
+&lt;p&gt;在学术交流中，总少不了要用英文跟会议/期刊编辑们询问和回复的时候，这时候就是考验自己的英文水平的时候了。&lt;/p&gt;
+&lt;p&gt;但是，哪怕十分有自信，对于初学者还是建议用语法检查工具实时校验，这里我还是推荐广泛使用的的 &lt;a href=&#34;https://www.grammarly.com/plans&#34;&gt;Grammarly&lt;/a&gt; 软件，大家可能认知中觉得它是一个付费服务，但其实 Grammarly 的拼写检查、语法检查、标点检查三个功能都是完全免费的。&lt;/p&gt;
+&lt;p&gt;在日常的邮件交流中，我们不需要写长篇大论去表达，基本都是短句和疑问句，因此这三个功能恰好满足了最基本的需求，而且免费，这点很重要。自信地发送，既减少了出糗的机会了，也能通过纠正的过程学会正确的表达。&lt;/p&gt;
+&lt;p&gt;另外，掌握一些常用的缩写能显得你很 Native Speaker，但是千万不要滥用，不然要是增加了阅读困难被收件人反问一句什么意思而且是回复全部人的，那就真的是社死现场了。下面我简单列一下日常工作中常见的缩写，网上的缩写多如鸿毛，但是这部分信息足够应付高频场景了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FYI - for your information&lt;/li&gt;
+&lt;li&gt;ASAP - as soon as possible&lt;/li&gt;
+&lt;li&gt;BTW - by the way&lt;/li&gt;
+&lt;li&gt;TL;DR - Too long; Didn&amp;rsquo;t read&lt;/li&gt;
+&lt;li&gt;CC/BCC &lt;strong&gt;-&lt;/strong&gt; carbon copy / blind carbon copy&lt;/li&gt;
+&lt;li&gt;P.S. - postscript&lt;/li&gt;
+&lt;li&gt;AKA - as known as&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;邮件结尾&#34;&gt;邮件结尾&lt;/h5&gt;
+&lt;p&gt;关于邮件结尾，我个人强烈建议手打签名，而不是使用邮件的自动签名功能，因为邮件内容的日常使用场景很不一样，你没有办法以一个签名解决所有。举个例子，日常使用 Regards 能应付大部分场景，但某一封邮件你对回复有更高的期望值，那么改用 Best regards 会有奇效，但前提是你没有日常滥用这个 best。同样地，请求帮助使用 Regards with thanks 而不是在正文里 thank you 显得更体面，毕竟人家还没答应帮你呢；在邀请别人的时候，使用 Sincerely 会显得十分地有礼貌。&lt;/p&gt;
+&lt;p&gt;至于落款，一般情况下使用非官方的英文名都 ok （不在身份证上），但是注意遇到需要给对方提供信息查询的时候，别忘了署名完整的在系统上的名字，否则会增加别人的负担（而且容易不回你邮件）。&lt;/p&gt;
+&lt;p&gt;最后，你可以添加收件人了。一般情况下，你期望收到回复的接收者放在收件人这一栏；你需要告知/知会的接收者放在抄送（cc）这一栏里，如果你希望发送邮件也出现在自己的收件箱，你可以把自己的邮箱地址放在这一栏；你不希望被看到的接收者放在密送（bcc）这一栏里，比如当你需要咨询某些学生为什么没交作业而又不想暴露对方姓名的时候，这个场景就很合适。&lt;/p&gt;
+&lt;p&gt;最后的最后，别忘了检查附件，如有。这可是最高频的犯错了，别问我怎么知道。&lt;/p&gt;
+&lt;h3 id=&#34;订阅优秀的信息&#34;&gt;订阅优秀的信息&lt;/h3&gt;
+&lt;p&gt;解决了邮件的发送问题，然后就是邮件的接收功能了。除了日常了邮件交流，在科研中我们的目标一般都是发现问题，解决问题，总结问题三部曲。而这些信息，在传统的解决方案中，是通过 Newsletter 来解决的。&lt;/p&gt;
+&lt;p&gt;你可以寻找你感兴趣的相关领域的会议和期刊的官网，然后寻找 Newsletter 相关的字眼，然后就可以输入自己的邮箱地址订阅相关的信息，一般的 Call for paper，Accepted papers 都会通过 Newsletter 告知订阅者，你可以在第一时间获取到最新的动态。&lt;/p&gt;
+&lt;p&gt;这里我也推荐其中一个我很喜欢的 &lt;a href=&#34;https://icse.eu/startseite/newsletter/&#34;&gt;Newsletter&lt;/a&gt; - ICSE (THE INTERNATIONAL CENTRE FOR STEM EDUCATION)。这是一个面向 STEM(Science, Technology, Engineering, Mathematics) 的 Newsletter，也就是我们平常说的理工科。虽然没有很深入某一个特定的小领域，但是它能拓宽你的视界，因此也比较适合大部分人。&lt;/p&gt;
+&lt;p&gt;但是如果订阅得多了，收件箱很容易被这些 Newsletter 淹没。我个人是喜欢使用「收件规则」来自动整理这些订阅的。因为 Newsletter 基本上只从固定的邮箱地址发出，因此增加收件规则能很好又准确地收纳这些订阅到分类文件夹，如果翻阅也能像阅读杂志一样一章一章阅读。&lt;/p&gt;
+&lt;p&gt;好了，关于邮箱的使用，这里就聊了这些使用情况，如果有更好的用法，也欢迎跟我分享互相学习~&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>使用 YADM 整理你的 dotfiles</title>
       <link>https://blog.wsine.top/posts/manage-your-dotfiles-with-yadm/</link>

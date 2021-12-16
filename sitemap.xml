@@ -3,16 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.wsine.top/posts/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.wsine.top/tags/solution/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.wsine.top/tags/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.wsine.top/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.wsine.top/posts/use-github-action-to-compile-android-project/</loc>
+    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.wsine.top/posts/your-raspberry-pi-housekeeper/</loc>
+    <lastmod>2021-12-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.wsine.top/tags/raspberry/</loc>
+    <lastmod>2021-12-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.wsine.top/posts/my-lost-labeling-solution/</loc>
+    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.wsine.top/posts/how-to-fix-connection-between-zotero-and-papership/</loc>
+    <lastmod>2021-11-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.wsine.top/posts/my-favourite-usage-of-email-in-research/</loc>
+    <lastmod>2021-09-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.wsine.top/posts/manage-your-dotfiles-with-yadm/</loc>
     <lastmod>2021-05-27T00:00:00+00:00</lastmod>

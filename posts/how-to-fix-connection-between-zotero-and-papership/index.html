@@ -1,0 +1,190 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>修复 Zotero 和 Papership 的联动 | Wsine's blog</title>
+<meta name=keywords content="Solution">
+<meta name=description content="随着 Zotero 的不断更新以及 Papership 的年久失修，它们之间的友谊出现了小小的问题，困扰着很多现有用户。我遍寻网络资源，虽然找到了一些解决方案，但我觉得不够优雅，因此提出一套自己的解决方案，以供有类似需求的读者们参考。">
+<meta name=author content="Wsine">
+<link rel=canonical href=https://blog.wsine.top/posts/how-to-fix-connection-between-zotero-and-papership/>
+<link href=/assets/css/stylesheet.min.746a86b58bb2b052b5e4df8216510494f04f81e62c08d626150c26c69ca929da.css integrity="sha256-dGqGtYuysFK15N+CFlEElPBPgeYsCNYmFQwmxpypKdo=" rel="preload stylesheet" as=style>
+<link rel=icon href=https://blog.wsine.top/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://blog.wsine.top/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://blog.wsine.top/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://blog.wsine.top/apple-touch-icon.png>
+<link rel=mask-icon href=https://blog.wsine.top/favicon.png>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.90.1">
+<meta property="og:title" content="修复 Zotero 和 Papership 的联动">
+<meta property="og:description" content="随着 Zotero 的不断更新以及 Papership 的年久失修，它们之间的友谊出现了小小的问题，困扰着很多现有用户。我遍寻网络资源，虽然找到了一些解决方案，但我觉得不够优雅，因此提出一套自己的解决方案，以供有类似需求的读者们参考。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.wsine.top/posts/how-to-fix-connection-between-zotero-and-papership/"><meta property="og:image" content="https://blog.wsine.top/author.jpg"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-11-08T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-11-08T00:00:00+00:00"><meta property="og:site_name" content="Wsine's blog">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://blog.wsine.top/author.jpg">
+<meta name=twitter:title content="修复 Zotero 和 Papership 的联动">
+<meta name=twitter:description content="随着 Zotero 的不断更新以及 Papership 的年久失修，它们之间的友谊出现了小小的问题，困扰着很多现有用户。我遍寻网络资源，虽然找到了一些解决方案，但我觉得不够优雅，因此提出一套自己的解决方案，以供有类似需求的读者们参考。">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.wsine.top/posts/"},{"@type":"ListItem","position":2,"name":"修复 Zotero 和 Papership 的联动","item":"https://blog.wsine.top/posts/how-to-fix-connection-between-zotero-and-papership/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"修复 Zotero 和 Papership 的联动","name":"修复 Zotero 和 Papership 的联动","description":"随着 Zotero 的不断更新以及 Papership 的年久失修，它们之间的友谊出现了小小的问题，困扰着很多现有用户。我遍寻网络资源，虽然找到了一些解决方案，但我觉得不够优雅，因此提出一套自己的解决方案，以供有类似需求的读者们参考。","keywords":["Solution"],"articleBody":"[TOC]\nZotero 作为一款开源文献管理工具，受到了很多科研工作者的喜爱，尤其是它能够安装插件以增强软件本身的功能。另一方面，Papership 作为 iOS 及 iPadOS 上目前唯一与之适配的客户端，支持双向同步，综合体验十分出色。\n然而，随着 Zotero 的不断更新以及 Papership 的年久失修，它们之间的友谊出现了小小的问题，困扰着很多现有用户。我遍寻网络资源，虽然找到了一些解决方案，但我觉得不够优雅，因此提出一套自己的解决方案，以供有类似需求的读者们参考。\nZotero 和 Papership 之间的问题在哪 在探讨解决方案之前，我们先来聊聊前文提到的问题具体在哪。\n https://forums.zotero.org/discussion/64967/cant-access-webdav-files-from-papership-or-zotero-org\n Zotero 本身作为开源工具并不收费，但是免费的文件存储空间只提供 300M 的空间，对于大量阅读 PDF 文献的小伙伴来说，很快就会把这部分的配额给消耗殆尽。如果要进一步购买空间 2G 档位，则需要支付每年 20 美元的费用，对学生党来说有点高。但是好在 Zotero 允许外挂 WebDAV 来存放文件，十分良心，所以不少用户都选择以这种方式同步文献。\n而 Papership 则是一个支持 Zotero 的第三方客户端，它可以直接登录 Zotero 账号以获取文献库中所有文献的 metadata 的信息，然后通过 WebDAV 链接直接访问文件，最终实现与 Zotero 的完美联动。\nPapership 唯一额外要求的一点是需要将一个特殊的文本文件 lastsync.txt 放置在 WebDAV 的同步目录内，Papership 在同步文件时会优先检查这个文件，如果发现本地的文件变动时间没有比 lastsync.txt 存储的最后变动文件更新，则采取「懒同步」的方式——也就是不同步。\n问题就出在 Papership 的同步机制上。随着 Zotero 的更新，不知道出于何种原因，Zotero 在同步 WebDAV 文件的时候会主动删除 lastsync.txt。这个机制让 Papership 失去了「懒同步」的参照系，导致在 Papership 中阅读和标注的内容无法更新到云端，Zotero 的文件变动也无法同步至 Papership。\n更麻烦的是，Papership 已被确认被 Elsevier 公司收购了，而 Elsevier 旗下有自己的文献管理工具 Mendeley。收购完成后，Papership 的开发重点也转向了母公司的产品，甚至可能不会再修复和 Zotero 相关的 bug。与此同时，Zotero 也在开发自己的 iOS 客户端，beta 版发布至今仍未支持 WebDAV 同步。在各方原因和背景之下，夹在中间的用户们只好自行寻求解决方案。\n当前网上流行的解决方案 目前，网络社群中解决该问题的主要方案是放弃 Papership，使用 Zotero 的插件来解决文件同步的问题。\nZotero 中有一个很多人都会安装的插件「zotfile」，它有一个功能可以把待阅读批注的文献发送到平板电脑上，然后等到在平板端阅读和标注后，再取回到整体的文献库中。它背后的工作原理是这样子的：\n 将待阅读标注文献复制到另一个文件夹 该文件夹依靠第三方云存储进行同步（如 OneDrive、坚果云等） 在 Android 设备或 iPad 上用自己喜欢的批注工具阅读（如 PDF Expert 等） 将该文献从同步文件夹中移动并替换文献库的文件  其中，发送和取回两个动作都需要手动操作，因此，从整体的联动性来说，我觉得是不够方便的。而且由于没有自动双向同步，将文献从 A 集合移动到 B 集合，它对应的存储位置不会改变，这对于我习惯使用 Inbox 来消化文章的用户来说，极大地不方便。\n如果没有就创造 既然现有的解决方案不满意，那就创造自己的解决方案。\n通过上文的讨论，我们知道整个问题的关键在于 lastsync.txt 文件身上，如何存储和恢复该文件就成了该解决方案的关键。同样地，我通过查询英文资料得知，哪怕只创建空白的 lastsync.txt ，也能激活 Papership，让它启动正确的同步机制。\n手动创建 lastsync.txt 是一件很麻烦的事情，但是如今比较流行的 serverless 的技术却能够很好地帮助我们自动化完成这一目标。不少的 serverless 服务都是以 web 作为入口，且使用这些服务或需要绑定信用卡或需要备案，比较麻烦，因此我最终选择了 Github Actions 作为本次的自动化工具。\n 注：serverless 是一种功能即服务（Function-as-a-Service），它也需要服务器运行，但分离了网页和数据库，仅保留运算部分对外提供服务。 注：如果你还不会使用 Github Actions，可以参考阮一峰大神的教程，简单易懂。https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html  由于目标比较简单，因此两行简单的 bash 命令就可以完成核心的目标。\ntouch lastsync.txt curl -u ${WEBDAV_EMAIL}:${WEBDAV_DAVPASS} -T lastsync.txt https://your/webdav/url/zotero/lastsync.txt 这两行的意思分别是：创建空白的 lastsync.txt 文件，上传到 WebDAV 的指定路径上。其中，${WEBDAV_EMAIL} 是你的 WebDAV 的登录账号或邮箱，${WEBDAV_DAVPASS} 是你 WebDAV 的应用密码。\n然后只需要在 GitHub 的任意一个仓库中（可新建），在 .github/workflows/webdav_lastsync.yml路径下放入这两行代码即可，具体的文件模板我都给大家创建好了。\nname: webdav_lastsync on: schedule: - cron: '0 4,16 * * *' workflow_dispatch: jobs: fix: runs-on: ubuntu-18.04 steps: - name: Fix run: |export SYNCFILE=\"lastsync.txt\" export REMOTEFILE=\"https://app.koofr.net/dav/Koofr/zotero/${SYNCFILE}\" touch ${SYNCFILE} curl -u ${KOOFR_EMAIL}:${KOOFR_DAVPASS} -T ${SYNCFILE} ${REMOTEFILE} env: KOOFR_EMAIL: ${{ secrets.KOOFR_EMAIL }} KOOFR_DAVPASS: ${{ secrets.KOOFR_DAVPASS }} 该文件也是我放在 Github 中的实际文件，以一个具体的例子供大家参考，记得修改为自己的字段。\n该 workflow 会在北京时间的每天 12 点和 0 点自动运行一遍，我觉得已经能满足我日常的同步需求了，我并不需要完全的实时同步。如果你希望增加同步的频率，在第 5 行中的 4,16 处增加你想同步的整点时间即可。值得注意的是，这里的时间是以格林威治时间为标准的，换算为北京时间（UTC+8）时，需要将你的目标时间倒推 8 小时。\n创建完该 workflow 后，别忘了在 GitHub 的 settings - secrets 中添加你的登录邮箱和应用密码字段。接下来，GitHub Actions 就会依照你设定好的时间，自动生成 lastsync.txt 并同步至你的 WebDAV 目录，Papership 只要识别到该文件，也会保持同步状态啦。\n该解决方案已正确运行一周，解决了我的巨大的痛点，仅以此文献给有需要的小伙伴。\n","wordCount":"239","inLanguage":"en","datePublished":"2021-11-08T00:00:00Z","dateModified":"2021-11-08T00:00:00Z","author":{"@type":"Person","name":"Wsine"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.wsine.top/posts/how-to-fix-connection-between-zotero-and-papership/"},"publisher":{"@type":"Organization","name":"Wsine's blog","logo":{"@type":"ImageObject","url":"https://blog.wsine.top/favicon.ico"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<noscript>
+<style type=text/css>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://blog.wsine.top/ accesskey=h title="Wsine's blog (Alt + H)">Wsine's blog</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu onscroll=menu_on_scroll()>
+<li>
+<a href=https://blog.wsine.top/archives/ title=Archive>
+<span>Archive</span>
+</a>
+</li>
+<li>
+<a href=https://blog.wsine.top/tags/ title=Tags>
+<span>Tags</span>
+</a>
+</li>
+<li>
+<a href=https://blog.wsine.top/search/ title="Search (Alt + /)" accesskey=/>
+<span>Search</span>
+</a>
+</li></ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<h1 class=post-title>
+修复 Zotero 和 Papership 的联动
+</h1>
+<div class=post-description>
+随着 Zotero 的不断更新以及 Papership 的年久失修，它们之间的友谊出现了小小的问题，困扰着很多现有用户。我遍寻网络资源，虽然找到了一些解决方案，但我觉得不够优雅，因此提出一套自己的解决方案，以供有类似需求的读者们参考。
+</div>
+<div class=post-meta>
+2021, November 8&nbsp;·&nbsp;Wsine
+|&nbsp;<a href=https://github.com/Wsine/blog/blob/master/content/posts/how-to-fix-connection-between-zotero-and-papership.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header>
+<div class=toc>
+<details>
+<summary accesskey=c title="(Alt + C)">
+<div class=details>Table of Contents</div>
+</summary>
+<div class=inner><ul><li>
+<a href=#zotero-%e5%92%8c-papership-%e4%b9%8b%e9%97%b4%e7%9a%84%e9%97%ae%e9%a2%98%e5%9c%a8%e5%93%aa aria-label="Zotero 和 Papership 之间的问题在哪">Zotero 和 Papership 之间的问题在哪</a></li><li>
+<a href=#%e5%bd%93%e5%89%8d%e7%bd%91%e4%b8%8a%e6%b5%81%e8%a1%8c%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88 aria-label=当前网上流行的解决方案>当前网上流行的解决方案</a></li><li>
+<a href=#%e5%a6%82%e6%9e%9c%e6%b2%a1%e6%9c%89%e5%b0%b1%e5%88%9b%e9%80%a0 aria-label=如果没有就创造>如果没有就创造</a></li></ul>
+</div>
+</details>
+</div>
+<div class=post-content>
+<p>[TOC]</p>
+<p><a href=https://www.zotero.org>Zotero</a> 作为一款开源文献管理工具，受到了很多科研工作者的喜爱，尤其是它能够安装插件以增强软件本身的功能。另一方面，<a href=https://www.papershipapp.com>Papership</a> 作为 iOS 及 iPadOS 上目前唯一与之适配的客户端，支持双向同步，综合体验十分出色。</p>
+<p>然而，随着 Zotero 的不断更新以及 Papership 的年久失修，它们之间的友谊出现了小小的问题，困扰着很多现有用户。我遍寻网络资源，虽然找到了一些解决方案，但我觉得不够优雅，因此提出一套自己的解决方案，以供有类似需求的读者们参考。</p>
+<h3 id=zotero-和-papership-之间的问题在哪>Zotero 和 Papership 之间的问题在哪<a hidden class=anchor aria-hidden=true href=#zotero-和-papership-之间的问题在哪>#</a></h3>
+<p>在探讨解决方案之前，我们先来聊聊前文提到的问题具体在哪。</p>
+<blockquote>
+<p><a href=https://forums.zotero.org/discussion/64967/cant-access-webdav-files-from-papership-or-zotero-org>https://forums.zotero.org/discussion/64967/cant-access-webdav-files-from-papership-or-zotero-org</a></p>
+</blockquote>
+<p>Zotero 本身作为开源工具并不收费，但是免费的文件存储空间只提供 300M 的空间，对于大量阅读 PDF 文献的小伙伴来说，很快就会把这部分的配额给消耗殆尽。如果要进一步购买空间 2G 档位，则需要支付每年 20 美元的费用，对学生党来说有点高。但是好在 Zotero 允许外挂 WebDAV 来存放文件，十分良心，所以不少用户都选择以这种方式同步文献。</p>
+<p>而 Papership 则是一个支持 Zotero 的第三方客户端，它可以直接登录 Zotero 账号以获取文献库中所有文献的 metadata 的信息，然后通过 WebDAV 链接直接访问文件，最终实现与 Zotero 的完美联动。</p>
+<p>Papership 唯一额外要求的一点是需要将一个特殊的文本文件 lastsync.txt 放置在 WebDAV 的同步目录内，Papership 在同步文件时会优先检查这个文件，如果发现本地的文件变动时间没有比 lastsync.txt 存储的最后变动文件更新，则采取「懒同步」的方式——也就是不同步。</p>
+<p>问题就出在 Papership 的同步机制上。随着 Zotero 的更新，不知道出于何种原因，Zotero 在同步 WebDAV 文件的时候会主动删除 lastsync.txt。这个机制让 Papership 失去了「懒同步」的参照系，导致在 Papership 中阅读和标注的内容无法更新到云端，Zotero 的文件变动也无法同步至 Papership。</p>
+<p>更麻烦的是，Papership 已被确认被 Elsevier 公司收购了，而 Elsevier 旗下有自己的文献管理工具 Mendeley。收购完成后，Papership 的开发重点也转向了母公司的产品，甚至可能不会再修复和 Zotero 相关的 bug。与此同时，Zotero 也在开发自己的 iOS 客户端，beta 版发布至今仍未支持 WebDAV 同步。在各方原因和背景之下，夹在中间的用户们只好自行寻求解决方案。</p>
+<h3 id=当前网上流行的解决方案>当前网上流行的解决方案<a hidden class=anchor aria-hidden=true href=#当前网上流行的解决方案>#</a></h3>
+<p>目前，网络社群中解决该问题的主要方案是放弃 Papership，使用 Zotero 的插件来解决文件同步的问题。</p>
+<p>Zotero 中有一个很多人都会安装的插件「zotfile」，它有一个功能可以把待阅读批注的文献发送到平板电脑上，然后等到在平板端阅读和标注后，再取回到整体的文献库中。它背后的工作原理是这样子的：</p>
+<ul>
+<li>将待阅读标注文献复制到另一个文件夹</li>
+<li>该文件夹依靠第三方云存储进行同步（如 OneDrive、坚果云等）</li>
+<li>在 Android 设备或 iPad 上用自己喜欢的批注工具阅读（如 PDF Expert 等）</li>
+<li>将该文献从同步文件夹中移动并替换文献库的文件</li>
+</ul>
+<p><img loading=lazy src=https://image.wsine.top/b57bf92e3d21defae1565bf50e2bb715.png alt=image-20211216210137802>
+</p>
+<p>其中，发送和取回两个动作都需要手动操作，因此，从整体的联动性来说，我觉得是不够方便的。而且由于没有自动双向同步，将文献从 A 集合移动到 B 集合，它对应的存储位置不会改变，这对于我习惯使用 Inbox 来消化文章的用户来说，极大地不方便。</p>
+<h3 id=如果没有就创造>如果没有就创造<a hidden class=anchor aria-hidden=true href=#如果没有就创造>#</a></h3>
+<p>既然现有的解决方案不满意，那就创造自己的解决方案。</p>
+<p>通过上文的讨论，我们知道整个问题的关键在于 lastsync.txt 文件身上，如何存储和恢复该文件就成了该解决方案的关键。同样地，我通过查询英文资料得知，哪怕只创建空白的 lastsync.txt ，也能激活 Papership，让它启动正确的同步机制。</p>
+<p>手动创建 lastsync.txt 是一件很麻烦的事情，但是如今比较流行的 serverless 的技术却能够很好地帮助我们自动化完成这一目标。不少的 serverless 服务都是以 web 作为入口，且使用这些服务或需要绑定信用卡或需要备案，比较麻烦，因此我最终选择了 Github Actions 作为本次的自动化工具。</p>
+<ul>
+<li>注：serverless 是一种功能即服务（Function-as-a-Service），它也需要服务器运行，但分离了网页和数据库，仅保留运算部分对外提供服务。</li>
+<li>注：如果你还不会使用 Github Actions，可以参考阮一峰大神的教程，简单易懂。https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html</li>
+</ul>
+<p>由于目标比较简单，因此两行简单的 bash 命令就可以完成核心的目标。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Bash data-lang=Bash>touch lastsync.txt
+curl -u <span style=color:#e6db74>${</span>WEBDAV_EMAIL<span style=color:#e6db74>}</span>:<span style=color:#e6db74>${</span>WEBDAV_DAVPASS<span style=color:#e6db74>}</span> -T lastsync.txt https://your/webdav/url/zotero/lastsync.txt
+</code></pre></div><p>这两行的意思分别是：创建空白的 lastsync.txt 文件，上传到 WebDAV 的指定路径上。其中，<code>${WEBDAV_EMAIL}</code> 是你的 WebDAV 的登录账号或邮箱，<code>${WEBDAV_DAVPASS}</code> 是你 WebDAV 的应用密码。</p>
+<p>然后只需要在 GitHub 的任意一个仓库中（可新建），在 <code>.github/workflows/webdav_lastsync.yml</code><a href=https://github.com/Wsine/actions/tree/main/.github/workflows> </a>路径下放入这两行代码即可，具体的文件模板我都给大家创建好了。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-YAML data-lang=YAML><span style=color:#f92672>name</span>: <span style=color:#ae81ff>webdav_lastsync</span>
+
+<span style=color:#f92672>on</span>:
+  <span style=color:#f92672>schedule</span>:
+    - <span style=color:#f92672>cron</span>: <span style=color:#e6db74>&#39;0 4,16 * * *&#39;</span>
+  <span style=color:#f92672>workflow_dispatch</span>:
+
+<span style=color:#f92672>jobs</span>:
+  <span style=color:#f92672>fix</span>:
+    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-18.04</span>
+    <span style=color:#f92672>steps</span>:
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Fix</span>
+        <span style=color:#f92672>run</span>: |<span style=color:#e6db74>
+</span><span style=color:#e6db74>          export SYNCFILE=&#34;lastsync.txt&#34;
+</span><span style=color:#e6db74>          export REMOTEFILE=&#34;https://app.koofr.net/dav/Koofr/zotero/${SYNCFILE}&#34;
+</span><span style=color:#e6db74>          touch ${SYNCFILE}
+</span><span style=color:#e6db74>          curl -u ${KOOFR_EMAIL}:${KOOFR_DAVPASS} -T ${SYNCFILE} ${REMOTEFILE}</span>          
+        <span style=color:#f92672>env</span>:
+          <span style=color:#f92672>KOOFR_EMAIL</span>: <span style=color:#ae81ff>${{ secrets.KOOFR_EMAIL }}</span>
+          <span style=color:#f92672>KOOFR_DAVPASS</span>: <span style=color:#ae81ff>${{ secrets.KOOFR_DAVPASS }}</span>
+</code></pre></div><p>该文件也是我放在 Github 中的实际文件，以一个具体的例子供大家参考，记得修改为自己的字段。</p>
+<p>该 workflow 会在北京时间的每天 12 点和 0 点自动运行一遍，我觉得已经能满足我日常的同步需求了，我并不需要完全的实时同步。如果你希望增加同步的频率，在第 5 行中的 <code>4,16</code> 处增加你想同步的整点时间即可。值得注意的是，这里的时间是以格林威治时间为标准的，换算为北京时间（UTC+8）时，需要将你的目标时间倒推 8 小时。</p>
+<p>创建完该 workflow 后，别忘了在 GitHub 的 settings -> secrets 中添加你的登录邮箱和应用密码字段。接下来，GitHub Actions 就会依照你设定好的时间，自动生成 lastsync.txt 并同步至你的 WebDAV 目录，Papership 只要识别到该文件，也会保持同步状态啦。</p>
+<p>该解决方案已正确运行一周，解决了我的巨大的痛点，仅以此文献给有需要的小伙伴。</p>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://blog.wsine.top/tags/solution/>Solution</a></li>
+</ul>
+<nav class=paginav>
+<a class=prev href=https://blog.wsine.top/posts/my-lost-labeling-solution/>
+<span class=title>« Prev Page</span>
+<br>
+<span>我的失物解决方案</span>
+</a>
+<a class=next href=https://blog.wsine.top/posts/my-favourite-usage-of-email-in-research/>
+<span class=title>Next Page »</span>
+<br>
+<span>科研邮箱的常用用法</span>
+</a>
+</nav>
+</footer>
+</article>
+</main><footer class=footer>
+<span>Copyright © 2019-Now · CC <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en>BY-NC-SA 4.0</a></span>
+<span>&#183;</span>
+<span>Powered by <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a></span>
+<span>&#183;</span>
+<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)">
+<button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</button>
+</a>
+<script defer src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position"))};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft)}document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>
