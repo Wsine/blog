@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div>
+  <div>Hi friend 👋</div>
+  <span>
+  Welcome to my blog, here is something about life and productivity. hope you enjoy.
+  </span>
+  {{ partial "svg.html" . }}
+</div>
+
+<div>
+  <ul>
+    {{ range .Site.RegularPages.ByPublishDate.Reverse }}
+    <div>
+      <div>
+        <time>{{ .Date.Format (.Site.Params.dateform | default "Jan 02 2006") }}</time>
+      </div>
+      <div>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </div>
+    </div>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

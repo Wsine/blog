@@ -1,0 +1,4 @@
+baseURL = "https://blog.wsine.top/"
+
+[params]
+  author = "Wsine"
