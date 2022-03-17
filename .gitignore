@@ -5,3 +5,4 @@ node_modules
 dist
 public
 resources
+assets/css/style.css
