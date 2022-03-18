@@ -24,11 +24,11 @@ description: "自给自足，轻便好用，不用污染自己的本地环境"
 
 ![image-20211216205520582](https://image.wsine.top/e290608b0930f14d4801fd8aaa7341fb.png)
 
-**编程语言：**2021 年 Android 项目主要支持的编程语言是 Java 和 Kotlin。两者语言都是运行在 JVM 环境中，都需要各自的编译器 javac 和 kotlinc 把源码编译为 JVM 的字节码。
+**编程语言：** 2021 年 Android 项目主要支持的编程语言是 Java 和 Kotlin。两者语言都是运行在 JVM 环境中，都需要各自的编译器 javac 和 kotlinc 把源码编译为 JVM 的字节码。
 
-**包管理器：**Android 项目常见的包管理器是 Gradle，它负责管理和下载项目的第三方依赖，并且构建出可安装运行的 Android 安装包 (apk)。
+**包管理器：** Android 项目常见的包管理器是 Gradle，它负责管理和下载项目的第三方依赖，并且构建出可安装运行的 Android 安装包 (apk)。
 
-**开发套件：**开发套件在图中是一个隐藏的依赖 —— Android SDK 。在大部分的平台架构上开发 GUI 程序，基本绕不开平台的 SDK。
+**开发套件：** 开发套件在图中是一个隐藏的依赖 —— Android SDK 。在大部分的平台架构上开发 GUI 程序，基本绕不开平台的 SDK。
 
 至此，我们了解清楚了我们所需要的工具，那么下一个问题就是从哪里获取这些工具。
 
@@ -48,9 +48,9 @@ description: "自给自足，轻便好用，不用污染自己的本地环境"
 
 ### 为什么选择 Github Action
 
-**开箱即用的环境。**从 Github 官方的[虚拟环境仓库](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md)可以看到，Ubuntu 20.04 的环境中自带了 Java 11，Kotlin 1.6.0，Gradle 7.3，和 Android SDK 的常用版本。相比上面的传统方法，Ubuntu 这套环境其实已经解决了很多编译环境问题了，且合适大部分的 Android 项目的构建，如果遇到不满足的地方，下面也有方法告诉你怎么轻易地解决。
+**开箱即用的环境。** 从 Github 官方的[虚拟环境仓库](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md)可以看到，Ubuntu 20.04 的环境中自带了 Java 11，Kotlin 1.6.0，Gradle 7.3，和 Android SDK 的常用版本。相比上面的传统方法，Ubuntu 这套环境其实已经解决了很多编译环境问题了，且合适大部分的 Android 项目的构建，如果遇到不满足的地方，下面也有方法告诉你怎么轻易地解决。
 
-**足够的免费配额。**Github Action 对于免费的账户也是有[一定的限制](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)的，具体表现在：每个仓库的构建产物限制是 500MB，每个月的运行时长是 2000 分钟。对于我们只是构建一个普通的 Android 项目安装包来说，也够用了，运行时长也是绰绰有余。
+**足够的免费配额。** Github Action 对于免费的账户也是有[一定的限制](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)的，具体表现在：每个仓库的构建产物限制是 500MB，每个月的运行时长是 2000 分钟。对于我们只是构建一个普通的 Android 项目安装包来说，也够用了，运行时长也是绰绰有余。
 
 ### 如何使用 Github Action
 

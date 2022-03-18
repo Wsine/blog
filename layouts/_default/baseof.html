@@ -4,10 +4,9 @@
     {{ partial "head.html" . }}
 </head>
 <body>
-  <div class="container mx-auto">
   {{ partial "header.html" . }}
   {{ block "main" . }}{{ end }}
+  <br>
   {{ partial "footer.html" . }}
-  </div>
 </body>
 </html>

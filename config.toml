@@ -1,4 +1,9 @@
 baseURL = "https://blog.wsine.top/"
 
-[params]
-  author = "Wsine"
+title = "Wsine's blog"
+rssLimit = 10
+
+[outputFormats]
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "feed"
