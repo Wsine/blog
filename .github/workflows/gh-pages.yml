@@ -13,9 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          submodules: true
-          fetch-depth: 1
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -24,9 +21,6 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
-      - name: RSS
-        run: cp public/index.xml public/feed.xml
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

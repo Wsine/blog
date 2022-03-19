@@ -10,7 +10,7 @@ Welcome to my blog, here are something about life and productivity. hope you enj
 {{ range .Pages }}
   <tr>
     <td style="width: 20%">{{ .Date.Format "Jan 02" }}</td>
-    <td><a href="{{ .RelPermalink }}" style="text-decoration: none; color: #000">{{ .Title }}</a></td>
+    <td><a href="{{ .RelPermalink }}" style="text-decoration: none; color: inherit">{{ .Title }}</a></td>
   </tr>
 {{ end }}
 </table>
