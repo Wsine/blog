@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://blog.wsine.top/sitemap.xml

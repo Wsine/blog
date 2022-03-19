@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research on Wsine's blog</title><link>https://blog.wsine.top/tags/research/</link><description>Recent content in Research on Wsine's blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/research/feed.xml" rel="self" type="application/rss+xml"/><item><title>我的科研软件流分享</title><link>https://blog.wsine.top/posts/my-research-software-solution/</link><pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/my-research-software-solution/</guid><description>在少数派2019的年度征文里，我分享了我积累的「科研方法论」。经过一年多的对科研软件的使用，我也逐渐积累了一套自己的软件流程，现整理为文章，希望对你有用。
+在科研的过程中，我经常经历的过程大概只有这几个：阅读论文，讨论 idea，实验记录。所以本文主要还是以这 3 点作为切入点来聊聊，如何将这3个过程变成一个电子化的，系统化的软件流程。
+阅读论文 首先科研离不开的是阅读论文，而一个好的文献管理工具能让你快速的收纳和回顾你所看过的文章。我使用过的文献管理工具有主流的 3 大工具，Mendeley，Endnote 和 Zotero，最后选择的是 Zotero。下面先来说说我为什么喜欢它的独特理由，其他的功能其实都大同小异。
+桌面端管理 在桌面端，我的需求是筛选论文并且可以快速入库；当论文阅读完觉得值得保留，从 Inbox 转移到特定的 Collection 时，我能够快速编辑相应的字段；当我想起来某篇论文，能够快速找到并查看 PDF 上面的标记。这就是我在桌面端会使用到的最常用的功能了。
+文章编号导入
+这个算是 Zotero 里比较让我眼前一亮的功能了。我们知道，出版商发行出版的书籍会有一个对应的ISBN号，这个编号是唯一的。在文献的领域里面，一般会使用 Digital Object Identifier (DOI) 来作为文章的唯一编号。但是在生命和医学等领域，他们会使用 PubMed Unique Identifier (PMID) 来作为唯一编号。哪怕是对于未发表的文章，比如 arxiv 这种平台的编号，在 Zotero 中通通都支持自动导入。
+但是值得注意的是，这种导入功能还是会跟你的出口 IP 有关系的。因为只有你所在的学校或机构购买对应出版商的访问资格权限，才能直接使用该导入功能，而服务器是根据你的请求所在的 IP 来判断你所在的机构的。
+字段管理
+另一个让我比较喜欢的功能就是简洁的字段管理了。因为 Zotero 本身虽然可以通过 Group 的方式来区分不同子领域的文章，但是实际上当你加入的文章比较多的时候，你的眼睛其实很难检索你脑海中的一篇文章。
+但是，实际上我们对文章记忆比较深的，除了 idea 本身以外，更多的是文章的 short title/short name。这个 short title 在 Zotero 中有专门一个字段「Short Title」，相比于其它的软件，确实更加符合实际的使用需求。
+另一个记忆比较深刻的字段应该属于 Publication 的 short name . 比如机器学习领域的顶会是 ICML，总比记忆 International Conference on Machine Learning 来得实在吧。这个字段在 Zotero 中被称之为 「Series」.</description></item><item><title>我的科研方法论</title><link>https://blog.wsine.top/posts/my-research-methodology/</link><pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/my-research-methodology/</guid><description>[TOC]
+去年9月份开学，一只脚正式踏进了科研圈。经过了一个多学期的学习，现在也总结了一些经验。所以今天就打算来聊聊，我在科研上面的一些方法和经验。但是，我的这些思考也只是经过了半年的迭代而已，可能还需要完善，但希望对你有用。
+科研新人 幸运的课程 初来乍到，我其实对科研实际是干什么的，也不太懂。但是，所有现成的方法都是有迹可循，而这个就是应该被传承的经验与方法。我很庆幸，学校有两门 PhD 新生的必修课，分别是：
+Comprehensive Studies in Selected Topics in Computer Science Research in Computer Science 先来说说第一门课，课程的主要组织内容是 每周一门课请 Department 里面的 Professors 或者 Visiting Scholar 来给大家讲述一下他们对科研的理解与他们的研究课题。它没有太大的 Work load 给到学生，但是对学生拓宽他们对别的领域的理解，去除对科研的迷雾很有帮助。
+诚然，有不少从本科直接读博士的学生，他们对行业或对某个领域的理解不深，仅仅是对某一名词觉得比较热门，感兴趣就选择了当前的导师做着一些未知的事情。但是，如果真的可以听一下自己导师做一遍现场 Presentation 你会有更好的理解自己要做什么。或者发现，自己真正感兴趣的反而是别的课题，也有方法与途径去协商转换，从而实现双赢。
+这门课的另一个线下任务是要求学生去参加一些 Seminar 交流，然后写不少于 2000 个词的 Report。这其实很痛苦的，2000 个单词真的好多啊，也不属于自己的研究课题，但是在这其中，你学会了如何聆听别人的 Talk，学会了如何组织文字和语言去表达你听到了什么。毕竟，带着任务去听，和没有压力去听，那种认真程度是不一样的（笑）。
+然后另外一门课，它的本质是一个 Mini Project，它不是一门常规的组织学生到课堂的课程，而是要求导师跟学生每周有不少于 2 个小时的 Meeting 交流，指导学生如何进行 Research，包括但不限于如何提出一个合格的 IDEA，如何组织实验，如何写一篇研究型的文章。
+在这一门课程里，由于课程有截止时间，你会快速地大量学到自己的导师的一些技能和技巧，这将是一笔巨大的财富。而且，由于有强制性的要求，你将不会遇到一周都见不到导师一面的尴尬放羊状态，浪费时间。而在每一步的 Step by Step 的过程中，你逐渐掌握了 what is Research in actual（笑），然后你就可以在某些场合自如地交流，“I am a new researcher on xxx, and bla bla&amp;hellip;”</description></item></channel></rss>

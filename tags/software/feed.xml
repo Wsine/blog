@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software on Wsine's blog</title><link>https://blog.wsine.top/tags/software/</link><description>Recent content in Software on Wsine's blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 18 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/software/feed.xml" rel="self" type="application/rss+xml"/><item><title>一个5年工科生的软件解决方案与故事</title><link>https://blog.wsine.top/posts/5-years-cs-student-software-solution/</link><pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/5-years-cs-student-software-solution/</guid><description>工欲善其事必先利其器
+适合自己的才是最好的
+首先这篇文章的初衷呢，很单纯，仅仅只是因为平时是一个工具控的爱好者，而身边朋友又大量和我咨询如何提高效率，解决痛点，所以特意写一篇文章，分享一下我在多平台下使用的软件，仅供参考。😀
+风向标：轻量够用、跨平台、效率、联动、键盘优先、正版
+一图以蔽之 导航 [TOC]
+Windows 10 1809 作为一个有编写Office文档和IM聊天需求的人，我认为至少需要一台mac/win来作为处理这些事情的机器，除非跟你交流的人能跟你使用完全相同的平台和软件。
+刚需 浏览器：Chrome 作为浏览器界的霸主，基本上每一个新网站的第一适配都会是Chrome，这能使你确保自己拥有最少遇到bug的体验。😎
+速度快，占用内存高，也是一个双刃剑，🤔 但是可以通过养成良好的使用习惯来减缓不足。我个人只有在搜索查资料的时候才会高并发打开新标签页，提前加载多个网页，然后快速浏览并关掉资料不合适的网页，一般情况下我的网页数量能控制在5个左右，配合快捷键跳转网页实在是如鱼得水，效率刚刚滴。顺便提一嘴👴 ，请学会使用合适的搜索引擎搜索合适的关键字，比如工科领域使用Google+English搜索排名前2的结果能解决你70%的问题，zhihu.com/github.com等也是搜索引擎，请不要再拘泥于那唯一的搜索引擎了。
+在登录了google的账号后，就能够无缝同步书签，这一点在多设备同步的情况下还是很有用的。但是书签本身是需要被整理和维护的，否则无法快速检索，那保存下来的书签也会变得没有意义。我是在大二的时候接触到这一方法论的，它能使我在未来的这几年里更快找到所需要的东西。同步书签本身依赖于google服务，微软的edge浏览器也在切换为chromium内核，这点我不予置评，如果体验好的话相信我会切换为edge浏览器的。😘
+拥有大量的插件支持也是Chrome本身胜于其他家的因素之一，下面着重讲讲我用到的插件。
+键盘控制：Vimium 这是一个利用键盘来控制网页浏览的工具，多用键盘毫无疑问能提高效率，但是要注意按组合键时候的舒适性，有空多活动活动手指关节。🤞
+我来说一下我日常使用到的按键及其功能
+按键 功能 ctrl + t 新建标签 alt + d 定位到地址栏 gi 定位到第一个编辑框 f 在当前标签页打开链接 Shift + F 在新标签页打开链接 space 滚动条下拉半屏 Shift + space 滚动条上拉半屏 j 滚动条下拉10个pixel k 滚动条上拉10个pixel Shift + J 切换到左边的标签页 Shift + K 切换到右边的标签页 ctrl/alt + num 跳转到特定标签页 x / ctrl + w 关闭当前标签页 有了上面的这一套衔接的流程，基本上覆盖了网页浏览的全流程了。还剩打开书签的工作还是留个小红点/触摸板吧👻 ，虽然绝大部分情况下我都能记住域名。😁</description></item></channel></rss>

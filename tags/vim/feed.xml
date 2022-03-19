@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vim on Wsine's blog</title><link>https://blog.wsine.top/tags/vim/</link><description>Recent content in Vim on Wsine's blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/vim/feed.xml" rel="self" type="application/rss+xml"/><item><title>我的Vim配置</title><link>https://blog.wsine.top/posts/my-vim-configuration/</link><pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/my-vim-configuration/</guid><description>前言 为什么选择vim？ 曾经我也是一个小白，使用Dev-C++来学习C++语言，使用Visual Studio开发工程，它们都被称为IDE(Integrated development environment)。但是，逐渐的，我渐渐意识到，你只能遵循它制定的一系列的流程来开发程序，自定义程度不高，而且大型的IDE消耗计算资源严重。
+后来，我认识到了编辑和编译应该是一个分开的过程，便转战到了文本编辑器，选择Sublime Text。Sublime优秀的UI界面，优秀的快捷键，拥有插件系统，着实让我着迷。它的初始环境便可直接上手，它的默认配色Monokai让人看得很舒服。
+但是，离开Sublime选择Vim的原因有三点，一是Sublime依赖于图形化界面，二是Sublime移动光标需要移动右手使用方向键，三是Sublime编辑远程文件要么借助工具要么经常传输。至此，我终于理解了那个古老的梗。
+世界上只有三种程序员，一种是使用Vim的，一种是使用Emacs的，还有一种是其他
+而这篇博文也是放置于效率分类下
+*加个小彩蛋：*我实验室的Boss爱用Emacs，我们互视为异教徒，我说“你的手指会变形的”，他说“程序员谁的手指不变形”，我“&amp;hellip;&amp;hellip;[冷漠]”
+如何学习Vim 我的观点是，自己一行一行写自己的配置文件才会深入学会Vim。如果一开始就用配置好的，那和直接使用IDE没有太大的差别。知道配置文件每一行干了些什么，不懂就搜，想加功能想改功能就动手，最后这就是一份你的配置文件。相信每个Vim大牛都是这样做的。同样的，我的Vim配置也会不断更新，可能会持续n年也不一定。而这也是为什么我的文章标题起名如此。
+原则 我的Vim配置有一定的原则，遵循原则才会让配置不会超出自己的控制
+插件能用轻量级的就不用复杂的 非需要的功能不会添加 尽量消耗更少的资源 配色一定不能忍 尽可能的做到一键配置 正文 配色 说得多还不如先看看总体的配色，配色我采用了vim自带的desert主题，在这个基础上加了一点自定义
+从左往右说起好了，左侧我添加了一个目录树，使用的是scrooloose/nerdtree的插件，并且绑定了&amp;lt;leader&amp;gt;q来启动和隐藏目录树，使用起来还是蛮方便的
+中间的配色我刻意挑了一个黑色的主题。我不喜欢那种惨淡的白色，函数名和命名空间是白色就和变量名看起来没有区分度了，因此搜了好久，找到了octol/vim-cpp-enhanced-highlight插件能满足这个需求，修改了一下它的颜色。弹出菜单的颜色我也自己修改了。颜色都采用了暗色调的color，确保不会刺眼，同时也能将不同的元素区分出来。set t_Co=256 &amp;quot; Enable status bar color很重要。
+顶部和底部采用的是比较出名的vim-airline/vim-airline插件，以及其相应的vim-airline/vim-airline-themes，主题我选择了let g:airline_theme='luna'，并且启用了powerline字体，也就是你能看到的三角形符号
+因为还在不断的修改中，未来可能会考虑把配色做成插件易于安装吧，目前的安装方式比较麻烦
+管理 插件管理上我选用了Vundle，目前一款比较流行的Vim插件管理器，基本上我只使用github上的vim插件
+按键 一直以来我对于那种秀配置不讲按键绑定的文章比较反感，除非你一个键都没改
+模式 按键 映射 功能 说明 全局 , leader &amp;lt;leader&amp;gt; leader键是vim中的一个特殊键 正常 j gj 下一行 视觉上往下移动(行太长导致分行时) 正常 k gk 上一行 视觉上往上移动(行太长导致分行时) 正常 &amp;lt;leader&amp;gt;w :w&amp;lt;CR&amp;gt; 快速保存 没有权限保存的时候也是不行的 正常 &amp;lt;leader&amp;gt;q :bd&amp;lt;CR&amp;gt;:q&amp;lt;CR&amp;gt; 快速退出 前提所有buffer都保存了，防止意外 正常 K :bnext&amp;lt;CR&amp;gt; 切换到右边的buffer 仿照Vimuim的标签切换 正常 J :bprevious&amp;lt;CR&amp;gt; 切换到左边的buffer 仿照Vimuim的标签切换 正常 &amp;lt;leader&amp;gt;bn :enew&amp;lt;CR&amp;gt; 新开一个buffer buffer new 正常 &amp;lt;leader&amp;gt;bd :bd&amp;lt;CR&amp;gt; 关闭当前buffer buffer delete 正常 空格键 smooth_scroll 向下平滑滚动 避免思维跳跃，仿照Chrome的设定 正常 减号键 smooth_scroll 向上平滑滚动 避免思维跳跃 编辑 Ctrl + b 方向键-左 向左移动一个字符 仿照Bash的控制方式 编辑 Ctrl + f 方向键-右 向右移动一个字符 仿照Bash的控制方式 编辑 Ctrl + e Home键 跳到行首 仿照Bash的控制方式 编辑 Ctrl + a End键 跳到行尾 仿照Bash的控制方式 编辑 Tab键 方向键-下 选择下一个候选词 可连续按 编辑 Esc键 Ctrl + 回车 清除菜单 无 可视化 // y/&amp;lt;C-R&amp;gt;&amp;quot;&amp;lt;CR&amp;gt; 快速搜索 需要先选择内容 其实可以看出我是比较喜欢统一各大软件的按键方式的，主要是可以让自己不用记忆太多，快捷键是效率的主要生产力，所以终端、编辑器、浏览器这三大离不开的软件，我都会尽可能地去统一它们的按键</description></item></channel></rss>
