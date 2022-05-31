@@ -3,3 +3,18 @@
 [![Build Status](https://github.com/Wsine/blog/workflows/Build%20&%20Deploy/badge.svg)](https://github.com/Wsine/blog/actions) [![RSS_icon](https://img.shields.io/badge/RSS-Atom-orange)](https://wsine.github.io/blog/feed.xml)
 
 闲暇时光，写写博客，纯粹是一个分享，欢迎订阅
+
+
+### Front Matter for the author
+
+```yaml
+---
+title: "这是一个标题"
+date: 2022-01-01
+published: true
+tags: ['Tag1']
+series: false
+canonical_url: false
+description: "一句话简短地描述一下"
+---
+```
