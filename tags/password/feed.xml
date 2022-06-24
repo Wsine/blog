@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Password on Wsine's blog</title><link>https://blog.wsine.top/tags/password/</link><description>Recent content in Password on Wsine's blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 26 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/password/feed.xml" rel="self" type="application/rss+xml"/><item><title>2019年科学且免费的复合密码管理策略</title><link>https://blog.wsine.top/posts/2019-scientific-overlapping-password-policy/</link><pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/2019-scientific-overlapping-password-policy/</guid><description>[TOC]
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Password on Wsine's blog</title><link>https://blog.wsine.top/tags/password/</link><description>Recent content in Password on Wsine's blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 22 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/password/feed.xml" rel="self" type="application/rss+xml"/><item><title>无密码认证的新方式之通行密钥</title><link>https://blog.wsine.top/posts/login-with-passkeys-but-without-password/</link><pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/login-with-passkeys-but-without-password/</guid><description>无密码认证的新方式 —— 通行密钥 记忆密码总是一件痛苦的事情，对于绝大多数不使用密码管理器的人来说「一个密码走天下」是密码问题上最佳的解决方案了。但一个密码到处用总会带来各式各样的安全问题，比如：这个密码因为其他问题导致了外泄，那么所有的账户都会受到威胁。
+为了解决这个情况，日常登录网站和应用程序要你两步验证，比如 SMS 短信验证码、邮箱验证码或是基于时间的一次性密钥等方式加强安全性。从我们日常使用来看，等验证码这个步骤反而可能是整个登陆流程里最麻烦的一件事。
+Apple 在 WWDC 2022 中向开发者介绍了「通行密钥（Passkeys） 」这项新的「希望可以替代密码」的新技术，并期望通过这项新技术来解决上面的问题。
+看到这里，你可能会担心 Apple 的新技术别的互联网公司可能并不会采纳。但事实上通行密钥是通用技术标准 WebAuthn 下的一个关键技术，不仅可以简化登录的流程，还可以提高安全性和增加跨设备授权登录的功能。只不过 Apple 在今年 WWDC 上高调地宣布了而已，微软、Google 等大公司也已经宣布将支持这项 FIDO Standard 技术标准。
+那通行密钥是如何替代密码进行身份验证的，Passkeys 能完全取代你的密码吗？本篇文章就来带领大家一探究竟。
+通行密钥是如何工作的？ 目前完整支持通行密钥的应用程序还不多，但我们可以从 WWDC 后续面向开发者的视频中窥探到通行密钥的使用方式。登录界面中只需要用户提供用户名（User name）这一信息，然后点击登录按钮，最后完成生物认证便能完成登录。使用通行密钥整个过程，就和我们目前使用 iCloud 钥匙串或是支持自动填充的密码管理器一样自然、直观。
+在传统登录环节中由短信验证码、两步验证器所扮演的身份验证功能，也将由通行密钥代劳；尽管 通行密钥和登录密码的功能存在差异，但在整个注册和登录的过程中无需我们主动创建、记忆或输入密码。这种一键登录、几乎不会增加学习和使用成本的身份验证机制，显然也要比我们现阶段主要使用的大部分身份验证方式更加无感。
+用非对称加密证明「你是你」 不过通行密钥并不是什么新鲜的玩意，它其实是密码学中「非对称加密」在登录认证中的一种应用。
+单个通行密钥由一对密钥组成，分别是公钥（Public key）和私钥（Private key）。
+我们可以把公钥类比于带「防盗」锁的传统信箱，把私钥类比于信箱的锁的钥匙。邮递员投递的信件就是我们要加密的信息，通过投递到信箱中加密起来，然后也只有信箱的主人才有钥匙能够打开信箱读取信件的内容。如果一个人手上没有钥匙，那就需要用暴力开防盗锁，整个过程不仅耗时耗力，最后也往往没办法打开那把防盗锁。
+与之对应的，如果某些内容被公钥加密了，则该内容能且仅能被私钥解密，非对称加密的可靠性正来源于此——若无私钥，在有限的算力和有限的时间内我们一般无法完成极大整数的因数分解；如果加密内容能被解密，则说明对方拥有私钥。
+非对称加密的这种唯一对应性，显然是非常适合用于登录认证的。
+以 WWDC 中的例子进一步展开说明，在用户完成第一次登录以后，服务端和用户终端分别持有由用户终端生成的公钥和私钥。如果这时用户再需要登录，用户将用户名发送给服务器以后，服务器用用户名对应的公钥创建一个「口令（challenge）」发送给用户终端，放到上面的例子里就是邮件投递到了用户的传统信箱里；用户这时可以使用私钥解答该「口令」并将对应的「答案（solution）」再发送给服务端，放到上面的例子里就是用户取出了这份邮件并根据这份邮件给发信人返回了一个正确的信件。如此，服务端便能通过比对答案是否正确从而验证终端是否为公钥的主人了。当然，上述的通讯过程都是通过 HTTPS 加密的。
+所以这也是为什么通行密钥可以替代各种形式的验证码进行身份验证。
+服务端如何获得用户的公钥？ 细心的同学可能会疑惑，上述过程中的假设是如何成立的？换句话说，服务端最初是如何获得公钥并与我们手里的私钥产生对应关系的？
+目前，从 WWDC 的视频和 Google 开发者文档中的信息来看，我们需要先行通过传统的密码方式注册一个账号，然后再绑定通行密钥到该账号中。
+在完成用密码的登录过程后，账户设置里面会有选项添加通行密钥，且通行密钥完全由用户终端生成、需要经过终端的生物认证，然后公钥上传到服务端，私钥保存在钥匙串里。这样就完成了用户名和通行密钥信息的绑定。
+这里打个不完全正确的比喻，和前面所说的一样公钥是传统邮箱的话，我们要向邮政公司提前登记「这个邮箱属于你」，提前登记的过程就是使用传统密码注册账户的过程。
+通行密钥还有什么优点？ 作为一种用于用户身份认证的替代方案，通行密钥最直接的应用场景显然就是跨设备登录了。
+上图就是很贴近生活的一个例子，在这类场景中，我们以往一般需要通过短信验证码或两步认证来确认登录者身份，国内比较常见的例子就是：微信登录电脑端时，需要通过已登录的手机进行扫码来完成身份验证。
+而在通行密钥的应用场景中，当用户打算在一个陌生电脑上临时登录自己的账号的时候，也是可以通过手机扫码来安全地授权完成认证登录的。
+同样是扫码行为，通行密钥不同的地方在于它可以脱离对具体服务端、客户端的依赖，变成一种纯粹的身份认证工具。因为它本质上是 FIDO 对通行密钥的扩展——客户端到认证器协议规范（Client to Authenticator Protocol，CTAP），也就是外部认证器通过中继网络（Relay Network）向用户的互联网接入设备局部传递认证证书——我们需要做的，就是通过设备上的生物信息验证机制将 Passkeys 认证结果传递给其他设备。</description></item><item><title>2019年科学且免费的复合密码管理策略</title><link>https://blog.wsine.top/posts/2019-scientific-overlapping-password-policy/</link><pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/2019-scientific-overlapping-password-policy/</guid><description>[TOC]
 前言 今天想要谈谈的是一套我在用的密码管理方案，我认为还是比较安全又易用的。
 回想一下，大多数人的密码管理策略可能有如下几个：
 纯大脑记忆所有的密码 几乎使用一套密码来注册所有网站 分重要等级用几套密码来注册所有网站 使用记忆因子，实时大脑计算出正确密码 使用流行的密码管理工具，如1password、Lastpass、Keychain等 第一种情况，无疑这样的解决方案十分痛苦，这种情况很常见于不常使用互联网服务的父辈或祖父辈；第二种情况，基本上遇到密码泄露事件，撞库攻击，危险性是最高的；第三种情况，也是我上一种使用策略，虽然减轻的第二种情况的危险性，但还是有一定的危险；第四种情况，我陪朋友去ATM取款的时候，在他旁边陪了10多分钟，才算好密码取出现金🙂；第五种情况，要么太贵，要么平台限制，还不拥有密码的存储权。
