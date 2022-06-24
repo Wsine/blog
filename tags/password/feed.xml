@@ -22,4 +22,4 @@ P.S. 如果你也会编程的话，完全可以fork一份后修改来定制自�
 无论是笔记还是其他东西，我都希望我的数据能够掌握在我的手里。我来讨论一下极端的几种情况：
 哪天我发疯了，将整个软件仓库删了，你不记得算法的流程了怎么办 哪天Github服务被block了或者倒下了，你不知道我将新的网站部署在哪了怎么办 哪天1password / Lasspass等服务倒下了，你的高强度密码都丢失了怎么办 哪天你更换了常用平台不用Apple的硬件了，你存储在keychain的密码怎么导出呢 虽然这些情况都比较难达到，但我依然将这种情况考虑进去了
 KeePass 我采用的密码管理软件是KeePass，首先引用一下的它的官方介绍：
-KeePass is a free open source password manager, which helps you to manage your passwords in a secure way.</description></item></channel></rss>
+KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file.</description></item></channel></rss>

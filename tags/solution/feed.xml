@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Solution on Wsine's blog</title><link>https://blog.wsine.top/tags/solution/</link><description>Recent content in Solution on Wsine's blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/solution/feed.xml" rel="self" type="application/rss+xml"/><item><title>飞书文档转换为 Markdown</title><link>https://blog.wsine.top/posts/use-feishu2md-to-attain-markdown-file/</link><pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/use-feishu2md-to-attain-markdown-file/</guid><description>飞书文档转换为 Markdown 随着少数派逐渐 All in 飞书，我们少数派作者们也逐渐迁移到飞书文档进行写稿。飞书文档提供了 Web 平台的富文本编辑器，配合「少数派助手」这个服务，可以将稿件一键发布到少数派平台，着实是非常方便。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Solution on Wsine's blog</title><link>https://blog.wsine.top/tags/solution/</link><description>Recent content in Solution on Wsine's blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 16 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/solution/feed.xml" rel="self" type="application/rss+xml"/><item><title>如何在 Linux 下装软件不求人</title><link>https://blog.wsine.top/posts/rootless-install-softwares-in-linux/</link><pubDate>Thu, 16 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/rootless-install-softwares-in-linux/</guid><description>如何在 Linux 下装软件不求人 大部分人日常使用电脑一般都是 Windows 系统和 macOS 系统，不少人可能因为尝鲜或者工作学习需求需要使用 Linux。在我们日常使用 Linux 中，我们自己就是管理员，所以我们可以自由地安装任何软件，当然出了问题就需要自己解决；但是在大学实验室、企业公司中，Linux 常常会以服务器的形式进行部署，一台服务器也会由多个用户互相共享，因此需要有专人负责维护管理 Linux 服务器，这种情况下我们想要安装软件就需要由「管理员」审核和操作。
+服务器的管理之所以安排管理员，是为了避免由于用户不了解或操作不小心误删了系统文件，以及安装奇怪的软件导致现有的软件运行不了了。在该审核流程下，普通用户没有办法修改系统相关的配置，因此大大提高了运行环境的稳定性。但是，这样的流程可能会造成以下的一些困难：
+因为一些原因，管理员审核不肯通过。
+管理员经验不够丰富，无法胜任高级一点的安装操作。
+审核流程过长，影响工作进度。
+由于版本冲突，无法满足特别的个人需求。
+俗话说，求人不如求己。在 2022 年这一时间节点，有很多新的解决方案能够解决上述这类的问题，本文就是来探讨一些有哪些好的解决方案。
+为什么安装软件需要管理员 Linux 下安装软件主流的方式都是通过系统自带的包管理器，如 apt、yum、pacman、dnf 等，安装系统官方仓库的软件，而这些命令都需要写入 /usr 系统路径，因此往往都需要管理员权限才能操作。
+哪怕是一些新兴的包管理器，如 homebrew 和 nix， 也需要管理员权限才能创建特殊的路径用于安装软件，如 /home/homebrew 和 /nix 。前者虽然经过设置也能安装在用户 home 目录，但是因为背后需要使用 git 同步完整的仓库克隆以及缺少很多的预编译二进制可执行文件，因此最终也没能在 Linux 中流行起来。
+可行的解决办法是什么 上述的问题是因为需要写入系统路径，而写入用户目录（/home/user）是不需要管理员权限的，因此只需要将软件所在的路径加入到 PATH 环境变量中，就可以实现在任意目录下运行目标软件，这其实就是我们平常所说的绿色软件，这也是我们解决方案的基石。
+比如，我会在 .bashrc 配置文件中把 ~/.local/bin/ 加入到 PATH 环境变量中，且优先于原本 PATH 中的系统路径：
+export PATH=&amp;#34;$HOME/.local/bin/:$PATH&amp;#34; 这样，系统在寻找软件的时候就会优先寻找我们用户目录下的软件执行，找不到了才去原本的系统路径下寻找，我们在自主安装软件的时候就不用受到现有软件的困扰。
+另一方面可行的原因是由于新兴编程语言的崛起，如 Python、Nodejs、Golang、Rust 等，很多当下热门的工具软件是通过这些语言编写。前两者为解析型语言，后两者不约而同地在编译期偏向静态链接，这两个特性为我们后续在我们用户目录下安装使用他们提供了极大的方便，关于这一点我们会在下文中详细展开。
+至于传统的 C/C++ 编写的软件，如今也有了更高级的沙盒机制和打包迁移方案，最大化地减少我们的主动编译麻烦，而且也有了社区级别的工具解决方案，对于暂时不能应用的 corner case ，社区会持续更新该工具使其有强大的生命力。
+方案一：AppImage （推荐） AppImage 的 Slogan 是「让 Linux 应用随处运行」。他们有领先的 Linux 应用打包方式，能够让用户只下载一个应用程序（文件），赋予可执行权限，然后双击/命令回车即可运行。和传统安装方式的运行情况没有任何差异，但无需走传统的安装过程，也不需要产生对外依赖。主流的操作系统如 Ubuntu、Debian、Fedora、Arch 等都原生支持 AppImage。</description></item><item><title>飞书文档转换为 Markdown</title><link>https://blog.wsine.top/posts/use-feishu2md-to-attain-markdown-file/</link><pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/use-feishu2md-to-attain-markdown-file/</guid><description>飞书文档转换为 Markdown 随着少数派逐渐 All in 飞书，我们少数派作者们也逐渐迁移到飞书文档进行写稿。飞书文档提供了 Web 平台的富文本编辑器，配合「少数派助手」这个服务，可以将稿件一键发布到少数派平台，着实是非常方便。
 不少的少数派作者都有自己的博客平台，而大部分的博客平台都是使用 Markdown 作为输入从而生成 HTML 发布到网络中的。但是，飞书只支持 Markdown 语法的编辑，却不支持导出为 Markdown 文件下载，这打断了我们一直以来已经完善的发布博客流程。
 本文就提供一种将飞书文档转换为 Markdown 文件的方法，来弥补这个 Gap。
 关联阅读：
@@ -89,9 +103,5 @@ Q&amp;amp;A 问：我已经使用默认的邮箱地址有一段时间了，更�
 我们来看一个例子，一个使用多年 Linux 的用户，它需要管理的配置文件到底有多乱。我就在 Github 搜索 dotfiles 找一个最高 star 的作为例子。
 实际上它总共包含了29个文件在一级目录里面。当然平时都是隐藏的状态，但是你总是会因为需要查看文件权限，不小心被这堆「垃圾」压倒。
 为了避免被压倒，我们需要遵循规则，而这个规则就是 XDG Base Directory Specification . 先来看一眼 XDG 官方的定义：
-Various specifications specify files and file formats. This specification defines where these files should be looked for by defining one or more base directories relative to which files should be located.</description></item><item><title>使用 Airtable 构建个人单词本</title><link>https://blog.wsine.top/posts/airtable-as-personal-lexicon/</link><pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/airtable-as-personal-lexicon/</guid><description>词到用时方恨少，这句话说的就是第一次写论文的时候的我。口语表达需要用到的词，真的比书面表达的词少很多。但是，在平时的论文阅读的过程中，总能发现一些「陌生词」，而这些陌生词往往用得非常的巧妙，在英语语境中，是更能precisely 地表达语义。我就是一直在思考这个问题，如何才能收藏起来以便以后为我所用呢？
-本文就是提出这么一个免费的解决方案，来帮助我们摘抄陌生词，形成自己的词典，并能方便地查看和温故。当然，我们的目标还是希望能够多平台覆盖和同步的，不然实用意义就变少了。
-Airtable as a Database 首先要解决的第一个问题，就是如何把想要的单词摘抄并存储起来。这里，很多的单词翻译软件都有自己的单词本功能，但是同步功能基本上都是付费的功能。对我这种低频使用者而言，不太实惠。
-我考虑了使用在线表格作为后端的存储，Airtable 就是这个领域的佼佼者了，并且它提供的基于 HTTP 的 API 接口方便和其他的软件交互完成存储和访问，就非常地符合我们的需求。
-你需要做的准备有以下的几点：
-准备一个 Airtable 的账户，新建一个 Table，并将主 sheet 命名为 Main 根据以下的 scheme 建立表头 # Name - Field Type Query - Long text Translation - Single line text isWord - Check box Explains - Long text US-Phonetic - Single line text UK-Phonetic - Single line text Count - Number - Integer 最后，你需要获取 Airtable 相关的 API Token。 访问 https://airtable.</description></item></channel></rss>
+Various specifications specify files and file formats. This specification defines where these files should be looked for by defining one or more base directories relative to which files should be located.
+XDG 给大家一份约束规范，约束了不同类型的文件的存放位置和命名规则，主要包括配置文件，缓存文件，数据文件等。它的提出能极大地改善上述配置文件太凌乱的情况，截止2021年5月，目前绝大部分的软件也已经跟进了这份规范。具体的支持情况可以看 Arch Wiki 上面的软件列表：https://wiki.</description></item></channel></rss>

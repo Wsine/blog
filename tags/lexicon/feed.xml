@@ -3,4 +3,4 @@
 Airtable as a Database 首先要解决的第一个问题，就是如何把想要的单词摘抄并存储起来。这里，很多的单词翻译软件都有自己的单词本功能，但是同步功能基本上都是付费的功能。对我这种低频使用者而言，不太实惠。
 我考虑了使用在线表格作为后端的存储，Airtable 就是这个领域的佼佼者了，并且它提供的基于 HTTP 的 API 接口方便和其他的软件交互完成存储和访问，就非常地符合我们的需求。
 你需要做的准备有以下的几点：
-准备一个 Airtable 的账户，新建一个 Table，并将主 sheet 命名为 Main 根据以下的 scheme 建立表头 # Name - Field Type Query - Long text Translation - Single line text isWord - Check box Explains - Long text US-Phonetic - Single line text UK-Phonetic - Single line text Count - Number - Integer 最后，你需要获取 Airtable 相关的 API Token。 访问 https://airtable.</description></item></channel></rss>
+准备一个 Airtable 的账户，新建一个 Table，并将主 sheet 命名为 Main 根据以下的 scheme 建立表头 # Name - Field Type Query - Long text Translation - Single line text isWord - Check box Explains - Long text US-Phonetic - Single line text UK-Phonetic - Single line text Count - Number - Integer 最后，你需要获取 Airtable 相关的 API Token。 访问 https://airtable.com/api，点击对应的 Table，选择左侧的 AUTHENTICATION，点击右上角的 show API key，你就能找到对应的 &amp;lt;your table id&amp;gt; 和 &amp;lt;your app token&amp;gt;。</description></item></channel></rss>

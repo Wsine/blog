@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Wsine's blog</title><link>https://blog.wsine.top/tags/linux/</link><description>Recent content in Linux on Wsine's blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/linux/feed.xml" rel="self" type="application/rss+xml"/><item><title>旧酒换新杯，Linux 游戏的春天</title><link>https://blog.wsine.top/posts/how-to-enble-proton-in-linux-steam/</link><pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/how-to-enble-proton-in-linux-steam/</guid><description>旧酒换新杯，Linux 游戏的春天 Steam Deck 是最近最火的游戏掌机，由 Steam 的母公司 Valve 在今年初发布，至今一机难求。正式发售后，从各种评测视频中我们可以看到 Steam Deck 的游戏表现相当不错。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Wsine's blog</title><link>https://blog.wsine.top/tags/linux/</link><description>Recent content in Linux on Wsine's blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 16 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wsine.top/tags/linux/feed.xml" rel="self" type="application/rss+xml"/><item><title>如何在 Linux 下装软件不求人</title><link>https://blog.wsine.top/posts/rootless-install-softwares-in-linux/</link><pubDate>Thu, 16 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/rootless-install-softwares-in-linux/</guid><description>如何在 Linux 下装软件不求人 大部分人日常使用电脑一般都是 Windows 系统和 macOS 系统，不少人可能因为尝鲜或者工作学习需求需要使用 Linux。在我们日常使用 Linux 中，我们自己就是管理员，所以我们可以自由地安装任何软件，当然出了问题就需要自己解决；但是在大学实验室、企业公司中，Linux 常常会以服务器的形式进行部署，一台服务器也会由多个用户互相共享，因此需要有专人负责维护管理 Linux 服务器，这种情况下我们想要安装软件就需要由「管理员」审核和操作。
+服务器的管理之所以安排管理员，是为了避免由于用户不了解或操作不小心误删了系统文件，以及安装奇怪的软件导致现有的软件运行不了了。在该审核流程下，普通用户没有办法修改系统相关的配置，因此大大提高了运行环境的稳定性。但是，这样的流程可能会造成以下的一些困难：
+因为一些原因，管理员审核不肯通过。
+管理员经验不够丰富，无法胜任高级一点的安装操作。
+审核流程过长，影响工作进度。
+由于版本冲突，无法满足特别的个人需求。
+俗话说，求人不如求己。在 2022 年这一时间节点，有很多新的解决方案能够解决上述这类的问题，本文就是来探讨一些有哪些好的解决方案。
+为什么安装软件需要管理员 Linux 下安装软件主流的方式都是通过系统自带的包管理器，如 apt、yum、pacman、dnf 等，安装系统官方仓库的软件，而这些命令都需要写入 /usr 系统路径，因此往往都需要管理员权限才能操作。
+哪怕是一些新兴的包管理器，如 homebrew 和 nix， 也需要管理员权限才能创建特殊的路径用于安装软件，如 /home/homebrew 和 /nix 。前者虽然经过设置也能安装在用户 home 目录，但是因为背后需要使用 git 同步完整的仓库克隆以及缺少很多的预编译二进制可执行文件，因此最终也没能在 Linux 中流行起来。
+可行的解决办法是什么 上述的问题是因为需要写入系统路径，而写入用户目录（/home/user）是不需要管理员权限的，因此只需要将软件所在的路径加入到 PATH 环境变量中，就可以实现在任意目录下运行目标软件，这其实就是我们平常所说的绿色软件，这也是我们解决方案的基石。
+比如，我会在 .bashrc 配置文件中把 ~/.local/bin/ 加入到 PATH 环境变量中，且优先于原本 PATH 中的系统路径：
+export PATH=&amp;#34;$HOME/.local/bin/:$PATH&amp;#34; 这样，系统在寻找软件的时候就会优先寻找我们用户目录下的软件执行，找不到了才去原本的系统路径下寻找，我们在自主安装软件的时候就不用受到现有软件的困扰。
+另一方面可行的原因是由于新兴编程语言的崛起，如 Python、Nodejs、Golang、Rust 等，很多当下热门的工具软件是通过这些语言编写。前两者为解析型语言，后两者不约而同地在编译期偏向静态链接，这两个特性为我们后续在我们用户目录下安装使用他们提供了极大的方便，关于这一点我们会在下文中详细展开。
+至于传统的 C/C++ 编写的软件，如今也有了更高级的沙盒机制和打包迁移方案，最大化地减少我们的主动编译麻烦，而且也有了社区级别的工具解决方案，对于暂时不能应用的 corner case ，社区会持续更新该工具使其有强大的生命力。
+方案一：AppImage （推荐） AppImage 的 Slogan 是「让 Linux 应用随处运行」。他们有领先的 Linux 应用打包方式，能够让用户只下载一个应用程序（文件），赋予可执行权限，然后双击/命令回车即可运行。和传统安装方式的运行情况没有任何差异，但无需走传统的安装过程，也不需要产生对外依赖。主流的操作系统如 Ubuntu、Debian、Fedora、Arch 等都原生支持 AppImage。</description></item><item><title>旧酒换新杯，Linux 游戏的春天</title><link>https://blog.wsine.top/posts/how-to-enble-proton-in-linux-steam/</link><pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate><guid>https://blog.wsine.top/posts/how-to-enble-proton-in-linux-steam/</guid><description>旧酒换新杯，Linux 游戏的春天 Steam Deck 是最近最火的游戏掌机，由 Steam 的母公司 Valve 在今年初发布，至今一机难求。正式发售后，从各种评测视频中我们可以看到 Steam Deck 的游戏表现相当不错。
 可是你又是否知道 Steam Deck 使用的是基于 Linux 开发的操作系统，但是却能运行各种 Windows 平台的大型游戏，这背后多亏了一个兼容层「Proton」。而 Valve 已经把这个兼容层开源奉献给社区，本文就来一起在 Linux 下实践和研究一下这个神奇的兼容层，看看实际表现如何。
 Proton 的本质是什么？ Valve 在 Github 的开源主页中是这么描述 Proton 的：
 Proton is a tool for use with the Steam client which allows games which are exclusive to Windows to run on the Linux operating system. It uses Wine to facilitate this.
