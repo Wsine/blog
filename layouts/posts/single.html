@@ -1,10 +1,9 @@
 {{ define "main" }}
 
-<h1 name="#top">{{ .Title }}</h1>
-<p style="text-align: right"><b>{{ .Date.Format "02 Jan 2006" }}</b></p>
+<p name="#top"><b>Posted on: {{ .Date.Format "2006 Jan 02" }}</b></p>
 
 {{ .Content }}
 
-<p style="text-align: right"><a href="#top">Back to Top</a></p>
+<p style="text-align: right"><a href="#top">↑ Back to Top</a></p>
 
 {{ end }}

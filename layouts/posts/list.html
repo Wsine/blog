@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+{{ range (where .Site.RegularPages "Section" "posts").GroupByDate "2006" }}
+<h3>{{ .Key }}</h3>
+<ul>
+{{ range .Pages }}
+  <li>
+    <span style="display: inline-block; width: 5rem">{{ .Date.Format "Jan 02" }}</span>
+    <a href="{{ .RelPermalink }}" style="color: inherit">{{ .Title }}</a>
+  </li>
+{{ end }}
+</ul>
+{{ end }}
+
+
+{{ end }}
