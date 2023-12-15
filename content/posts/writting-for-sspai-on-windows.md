@@ -1,12 +1,7 @@
 ---
 title: "Windows平台下的少数派新写稿流程"
 date: 2020-06-02
-published: true
-tags: ['Windows', 'Solution', 'SSPAI']
-series: false
 cover_image: https://image.wsine.top/bcf36126e162a7d610effe869dc8b8c1.jpg
-canonical_url: false
-description: "谈及写作，不少的用户都是使用 Mac 平台配合多样的 App 完成从写稿到发布的一条龙服务"
 ---
 
 谈及写作，不少的用户都是使用 Mac 平台配合多样的 App 完成从写稿到发布的一条龙服务。但是在 Windows 平台上，往往需要很多手动的过程。比如，在少数派平台上，官方提供了专用的接口给 MWeb App 完成从写稿、插图、发布的完善服务，但是 MWeb App 仅在 Mac 平台上提供，Windows 用户常常因为插图图床问题困扰。

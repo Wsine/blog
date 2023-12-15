@@ -1,11 +1,6 @@
 ---
 title: "balena：你的树莓派的强力后援"
 date: 2021-12-07
-published: true
-tags: ['Raspberry', 'Solution']
-series: false
-canonical_url: false
-description: "使用 balena 云服务管理树莓派里的应用"
 ---
 
 [TOC]

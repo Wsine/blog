@@ -1,11 +1,6 @@
 ---
 title: "旧酒换新杯，Linux 游戏的春天"
 date: 2022-05-16
-published: true
-tags: ["Linux", "Game"]
-series: false
-canonical_url: false
-description: "使用 Proton 畅快地在 Linux 下玩游戏"
 ---
 
 # 旧酒换新杯，Linux 游戏的春天

@@ -1,10 +1,6 @@
 ---
 title: "使用 Airtable 构建个人单词本"
 date: 2021-05-02
-published: true
-tags: ['Lexicon', 'Solution']
-series: false
-canonical_url: false
 ---
 
 

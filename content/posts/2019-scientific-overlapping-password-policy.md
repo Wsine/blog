@@ -1,12 +1,7 @@
 ---
 title: "2019年科学且免费的复合密码管理策略"
 date: 2019-06-26
-published: true
-tags: ['Password', 'Solution']
-series: false
 cover_image: https://image.wsine.top/001cbe85e3702d136293e4e2df25b9f9.jpg
-canonical_url: false
-description: "基于Keepass的多平台密码管理方案"
 ---
 
 [TOC]

@@ -1,12 +1,7 @@
 ---
 title: "NS大屏共享的小众方案"
 date: 2020-06-15
-published: true
-tags: ['Solution', 'Switch']
-series: false
 cover_image: https://image.wsine.top/deec419a79c3fae239072a2ef4ca928a.png
-canonical_url: false
-description: "你是否曾经苦恼在宿舍里生活，偶尔想跟舍友来打一把大乱斗却苦于NS屏幕太小不尽兴？"
 ---
 
 你是否曾经苦恼在宿舍里生活，偶尔想跟舍友来打一把大乱斗却苦于NS屏幕太小不尽兴？

@@ -1,10 +1,6 @@
 ---
 title: "使用 YADM 整理你的 dotfiles"
 date: 2021-05-27
-published: true
-tags: ['Solution']
-series: false
-canonical_url: false
 ---
 
 说起收纳与整理，大家首先映入脑海中的应该都是家居收纳和书桌的整理。但是对于虚拟的东西是否也应该收纳与整理，一个干净的工作环境必定也能对工作有正面的帮助效果。

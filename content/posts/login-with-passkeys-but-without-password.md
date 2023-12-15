@@ -1,11 +1,6 @@
 ---
 title: "无密码认证的新方式之通行密钥"
 date: 2022-06-22
-published: true
-tags: ['Solution', 'Password']
-series: false
-canonical_url: false
-description: "通行密钥是如何替代密码进行身份验证的，Passkeys 能完全取代你的密码吗？本篇文章就来带领大家一探究竟。"
 ---
 
 # 无密码认证的新方式 —— 通行密钥

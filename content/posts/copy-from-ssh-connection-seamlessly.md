@@ -1,11 +1,6 @@
 ---
 title: "从 SSH 无感远程复制"
 date: 2022-01-18
-published: true
-tags: ['Solution']
-series: false
-canonical_url: false
-description: "使用 OSC code 从远程机器复制到本地剪切板"
 ---
 
 # 从 SSH 无感远程复制

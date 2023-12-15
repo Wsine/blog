@@ -1,11 +1,6 @@
 ---
 title: "WSL 的三块新拼图，这就是为师的完全体"
 date: 2022-07-08
-published: true
-tags: ['Solution']
-series: false
-canonical_url: false
-description: "本篇文章是一个教程指导安装和配置 WSL 使其能够使用上新功能。"
 ---
 
 # WSL 的三块新拼图，这就是为师的完全体

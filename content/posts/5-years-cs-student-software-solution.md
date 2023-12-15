@@ -1,11 +1,6 @@
 ---
 title: "一个5年工科生的软件解决方案与故事"
 date: 2019-02-18
-published: true
-tags: ['Software', 'Solution']
-series: false
-canonical_url: false
-description: "由于朋友们的咨询比较多，这篇文章就是来聊聊软件解决方案的"
 ---
 
 > 工欲善其事必先利其器

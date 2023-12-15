@@ -1,11 +1,6 @@
 ---
 title: "安装 WSL2 到非系统盘"
 date: 2022-07-22
-published: true
-tags: ['Solution']
-series: false
-canonical_url: false
-description: "本文分析旧方法的不可行的原因，并对于 WSL2 的迁移整理了新的方法。"
 ---
 
 # 安装 WSL2 到非系统盘

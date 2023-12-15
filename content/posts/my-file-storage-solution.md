@@ -1,12 +1,7 @@
 ---
 title: "我的资料存储方案分享"
 date: 2020-03-09
-published: true
-tags: ['Solution', 'Storage']
-series: false
 cover_image: https://image.wsine.top/a5c0a34def45567724d8730ba796f380.png
-canonical_url: false
-description: "今天来聊聊存储相关的事情，分享一下我现在所使用的方案"
 ---
 
 [TOC]

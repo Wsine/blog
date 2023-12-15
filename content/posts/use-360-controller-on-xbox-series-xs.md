@@ -1,11 +1,6 @@
 ---
 title: "让次世代 Xbox 支持旧手柄"
 date: 2022-03-24
-published: true
-tags: ["Solution"]
-series: false
-canonical_url: false
-description: "试问哪个男孩子不想拥有一台游戏机呢？借着女朋友生日的机会，我购置了一台 Xbox Series S 作为生日礼物 🐶。目前使用了一个多月，本篇文章就来说说我遇到的问题以及解决方案。"
 ---
 
 # 让次世代 Xbox 支持旧手柄

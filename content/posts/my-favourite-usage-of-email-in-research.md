@@ -1,11 +1,6 @@
 ---
 title: "科研邮箱的常用用法"
 date: 2021-09-27
-published: true
-tags: ['Solution']
-series: false
-canonical_url: false
-description: "9月份，有新同学进入了大学走进知识的殿堂，有新的学者进入了科研的队伍拓展知识的尽头，也有新的毕业生进入了企业实现自己的人生目标。邮箱是在学习和工作中必不可少的一个工具之一，本篇就是通过科研作为切入口来聊聊邮箱的一些常见用法。"
 ---
 
 [TOC]

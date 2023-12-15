@@ -1,12 +1,7 @@
 ---
 title: "国产优质搜索引擎Dogedoge多吉搜索"
 date: 2019-08-25
-published: true
-tags: ['Search']
-series: false
 cover_image: https://image.wsine.top/1664818bd215fdef486dbfd738804a5e.jpg
-canonical_url: false
-description: "聊聊我喜欢的一款国内搜索引擎"
 ---
 
 今天想跟大家聊聊的是一个新晋的搜索引擎。

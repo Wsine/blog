@@ -1,11 +1,6 @@
 ---
 title: "我的失物解决方案"
 date: 2021-11-10
-published: true
-tags: ['Solution']
-series: false
-canonical_url: false
-description: "经常丢东西，不如给自己的物品贴上寻回标签"
 ---
 
 [TOC]

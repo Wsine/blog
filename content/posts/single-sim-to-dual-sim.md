@@ -1,12 +1,7 @@
 ---
 title: "单卡手机「变」双卡的使用方案"
 date: 2020-04-21
-published: true
-tags: ['Solution']
-series: false
 cover_image: https://image.wsine.top/2920b61ca8b10d744a993506cfce4cee.png
-canonical_url: false
-description: "今天想来聊聊的是一个单卡手机也能媲美双卡手机的使用方案"
 ---
 
 今天想来聊聊的是一个单卡手机也能媲美双卡手机的使用方案。如果你正好在使用中国移动的套餐计划也有使用双卡的需求，那么就请往下看吧。

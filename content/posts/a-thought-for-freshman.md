@@ -1,11 +1,6 @@
 ---
 title: "给大学新生学子的一个思考"
 date: 2019-07-04
-published: true
-tags: ['Thought', 'School']
-series: false
-canonical_url: false
-description: "正值毕业两年，迈向读博之路前，给家乡学子们的一点思考"
 ---
 
 ## 前言

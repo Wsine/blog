@@ -1,11 +1,6 @@
 ---
 title: "修复 Zotero 和 Papership 的联动"
 date: 2021-11-08
-published: true
-tags: ['Solution']
-series: false
-canonical_url: false
-description: "随着 Zotero 的不断更新以及 Papership 的年久失修，它们之间的友谊出现了小小的问题，困扰着很多现有用户。我遍寻网络资源，虽然找到了一些解决方案，但我觉得不够优雅，因此提出一套自己的解决方案，以供有类似需求的读者们参考。"
 ---
 
 [TOC]

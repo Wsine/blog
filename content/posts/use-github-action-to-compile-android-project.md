@@ -1,11 +1,6 @@
 ---
 title: "使用 Github Action 编译 Android 项目"
 date: 2021-12-15
-published: true
-tags: ['Solution']
-series: false
-canonical_url: false
-description: "自给自足，轻便好用，不用污染自己的本地环境"
 ---
 
 [TOC]

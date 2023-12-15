@@ -3,6 +3,8 @@ baseURL = "https://blog.wsine.top/"
 title = "Wsine's blog"
 rssLimit = 10
 
+disableKinds = ['taxonomy', 'term']
+
 [outputFormats]
 [outputFormats.RSS]
   mediatype = "application/rss"

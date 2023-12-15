@@ -1,11 +1,6 @@
 ---
 title: "如何在 Linux 下装软件不求人"
 date: 2022-06-16
-published: true
-tags: ['Solution', 'Linux']
-series: false
-canonical_url: false
-description: "俗话说，求人不如求己。在 2022 年这一时间节点，有很多新的解决方案能够解决上述这类的问题，本文就是来探讨一些有哪些好的解决方案。"
 ---
 
 # 如何在 Linux 下装软件不求人

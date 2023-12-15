@@ -6,3 +6,4 @@ dist
 public
 resources
 assets/css/style.css
+.hugo_build.lock

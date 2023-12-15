@@ -1,12 +1,7 @@
 ---
 title: "我的科研软件流分享"
 date: 2020-12-01
-published: true
-tags: ['Research', 'Solution']
-series: false
 cover_image: https://image.wsine.top/ba7d37965807a31c8ff2ed6f60a24ed6.png
-canonical_url: false
-description: "经历了一年多的博士生学习，来聊聊我目前在科研生活中使用的软件"
 ---
 
 在少数派2019的年度征文里，我分享了我积累的「[科研方法论](https://sspai.com/post/58386)」。经过一年多的对科研软件的使用，我也逐渐积累了一套自己的软件流程，现整理为文章，希望对你有用。
