@@ -1,0 +1,22 @@
+{{ define "main" }}
+<link href="https://cdn.jsdelivr.net/gh/eallion/mastodon-embed-feed-timeline/dist/mastodon-timeline.min.css" rel="stylesheet" />
+
+{{ .Content }}
+
+<div id="mt-container" class="mt-container">
+  <div class="mt-body" role="feed">
+    <div class="mt-loading-spinner"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/eallion/mastodon-embed-feed-timeline/dist/mastodon-timeline.min.js"></script>
+<script>
+// You can initialize the script here
+const myTimeline = new MastodonTimeline({
+  instanceUrl: "https://o3o.ca",
+  timelineType: "profile",
+  userId: "110845",
+  profileName: "@wsine",
+});
+</script>
+{{ end }}
